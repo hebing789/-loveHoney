@@ -15,7 +15,7 @@
 
 @interface HBTableBarController ()
 
-@property(nonatomic,weak)UIButton* but;
+
 
 @end
 
@@ -45,21 +45,23 @@
 -(void)setMyBarControl{
     
     UIViewController* home = [HMHomeController new];
+    hideBottomBarNavagationControl* nvHome = [[hideBottomBarNavagationControl alloc]initWithRootViewController:home];
     [self setTabbarItemWith:home andWith:@"v2_home" andWithTitle:@"首页"];
-   
-
+    
+    
     UIViewController* market = [HMMarketViewController new];
-     hideBottomBarNavagationControl* nvMarket = [[hideBottomBarNavagationControl alloc]initWithRootViewController:market];
+    hideBottomBarNavagationControl* nvMarket = [[hideBottomBarNavagationControl alloc]initWithRootViewController:market];
     [self setTabbarItemWith:nvMarket andWith:@"freshReservation" andWithTitle:@"首页"];
     
     UIViewController* shopping = [HMShoppingViewController new];
-        hideBottomBarNavagationControl* nvShopping = [[hideBottomBarNavagationControl alloc]initWithRootViewController:shopping];
+    hideBottomBarNavagationControl* nvShopping = [[hideBottomBarNavagationControl alloc]initWithRootViewController:shopping];
     [self setTabbarItemWith:shopping andWith:@"shopCart" andWithTitle:@"首页"];
     
     UIViewController* me = [HMMeViewController new];
+    hideBottomBarNavagationControl* nvMe = [[hideBottomBarNavagationControl alloc]initWithRootViewController:me];
     [self setTabbarItemWith:me andWith:@"v2_my" andWithTitle:@"首页"];
     
-    self.viewControllers=@[home,nvMarket,nvShopping,me];
+    self.viewControllers=@[nvHome,nvMarket,nvShopping,nvMe];
     
     //    [self setTabbar];
     NSMutableDictionary *atts=[NSMutableDictionary dictionary];

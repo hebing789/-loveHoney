@@ -29,6 +29,10 @@
 		5B0674611DB1371500299600 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B06744C1DB1371500299600 /* ViewController.m */; };
 		5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674631DB1375400299600 /* DSHTTPClient.m */; };
 		5B0674661DB13AF400299600 /* Assets 00-09-05-008.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674651DB13AF400299600 /* Assets 00-09-05-008.xcassets */; };
+		5B0674691DB13F7600299600 /* HMHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674681DB13F7600299600 /* HMHomeController.m */; };
+		5B06746C1DB13F8C00299600 /* HMMarketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B06746B1DB13F8C00299600 /* HMMarketViewController.m */; };
+		5B06746F1DB13F9F00299600 /* HMMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B06746E1DB13F9F00299600 /* HMMeViewController.m */; };
+		5B0674721DB13FD400299600 /* HMShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674711DB13FD400299600 /* HMShoppingViewController.m */; };
 		5BEC4FC31DB1192100CA99B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC4FC21DB1192100CA99B0 /* main.m */; };
 		EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */; };
 /* End PBXBuildFile section */
@@ -65,6 +69,14 @@
 		5B0674621DB1375400299600 /* DSHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSHTTPClient.h; sourceTree = "<group>"; };
 		5B0674631DB1375400299600 /* DSHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSHTTPClient.m; sourceTree = "<group>"; };
 		5B0674651DB13AF400299600 /* Assets 00-09-05-008.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 00-09-05-008.xcassets"; sourceTree = "<group>"; };
+		5B0674671DB13F7600299600 /* HMHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMHomeController.h; sourceTree = "<group>"; };
+		5B0674681DB13F7600299600 /* HMHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMHomeController.m; sourceTree = "<group>"; };
+		5B06746A1DB13F8C00299600 /* HMMarketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMMarketViewController.h; sourceTree = "<group>"; };
+		5B06746B1DB13F8C00299600 /* HMMarketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMMarketViewController.m; sourceTree = "<group>"; };
+		5B06746D1DB13F9F00299600 /* HMMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMMeViewController.h; sourceTree = "<group>"; };
+		5B06746E1DB13F9F00299600 /* HMMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMMeViewController.m; sourceTree = "<group>"; };
+		5B0674701DB13FD400299600 /* HMShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMShoppingViewController.h; sourceTree = "<group>"; };
+		5B0674711DB13FD400299600 /* HMShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMShoppingViewController.m; sourceTree = "<group>"; };
 		5BEC4FBE1DB1192100CA99B0 /* loveHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loveHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEC4FC21DB1192100CA99B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BEC4FD21DB1192100CA99B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				5B0674261DB1371500299600 /* .gitkeep */,
+				5B0674671DB13F7600299600 /* HMHomeController.h */,
+				5B0674681DB13F7600299600 /* HMHomeController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -149,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				5B06742E1DB1371500299600 /* .gitkeep */,
+				5B06746A1DB13F8C00299600 /* HMMarketViewController.h */,
+				5B06746B1DB13F8C00299600 /* HMMarketViewController.m */,
 			);
 			path = market;
 			sourceTree = "<group>";
@@ -157,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				5B0674301DB1371500299600 /* .gitkeep */,
+				5B06746D1DB13F9F00299600 /* HMMeViewController.h */,
+				5B06746E1DB13F9F00299600 /* HMMeViewController.m */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -165,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				5B0674321DB1371500299600 /* .gitkeep */,
+				5B0674701DB13FD400299600 /* HMShoppingViewController.h */,
+				5B0674711DB13FD400299600 /* HMShoppingViewController.m */,
 			);
 			path = shopping;
 			sourceTree = "<group>";
@@ -439,10 +459,14 @@
 				5B0674611DB1371500299600 /* ViewController.m in Sources */,
 				5B06745E1DB1371500299600 /* UIView+UIframe.m in Sources */,
 				5B0674521DB1371500299600 /* hideBottomBarNavagationControl.m in Sources */,
+				5B0674721DB13FD400299600 /* HMShoppingViewController.m in Sources */,
 				5B0674511DB1371500299600 /* HBTableBarController.m in Sources */,
 				5B0674581DB1371500299600 /* WelcomCell.m in Sources */,
+				5B0674691DB13F7600299600 /* HMHomeController.m in Sources */,
+				5B06746C1DB13F8C00299600 /* HMMarketViewController.m in Sources */,
 				5B06744D1DB1371500299600 /* AppDelegate.m in Sources */,
 				5B0674591DB1371500299600 /* WecomeAnimation.m in Sources */,
+				5B06746F1DB13F9F00299600 /* HMMeViewController.m in Sources */,
 				5BEC4FC31DB1192100CA99B0 /* main.m in Sources */,
 				5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */,
 			);

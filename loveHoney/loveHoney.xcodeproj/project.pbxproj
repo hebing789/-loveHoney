@@ -9,10 +9,21 @@
 /* Begin PBXBuildFile section */
 		5BEC4FC31DB1192100CA99B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC4FC21DB1192100CA99B0 /* main.m */; };
 		5BEC4FC61DB1192100CA99B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC4FC51DB1192100CA99B0 /* AppDelegate.m */; };
-		5BEC4FC91DB1192100CA99B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC4FC81DB1192100CA99B0 /* ViewController.m */; };
 		5BEC4FCC1DB1192100CA99B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FCA1DB1192100CA99B0 /* Main.storyboard */; };
 		5BEC4FCE1DB1192100CA99B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FCD1DB1192100CA99B0 /* Assets.xcassets */; };
 		5BEC4FD11DB1192100CA99B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FCF1DB1192100CA99B0 /* LaunchScreen.storyboard */; };
+		5BEC4FF21DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FDA1DB11DCB00CA99B0 /* .gitkeep */; };
+		5BEC4FF31DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FDC1DB11DCB00CA99B0 /* .gitkeep */; };
+		5BEC4FF41DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FDE1DB11DCB00CA99B0 /* .gitkeep */; };
+		5BEC4FF51DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FE01DB11DCB00CA99B0 /* .gitkeep */; };
+		5BEC4FF61DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FE21DB11DCB00CA99B0 /* .gitkeep */; };
+		5BEC4FF71DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FE41DB11DCB00CA99B0 /* .gitkeep */; };
+		5BEC4FF81DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FE61DB11DCB00CA99B0 /* .gitkeep */; };
+		5BEC4FF91DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FE91DB11DCB00CA99B0 /* .gitkeep */; };
+		5BEC4FFA1DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FEB1DB11DCB00CA99B0 /* .gitkeep */; };
+		5BEC4FFB1DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FED1DB11DCB00CA99B0 /* .gitkeep */; };
+		5BEC4FFC1DB11DCB00CA99B0 /* UIView+UIframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC4FEF1DB11DCB00CA99B0 /* UIView+UIframe.m */; };
+		5BEC4FFD1DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FF11DB11DCB00CA99B0 /* .gitkeep */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +31,23 @@
 		5BEC4FC21DB1192100CA99B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BEC4FC41DB1192100CA99B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5BEC4FC51DB1192100CA99B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5BEC4FC71DB1192100CA99B0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5BEC4FC81DB1192100CA99B0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5BEC4FCB1DB1192100CA99B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BEC4FCD1DB1192100CA99B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BEC4FD01DB1192100CA99B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BEC4FD21DB1192100CA99B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BEC4FDA1DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5BEC4FDC1DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5BEC4FDE1DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5BEC4FE01DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5BEC4FE21DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5BEC4FE41DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5BEC4FE61DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5BEC4FE91DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5BEC4FEB1DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5BEC4FED1DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5BEC4FEE1DB11DCB00CA99B0 /* UIView+UIframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIframe.h"; sourceTree = "<group>"; };
+		5BEC4FEF1DB11DCB00CA99B0 /* UIView+UIframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIframe.m"; sourceTree = "<group>"; };
+		5BEC4FF11DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +80,9 @@
 		5BEC4FC01DB1192100CA99B0 /* loveHoney */ = {
 			isa = PBXGroup;
 			children = (
+				5BEC4FD81DB11DCB00CA99B0 /* Classes */,
 				5BEC4FC41DB1192100CA99B0 /* AppDelegate.h */,
 				5BEC4FC51DB1192100CA99B0 /* AppDelegate.m */,
-				5BEC4FC71DB1192100CA99B0 /* ViewController.h */,
-				5BEC4FC81DB1192100CA99B0 /* ViewController.m */,
 				5BEC4FCA1DB1192100CA99B0 /* Main.storyboard */,
 				5BEC4FCD1DB1192100CA99B0 /* Assets.xcassets */,
 				5BEC4FCF1DB1192100CA99B0 /* LaunchScreen.storyboard */,
@@ -77,6 +98,122 @@
 				5BEC4FC21DB1192100CA99B0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BEC4FD81DB11DCB00CA99B0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC4FD91DB11DCB00CA99B0 /* Controllers */,
+				5BEC4FE51DB11DCB00CA99B0 /* Modles */,
+				5BEC4FE71DB11DCB00CA99B0 /* Others */,
+				5BEC4FF01DB11DCB00CA99B0 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5BEC4FD91DB11DCB00CA99B0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC4FDA1DB11DCB00CA99B0 /* .gitkeep */,
+				5BEC4FDB1DB11DCB00CA99B0 /* Home */,
+				5BEC4FDD1DB11DCB00CA99B0 /* Main */,
+				5BEC4FDF1DB11DCB00CA99B0 /* market */,
+				5BEC4FE11DB11DCB00CA99B0 /* Me */,
+				5BEC4FE31DB11DCB00CA99B0 /* shopping */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BEC4FDB1DB11DCB00CA99B0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC4FDC1DB11DCB00CA99B0 /* .gitkeep */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5BEC4FDD1DB11DCB00CA99B0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC4FDE1DB11DCB00CA99B0 /* .gitkeep */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5BEC4FDF1DB11DCB00CA99B0 /* market */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC4FE01DB11DCB00CA99B0 /* .gitkeep */,
+			);
+			path = market;
+			sourceTree = "<group>";
+		};
+		5BEC4FE11DB11DCB00CA99B0 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC4FE21DB11DCB00CA99B0 /* .gitkeep */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		5BEC4FE31DB11DCB00CA99B0 /* shopping */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC4FE41DB11DCB00CA99B0 /* .gitkeep */,
+			);
+			path = shopping;
+			sourceTree = "<group>";
+		};
+		5BEC4FE51DB11DCB00CA99B0 /* Modles */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC4FE61DB11DCB00CA99B0 /* .gitkeep */,
+			);
+			path = Modles;
+			sourceTree = "<group>";
+		};
+		5BEC4FE71DB11DCB00CA99B0 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC4FE81DB11DCB00CA99B0 /* catogry */,
+				5BEC4FEA1DB11DCB00CA99B0 /* common */,
+				5BEC4FEC1DB11DCB00CA99B0 /* tools */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		5BEC4FE81DB11DCB00CA99B0 /* catogry */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC4FE91DB11DCB00CA99B0 /* .gitkeep */,
+			);
+			path = catogry;
+			sourceTree = "<group>";
+		};
+		5BEC4FEA1DB11DCB00CA99B0 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC4FEB1DB11DCB00CA99B0 /* .gitkeep */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		5BEC4FEC1DB11DCB00CA99B0 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC4FED1DB11DCB00CA99B0 /* .gitkeep */,
+				5BEC4FEE1DB11DCB00CA99B0 /* UIView+UIframe.h */,
+				5BEC4FEF1DB11DCB00CA99B0 /* UIView+UIframe.m */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		5BEC4FF01DB11DCB00CA99B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BEC4FF11DB11DCB00CA99B0 /* .gitkeep */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +276,18 @@
 			files = (
 				5BEC4FD11DB1192100CA99B0 /* LaunchScreen.storyboard in Resources */,
 				5BEC4FCE1DB1192100CA99B0 /* Assets.xcassets in Resources */,
+				5BEC4FF91DB11DCB00CA99B0 /* .gitkeep in Resources */,
+				5BEC4FFA1DB11DCB00CA99B0 /* .gitkeep in Resources */,
+				5BEC4FF31DB11DCB00CA99B0 /* .gitkeep in Resources */,
+				5BEC4FF71DB11DCB00CA99B0 /* .gitkeep in Resources */,
+				5BEC4FF41DB11DCB00CA99B0 /* .gitkeep in Resources */,
 				5BEC4FCC1DB1192100CA99B0 /* Main.storyboard in Resources */,
+				5BEC4FFB1DB11DCB00CA99B0 /* .gitkeep in Resources */,
+				5BEC4FF21DB11DCB00CA99B0 /* .gitkeep in Resources */,
+				5BEC4FF81DB11DCB00CA99B0 /* .gitkeep in Resources */,
+				5BEC4FF51DB11DCB00CA99B0 /* .gitkeep in Resources */,
+				5BEC4FF61DB11DCB00CA99B0 /* .gitkeep in Resources */,
+				5BEC4FFD1DB11DCB00CA99B0 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BEC4FC91DB1192100CA99B0 /* ViewController.m in Sources */,
+				5BEC4FFC1DB11DCB00CA99B0 /* UIView+UIframe.m in Sources */,
 				5BEC4FC61DB1192100CA99B0 /* AppDelegate.m in Sources */,
 				5BEC4FC31DB1192100CA99B0 /* main.m in Sources */,
 			);
@@ -307,6 +455,7 @@
 				5BEC4FD71DB1192100CA99B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,47 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B06744D1DB1371500299600 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674211DB1371500299600 /* AppDelegate.m */; };
+		5B06744E1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674241DB1371500299600 /* .gitkeep */; };
+		5B06744F1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674261DB1371500299600 /* .gitkeep */; };
+		5B0674501DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674281DB1371500299600 /* .gitkeep */; };
+		5B0674511DB1371500299600 /* HBTableBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B06742A1DB1371500299600 /* HBTableBarController.m */; };
+		5B0674521DB1371500299600 /* hideBottomBarNavagationControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B06742C1DB1371500299600 /* hideBottomBarNavagationControl.m */; };
+		5B0674531DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B06742E1DB1371500299600 /* .gitkeep */; };
+		5B0674541DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674301DB1371500299600 /* .gitkeep */; };
+		5B0674551DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674321DB1371500299600 /* .gitkeep */; };
+		5B0674561DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674341DB1371500299600 /* .gitkeep */; };
+		5B0674571DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674361DB1371500299600 /* .gitkeep */; };
+		5B0674581DB1371500299600 /* WelcomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674391DB1371500299600 /* WelcomCell.m */; };
+		5B0674591DB1371500299600 /* WecomeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B06743B1DB1371500299600 /* WecomeAnimation.m */; };
+		5B06745A1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B06743D1DB1371500299600 /* .gitkeep */; };
+		5B06745B1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674401DB1371500299600 /* .gitkeep */; };
+		5B06745C1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674421DB1371500299600 /* .gitkeep */; };
+		5B06745D1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674441DB1371500299600 /* .gitkeep */; };
+		5B06745E1DB1371500299600 /* UIView+UIframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674461DB1371500299600 /* UIView+UIframe.m */; };
+		5B06745F1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674481DB1371500299600 /* .gitkeep */; };
+		5B0674611DB1371500299600 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B06744C1DB1371500299600 /* ViewController.m */; };
+		5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674631DB1375400299600 /* DSHTTPClient.m */; };
+		5B0674661DB13AF400299600 /* Assets 00-09-05-008.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674651DB13AF400299600 /* Assets 00-09-05-008.xcassets */; };
 		5BEC4FC31DB1192100CA99B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC4FC21DB1192100CA99B0 /* main.m */; };
-		5BEC4FC61DB1192100CA99B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC4FC51DB1192100CA99B0 /* AppDelegate.m */; };
-		5BEC4FCC1DB1192100CA99B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FCA1DB1192100CA99B0 /* Main.storyboard */; };
-		5BEC4FCE1DB1192100CA99B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FCD1DB1192100CA99B0 /* Assets.xcassets */; };
-		5BEC4FD11DB1192100CA99B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FCF1DB1192100CA99B0 /* LaunchScreen.storyboard */; };
-		5BEC4FF21DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FDA1DB11DCB00CA99B0 /* .gitkeep */; };
-		5BEC4FF31DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FDC1DB11DCB00CA99B0 /* .gitkeep */; };
-		5BEC4FF41DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FDE1DB11DCB00CA99B0 /* .gitkeep */; };
-		5BEC4FF51DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FE01DB11DCB00CA99B0 /* .gitkeep */; };
-		5BEC4FF61DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FE21DB11DCB00CA99B0 /* .gitkeep */; };
-		5BEC4FF71DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FE41DB11DCB00CA99B0 /* .gitkeep */; };
-		5BEC4FF81DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FE61DB11DCB00CA99B0 /* .gitkeep */; };
-		5BEC4FF91DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FE91DB11DCB00CA99B0 /* .gitkeep */; };
-		5BEC4FFA1DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FEB1DB11DCB00CA99B0 /* .gitkeep */; };
-		5BEC4FFB1DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FED1DB11DCB00CA99B0 /* .gitkeep */; };
-		5BEC4FFC1DB11DCB00CA99B0 /* UIView+UIframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC4FEF1DB11DCB00CA99B0 /* UIView+UIframe.m */; };
-		5BEC4FFD1DB11DCB00CA99B0 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5BEC4FF11DB11DCB00CA99B0 /* .gitkeep */; };
+		EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		055F5C9A44396790450CF0E2 /* Pods-loveHoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.debug.xcconfig"; sourceTree = "<group>"; };
+		5B0674201DB1371500299600 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5B0674211DB1371500299600 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5B0674241DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5B0674261DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5B0674281DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5B0674291DB1371500299600 /* HBTableBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBTableBarController.h; sourceTree = "<group>"; };
+		5B06742A1DB1371500299600 /* HBTableBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBTableBarController.m; sourceTree = "<group>"; };
+		5B06742B1DB1371500299600 /* hideBottomBarNavagationControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hideBottomBarNavagationControl.h; sourceTree = "<group>"; };
+		5B06742C1DB1371500299600 /* hideBottomBarNavagationControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hideBottomBarNavagationControl.m; sourceTree = "<group>"; };
+		5B06742E1DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5B0674301DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5B0674321DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5B0674341DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5B0674361DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5B0674381DB1371500299600 /* WelcomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomCell.h; sourceTree = "<group>"; };
+		5B0674391DB1371500299600 /* WelcomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomCell.m; sourceTree = "<group>"; };
+		5B06743A1DB1371500299600 /* WecomeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WecomeAnimation.h; sourceTree = "<group>"; };
+		5B06743B1DB1371500299600 /* WecomeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WecomeAnimation.m; sourceTree = "<group>"; };
+		5B06743D1DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5B0674401DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5B0674421DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5B0674441DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5B0674451DB1371500299600 /* UIView+UIframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIframe.h"; sourceTree = "<group>"; };
+		5B0674461DB1371500299600 /* UIView+UIframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIframe.m"; sourceTree = "<group>"; };
+		5B0674481DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		5B06744B1DB1371500299600 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5B06744C1DB1371500299600 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5B0674621DB1375400299600 /* DSHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSHTTPClient.h; sourceTree = "<group>"; };
+		5B0674631DB1375400299600 /* DSHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSHTTPClient.m; sourceTree = "<group>"; };
+		5B0674651DB13AF400299600 /* Assets 00-09-05-008.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets 00-09-05-008.xcassets"; sourceTree = "<group>"; };
 		5BEC4FBE1DB1192100CA99B0 /* loveHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loveHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEC4FC21DB1192100CA99B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5BEC4FC41DB1192100CA99B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5BEC4FC51DB1192100CA99B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5BEC4FCB1DB1192100CA99B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5BEC4FCD1DB1192100CA99B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5BEC4FD01DB1192100CA99B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BEC4FD21DB1192100CA99B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5BEC4FDA1DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		5BEC4FDC1DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		5BEC4FDE1DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		5BEC4FE01DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		5BEC4FE21DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		5BEC4FE41DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		5BEC4FE61DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		5BEC4FE91DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		5BEC4FEB1DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		5BEC4FED1DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		5BEC4FEE1DB11DCB00CA99B0 /* UIView+UIframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIframe.h"; sourceTree = "<group>"; };
-		5BEC4FEF1DB11DCB00CA99B0 /* UIView+UIframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIframe.m"; sourceTree = "<group>"; };
-		5BEC4FF11DB11DCB00CA99B0 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loveHoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,17 +77,186 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		545D9F0547DDDAF0A5BF1B96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				055F5C9A44396790450CF0E2 /* Pods-loveHoney.debug.xcconfig */,
+				F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B06734A1DB1324400299600 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		5B0674221DB1371500299600 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5B0674231DB1371500299600 /* Controllers */,
+				5B06743C1DB1371500299600 /* Modles */,
+				5B06743E1DB1371500299600 /* Others */,
+				5B0674471DB1371500299600 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5B0674231DB1371500299600 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B0674241DB1371500299600 /* .gitkeep */,
+				5B0674251DB1371500299600 /* Home */,
+				5B0674271DB1371500299600 /* Main */,
+				5B06742D1DB1371500299600 /* market */,
+				5B06742F1DB1371500299600 /* Me */,
+				5B0674311DB1371500299600 /* shopping */,
+				5B0674331DB1371500299600 /* Welcome */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5B0674251DB1371500299600 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B0674261DB1371500299600 /* .gitkeep */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B0674271DB1371500299600 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5B0674281DB1371500299600 /* .gitkeep */,
+				5B0674291DB1371500299600 /* HBTableBarController.h */,
+				5B06742A1DB1371500299600 /* HBTableBarController.m */,
+				5B06742B1DB1371500299600 /* hideBottomBarNavagationControl.h */,
+				5B06742C1DB1371500299600 /* hideBottomBarNavagationControl.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		5B06742D1DB1371500299600 /* market */ = {
+			isa = PBXGroup;
+			children = (
+				5B06742E1DB1371500299600 /* .gitkeep */,
+			);
+			path = market;
+			sourceTree = "<group>";
+		};
+		5B06742F1DB1371500299600 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				5B0674301DB1371500299600 /* .gitkeep */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		5B0674311DB1371500299600 /* shopping */ = {
+			isa = PBXGroup;
+			children = (
+				5B0674321DB1371500299600 /* .gitkeep */,
+			);
+			path = shopping;
+			sourceTree = "<group>";
+		};
+		5B0674331DB1371500299600 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				5B0674341DB1371500299600 /* .gitkeep */,
+				5B0674351DB1371500299600 /* Model */,
+				5B0674371DB1371500299600 /* View */,
+				5B06743A1DB1371500299600 /* WecomeAnimation.h */,
+				5B06743B1DB1371500299600 /* WecomeAnimation.m */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		5B0674351DB1371500299600 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B0674361DB1371500299600 /* .gitkeep */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B0674371DB1371500299600 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B0674381DB1371500299600 /* WelcomCell.h */,
+				5B0674391DB1371500299600 /* WelcomCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B06743C1DB1371500299600 /* Modles */ = {
+			isa = PBXGroup;
+			children = (
+				5B06743D1DB1371500299600 /* .gitkeep */,
+			);
+			path = Modles;
+			sourceTree = "<group>";
+		};
+		5B06743E1DB1371500299600 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				5B06743F1DB1371500299600 /* catogry */,
+				5B0674411DB1371500299600 /* common */,
+				5B0674431DB1371500299600 /* tools */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		5B06743F1DB1371500299600 /* catogry */ = {
+			isa = PBXGroup;
+			children = (
+				5B0674401DB1371500299600 /* .gitkeep */,
+			);
+			path = catogry;
+			sourceTree = "<group>";
+		};
+		5B0674411DB1371500299600 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				5B0674421DB1371500299600 /* .gitkeep */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		5B0674431DB1371500299600 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				5B0674441DB1371500299600 /* .gitkeep */,
+				5B0674451DB1371500299600 /* UIView+UIframe.h */,
+				5B0674461DB1371500299600 /* UIView+UIframe.m */,
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		5B0674471DB1371500299600 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B0674481DB1371500299600 /* .gitkeep */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5BEC4FB51DB1192100CA99B0 = {
 			isa = PBXGroup;
 			children = (
 				5BEC4FC01DB1192100CA99B0 /* loveHoney */,
 				5BEC4FBF1DB1192100CA99B0 /* Products */,
+				545D9F0547DDDAF0A5BF1B96 /* Pods */,
+				F91E465377817DC3DBC7ACA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,12 +271,15 @@
 		5BEC4FC01DB1192100CA99B0 /* loveHoney */ = {
 			isa = PBXGroup;
 			children = (
-				5BEC4FD81DB11DCB00CA99B0 /* Classes */,
-				5BEC4FC41DB1192100CA99B0 /* AppDelegate.h */,
-				5BEC4FC51DB1192100CA99B0 /* AppDelegate.m */,
-				5BEC4FCA1DB1192100CA99B0 /* Main.storyboard */,
-				5BEC4FCD1DB1192100CA99B0 /* Assets.xcassets */,
-				5BEC4FCF1DB1192100CA99B0 /* LaunchScreen.storyboard */,
+				5B0674201DB1371500299600 /* AppDelegate.h */,
+				5B0674211DB1371500299600 /* AppDelegate.m */,
+				5B0674621DB1375400299600 /* DSHTTPClient.h */,
+				5B0674631DB1375400299600 /* DSHTTPClient.m */,
+				5B0674221DB1371500299600 /* Classes */,
+				5B06744B1DB1371500299600 /* ViewController.h */,
+				5B06744C1DB1371500299600 /* ViewController.m */,
+				5B0674651DB13AF400299600 /* Assets 00-09-05-008.xcassets */,
+				5B06734A1DB1324400299600 /* Base.lproj */,
 				5BEC4FD21DB1192100CA99B0 /* Info.plist */,
 				5BEC4FC11DB1192100CA99B0 /* Supporting Files */,
 			);
@@ -100,120 +294,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5BEC4FD81DB11DCB00CA99B0 /* Classes */ = {
+		F91E465377817DC3DBC7ACA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5BEC4FD91DB11DCB00CA99B0 /* Controllers */,
-				5BEC4FE51DB11DCB00CA99B0 /* Modles */,
-				5BEC4FE71DB11DCB00CA99B0 /* Others */,
-				5BEC4FF01DB11DCB00CA99B0 /* Views */,
+				9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */,
 			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		5BEC4FD91DB11DCB00CA99B0 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				5BEC4FDA1DB11DCB00CA99B0 /* .gitkeep */,
-				5BEC4FDB1DB11DCB00CA99B0 /* Home */,
-				5BEC4FDD1DB11DCB00CA99B0 /* Main */,
-				5BEC4FDF1DB11DCB00CA99B0 /* market */,
-				5BEC4FE11DB11DCB00CA99B0 /* Me */,
-				5BEC4FE31DB11DCB00CA99B0 /* shopping */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		5BEC4FDB1DB11DCB00CA99B0 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				5BEC4FDC1DB11DCB00CA99B0 /* .gitkeep */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		5BEC4FDD1DB11DCB00CA99B0 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				5BEC4FDE1DB11DCB00CA99B0 /* .gitkeep */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		5BEC4FDF1DB11DCB00CA99B0 /* market */ = {
-			isa = PBXGroup;
-			children = (
-				5BEC4FE01DB11DCB00CA99B0 /* .gitkeep */,
-			);
-			path = market;
-			sourceTree = "<group>";
-		};
-		5BEC4FE11DB11DCB00CA99B0 /* Me */ = {
-			isa = PBXGroup;
-			children = (
-				5BEC4FE21DB11DCB00CA99B0 /* .gitkeep */,
-			);
-			path = Me;
-			sourceTree = "<group>";
-		};
-		5BEC4FE31DB11DCB00CA99B0 /* shopping */ = {
-			isa = PBXGroup;
-			children = (
-				5BEC4FE41DB11DCB00CA99B0 /* .gitkeep */,
-			);
-			path = shopping;
-			sourceTree = "<group>";
-		};
-		5BEC4FE51DB11DCB00CA99B0 /* Modles */ = {
-			isa = PBXGroup;
-			children = (
-				5BEC4FE61DB11DCB00CA99B0 /* .gitkeep */,
-			);
-			path = Modles;
-			sourceTree = "<group>";
-		};
-		5BEC4FE71DB11DCB00CA99B0 /* Others */ = {
-			isa = PBXGroup;
-			children = (
-				5BEC4FE81DB11DCB00CA99B0 /* catogry */,
-				5BEC4FEA1DB11DCB00CA99B0 /* common */,
-				5BEC4FEC1DB11DCB00CA99B0 /* tools */,
-			);
-			path = Others;
-			sourceTree = "<group>";
-		};
-		5BEC4FE81DB11DCB00CA99B0 /* catogry */ = {
-			isa = PBXGroup;
-			children = (
-				5BEC4FE91DB11DCB00CA99B0 /* .gitkeep */,
-			);
-			path = catogry;
-			sourceTree = "<group>";
-		};
-		5BEC4FEA1DB11DCB00CA99B0 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				5BEC4FEB1DB11DCB00CA99B0 /* .gitkeep */,
-			);
-			path = common;
-			sourceTree = "<group>";
-		};
-		5BEC4FEC1DB11DCB00CA99B0 /* tools */ = {
-			isa = PBXGroup;
-			children = (
-				5BEC4FED1DB11DCB00CA99B0 /* .gitkeep */,
-				5BEC4FEE1DB11DCB00CA99B0 /* UIView+UIframe.h */,
-				5BEC4FEF1DB11DCB00CA99B0 /* UIView+UIframe.m */,
-			);
-			path = tools;
-			sourceTree = "<group>";
-		};
-		5BEC4FF01DB11DCB00CA99B0 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				5BEC4FF11DB11DCB00CA99B0 /* .gitkeep */,
-			);
-			path = Views;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,9 +309,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5BEC4FD51DB1192100CA99B0 /* Build configuration list for PBXNativeTarget "loveHoney" */;
 			buildPhases = (
+				F6DC3F004C044C1A0E079483 /* [CP] Check Pods Manifest.lock */,
 				5BEC4FBA1DB1192100CA99B0 /* Sources */,
 				5BEC4FBB1DB1192100CA99B0 /* Frameworks */,
 				5BEC4FBC1DB1192100CA99B0 /* Resources */,
+				624F8BD19C45EE823FA758F7 /* [CP] Embed Pods Frameworks */,
+				395C4F65B8E937C8E7C36FD0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,6 +331,7 @@
 		5BEC4FB61DB1192100CA99B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HM;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = hebing;
 				TargetAttributes = {
@@ -274,56 +364,91 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BEC4FD11DB1192100CA99B0 /* LaunchScreen.storyboard in Resources */,
-				5BEC4FCE1DB1192100CA99B0 /* Assets.xcassets in Resources */,
-				5BEC4FF91DB11DCB00CA99B0 /* .gitkeep in Resources */,
-				5BEC4FFA1DB11DCB00CA99B0 /* .gitkeep in Resources */,
-				5BEC4FF31DB11DCB00CA99B0 /* .gitkeep in Resources */,
-				5BEC4FF71DB11DCB00CA99B0 /* .gitkeep in Resources */,
-				5BEC4FF41DB11DCB00CA99B0 /* .gitkeep in Resources */,
-				5BEC4FCC1DB1192100CA99B0 /* Main.storyboard in Resources */,
-				5BEC4FFB1DB11DCB00CA99B0 /* .gitkeep in Resources */,
-				5BEC4FF21DB11DCB00CA99B0 /* .gitkeep in Resources */,
-				5BEC4FF81DB11DCB00CA99B0 /* .gitkeep in Resources */,
-				5BEC4FF51DB11DCB00CA99B0 /* .gitkeep in Resources */,
-				5BEC4FF61DB11DCB00CA99B0 /* .gitkeep in Resources */,
-				5BEC4FFD1DB11DCB00CA99B0 /* .gitkeep in Resources */,
+				5B06744F1DB1371500299600 /* .gitkeep in Resources */,
+				5B06745B1DB1371500299600 /* .gitkeep in Resources */,
+				5B06745C1DB1371500299600 /* .gitkeep in Resources */,
+				5B0674531DB1371500299600 /* .gitkeep in Resources */,
+				5B0674571DB1371500299600 /* .gitkeep in Resources */,
+				5B0674541DB1371500299600 /* .gitkeep in Resources */,
+				5B06744E1DB1371500299600 /* .gitkeep in Resources */,
+				5B06745D1DB1371500299600 /* .gitkeep in Resources */,
+				5B0674661DB13AF400299600 /* Assets 00-09-05-008.xcassets in Resources */,
+				5B0674501DB1371500299600 /* .gitkeep in Resources */,
+				5B06745A1DB1371500299600 /* .gitkeep in Resources */,
+				5B0674551DB1371500299600 /* .gitkeep in Resources */,
+				5B0674561DB1371500299600 /* .gitkeep in Resources */,
+				5B06745F1DB1371500299600 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		395C4F65B8E937C8E7C36FD0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		624F8BD19C45EE823FA758F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6DC3F004C044C1A0E079483 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5BEC4FBA1DB1192100CA99B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BEC4FFC1DB11DCB00CA99B0 /* UIView+UIframe.m in Sources */,
-				5BEC4FC61DB1192100CA99B0 /* AppDelegate.m in Sources */,
+				5B0674611DB1371500299600 /* ViewController.m in Sources */,
+				5B06745E1DB1371500299600 /* UIView+UIframe.m in Sources */,
+				5B0674521DB1371500299600 /* hideBottomBarNavagationControl.m in Sources */,
+				5B0674511DB1371500299600 /* HBTableBarController.m in Sources */,
+				5B0674581DB1371500299600 /* WelcomCell.m in Sources */,
+				5B06744D1DB1371500299600 /* AppDelegate.m in Sources */,
+				5B0674591DB1371500299600 /* WecomeAnimation.m in Sources */,
 				5BEC4FC31DB1192100CA99B0 /* main.m in Sources */,
+				5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		5BEC4FCA1DB1192100CA99B0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BEC4FCB1DB1192100CA99B0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5BEC4FCF1DB1192100CA99B0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BEC4FD01DB1192100CA99B0 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		5BEC4FD31DB1192100CA99B0 /* Debug */ = {
@@ -416,9 +541,12 @@
 		};
 		5BEC4FD61DB1192100CA99B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 055F5C9A44396790450CF0E2 /* Pods-loveHoney.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = loveHoney/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dd.loveHoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,9 +555,12 @@
 		};
 		5BEC4FD71DB1192100CA99B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = loveHoney/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dd.loveHoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";

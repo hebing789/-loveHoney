@@ -17,6 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+   
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
 //    //获取当前版本号:
@@ -40,29 +41,32 @@
 //        [[NSUserDefaults standardUserDefaults]synchronize];
 //    }
 //    WecomeAnimation* welcome=[[WecomeAnimation alloc]init];
-    HBTableBarController* tabbar=[[HBTableBarController alloc]init];
-            self.window.rootViewController=tabbar;
-
+//    
 //    self.window.rootViewController=welcome;
-    //    // UIStatusBarStyleDefault                                     = 0, // Dark content, for use on light backgrounds
-    //    UIStatusBarStyleLightContent     NS_ENUM_AVAILABLE_IOS(7_0) = 1, // Light content, for use on dark backgrounds
-    //
-    //    UIStatusBarStyleBlackTranslucent NS_ENUM_DEPRECATED_IOS(2_0, 7_0, "Use UIStatusBarStyleLightContent") = 1,
-    //    UIStatusBarStyleBlackOpaque      NS_ENUM_DEPRECATED_IOS(2_0, 7_0, "Use UIStatusBarStyleLightContent") = 2,
+//    //    // UIStatusBarStyleDefault                                     = 0, // Dark content, for use on light backgrounds
+//    //    UIStatusBarStyleLightContent     NS_ENUM_AVAILABLE_IOS(7_0) = 1, // Light content, for use on dark backgrounds
+//    //
+//    //    UIStatusBarStyleBlackTranslucent NS_ENUM_DEPRECATED_IOS(2_0, 7_0, "Use UIStatusBarStyleLightContent") = 1,
+//    //    UIStatusBarStyleBlackOpaque      NS_ENUM_DEPRECATED_IOS(2_0, 7_0, "Use UIStatusBarStyleLightContent") = 2,
+//    
+//    
+//    //    /    这句话影藏tabar没效果,可能是自定义的原因;
+//    //    [UIApplication sharedApplication].keyWindow.rootViewCtroller.hidesBottomBarWhenPushed=YES;
+//    
+//    
+//    //启动时屏幕右边向上设置,
+//    //    [UIApplication sharedApplication].statusBarOrientation=UIInterfaceOrientationLandscapeRight;
+//    
+//    
+    HBTableBarController* tabbar=[[HBTableBarController alloc]init];
     
-    
-    //    /    这句话影藏tabar没效果,可能是自定义的原因;
-    //    [UIApplication sharedApplication].keyWindow.rootViewCtroller.hidesBottomBarWhenPushed=YES;
-    
-    
-    //启动时屏幕右边向上设置,
-    //    [UIApplication sharedApplication].statusBarOrientation=UIInterfaceOrientationLandscapeRight;
-    
-    
-    
+    self.window.rootViewController=tabbar;
+
     [self.window makeKeyAndVisible];
-//    [UIApplication sharedApplication].statusBarHidden=NO;
-//    [UIApplication sharedApplication].statusBarStyle= UIStatusBarStyleLightContent ;
+    [UIApplication sharedApplication].statusBarHidden=NO;
+    [UIApplication sharedApplication].statusBarStyle= UIStatusBarStyleLightContent ;
+    
+
     
 
     return YES;

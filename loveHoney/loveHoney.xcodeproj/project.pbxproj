@@ -37,6 +37,9 @@
 		5B06746F1DB13F9F00299600 /* HMMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B06746E1DB13F9F00299600 /* HMMeViewController.m */; };
 		5B0674721DB13FD400299600 /* HMShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674711DB13FD400299600 /* HMShoppingViewController.m */; };
 		5BEC4FC31DB1192100CA99B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC4FC21DB1192100CA99B0 /* main.m */; };
+		8E63D0EA1DB1CDDA00D85260 /* DDProductKindView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63D0E91DB1CDDA00D85260 /* DDProductKindView.m */; };
+		8E63D0ED1DB1D12400D85260 /* DDBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63D0EC1DB1D12400D85260 /* DDBaseNavController.m */; };
+		8E63D0F21DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63D0F11DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m */; };
 		EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +95,12 @@
 		5BEC4FBE1DB1192100CA99B0 /* loveHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loveHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEC4FC21DB1192100CA99B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BEC4FD21DB1192100CA99B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E63D0E81DB1CDDA00D85260 /* DDProductKindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProductKindView.h; sourceTree = "<group>"; };
+		8E63D0E91DB1CDDA00D85260 /* DDProductKindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProductKindView.m; sourceTree = "<group>"; };
+		8E63D0EB1DB1D12400D85260 /* DDBaseNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseNavController.h; sourceTree = "<group>"; };
+		8E63D0EC1DB1D12400D85260 /* DDBaseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseNavController.m; sourceTree = "<group>"; };
+		8E63D0F01DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+DDBarButtonItem.h"; sourceTree = "<group>"; };
+		8E63D0F11DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+DDBarButtonItem.m"; sourceTree = "<group>"; };
 		9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loveHoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +176,8 @@
 				5B06742A1DB1371500299600 /* HBTableBarController.m */,
 				5B06742B1DB1371500299600 /* hideBottomBarNavagationControl.h */,
 				5B06742C1DB1371500299600 /* hideBottomBarNavagationControl.m */,
+				8E63D0EB1DB1D12400D85260 /* DDBaseNavController.h */,
+				8E63D0EC1DB1D12400D85260 /* DDBaseNavController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -241,6 +252,7 @@
 		5B06743E1DB1371500299600 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				8E63D0EE1DB1D2B300D85260 /* Extension */,
 				5B06743F1DB1371500299600 /* catogry */,
 				5B0674411DB1371500299600 /* common */,
 				5B0674431DB1371500299600 /* tools */,
@@ -285,6 +297,7 @@
 		5B0674471DB1371500299600 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8E63D0E71DB1CDA000D85260 /* ProductKindView */,
 				5B0674481DB1371500299600 /* .gitkeep */,
 			);
 			path = Views;
@@ -333,6 +346,24 @@
 				5BEC4FC21DB1192100CA99B0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E63D0E71DB1CDA000D85260 /* ProductKindView */ = {
+			isa = PBXGroup;
+			children = (
+				8E63D0E81DB1CDDA00D85260 /* DDProductKindView.h */,
+				8E63D0E91DB1CDDA00D85260 /* DDProductKindView.m */,
+			);
+			path = ProductKindView;
+			sourceTree = "<group>";
+		};
+		8E63D0EE1DB1D2B300D85260 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8E63D0F01DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.h */,
+				8E63D0F11DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		F91E465377817DC3DBC7ACA2 /* Frameworks */ = {
@@ -479,14 +510,17 @@
 			files = (
 				5B0674611DB1371500299600 /* ViewController.m in Sources */,
 				5B01F7641DB1C45A00E3A1EE /* NotificationDefine.m in Sources */,
+				8E63D0ED1DB1D12400D85260 /* DDBaseNavController.m in Sources */,
 				5B06745E1DB1371500299600 /* UIView+UIframe.m in Sources */,
 				5B0674521DB1371500299600 /* hideBottomBarNavagationControl.m in Sources */,
 				5B0674721DB13FD400299600 /* HMShoppingViewController.m in Sources */,
 				5B01F7671DB1C48D00E3A1EE /* NSArray+Log.m in Sources */,
 				5B0674511DB1371500299600 /* HBTableBarController.m in Sources */,
 				5B0674581DB1371500299600 /* WelcomCell.m in Sources */,
+				8E63D0F21DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m in Sources */,
 				5B0674691DB13F7600299600 /* HMHomeController.m in Sources */,
 				5B06746C1DB13F8C00299600 /* HMMarketViewController.m in Sources */,
+				8E63D0EA1DB1CDDA00D85260 /* DDProductKindView.m in Sources */,
 				5B06744D1DB1371500299600 /* AppDelegate.m in Sources */,
 				5B0674591DB1371500299600 /* WecomeAnimation.m in Sources */,
 				5B06746F1DB13F9F00299600 /* HMMeViewController.m in Sources */,

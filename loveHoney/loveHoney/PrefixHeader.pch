@@ -13,20 +13,31 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
+
+//第三方框架
 #import "MJRefresh.h"
 #import "SDCycleScrollView.h"
+
 
 #import <Masonry/Masonry.h>
 #import <AFNetworking/AFNetworking.h>
 #import "UIImageView+WebCache.h"
 
+//类
 #import "ConstntDefine.h"
+#import "HMMarketViewController.h"
+#import "HMShoppingViewController.h"
+#import "HMMeViewController.h"
+#import "HMHomeController.h"
+#import "DDBaseNavController.h"
 
-
+//分类与工具类
 #import "UIView+UIframe.h"
 #import "HMNetworkTools.h"
+#import "UIBarButtonItem+DDBarButtonItem.h"
 
-
+//接口
 #import "ViewController.h"
 #import "DSHTTPClient.h"
 
@@ -37,6 +48,7 @@
 #define screemW    [UIScreen mainScreen].bounds.size.width
 #define screemH    [UIScreen mainScreen].bounds.size.height
 
+#import "UIBarButtonItem+DDBarButtonItem.h"
 
 
 

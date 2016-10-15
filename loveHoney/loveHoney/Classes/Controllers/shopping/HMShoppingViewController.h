@@ -10,4 +10,6 @@
 
 @interface HMShoppingViewController : UIViewController
 
+@property(nonatomic,copy) void(^callback)();
+
 @end

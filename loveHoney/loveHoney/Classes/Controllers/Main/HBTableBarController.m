@@ -16,6 +16,7 @@
 @interface HBTableBarController ()
 
 @property(nonatomic,weak) HMShoppingViewController *shoppingVC;
+@property(nonatomic,assign)NSInteger lastiIndex;
 
 @end
 
@@ -76,7 +77,12 @@
     
     DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:vc];
     
-    [self addChildViewController:navVC];
+    if (vc.tabBarItem.tag == 3) {
+         [self addChildViewController:vc];
+    }else{
+        
+        [self addChildViewController:navVC];
+    }
     
     
 }
@@ -91,15 +97,16 @@
         
         //需要创建一个,设置属性传过来不行
         HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
-       
-        [self presentViewController: shoppingVC animated:YES completion:nil];
+        UIViewController* lastViewController=self.viewControllers[self.lastiIndex];
+        
+        [lastViewController presentViewController: shoppingVC animated:YES completion:nil];
         
 
         return;
     }
     
     NSInteger index = 0;
-    NSLog(@"%ld",(long)item.tag);
+//    NSLog(@"%ld",(long)item.tag);
     for (UIView* subview in tabBar.subviews) {
         
         
@@ -131,6 +138,8 @@
             
             index ++;
         }
+        
+        self.lastiIndex= item.tag;
     }
     
     

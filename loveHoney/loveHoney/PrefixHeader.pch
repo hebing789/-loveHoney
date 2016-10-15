@@ -14,7 +14,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+
 //第三方框架
+#import "MJRefresh.h"
+#import "SDCycleScrollView.h"
+
+
 #import <Masonry/Masonry.h>
 #import <AFNetworking/AFNetworking.h>
 #import "UIImageView+WebCache.h"

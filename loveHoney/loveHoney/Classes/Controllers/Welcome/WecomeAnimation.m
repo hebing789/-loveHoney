@@ -160,103 +160,13 @@ static NSString* useId=@"use";
     }];
     }
      _currentPage=index;
-//    //这样可以实现页面更换,但是不能实现动画效果
-//    _topImageView.x+=(index-_currentPage)*screemW;
-//    _smallImageView.x+=(index-_currentPage)*screemW;
-//    _bigImageView.x+=(index-_currentPage)*screemW;
-//    _currentPage=index;
+
+
 
     
 }
-//-(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
-//    //考虑3个位置图片轮播,实现动画效果,先将页面跳转到前面或后面,再通过动画实现效果
-//    
-//        NSLog(@"%s",__func__);
-//    //获取当前的页面
-//    NSInteger index=scrollView.contentOffset.x/screemW+0.5;
-//    
-//    
-//    
-//    //只有跟换图片,图片在collectionView中,背景在cell中,因此cell在滚动,图片更换,而collectionView中内容无法更换
-//    _topImageView.image=[UIImage imageNamed:[NSString stringWithFormat:@"guide%ld",index+1]];
-//    
-//    _smallImageView.image=[UIImage imageNamed:[NSString stringWithFormat:@"guideLargeText%ld",index+1]];
-//    _bigImageView.image=[UIImage imageNamed:[NSString stringWithFormat:@"guideSmallText%ld",index+1]];
-//    
-//    
-//    
-//    //frame修改;
-//    if (_currentPage==index) {
-//        return;
-//    }
-//    else{
-//        
-//        //要提前跳转页面
-//        _topImageView.x+=(index-_currentPage)*screemW*2;
-//        _smallImageView.x+=(index-_currentPage)*screemW*2;
-//        _bigImageView.x+=(index-_currentPage)*screemW*2;
-//        
-//        [UIView animateWithDuration:0.5 animations:^{
-//            //再来动画
-//            _topImageView.x-=(index-_currentPage)*screemW;
-//            _smallImageView.x-=(index-_currentPage)*screemW;
-//            _bigImageView.x-=(index-_currentPage)*screemW;
-//            
-//        }];
-//    }
-//    //    //这样可以实现页面更换,但是不能实现动画效果
-//    //    _topImageView.x+=(index-_currentPage)*screemW;
-//    //    _smallImageView.x+=(index-_currentPage)*screemW;
-//    //    _bigImageView.x+=(index-_currentPage)*screemW;
-//    //    _currentPage=index;
-//    
-//
-//}
-//
-////拖拽一次,调用一次
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-//    //考虑3个位置图片轮播,实现动画效果,先将页面跳转到前面或后面,再通过动画实现效果
-//    
-//    NSLog(@"%s",__func__);
-//    //获取当前的页面
-//    NSInteger index=scrollView.contentOffset.x/screemW+0.5;
-//    
-//    
-//    
-//    //只有跟换图片,图片在collectionView中,背景在cell中,因此cell在滚动,图片更换,而collectionView中内容无法更换
-//    _topImageView.image=[UIImage imageNamed:[NSString stringWithFormat:@"guide%ld",index+1]];
-//    
-//    _smallImageView.image=[UIImage imageNamed:[NSString stringWithFormat:@"guideLargeText%ld",index+1]];
-//    _bigImageView.image=[UIImage imageNamed:[NSString stringWithFormat:@"guideSmallText%ld",index+1]];
-//    
-//    
-//    
-//    //frame修改;
-//    if (_currentPage==index) {
-//        return;
-//    }
-//    else{
-//        
-//        //要提前跳转页面
-//        _topImageView.x+=(index-_currentPage)*screemW*2;
-//        _smallImageView.x+=(index-_currentPage)*screemW*2;
-//        _bigImageView.x+=(index-_currentPage)*screemW*2;
-//        
-//        [UIView animateWithDuration:0.5 animations:^{
-//            //再来动画
-//            _topImageView.x-=(index-_currentPage)*screemW;
-//            _smallImageView.x-=(index-_currentPage)*screemW;
-//            _bigImageView.x-=(index-_currentPage)*screemW;
-//            
-//        }];
-//    }
-//    //    //这样可以实现页面更换,但是不能实现动画效果
-//    //    _topImageView.x+=(index-_currentPage)*screemW;
-//    //    _smallImageView.x+=(index-_currentPage)*screemW;
-//    //    _bigImageView.x+=(index-_currentPage)*screemW;
-//    //    _currentPage=index;
-//    
-//}
+
+
 -(BOOL)prefersStatusBarHidden{
 
                               return YES;

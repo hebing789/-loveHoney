@@ -15,7 +15,7 @@
 
 @interface HBTableBarController ()
 
-
+@property(nonatomic,weak) HMShoppingViewController *shoppingVC;
 
 @end
 
@@ -48,6 +48,7 @@
     HMHomeController *homeVC = [[HMHomeController alloc]init];
     HMMarketViewController *marketVC = [[HMMarketViewController alloc]init];
     HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
+//    self.shoppingVC=shoppingVC;
     HMMeViewController *profileVC = [[HMMeViewController alloc]init];
     
     
@@ -80,7 +81,22 @@
     
 }
 
+
+
+
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+    
+    if(item.tag ==2){
+        
+        
+        //需要创建一个,设置属性传过来不行
+        HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
+       
+        [self presentViewController: shoppingVC animated:YES completion:nil];
+        
+
+        return;
+    }
     
     NSInteger index = 0;
     NSLog(@"%ld",(long)item.tag);

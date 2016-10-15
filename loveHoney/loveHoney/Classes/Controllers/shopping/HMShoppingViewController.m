@@ -16,8 +16,64 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   //设置背景颜色
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self setUpUI];
+    
+    
 }
+//设置UI界面
+- (void)setUpUI{
+
+    UIImageView *imageView = [[UIImageView alloc]initWithImage:@"v2_shop_empty"];
+ 
+    [self.view addSubview:imageView];
+
+//设置imageView的约束
+    
+    [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.mas_equalTo(imageView.superview.mas_top).offset(screemH * 1/6);
+        make.left.mas_equalTo(self.view.mas_left).offset(KsceeenWidth * 2/5);
+        make.height.mas_equalTo(60);
+        make.width.mas_equalTo(60);
+        
+    }];
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

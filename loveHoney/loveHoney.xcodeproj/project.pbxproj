@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B01F75F1DB1B0AC00E3A1EE /* HMNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F75E1DB1B0AC00E3A1EE /* HMNetworkTools.m */; };
 		5B06744D1DB1371500299600 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674211DB1371500299600 /* AppDelegate.m */; };
 		5B06744E1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674241DB1371500299600 /* .gitkeep */; };
 		5B06744F1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674261DB1371500299600 /* .gitkeep */; };
@@ -39,6 +40,9 @@
 
 /* Begin PBXFileReference section */
 		055F5C9A44396790450CF0E2 /* Pods-loveHoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.debug.xcconfig"; sourceTree = "<group>"; };
+		5B01F75C1DB1ADA000E3A1EE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5B01F75D1DB1B0AC00E3A1EE /* HMNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMNetworkTools.h; sourceTree = "<group>"; };
+		5B01F75E1DB1B0AC00E3A1EE /* HMNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMNetworkTools.m; sourceTree = "<group>"; };
 		5B0674201DB1371500299600 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B0674211DB1371500299600 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5B0674241DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -258,6 +262,8 @@
 				5B0674441DB1371500299600 /* .gitkeep */,
 				5B0674451DB1371500299600 /* UIView+UIframe.h */,
 				5B0674461DB1371500299600 /* UIView+UIframe.m */,
+				5B01F75D1DB1B0AC00E3A1EE /* HMNetworkTools.h */,
+				5B01F75E1DB1B0AC00E3A1EE /* HMNetworkTools.m */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -295,6 +301,7 @@
 				5B0674211DB1371500299600 /* AppDelegate.m */,
 				5B0674621DB1375400299600 /* DSHTTPClient.h */,
 				5B0674631DB1375400299600 /* DSHTTPClient.m */,
+				5B01F75C1DB1ADA000E3A1EE /* PrefixHeader.pch */,
 				5B0674221DB1371500299600 /* Classes */,
 				5B06744B1DB1371500299600 /* ViewController.h */,
 				5B06744C1DB1371500299600 /* ViewController.m */,
@@ -467,6 +474,7 @@
 				5B06744D1DB1371500299600 /* AppDelegate.m in Sources */,
 				5B0674591DB1371500299600 /* WecomeAnimation.m in Sources */,
 				5B06746F1DB13F9F00299600 /* HMMeViewController.m in Sources */,
+				5B01F75F1DB1B0AC00E3A1EE /* HMNetworkTools.m in Sources */,
 				5BEC4FC31DB1192100CA99B0 /* main.m in Sources */,
 				5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */,
 			);
@@ -569,6 +577,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = loveHoney/PrefixHeader.pch;
 				INFOPLIST_FILE = loveHoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -583,6 +594,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = loveHoney/PrefixHeader.pch;
 				INFOPLIST_FILE = loveHoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

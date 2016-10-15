@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="L4k-OE-3Kt" customClass="DDTitleView">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配送至" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpn-VD-Oc8">
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人民大会堂" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3B-If-Pf3">
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allowBlack" translatesAutoresizingMaskIntoConstraints="NO" id="S1I-QW-zMD">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="J8W-oK-Qg8"/>
+                        <constraint firstAttribute="width" constant="10" id="tWL-fc-Bw5"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="A3B-If-Pf3" firstAttribute="leading" secondItem="xpn-VD-Oc8" secondAttribute="trailing" id="KPy-Dr-tRg"/>
+                <constraint firstItem="S1I-QW-zMD" firstAttribute="centerY" secondItem="A3B-If-Pf3" secondAttribute="centerY" id="Kyn-pN-Cjc"/>
+                <constraint firstItem="S1I-QW-zMD" firstAttribute="leading" secondItem="A3B-If-Pf3" secondAttribute="trailing" id="WGi-uF-v9n"/>
+                <constraint firstItem="A3B-If-Pf3" firstAttribute="centerY" secondItem="xpn-VD-Oc8" secondAttribute="centerY" id="Z7Y-EA-LDY"/>
+                <constraint firstItem="xpn-VD-Oc8" firstAttribute="leading" secondItem="L4k-OE-3Kt" secondAttribute="leading" id="h1p-o9-Taz"/>
+                <constraint firstItem="A3B-If-Pf3" firstAttribute="top" secondItem="L4k-OE-3Kt" secondAttribute="top" id="hoW-fp-cF3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="deliveryLabel" destination="xpn-VD-Oc8" id="82f-Km-63H"/>
+            </connections>
+            <point key="canvasLocation" x="-275" y="-424.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="allowBlack" width="20" height="12"/>
+    </resources>
+</document>

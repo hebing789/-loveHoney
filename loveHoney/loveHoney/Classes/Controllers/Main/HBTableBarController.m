@@ -32,7 +32,7 @@
 -(instancetype)init{
     if (self=[super init]) {
         
-        [self setMyBarControl];
+        [self addChildViewControllers];
         //如何关掉tabbar的渲染颜色
         //这句话直接没颜色,连字都显示不出来
         //        self.tabBar.tintColor=[UIColor clearColor];
@@ -42,53 +42,41 @@
     return self;
 }
 
--(void)setMyBarControl{
-    
-    UIViewController* home = [HMHomeController new];
-    hideBottomBarNavagationControl* nvHome = [[hideBottomBarNavagationControl alloc]initWithRootViewController:home];
-    [self setTabbarItemWith:home andWith:@"v2_home" andWithTitle:@"首页"];
-    
-    
-    UIViewController* market = [HMMarketViewController new];
-    hideBottomBarNavagationControl* nvMarket = [[hideBottomBarNavagationControl alloc]initWithRootViewController:market];
-    [self setTabbarItemWith:nvMarket andWith:@"freshReservation" andWithTitle:@"首页"];
-    
-    UIViewController* shopping = [HMShoppingViewController new];
-    hideBottomBarNavagationControl* nvShopping = [[hideBottomBarNavagationControl alloc]initWithRootViewController:shopping];
-    [self setTabbarItemWith:shopping andWith:@"shopCart" andWithTitle:@"首页"];
-    
-    UIViewController* me = [HMMeViewController new];
-    hideBottomBarNavagationControl* nvMe = [[hideBottomBarNavagationControl alloc]initWithRootViewController:me];
-    [self setTabbarItemWith:me andWith:@"v2_my" andWithTitle:@"首页"];
-    
-    self.viewControllers=@[nvHome,nvMarket,nvShopping,nvMe];
-    
-    //    [self setTabbar];
-    NSMutableDictionary *atts=[NSMutableDictionary dictionary];
-    atts[NSFontAttributeName]=[UIFont systemFontOfSize:12];
-    atts[NSForegroundColorAttributeName]=[UIColor grayColor];
-    
-    NSMutableDictionary *selectedAtts=[NSMutableDictionary dictionary];
-    selectedAtts[NSFontAttributeName]=atts[NSFontAttributeName];
-    selectedAtts[NSForegroundColorAttributeName]=[UIColor darkGrayColor];
-    // 在这里 只要更改，所有的文字都改
-    
-    UITabBarItem *item=[UITabBarItem appearance];
-    [item setTitleTextAttributes:atts forState:UIControlStateNormal];
-    [item setTitleTextAttributes:selectedAtts forState:UIControlStateSelected];
-    
-    UINavigationBar* navagationBar=[UINavigationBar appearance];
-    [navagationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize: 16],NSForegroundColorAttributeName:[UIColor blackColor]}];
+
+-(void)addChildViewControllers
+{
+    HMHomeController *homeVC = [[HMHomeController alloc]init];
+    HMMarketViewController *marketVC = [[HMMarketViewController alloc]init];
+    HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
+    HMMeViewController *profileVC = [[HMMeViewController alloc]init];
     
     
+    [self addChildViewController:homeVC andTitle:@"首页" andImageName:@"v2_home" andSelectedImageName:@"v2_home_r"];
+    [self addChildViewController:marketVC andTitle:@"闪电超市" andImageName:@"freshReservation" andSelectedImageName:@"freshReservation_r"];
+    [self addChildViewController:shoppingVC andTitle:@"购物车" andImageName:@"shopCart" andSelectedImageName:@"shopCart_r"];
+    [self addChildViewController:profileVC andTitle:@"我的" andImageName:@"v2_my" andSelectedImageName:@"v2_my_r"];
     
 }
 
--(void)setTabbarItemWith:(UIViewController*) vc andWith:(NSString*)imagName andWithTitle:(NSString*)title{
+-(void)addChildViewController:(UIViewController *)vc andTitle:(NSString *)title andImageName:(NSString *)imageName andSelectedImageName:(NSString *)selectedImageName
+{
+    vc.navigationItem.title = title;
+    vc.tabBarItem.title = title;
     
-    vc.tabBarItem.image=[[UIImage imageNamed:imagName]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    vc.tabBarItem.selectedImage= [[UIImage imageNamed:[NSString stringWithFormat:@"%@_r",imagName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] ;
-    vc.tabBarItem.title=@"首页";
+    UIImage *normalImage = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *selectedImage = [[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    vc.tabBarItem.image = normalImage;
+    vc.tabBarItem.selectedImage = selectedImage;
+    
+    
+    [vc.tabBarItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:11]} forState:UIControlStateNormal];
+    [vc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor darkGrayColor]} forState:UIControlStateSelected];
+    
+    DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:vc];
+    
+    [self addChildViewController:navVC];
+    
     
 }
 
@@ -103,7 +91,6 @@
     
     
 }
-
 
 
 @end

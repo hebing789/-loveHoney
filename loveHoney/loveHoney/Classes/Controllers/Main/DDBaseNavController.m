@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
+    
+    
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
@@ -28,10 +30,8 @@
         
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" imageName:@"v2_goback" target:self action:@selector(back)];
         
-        
+        //隐藏底部
         viewController.hidesBottomBarWhenPushed = YES;
-        
-    
     }
     
     [super pushViewController:viewController animated:animated];
@@ -40,7 +40,7 @@
 
 -(void)back{
 
-    NSLog(@"返回");
+    [self.navigationController popViewControllerAnimated:YES];
 
 }
 

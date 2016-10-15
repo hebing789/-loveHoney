@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5B01F75F1DB1B0AC00E3A1EE /* HMNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F75E1DB1B0AC00E3A1EE /* HMNetworkTools.m */; };
+		5B01F7641DB1C45A00E3A1EE /* NotificationDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F7621DB1C45A00E3A1EE /* NotificationDefine.m */; };
+		5B01F7671DB1C48D00E3A1EE /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F7661DB1C48D00E3A1EE /* NSArray+Log.m */; };
 		5B06744D1DB1371500299600 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674211DB1371500299600 /* AppDelegate.m */; };
 		5B06744E1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674241DB1371500299600 /* .gitkeep */; };
 		5B06744F1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674261DB1371500299600 /* .gitkeep */; };
@@ -43,6 +45,12 @@
 		5B01F75C1DB1ADA000E3A1EE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5B01F75D1DB1B0AC00E3A1EE /* HMNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMNetworkTools.h; sourceTree = "<group>"; };
 		5B01F75E1DB1B0AC00E3A1EE /* HMNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMNetworkTools.m; sourceTree = "<group>"; };
+		5B01F7601DB1C45A00E3A1EE /* ConstntDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstntDefine.h; sourceTree = "<group>"; };
+		5B01F7611DB1C45A00E3A1EE /* NotificationDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationDefine.h; sourceTree = "<group>"; };
+		5B01F7621DB1C45A00E3A1EE /* NotificationDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationDefine.m; sourceTree = "<group>"; };
+		5B01F7631DB1C45A00E3A1EE /* TableConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableConstant.h; sourceTree = "<group>"; };
+		5B01F7651DB1C48D00E3A1EE /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		5B01F7661DB1C48D00E3A1EE /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		5B0674201DB1371500299600 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B0674211DB1371500299600 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5B0674241DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -244,6 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				5B0674401DB1371500299600 /* .gitkeep */,
+				5B01F7651DB1C48D00E3A1EE /* NSArray+Log.h */,
+				5B01F7661DB1C48D00E3A1EE /* NSArray+Log.m */,
 			);
 			path = catogry;
 			sourceTree = "<group>";
@@ -251,6 +261,10 @@
 		5B0674411DB1371500299600 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				5B01F7601DB1C45A00E3A1EE /* ConstntDefine.h */,
+				5B01F7611DB1C45A00E3A1EE /* NotificationDefine.h */,
+				5B01F7621DB1C45A00E3A1EE /* NotificationDefine.m */,
+				5B01F7631DB1C45A00E3A1EE /* TableConstant.h */,
 				5B0674421DB1371500299600 /* .gitkeep */,
 			);
 			path = common;
@@ -464,9 +478,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B0674611DB1371500299600 /* ViewController.m in Sources */,
+				5B01F7641DB1C45A00E3A1EE /* NotificationDefine.m in Sources */,
 				5B06745E1DB1371500299600 /* UIView+UIframe.m in Sources */,
 				5B0674521DB1371500299600 /* hideBottomBarNavagationControl.m in Sources */,
 				5B0674721DB13FD400299600 /* HMShoppingViewController.m in Sources */,
+				5B01F7671DB1C48D00E3A1EE /* NSArray+Log.m in Sources */,
 				5B0674511DB1371500299600 /* HBTableBarController.m in Sources */,
 				5B0674581DB1371500299600 /* WelcomCell.m in Sources */,
 				5B0674691DB13F7600299600 /* HMHomeController.m in Sources */,

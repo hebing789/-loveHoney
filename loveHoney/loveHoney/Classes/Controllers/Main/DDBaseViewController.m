@@ -33,29 +33,58 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"搜索" imageName:@"icon_search" target:self action:@selector(searchBtnDidClick)];
     
     //titleView
-    DDTitleView *customTitleView = [DDTitleView ddTitleView];
+//    DDTitleView *customTitleView = [DDTitleView ddTitleView];
+    UIView *customTitleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 20)];
     self.navigationItem.titleView = customTitleView;
-//    //deliveryLabel
-//    UILabel *deliveryLabel = [[UILabel alloc]init];
-//    [deliveryLabel setText:@"配送至"];
-//    [deliveryLabel setFont: [UIFont systemFontOfSize:9]];
-//    [deliveryLabel setTextColor:[UIColor darkGrayColor]];
-//    deliveryLabel.layer.borderWidth = 2;
-//    deliveryLabel.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor darkGrayColor]);
-//    [titleView addSubview:deliveryLabel];
-//    //adressLabel
-//    UILabel *addressLabel = [[UILabel alloc]init];
-//    [addressLabel setText:@"人民大会堂"];
-//    [addressLabel setFont: [UIFont systemFontOfSize:14]];
-//    [addressLabel setTextColor:[UIColor darkGrayColor]];
-//    [titleView addSubview:addressLabel];
-//    //arrowIcon
-//    UIImageView *iconView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"allowBlack"]];
-//    [titleView addSubview:iconView];
-//    //约束
     
+    
+    //添加点击手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(jumpToAdressView)];
+    [customTitleView addGestureRecognizer:tap];
+    
+    //deliveryLabel
+    UILabel *deliveryLabel = [[UILabel alloc]init];
+    [deliveryLabel setText:@"配送至"];
+    [deliveryLabel setFont: [UIFont systemFontOfSize:10]];
+    [deliveryLabel setTextColor:[UIColor blackColor]];
+    deliveryLabel.layer.borderWidth = 0.5;
+    deliveryLabel.layer.borderColor = (__bridge CGColorRef _Nullable)([UIColor blackColor]);
+    [customTitleView addSubview:deliveryLabel];
+    //adressLabel
+    UILabel *addressLabel = [[UILabel alloc]init];
+    [addressLabel setText:@"人民大会堂"];
+    [addressLabel setFont: [UIFont systemFontOfSize:14]];
+    [addressLabel setTextColor:[UIColor blackColor]];
+    [customTitleView addSubview:addressLabel];
+    //arrowIcon
+    UIImageView *iconView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"allowBlack"]];
+    [customTitleView addSubview:iconView];
+    
+    //约束
+    [deliveryLabel makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(customTitleView);
+        make.centerY.equalTo(customTitleView);
+    }];
+    [addressLabel makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(deliveryLabel.trailing).offset(@5);
+        make.centerY.equalTo(customTitleView);
+        make.top.equalTo(customTitleView);
+    }];
+    [iconView makeConstraints:^(MASConstraintMaker *make) {
+        make.height.width.equalTo(@10);
+        make.leading.equalTo(addressLabel.trailing).offset(@5);
+        make.centerY.equalTo(addressLabel);
+    }];
+    
+}
+
+
+-(void)jumpToAdressView{
+
+    NSLog(@"跳到地址视图");
 
 }
+
 
 -(void)scanBtnDidClick{
 

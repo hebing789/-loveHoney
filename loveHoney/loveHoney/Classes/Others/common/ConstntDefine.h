@@ -39,6 +39,9 @@
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 
+#define kNav_H SCREEN_HEIGHT > 668 ? 86 : 64 //导航栏的高度
+#define KTabBar_H SCREEN_HEIGHT > 668 ? 59 : 49//工具栏的高度
+
 #define kProportion   SCREEN_WIDTH/320 // 5 ok
 #define kProportion6  SCREEN_WIDTH/375
 #define kProportion6P SCREEN_WIDTH/414

@@ -40,6 +40,7 @@
 		8E63D0EA1DB1CDDA00D85260 /* DDProductKindView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63D0E91DB1CDDA00D85260 /* DDProductKindView.m */; };
 		8E63D0ED1DB1D12400D85260 /* DDBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63D0EC1DB1D12400D85260 /* DDBaseNavController.m */; };
 		8E63D0F21DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63D0F11DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m */; };
+		8EC8BC7B1DB20DFA00AFCD51 /* DDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8BC7A1DB20DFA00AFCD51 /* DDBaseViewController.m */; };
 		EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,8 @@
 		8E63D0EC1DB1D12400D85260 /* DDBaseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseNavController.m; sourceTree = "<group>"; };
 		8E63D0F01DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+DDBarButtonItem.h"; sourceTree = "<group>"; };
 		8E63D0F11DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+DDBarButtonItem.m"; sourceTree = "<group>"; };
+		8EC8BC791DB20DFA00AFCD51 /* DDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseViewController.h; sourceTree = "<group>"; };
+		8EC8BC7A1DB20DFA00AFCD51 /* DDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseViewController.m; sourceTree = "<group>"; };
 		9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loveHoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +181,8 @@
 				5B06742C1DB1371500299600 /* hideBottomBarNavagationControl.m */,
 				8E63D0EB1DB1D12400D85260 /* DDBaseNavController.h */,
 				8E63D0EC1DB1D12400D85260 /* DDBaseNavController.m */,
+				8EC8BC791DB20DFA00AFCD51 /* DDBaseViewController.h */,
+				8EC8BC7A1DB20DFA00AFCD51 /* DDBaseViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -523,6 +528,7 @@
 				8E63D0EA1DB1CDDA00D85260 /* DDProductKindView.m in Sources */,
 				5B06744D1DB1371500299600 /* AppDelegate.m in Sources */,
 				5B0674591DB1371500299600 /* WecomeAnimation.m in Sources */,
+				8EC8BC7B1DB20DFA00AFCD51 /* DDBaseViewController.m in Sources */,
 				5B06746F1DB13F9F00299600 /* HMMeViewController.m in Sources */,
 				5B01F75F1DB1B0AC00E3A1EE /* HMNetworkTools.m in Sources */,
 				5BEC4FC31DB1192100CA99B0 /* main.m in Sources */,

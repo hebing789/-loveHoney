@@ -92,15 +92,15 @@
     
 }
 
--(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
-    [super tabBar:tabBar didSelectItem:item];
-    
-    
-    
-    
-    
-    
-}
+//-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+//    [super tabBar:tabBar didSelectItem:item];
+//    
+//    
+//    
+//    
+//    
+//    
+//}
 
 
 

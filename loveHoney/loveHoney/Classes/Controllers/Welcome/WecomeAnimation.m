@@ -16,13 +16,9 @@
 
 static NSString* useId=@"use";
 @interface WecomeAnimation ()
-@property (nonatomic, weak) UIImageView *topImageView;
 
-@property (nonatomic, weak) UIImageView *bigImageView;
+@property(nonatomic,strong)UIPageControl* pageControl;
 
-@property (nonatomic, weak) UIImageView *smallImageView;
-
-@property (nonatomic, assign) NSInteger currentPage;
 
 @end
 
@@ -38,7 +34,7 @@ static NSString* useId=@"use";
     [super viewDidLoad];
     UICollectionViewFlowLayout* flowLayOut=(UICollectionViewFlowLayout*)self.collectionViewLayout;
     
-   
+    
     flowLayOut.itemSize=[UIScreen mainScreen].bounds.size;
     
     flowLayOut.sectionInset=UIEdgeInsetsMake(0, 0, 0, 0);
@@ -51,39 +47,23 @@ static NSString* useId=@"use";
     colletctionView.showsVerticalScrollIndicator=NO;
     colletctionView.showsHorizontalScrollIndicator=NO;
     
-//    colletctionView.backgroundColor=[UIColor whiteColor];
+    UIPageControl *pagecontrol = [[ UIPageControl alloc]initWithFrame:CGRectMake(0,screemH * 0.9 ,screemW , 30)];
+    self.pageControl = pagecontrol;
+    pagecontrol.numberOfPages = 4;
     
-    UIImageView *imgview=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, screemW, screemH)];
-    imgview.image=[UIImage imageNamed:@"guide1"];
-    _topImageView=imgview;
-    [self.collectionView addSubview:imgview];
     
-    UIImage* bigImg=[UIImage imageNamed:@"guideLargeText1"];
-    UIImageView* bigImgView=[[UIImageView alloc]initWithFrame:CGRectMake(screemW/2, screemH*0.7, bigImg.size.width, bigImg.size.height)];
-    bigImgView.center=CGPointMake(screemW/2, screemH*0.7);
-    bigImgView.image=bigImg;
-    _bigImageView=bigImgView;
-    [colletctionView addSubview:bigImgView];
+    [pagecontrol setPageIndicatorTintColor:[UIColor whiteColor]];
     
-    UIImage * smaImg=[UIImage imageNamed:@"guideSmallText1"];
-    UIImageView* smaImgView=[[UIImageView alloc]initWithImage:smaImg];
-    smaImgView.frame=CGRectMake(0, 0, smaImg.size.width, smaImg.size.height);
-    smaImgView.center=CGPointMake(screemW/2, CGRectGetMaxY(bigImgView.frame)+40);
-    _smallImageView=smaImgView;
-    [colletctionView addSubview:smaImgView];
+    [pagecontrol setCurrentPageIndicatorTintColor:[UIColor darkGrayColor]];
     
-    UIImage *lineImage = [UIImage imageNamed:@"guideLine"];
-    UIImageView *lineImageView = [[UIImageView alloc] initWithImage:lineImage];
     
-    [colletctionView addSubview:lineImageView];
+    [self.view addSubview:pagecontrol];
     
-    lineImageView.x = -200;//线条图片左移动
-    lineImageView.y += 0;
     
-    UIButton* toMainControl=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, screemW*0.6, 40)];
+    UIButton* toMainControl=[[UIButton alloc]initWithFrame:CGRectMake(0, 0, 150, 40)];
     [toMainControl addTarget:self action:@selector(toMyLottery) forControlEvents:UIControlEventTouchUpInside];
-    [toMainControl setBackgroundImage:[UIImage imageNamed:@"guideStart"] forState:UIControlStateNormal];
-    toMainControl.center=CGPointMake(screemW*3.5, screemH*0.9);
+    [toMainControl setBackgroundImage:[UIImage imageNamed:@"icon_next"] forState:UIControlStateNormal];
+    toMainControl.center=CGPointMake(screemW*3.5, screemH*0.8);
     [colletctionView addSubview:toMainControl];
     [self.collectionView registerClass:[WelcomCell class] forCellWithReuseIdentifier:useId];
     
@@ -108,68 +88,28 @@ static NSString* useId=@"use";
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-//    WelcomCell* cell=[[WelcomCell alloc]init];
     WelcomCell* cell=[collectionView dequeueReusableCellWithReuseIdentifier:useId forIndexPath:indexPath];
     
     //背景图片
-    cell.img=[UIImage imageNamed:[NSString stringWithFormat:@"guide%ldBackground568h", indexPath.item + 1]];
+    cell.img=[UIImage imageNamed:[NSString stringWithFormat:@"guide_40_%ld", indexPath.item + 1]];
+    
+    
     return cell;
     
     
 }
 
-
-//要写完数据源方法后才能拖动
-//这个方法在滚动结束后调用
-//这个能根据过界面距离判断cell的背景该滚到那个界面
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    
-    //考虑3个位置图片轮播,实现动画效果,先将页面跳转到前面或后面,再通过动画实现效果
-    
-//    NSLog(@"%s",__func__);
-    //获取当前的页面
-    NSInteger index=scrollView.contentOffset.x/screemW+0.5;
-    
-    
-   
-    //只有跟换图片,图片在collectionView中,背景在cell中,因此cell在滚动,图片更换,而collectionView中内容无法更换
-    _topImageView.image=[UIImage imageNamed:[NSString stringWithFormat:@"guide%ld",index+1]];
-    
-    _smallImageView.image=[UIImage imageNamed:[NSString stringWithFormat:@"guideLargeText%ld",index+1]];
-    _bigImageView.image=[UIImage imageNamed:[NSString stringWithFormat:@"guideSmallText%ld",index+1]];
-    
-    
-    
-    //frame修改;
-    if (_currentPage==index) {
-        return;
-    }
-    else{
-    
-    //要提前跳转页面
-    _topImageView.x+=(index-_currentPage)*screemW*2;
-    _smallImageView.x+=(index-_currentPage)*screemW*2;
-    _bigImageView.x+=(index-_currentPage)*screemW*2;
-    
-    [UIView animateWithDuration:0.5 animations:^{
-        //再来动画
-        _topImageView.x-=(index-_currentPage)*screemW;
-        _smallImageView.x-=(index-_currentPage)*screemW;
-        _bigImageView.x-=(index-_currentPage)*screemW;
-
-    }];
-    }
-     _currentPage=index;
-
-
-
+    NSInteger index = scrollView.contentOffset.x / screemW;
+    self.pageControl.currentPage = index;
     
 }
 
 
--(BOOL)prefersStatusBarHidden{
 
-                              return YES;
+-(BOOL)prefersStatusBarHidden{
+    
+    return YES;
 }
 
 

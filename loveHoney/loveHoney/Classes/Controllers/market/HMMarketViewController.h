@@ -8,6 +8,6 @@
 
 #import "DDBaseViewController.h"
 
-@interface HMMarketViewController : DDBaseViewController
+@interface HMMarketViewController : DDBaseViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end

@@ -49,6 +49,7 @@
 		8EC8BC871DB2183100AFCD51 /* UIButton+CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8BC861DB2183100AFCD51 /* UIButton+CustomButton.m */; };
 		8EC8BC8A1DB229DA00AFCD51 /* DDTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8BC891DB229DA00AFCD51 /* DDTitleView.m */; };
 		8EC8BC8C1DB229EC00AFCD51 /* DDTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC8BC8B1DB229EC00AFCD51 /* DDTitleView.xib */; };
+		8EF7C0041DB2575000E637DA /* DDProductSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7C0031DB2575000E637DA /* DDProductSelectVC.m */; };
 		EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,8 @@
 		8EC8BC881DB229DA00AFCD51 /* DDTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTitleView.h; sourceTree = "<group>"; };
 		8EC8BC891DB229DA00AFCD51 /* DDTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTitleView.m; sourceTree = "<group>"; };
 		8EC8BC8B1DB229EC00AFCD51 /* DDTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDTitleView.xib; sourceTree = "<group>"; };
+		8EF7C0021DB2575000E637DA /* DDProductSelectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProductSelectVC.h; sourceTree = "<group>"; };
+		8EF7C0031DB2575000E637DA /* DDProductSelectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProductSelectVC.m; sourceTree = "<group>"; };
 		9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loveHoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +144,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37FD840B1DB22C5F00AC21C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		545D9F0547DDDAF0A5BF1B96 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +217,7 @@
 		5B0674251DB1371500299600 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				37FD840B1DB22C5F00AC21C2 /* View */,
 				5B0674261DB1371500299600 /* .gitkeep */,
 				5B0674671DB13F7600299600 /* HMHomeController.h */,
 				5B0674681DB13F7600299600 /* HMHomeController.m */,
@@ -403,6 +414,8 @@
 			children = (
 				8E63D0E81DB1CDDA00D85260 /* DDProductKindView.h */,
 				8E63D0E91DB1CDDA00D85260 /* DDProductKindView.m */,
+				8EF7C0021DB2575000E637DA /* DDProductSelectVC.h */,
+				8EF7C0031DB2575000E637DA /* DDProductSelectVC.m */,
 				8EC8BC881DB229DA00AFCD51 /* DDTitleView.h */,
 				8EC8BC891DB229DA00AFCD51 /* DDTitleView.m */,
 				8EC8BC8B1DB229EC00AFCD51 /* DDTitleView.xib */,
@@ -574,6 +587,7 @@
 				5B01F7761DB266B900E3A1EE /* HMVerticalTitleButton.m in Sources */,
 				5B0674521DB1371500299600 /* hideBottomBarNavagationControl.m in Sources */,
 				5B0674721DB13FD400299600 /* HMShoppingViewController.m in Sources */,
+				8EF7C0041DB2575000E637DA /* DDProductSelectVC.m in Sources */,
 				5B01F7671DB1C48D00E3A1EE /* NSArray+Log.m in Sources */,
 				5B0674511DB1371500299600 /* HBTableBarController.m in Sources */,
 				5B0674581DB1371500299600 /* WelcomCell.m in Sources */,

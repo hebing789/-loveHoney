@@ -17,7 +17,15 @@
 
 @implementation DDTitleView
 
+-(void)awakeFromNib{
+
+    
+}
+
+
 +(instancetype)ddTitleView{
+    
+    
 
     return [[NSBundle mainBundle]loadNibNamed:@"DDTitleView" owner:self options:nil].lastObject;
 }

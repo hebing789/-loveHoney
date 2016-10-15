@@ -106,7 +106,9 @@
     NSLog(@"点击逛逛按钮");
     [self dismissViewControllerAnimated:YES completion:^{
         
-        
+        if (_callback) {
+            _callback();
+        }
     }];
 
 }

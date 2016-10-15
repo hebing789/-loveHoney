@@ -8,6 +8,11 @@
 
 #import "HMMenuTableViewCell2.h"
 #import "HMVerticalTitleButton.h"
+#import "HMMyMeNuController.h"
+#import "HMMyMessageController.h"
+#import "HMYouHuiQuanController.h"
+
+
 @interface HMMenuTableViewCell2 ()
 @property (weak, nonatomic) IBOutlet HMVerticalTitleButton *myMenu;
 
@@ -37,18 +42,48 @@
    
 }
 - (IBAction)toMyMenu:(id)sender {
+    NSLog(@"我的订单");
+    
+    HMMyMeNuController* myMenuContr=[HMMyMeNuController new];
+//    DDBaseNavController* nvmyMenuContr= [[DDBaseNavController alloc]initWithRootViewController:myMenuContr];
+    //无效果
+   
+    
+    [[self viewController].navigationController pushViewController:myMenuContr animated:YES];
     
     
 }
 
 - (IBAction)toFree:(id)sender {
     
+    NSLog(@"优惠券");
+    HMYouHuiQuanController* youhui = [[HMYouHuiQuanController alloc]init];
+    [[self viewController].navigationController pushViewController:youhui animated:YES];
+    
+
     
 }
 
 - (IBAction)toMyMessage:(id)sender {
-    
+    NSLog(@"我的消息");
+    HMMyMessageController* messageControl= [[HMMyMessageController alloc]init];
+      [[self viewController].navigationController pushViewController:messageControl animated:YES];
+}
+
+
+- (UIViewController *)viewController
+{
+    //获取当前view的superView对应的控制器
+    UIResponder *next = [self nextResponder];
+    do {
+        if ([next isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)next;
+        }
+        next = [next nextResponder];
+    } while (next != nil);
+    return nil;
     
 }
+
 
 @end

@@ -86,13 +86,9 @@
     [vc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor darkGrayColor]} forState:UIControlStateSelected];
     
     DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:vc];
-    
-    if (vc.tabBarItem.tag == 3) {
-         [self addChildViewController:vc];
-    }else{
-        
-        [self addChildViewController:navVC];
-    }
+     [self addChildViewController:navVC];
+////    后面要Push如果当前控制器没有导航控制器push不过去,在此可以获取navegationBar,利用生命周期写,更简单
+
     
     
 }

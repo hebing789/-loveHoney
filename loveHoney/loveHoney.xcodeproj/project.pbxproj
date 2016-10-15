@@ -15,6 +15,9 @@
 		5B01F7721DB261A200E3A1EE /* HMMenuTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F7701DB261A200E3A1EE /* HMMenuTableViewCell2.m */; };
 		5B01F7731DB261A200E3A1EE /* HMMenuTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B01F7711DB261A200E3A1EE /* HMMenuTableViewCell2.xib */; };
 		5B01F7761DB266B900E3A1EE /* HMVerticalTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F7751DB266B900E3A1EE /* HMVerticalTitleButton.m */; };
+		5B01F78D1DB29B2E00E3A1EE /* HMMyMeNuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F7891DB29B2E00E3A1EE /* HMMyMeNuController.m */; };
+		5B01F78E1DB29B2E00E3A1EE /* HMYouHuiQuanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F78C1DB29B2E00E3A1EE /* HMYouHuiQuanController.m */; };
+		5B01F7911DB29B5E00E3A1EE /* HMMyMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F7901DB29B5E00E3A1EE /* HMMyMessageController.m */; };
 		5B06744D1DB1371500299600 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674211DB1371500299600 /* AppDelegate.m */; };
 		5B06744E1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674241DB1371500299600 /* .gitkeep */; };
 		5B06744F1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674261DB1371500299600 /* .gitkeep */; };
@@ -72,6 +75,12 @@
 		5B01F7711DB261A200E3A1EE /* HMMenuTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMMenuTableViewCell2.xib; sourceTree = "<group>"; };
 		5B01F7741DB266B900E3A1EE /* HMVerticalTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMVerticalTitleButton.h; sourceTree = "<group>"; };
 		5B01F7751DB266B900E3A1EE /* HMVerticalTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMVerticalTitleButton.m; sourceTree = "<group>"; };
+		5B01F7881DB29B2E00E3A1EE /* HMMyMeNuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMMyMeNuController.h; sourceTree = "<group>"; };
+		5B01F7891DB29B2E00E3A1EE /* HMMyMeNuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMMyMeNuController.m; sourceTree = "<group>"; };
+		5B01F78B1DB29B2E00E3A1EE /* HMYouHuiQuanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMYouHuiQuanController.h; sourceTree = "<group>"; };
+		5B01F78C1DB29B2E00E3A1EE /* HMYouHuiQuanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMYouHuiQuanController.m; sourceTree = "<group>"; };
+		5B01F78F1DB29B5E00E3A1EE /* HMMyMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMMyMessageController.h; sourceTree = "<group>"; };
+		5B01F7901DB29B5E00E3A1EE /* HMMyMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMMyMessageController.m; sourceTree = "<group>"; };
 		5B0674201DB1371500299600 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B0674211DB1371500299600 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5B0674241DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -182,6 +191,43 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5B01F7771DB2916F00E3A1EE /* MyMenuAndMessage */ = {
+			isa = PBXGroup;
+			children = (
+				5B01F7861DB29B2E00E3A1EE /* myMeassage */,
+				5B01F7871DB29B2E00E3A1EE /* myMenu */,
+				5B01F78A1DB29B2E00E3A1EE /* youhuiQuan */,
+			);
+			path = MyMenuAndMessage;
+			sourceTree = "<group>";
+		};
+		5B01F7861DB29B2E00E3A1EE /* myMeassage */ = {
+			isa = PBXGroup;
+			children = (
+				5B01F78F1DB29B5E00E3A1EE /* HMMyMessageController.h */,
+				5B01F7901DB29B5E00E3A1EE /* HMMyMessageController.m */,
+			);
+			path = myMeassage;
+			sourceTree = "<group>";
+		};
+		5B01F7871DB29B2E00E3A1EE /* myMenu */ = {
+			isa = PBXGroup;
+			children = (
+				5B01F7881DB29B2E00E3A1EE /* HMMyMeNuController.h */,
+				5B01F7891DB29B2E00E3A1EE /* HMMyMeNuController.m */,
+			);
+			path = myMenu;
+			sourceTree = "<group>";
+		};
+		5B01F78A1DB29B2E00E3A1EE /* youhuiQuan */ = {
+			isa = PBXGroup;
+			children = (
+				5B01F78B1DB29B2E00E3A1EE /* HMYouHuiQuanController.h */,
+				5B01F78C1DB29B2E00E3A1EE /* HMYouHuiQuanController.m */,
+			);
+			path = youhuiQuan;
+			sourceTree = "<group>";
+		};
 		5B06734A1DB1324400299600 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +249,7 @@
 		5B0674231DB1371500299600 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5B01F7771DB2916F00E3A1EE /* MyMenuAndMessage */,
 				5B0674241DB1371500299600 /* .gitkeep */,
 				5B0674251DB1371500299600 /* Home */,
 				5B0674271DB1371500299600 /* Main */,
@@ -592,18 +639,21 @@
 				5B0674511DB1371500299600 /* HBTableBarController.m in Sources */,
 				5B0674581DB1371500299600 /* WelcomCell.m in Sources */,
 				8EC8BC8A1DB229DA00AFCD51 /* DDTitleView.m in Sources */,
+				5B01F78D1DB29B2E00E3A1EE /* HMMyMeNuController.m in Sources */,
 				8E63D0F21DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m in Sources */,
 				5B0674691DB13F7600299600 /* HMHomeController.m in Sources */,
 				5B06746C1DB13F8C00299600 /* HMMarketViewController.m in Sources */,
 				8E63D0EA1DB1CDDA00D85260 /* DDProductKindView.m in Sources */,
 				5B06744D1DB1371500299600 /* AppDelegate.m in Sources */,
 				5B01F7721DB261A200E3A1EE /* HMMenuTableViewCell2.m in Sources */,
+				5B01F78E1DB29B2E00E3A1EE /* HMYouHuiQuanController.m in Sources */,
 				5B0674591DB1371500299600 /* WecomeAnimation.m in Sources */,
 				8EC8BC7B1DB20DFA00AFCD51 /* DDBaseViewController.m in Sources */,
 				8EC8BC871DB2183100AFCD51 /* UIButton+CustomButton.m in Sources */,
 				5B06746F1DB13F9F00299600 /* HMMeViewController.m in Sources */,
 				5B01F75F1DB1B0AC00E3A1EE /* HMNetworkTools.m in Sources */,
 				5BEC4FC31DB1192100CA99B0 /* main.m in Sources */,
+				5B01F7911DB29B5E00E3A1EE /* HMMyMessageController.m in Sources */,
 				5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

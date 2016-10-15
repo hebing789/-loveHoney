@@ -207,4 +207,15 @@ static NSString* cellMe=@"HMMeViewControllerCell2";
     NSLog(@"设置页面");
 }
 
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+        self.navigationController.navigationBar.hidden = NO;
+    [super viewWillDisappear:YES];
+}
+
 @end

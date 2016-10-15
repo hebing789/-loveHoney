@@ -16,6 +16,7 @@
 
 @implementation HMHomeController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -30,6 +31,7 @@
     self.tableView = tableView;
     self.view = tableView;
     
+    
     [self setupScroll];
     
 }
@@ -37,7 +39,12 @@
 
 
 - (void)setupScroll{
-    //轮播器框架
+    //轮播器模块
+    
+    UIView *HDView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 250)];
+    self.tableView.tableHeaderView = HDView;
+    
+    
     
     CGRect frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 150);
     
@@ -61,9 +68,16 @@
     cycleScrollView.currentPageDotImage = [UIImage imageNamed:@"v2_home_cycle_dot_selected"];
     cycleScrollView.pageDotImage = [UIImage imageNamed:@"v2_home_cycle_dot_normal"];
     
-    self.tableView.tableHeaderView = cycleScrollView;
-
+    
+    [HDView addSubview:cycleScrollView];
+    
+    
+    UIView *BtnView = [[UIView alloc] initWithFrame:CGRectMake(0, 150, [UIScreen mainScreen].bounds.size.width, 100)];
+    BtnView.backgroundColor = [UIColor redColor];
+    [HDView addSubview:BtnView];
 }
+
+
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

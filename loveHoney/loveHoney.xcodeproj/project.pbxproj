@@ -131,6 +131,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37FD840B1DB22C5F00AC21C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		545D9F0547DDDAF0A5BF1B96 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +182,7 @@
 		5B0674251DB1371500299600 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				37FD840B1DB22C5F00AC21C2 /* View */,
 				5B0674261DB1371500299600 /* .gitkeep */,
 				5B0674671DB13F7600299600 /* HMHomeController.h */,
 				5B0674681DB13F7600299600 /* HMHomeController.m */,

@@ -15,13 +15,24 @@
 
 @interface HBTableBarController ()
 
-
-
+@property(nonatomic,weak) HMShoppingViewController *shoppingVC;
+//解决dismiss后调回之前present的页面问题,购物页面present问题
+//@property(nonatomic,assign)NSInteger lastiIndex;
+//
+//@property(nonatomic,weak)UITabBarItem* lastItem;
+//
+//@property(nonatomic,strong)NSMutableArray* itemAry;
 @end
 
 @implementation HBTableBarController
 
-
+//-(NSMutableArray *)itemAry{
+//    
+//    if (_itemAry == nil) {
+//        _itemAry= [NSMutableArray new];
+//    }
+//    return _itemAry;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -48,6 +59,7 @@
     HMHomeController *homeVC = [[HMHomeController alloc]init];
     HMMarketViewController *marketVC = [[HMMarketViewController alloc]init];
     HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
+//    self.shoppingVC=shoppingVC;
     HMMeViewController *profileVC = [[HMMeViewController alloc]init];
     
     
@@ -75,15 +87,52 @@
     
     DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:vc];
     
-    [self addChildViewController:navVC];
+    if (vc.tabBarItem.tag == 3) {
+         [self addChildViewController:vc];
+    }else{
+        
+        [self addChildViewController:navVC];
+    }
     
     
 }
 
+
+
+
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     
+    if(item.tag ==2){
+        //由于这个tabbar的点击事件无法拦截,跳转后dismiss都会直接回到购物车页面
+        
+        //需要创建一个,设置属性传过来不行
+        HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
+        DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:shoppingVC];
+//        [self.itemAry addObject:item];
+//        [shoppingVC setCallback:^{
+//            
+//            if (self.itemAry.count ==1) {
+//                [self tabBar:tabBar didSelectItem: self.itemAry[0]];
+//            }else{
+//            
+//            [self tabBar:tabBar didSelectItem: self.itemAry[self.itemAry.count-2]];
+//            }
+//            
+//            
+//        }];
+        
+        [self presentViewController: navVC animated:YES completion:^{
+
+            
+            
+        }];
+        
+
+        return;
+    }
+    
     NSInteger index = 0;
-    NSLog(@"%ld",(long)item.tag);
+//    NSLog(@"%ld",(long)item.tag);
     for (UIView* subview in tabBar.subviews) {
         
         
@@ -115,6 +164,8 @@
             
             index ++;
         }
+        
+        
     }
     
     

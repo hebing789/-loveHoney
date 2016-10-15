@@ -25,7 +25,7 @@
 #define kNetWorkFailureStatus @"当前网络不佳，请检查网络!"
 
 //主题颜色
-#define kThemeColor [UIColor colorWithRed:24/255.0 green:188/255.0 blue:187/255.0 alpha:1]
+#define kThemeColor [UIColor colorWithRed:254/255.0 green:213/255.0 blue:3/255.0 alpha:1]
 
 //**************************************************************
 

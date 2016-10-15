@@ -104,7 +104,7 @@ static NSString* cellMe=@"HMMeViewControllerCell2";
     //头像
     UIImageView* iconImgView=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"v2_my_avatar" ]];
     
-    iconImgView.center= CGPointMake(screemW/2, iconImgView.width/2+20);
+    iconImgView.center= CGPointMake(screemW/2, iconImgView.frame.size.width/2+20);
     [headBackImgView addSubview:iconImgView];
     
     //手机号码;
@@ -115,7 +115,7 @@ static NSString* cellMe=@"HMMeViewControllerCell2";
     phoneLable.textColor=[UIColor whiteColor];
     [phoneLable sizeToFit];
     
-    phoneLable.center = CGPointMake(screemW/2, CGRectGetMaxY(iconImgView.frame)+phoneLable.height/2+5);
+    phoneLable.center = CGPointMake(screemW/2, CGRectGetMaxY(iconImgView.frame)+phoneLable.frame.size.height/2+5);
     
     [headBackImgView addSubview:phoneLable];
     

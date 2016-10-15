@@ -20,11 +20,7 @@
     
 }
 
-- (void)setupNavBar{
-    
 
-
-}
 
 
 

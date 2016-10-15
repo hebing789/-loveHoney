@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HMHomeController : UIViewController
+@interface HMHomeController : DDBaseViewController
 
 @end

@@ -28,12 +28,13 @@
         [btn setTitle:title forState:UIControlStateNormal];
         [btn setTitle:title forState:UIControlStateHighlighted];
         //字号
-        [btn.titleLabel setFont:[UIFont systemFontOfSize:15]];
+        [btn.titleLabel setFont:[UIFont systemFontOfSize:10]];
         //颜色
         [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         [btn setTitleColor:kThemeColor forState:UIControlStateHighlighted];
         //自适应
         [btn sizeToFit];
+        [btn layoutButtonWithEdgeInsetsStyle:MKButtonEdgeInsetsStyleTop imageTitleSpace:0];
         
         //添加点击事件
         [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];

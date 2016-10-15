@@ -41,6 +41,9 @@
 		8E63D0ED1DB1D12400D85260 /* DDBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63D0EC1DB1D12400D85260 /* DDBaseNavController.m */; };
 		8E63D0F21DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E63D0F11DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m */; };
 		8EC8BC7B1DB20DFA00AFCD51 /* DDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8BC7A1DB20DFA00AFCD51 /* DDBaseViewController.m */; };
+		8EC8BC871DB2183100AFCD51 /* UIButton+CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8BC861DB2183100AFCD51 /* UIButton+CustomButton.m */; };
+		8EC8BC8A1DB229DA00AFCD51 /* DDTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8BC891DB229DA00AFCD51 /* DDTitleView.m */; };
+		8EC8BC8C1DB229EC00AFCD51 /* DDTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC8BC8B1DB229EC00AFCD51 /* DDTitleView.xib */; };
 		EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +107,11 @@
 		8E63D0F11DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+DDBarButtonItem.m"; sourceTree = "<group>"; };
 		8EC8BC791DB20DFA00AFCD51 /* DDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseViewController.h; sourceTree = "<group>"; };
 		8EC8BC7A1DB20DFA00AFCD51 /* DDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseViewController.m; sourceTree = "<group>"; };
+		8EC8BC851DB2183100AFCD51 /* UIButton+CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CustomButton.h"; sourceTree = "<group>"; };
+		8EC8BC861DB2183100AFCD51 /* UIButton+CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CustomButton.m"; sourceTree = "<group>"; };
+		8EC8BC881DB229DA00AFCD51 /* DDTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTitleView.h; sourceTree = "<group>"; };
+		8EC8BC891DB229DA00AFCD51 /* DDTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTitleView.m; sourceTree = "<group>"; };
+		8EC8BC8B1DB229EC00AFCD51 /* DDTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDTitleView.xib; sourceTree = "<group>"; };
 		9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loveHoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -358,6 +366,9 @@
 			children = (
 				8E63D0E81DB1CDDA00D85260 /* DDProductKindView.h */,
 				8E63D0E91DB1CDDA00D85260 /* DDProductKindView.m */,
+				8EC8BC881DB229DA00AFCD51 /* DDTitleView.h */,
+				8EC8BC891DB229DA00AFCD51 /* DDTitleView.m */,
+				8EC8BC8B1DB229EC00AFCD51 /* DDTitleView.xib */,
 			);
 			path = ProductKindView;
 			sourceTree = "<group>";
@@ -367,6 +378,8 @@
 			children = (
 				8E63D0F01DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.h */,
 				8E63D0F11DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m */,
+				8EC8BC851DB2183100AFCD51 /* UIButton+CustomButton.h */,
+				8EC8BC861DB2183100AFCD51 /* UIButton+CustomButton.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -447,6 +460,7 @@
 				5B0674531DB1371500299600 /* .gitkeep in Resources */,
 				5B0674571DB1371500299600 /* .gitkeep in Resources */,
 				5B0674541DB1371500299600 /* .gitkeep in Resources */,
+				8EC8BC8C1DB229EC00AFCD51 /* DDTitleView.xib in Resources */,
 				5B06744E1DB1371500299600 /* .gitkeep in Resources */,
 				5B06745D1DB1371500299600 /* .gitkeep in Resources */,
 				5B0674661DB13AF400299600 /* Assets 00-09-05-008.xcassets in Resources */,
@@ -522,6 +536,7 @@
 				5B01F7671DB1C48D00E3A1EE /* NSArray+Log.m in Sources */,
 				5B0674511DB1371500299600 /* HBTableBarController.m in Sources */,
 				5B0674581DB1371500299600 /* WelcomCell.m in Sources */,
+				8EC8BC8A1DB229DA00AFCD51 /* DDTitleView.m in Sources */,
 				8E63D0F21DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m in Sources */,
 				5B0674691DB13F7600299600 /* HMHomeController.m in Sources */,
 				5B06746C1DB13F8C00299600 /* HMMarketViewController.m in Sources */,
@@ -529,6 +544,7 @@
 				5B06744D1DB1371500299600 /* AppDelegate.m in Sources */,
 				5B0674591DB1371500299600 /* WecomeAnimation.m in Sources */,
 				8EC8BC7B1DB20DFA00AFCD51 /* DDBaseViewController.m in Sources */,
+				8EC8BC871DB2183100AFCD51 /* UIButton+CustomButton.m in Sources */,
 				5B06746F1DB13F9F00299600 /* HMMeViewController.m in Sources */,
 				5B01F75F1DB1B0AC00E3A1EE /* HMNetworkTools.m in Sources */,
 				5BEC4FC31DB1192100CA99B0 /* main.m in Sources */,
@@ -637,7 +653,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = loveHoney/PrefixHeader.pch;
 				INFOPLIST_FILE = loveHoney/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dd.loveHoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -654,7 +670,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = loveHoney/PrefixHeader.pch;
 				INFOPLIST_FILE = loveHoney/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dd.loveHoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";

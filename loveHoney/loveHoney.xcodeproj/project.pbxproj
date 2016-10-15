@@ -10,6 +10,11 @@
 		5B01F75F1DB1B0AC00E3A1EE /* HMNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F75E1DB1B0AC00E3A1EE /* HMNetworkTools.m */; };
 		5B01F7641DB1C45A00E3A1EE /* NotificationDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F7621DB1C45A00E3A1EE /* NotificationDefine.m */; };
 		5B01F7671DB1C48D00E3A1EE /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F7661DB1C48D00E3A1EE /* NSArray+Log.m */; };
+		5B01F76D1DB2618700E3A1EE /* HMMeTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F76B1DB2618700E3A1EE /* HMMeTableViewCell1.m */; };
+		5B01F76E1DB2618700E3A1EE /* HMMeTableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B01F76C1DB2618700E3A1EE /* HMMeTableViewCell1.xib */; };
+		5B01F7721DB261A200E3A1EE /* HMMenuTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F7701DB261A200E3A1EE /* HMMenuTableViewCell2.m */; };
+		5B01F7731DB261A200E3A1EE /* HMMenuTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B01F7711DB261A200E3A1EE /* HMMenuTableViewCell2.xib */; };
+		5B01F7761DB266B900E3A1EE /* HMVerticalTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F7751DB266B900E3A1EE /* HMVerticalTitleButton.m */; };
 		5B06744D1DB1371500299600 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674211DB1371500299600 /* AppDelegate.m */; };
 		5B06744E1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674241DB1371500299600 /* .gitkeep */; };
 		5B06744F1DB1371500299600 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674261DB1371500299600 /* .gitkeep */; };
@@ -58,6 +63,14 @@
 		5B01F7631DB1C45A00E3A1EE /* TableConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableConstant.h; sourceTree = "<group>"; };
 		5B01F7651DB1C48D00E3A1EE /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		5B01F7661DB1C48D00E3A1EE /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		5B01F76A1DB2618700E3A1EE /* HMMeTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMMeTableViewCell1.h; sourceTree = "<group>"; };
+		5B01F76B1DB2618700E3A1EE /* HMMeTableViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMMeTableViewCell1.m; sourceTree = "<group>"; };
+		5B01F76C1DB2618700E3A1EE /* HMMeTableViewCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMMeTableViewCell1.xib; sourceTree = "<group>"; };
+		5B01F76F1DB261A200E3A1EE /* HMMenuTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMMenuTableViewCell2.h; sourceTree = "<group>"; };
+		5B01F7701DB261A200E3A1EE /* HMMenuTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMMenuTableViewCell2.m; sourceTree = "<group>"; };
+		5B01F7711DB261A200E3A1EE /* HMMenuTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMMenuTableViewCell2.xib; sourceTree = "<group>"; };
+		5B01F7741DB266B900E3A1EE /* HMVerticalTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMVerticalTitleButton.h; sourceTree = "<group>"; };
+		5B01F7751DB266B900E3A1EE /* HMVerticalTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMVerticalTitleButton.m; sourceTree = "<group>"; };
 		5B0674201DB1371500299600 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B0674211DB1371500299600 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5B0674241DB1371500299600 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -137,6 +150,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5B01F7681DB2613900E3A1EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B01F76A1DB2618700E3A1EE /* HMMeTableViewCell1.h */,
+				5B01F76B1DB2618700E3A1EE /* HMMeTableViewCell1.m */,
+				5B01F76C1DB2618700E3A1EE /* HMMeTableViewCell1.xib */,
+				5B01F76F1DB261A200E3A1EE /* HMMenuTableViewCell2.h */,
+				5B01F7701DB261A200E3A1EE /* HMMenuTableViewCell2.m */,
+				5B01F7711DB261A200E3A1EE /* HMMenuTableViewCell2.xib */,
+				5B01F7741DB266B900E3A1EE /* HMVerticalTitleButton.h */,
+				5B01F7751DB266B900E3A1EE /* HMVerticalTitleButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B01F7691DB2614100E3A1EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5B06734A1DB1324400299600 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +243,8 @@
 		5B06742F1DB1371500299600 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				5B01F7691DB2614100E3A1EE /* Model */,
+				5B01F7681DB2613900E3A1EE /* View */,
 				5B0674301DB1371500299600 /* .gitkeep */,
 				5B06746D1DB13F9F00299600 /* HMMeViewController.h */,
 				5B06746E1DB13F9F00299600 /* HMMeViewController.m */,
@@ -456,6 +493,8 @@
 			files = (
 				5B06744F1DB1371500299600 /* .gitkeep in Resources */,
 				5B06745B1DB1371500299600 /* .gitkeep in Resources */,
+				5B01F7731DB261A200E3A1EE /* HMMenuTableViewCell2.xib in Resources */,
+				5B01F76E1DB2618700E3A1EE /* HMMeTableViewCell1.xib in Resources */,
 				5B06745C1DB1371500299600 /* .gitkeep in Resources */,
 				5B0674531DB1371500299600 /* .gitkeep in Resources */,
 				5B0674571DB1371500299600 /* .gitkeep in Resources */,
@@ -530,7 +569,9 @@
 				5B0674611DB1371500299600 /* ViewController.m in Sources */,
 				5B01F7641DB1C45A00E3A1EE /* NotificationDefine.m in Sources */,
 				8E63D0ED1DB1D12400D85260 /* DDBaseNavController.m in Sources */,
+				5B01F76D1DB2618700E3A1EE /* HMMeTableViewCell1.m in Sources */,
 				5B06745E1DB1371500299600 /* UIView+UIframe.m in Sources */,
+				5B01F7761DB266B900E3A1EE /* HMVerticalTitleButton.m in Sources */,
 				5B0674521DB1371500299600 /* hideBottomBarNavagationControl.m in Sources */,
 				5B0674721DB13FD400299600 /* HMShoppingViewController.m in Sources */,
 				5B01F7671DB1C48D00E3A1EE /* NSArray+Log.m in Sources */,
@@ -542,6 +583,7 @@
 				5B06746C1DB13F8C00299600 /* HMMarketViewController.m in Sources */,
 				8E63D0EA1DB1CDDA00D85260 /* DDProductKindView.m in Sources */,
 				5B06744D1DB1371500299600 /* AppDelegate.m in Sources */,
+				5B01F7721DB261A200E3A1EE /* HMMenuTableViewCell2.m in Sources */,
 				5B0674591DB1371500299600 /* WecomeAnimation.m in Sources */,
 				8EC8BC7B1DB20DFA00AFCD51 /* DDBaseViewController.m in Sources */,
 				8EC8BC871DB2183100AFCD51 /* UIButton+CustomButton.m in Sources */,

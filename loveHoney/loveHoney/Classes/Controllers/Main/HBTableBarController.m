@@ -51,18 +51,18 @@
     HMMeViewController *profileVC = [[HMMeViewController alloc]init];
     
     
-    [self addChildViewController:homeVC andTitle:@"首页" andImageName:@"v2_home" andSelectedImageName:@"v2_home_r"];
-    [self addChildViewController:marketVC andTitle:@"闪电超市" andImageName:@"freshReservation" andSelectedImageName:@"freshReservation_r"];
-    [self addChildViewController:shoppingVC andTitle:@"购物车" andImageName:@"shopCart" andSelectedImageName:@"shopCart_r"];
-    [self addChildViewController:profileVC andTitle:@"我的" andImageName:@"v2_my" andSelectedImageName:@"v2_my_r"];
+    [self addChildViewController:homeVC andTitle:@"首页" andImageName:@"v2_home" andSelectedImageName:@"v2_home_r"andIndex:0];
+    [self addChildViewController:marketVC andTitle:@"闪电超市" andImageName:@"freshReservation" andSelectedImageName:@"freshReservation_r"andIndex:1];
+    [self addChildViewController:shoppingVC andTitle:@"购物车" andImageName:@"shopCart" andSelectedImageName:@"shopCart_r"andIndex:2];
+    [self addChildViewController:profileVC andTitle:@"我的" andImageName:@"v2_my" andSelectedImageName:@"v2_my_r"andIndex:3];
     
 }
 
--(void)addChildViewController:(UIViewController *)vc andTitle:(NSString *)title andImageName:(NSString *)imageName andSelectedImageName:(NSString *)selectedImageName
+-(void)addChildViewController:(UIViewController *)vc andTitle:(NSString *)title andImageName:(NSString *)imageName andSelectedImageName:(NSString *)selectedImageName andIndex:(NSInteger)index
 {
     vc.navigationItem.title = title;
     vc.tabBarItem.title = title;
-    
+    vc.tabBarItem.tag=index;
     UIImage *normalImage = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIImage *selectedImage = [[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
@@ -81,7 +81,42 @@
 }
 
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
+    
+    NSInteger index = 0;
+    NSLog(@"%ld",(long)item.tag);
+    for (UIView* subview in tabBar.subviews) {
+        
+        
+        
+        if ([subview isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+            
+            if (index == item.tag) {
+                for (UIView* targertView in subview.subviews) {
+                    
+                    if ([targertView isKindOfClass:NSClassFromString(@"UITabBarSwappableImageView")]) {
+                        
+                        targertView.transform = CGAffineTransformMakeScale(0.5, 0.5);
+                        
+                        [UIView animateWithDuration:0.6 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:5 options:UIViewAnimationOptionLayoutSubviews animations:^{
+                            
+                            targertView.transform = CGAffineTransformMakeScale(1, 1);
+                            
+                        } completion:^(BOOL finished) {
+                            
+                        }];
+              
+                    }
+                    
+                    
+                }
+                
 
+            }
+            
+            index ++;
+        }
+    }
+    
     
     
     

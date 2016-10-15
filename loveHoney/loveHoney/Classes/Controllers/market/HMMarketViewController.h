@@ -6,8 +6,8 @@
 //  Copyright © 2016年 hebing. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DDBaseViewController.h"
 
-@interface HMMarketViewController : UIViewController
+@interface HMMarketViewController : DDBaseViewController
 
 @end

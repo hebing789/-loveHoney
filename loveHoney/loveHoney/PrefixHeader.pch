@@ -31,6 +31,7 @@
 #import "HMMeViewController.h"
 #import "HMHomeController.h"
 #import "DDBaseNavController.h"
+#import "DDBaseViewController.h"
 
 //分类与工具类
 #import "UIView+UIframe.h"

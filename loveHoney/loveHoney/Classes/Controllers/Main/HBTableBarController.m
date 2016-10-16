@@ -33,7 +33,7 @@
         HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
         DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:shoppingVC];
         
-        
+        shoppingVC.navigationItem.title = @"购物车";
         [self presentViewController: navVC animated:YES completion:^{
 
         }];

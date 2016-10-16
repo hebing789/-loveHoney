@@ -212,8 +212,13 @@ static NSString* cellMe=@"HMMeViewControllerCell2";
 
 -(void)toSetting{
     
-    NSLog(@"设置页面");
+//    NSLog(@"设置页面");
     
+    HMSettingController* set = [[HMSettingController alloc]init];
+    
+    set.navigationItem.title = @"设置";
+    
+    [self.navigationController pushViewController:set animated:YES];
     
     
     
@@ -222,7 +227,113 @@ static NSString* cellMe=@"HMMeViewControllerCell2";
 
 //跳转页面
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.section == 0 ){
+        return;
+    }
     
+    if (indexPath.section ==1) {
+        if (indexPath.row==0) {
+            HMAddressController* addres = [[HMAddressController alloc]init];
+            addres.navigationItem.title = @"我的收货地址";
+            [self.navigationController pushViewController:addres animated:YES];
+            
+            
+        }else{
+            
+            HMStoreController* store = [[HMStoreController alloc]init];
+            store.navigationItem.title = @"我的店铺";
+            [self.navigationController pushViewController:store animated:YES];
+            
+
+            
+        }
+        
+        
+    }
+    if (indexPath.section ==2) {
+        
+        //先跳出弹窗,然后再跳转页面;
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"分享到" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        UIAlertAction* action1 = [UIAlertAction actionWithTitle:@"微信好友" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            HMSharedController* shared = [[HMSharedController alloc]init];
+            shared.navigationItem.title = @"微信登录";
+            [self.navigationController pushViewController:shared animated:YES];
+        }];
+        
+        [alert addAction:action1];
+        
+        
+        
+        UIAlertAction* action2 = [UIAlertAction actionWithTitle:@"微信朋友圈" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            HMSharedController* shared = [[HMSharedController alloc]init];
+            shared.navigationItem.title = @"微信朋友圈";
+            [self.navigationController pushViewController:shared animated:YES];
+        }];
+        
+        [alert addAction:action2];
+        
+        
+        
+        UIAlertAction* action3 = [UIAlertAction actionWithTitle:@"新浪微博" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            HMSharedController* shared = [[HMSharedController alloc]init];
+            shared.navigationItem.title = @"微博登录";
+            [self.navigationController pushViewController:shared animated:YES];
+        }];
+        
+        [alert addAction:action3];
+        
+        
+        UIAlertAction* action4 = [UIAlertAction actionWithTitle:@"QQ空间" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            HMSharedController* shared = [[HMSharedController alloc]init];
+            shared.navigationItem.title = @"QQ空间";
+            [self.navigationController pushViewController:shared animated:YES];
+        }];
+        
+        [alert addAction:action4];
+        
+        UIAlertAction* action5 = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+           
+        }];
+        
+        [alert addAction:action5];
+
+        
+        
+        [self presentViewController:alert animated:YES completion:^{
+            
+        }];
+        
+        
+    }
+    if (indexPath.section ==3) {
+        if (indexPath.row==0) {
+            
+            HMCustomerController* customer = [[HMCustomerController alloc]init];
+            
+            customer.navigationItem.title = @"客服帮助";
+            
+            [self.navigationController pushViewController:customer animated:YES];
+            
+            
+            
+        }else{
+            
+            HMHelpController* help = [[HMHelpController alloc]init];
+            
+            help.navigationItem.title = @"意见反馈";
+            
+            [self.navigationController pushViewController:help animated:YES];
+
+        }
+
+        
+        
+    }
     
     
     

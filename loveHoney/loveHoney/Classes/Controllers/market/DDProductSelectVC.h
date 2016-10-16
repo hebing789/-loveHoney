@@ -10,4 +10,6 @@
 
 @interface DDProductSelectVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
+@property(nonatomic,strong)NSArray<DDProductsModel *> *productsList;
+
 @end

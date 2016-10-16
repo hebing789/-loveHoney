@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DDCategoriesModel;
 
 @interface DDKindViewCell : UITableViewCell
+
+@property(nonatomic,strong)DDCategoriesModel *model;
 
 @end

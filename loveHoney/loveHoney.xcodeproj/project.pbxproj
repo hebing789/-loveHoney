@@ -42,7 +42,6 @@
 		8E8A471C1DB32779009F2A01 /* WelcomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A46D41DB32779009F2A01 /* WelcomCell.m */; };
 		8E8A471D1DB32779009F2A01 /* WecomeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A46D61DB32779009F2A01 /* WecomeAnimation.m */; };
 		8E8A471E1DB32779009F2A01 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A46D81DB32779009F2A01 /* .gitkeep */; };
-		8E8A471F1DB32779009F2A01 /* DDMarketViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A46DA1DB32779009F2A01 /* DDMarketViewModel.m */; };
 		8E8A47201DB32779009F2A01 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A46DD1DB32779009F2A01 /* .gitkeep */; };
 		8E8A47211DB32779009F2A01 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A46DF1DB32779009F2A01 /* NSArray+Log.m */; };
 		8E8A47221DB32779009F2A01 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A46E11DB32779009F2A01 /* .gitkeep */; };
@@ -56,11 +55,14 @@
 		8E8A472A1DB32779009F2A01 /* DDKindViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A46F51DB32779009F2A01 /* DDKindViewCell.m */; };
 		8E8A472B1DB32779009F2A01 /* DDKindViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A46F61DB32779009F2A01 /* DDKindViewCell.xib */; };
 		8E8A472C1DB32779009F2A01 /* DDProductKindView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A46F81DB32779009F2A01 /* DDProductKindView.m */; };
-		8E8A472D1DB32779009F2A01 /* DDProductSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A46FA1DB32779009F2A01 /* DDProductSelectVC.m */; };
 		8E8A472E1DB32779009F2A01 /* DDProductViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A46FC1DB32779009F2A01 /* DDProductViewCell.m */; };
 		8E8A472F1DB32779009F2A01 /* DDProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A46FD1DB32779009F2A01 /* DDProductViewCell.xib */; };
 		8E8A47301DB32779009F2A01 /* DDTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A46FF1DB32779009F2A01 /* DDTitleView.m */; };
 		8E8A47311DB32779009F2A01 /* DDTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A47001DB32779009F2A01 /* DDTitleView.xib */; };
+		8E8A47351DB32C37009F2A01 /* DDMarketViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A47341DB32C37009F2A01 /* DDMarketViewModel.m */; };
+		8E8A47381DB32CFD009F2A01 /* DDCategoriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A47371DB32CFD009F2A01 /* DDCategoriesModel.m */; };
+		8E8A473B1DB33011009F2A01 /* DDProductsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A473A1DB33011009F2A01 /* DDProductsModel.m */; };
+		8E8A473E1DB37765009F2A01 /* DDProductSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A473D1DB37765009F2A01 /* DDProductSelectVC.m */; };
 		EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */; };
 /* End PBXBuildFile section */
 
@@ -125,8 +127,6 @@
 		8E8A46D51DB32779009F2A01 /* WecomeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WecomeAnimation.h; sourceTree = "<group>"; };
 		8E8A46D61DB32779009F2A01 /* WecomeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WecomeAnimation.m; sourceTree = "<group>"; };
 		8E8A46D81DB32779009F2A01 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		8E8A46D91DB32779009F2A01 /* DDMarketViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMarketViewModel.h; sourceTree = "<group>"; };
-		8E8A46DA1DB32779009F2A01 /* DDMarketViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMarketViewModel.m; sourceTree = "<group>"; };
 		8E8A46DD1DB32779009F2A01 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		8E8A46DE1DB32779009F2A01 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		8E8A46DF1DB32779009F2A01 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
@@ -150,14 +150,20 @@
 		8E8A46F61DB32779009F2A01 /* DDKindViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDKindViewCell.xib; sourceTree = "<group>"; };
 		8E8A46F71DB32779009F2A01 /* DDProductKindView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProductKindView.h; sourceTree = "<group>"; };
 		8E8A46F81DB32779009F2A01 /* DDProductKindView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProductKindView.m; sourceTree = "<group>"; };
-		8E8A46F91DB32779009F2A01 /* DDProductSelectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProductSelectVC.h; sourceTree = "<group>"; };
-		8E8A46FA1DB32779009F2A01 /* DDProductSelectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProductSelectVC.m; sourceTree = "<group>"; };
 		8E8A46FB1DB32779009F2A01 /* DDProductViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProductViewCell.h; sourceTree = "<group>"; };
 		8E8A46FC1DB32779009F2A01 /* DDProductViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProductViewCell.m; sourceTree = "<group>"; };
 		8E8A46FD1DB32779009F2A01 /* DDProductViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDProductViewCell.xib; sourceTree = "<group>"; };
 		8E8A46FE1DB32779009F2A01 /* DDTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTitleView.h; sourceTree = "<group>"; };
 		8E8A46FF1DB32779009F2A01 /* DDTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTitleView.m; sourceTree = "<group>"; };
 		8E8A47001DB32779009F2A01 /* DDTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDTitleView.xib; sourceTree = "<group>"; };
+		8E8A47331DB32C37009F2A01 /* DDMarketViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMarketViewModel.h; sourceTree = "<group>"; };
+		8E8A47341DB32C37009F2A01 /* DDMarketViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMarketViewModel.m; sourceTree = "<group>"; };
+		8E8A47361DB32CFD009F2A01 /* DDCategoriesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCategoriesModel.h; sourceTree = "<group>"; };
+		8E8A47371DB32CFD009F2A01 /* DDCategoriesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCategoriesModel.m; sourceTree = "<group>"; };
+		8E8A47391DB33011009F2A01 /* DDProductsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProductsModel.h; sourceTree = "<group>"; };
+		8E8A473A1DB33011009F2A01 /* DDProductsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProductsModel.m; sourceTree = "<group>"; };
+		8E8A473C1DB37765009F2A01 /* DDProductSelectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProductSelectVC.h; sourceTree = "<group>"; };
+		8E8A473D1DB37765009F2A01 /* DDProductSelectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProductSelectVC.m; sourceTree = "<group>"; };
 		9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loveHoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -293,6 +299,8 @@
 				8E8A46A91DB32779009F2A01 /* .gitkeep */,
 				8E8A46AA1DB32779009F2A01 /* HMMarketViewController.h */,
 				8E8A46AB1DB32779009F2A01 /* HMMarketViewController.m */,
+				8E8A473C1DB37765009F2A01 /* DDProductSelectVC.h */,
+				8E8A473D1DB37765009F2A01 /* DDProductSelectVC.m */,
 			);
 			path = market;
 			sourceTree = "<group>";
@@ -423,9 +431,8 @@
 		8E8A46D71DB32779009F2A01 /* Modles */ = {
 			isa = PBXGroup;
 			children = (
+				8E8A47321DB32BF3009F2A01 /* Market */,
 				8E8A46D81DB32779009F2A01 /* .gitkeep */,
-				8E8A46D91DB32779009F2A01 /* DDMarketViewModel.h */,
-				8E8A46DA1DB32779009F2A01 /* DDMarketViewModel.m */,
 			);
 			path = Modles;
 			sourceTree = "<group>";
@@ -503,8 +510,6 @@
 				8E8A46F61DB32779009F2A01 /* DDKindViewCell.xib */,
 				8E8A46F71DB32779009F2A01 /* DDProductKindView.h */,
 				8E8A46F81DB32779009F2A01 /* DDProductKindView.m */,
-				8E8A46F91DB32779009F2A01 /* DDProductSelectVC.h */,
-				8E8A46FA1DB32779009F2A01 /* DDProductSelectVC.m */,
 				8E8A46FB1DB32779009F2A01 /* DDProductViewCell.h */,
 				8E8A46FC1DB32779009F2A01 /* DDProductViewCell.m */,
 				8E8A46FD1DB32779009F2A01 /* DDProductViewCell.xib */,
@@ -513,6 +518,19 @@
 				8E8A47001DB32779009F2A01 /* DDTitleView.xib */,
 			);
 			path = ProductKindView;
+			sourceTree = "<group>";
+		};
+		8E8A47321DB32BF3009F2A01 /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				8E8A47331DB32C37009F2A01 /* DDMarketViewModel.h */,
+				8E8A47341DB32C37009F2A01 /* DDMarketViewModel.m */,
+				8E8A47361DB32CFD009F2A01 /* DDCategoriesModel.h */,
+				8E8A47371DB32CFD009F2A01 /* DDCategoriesModel.m */,
+				8E8A47391DB33011009F2A01 /* DDProductsModel.h */,
+				8E8A473A1DB33011009F2A01 /* DDProductsModel.m */,
+			);
+			path = Market;
 			sourceTree = "<group>";
 		};
 		F91E465377817DC3DBC7ACA2 /* Frameworks */ = {
@@ -676,11 +694,10 @@
 				8E8A47231DB32779009F2A01 /* NotificationDefine.m in Sources */,
 				8E8A47051DB32779009F2A01 /* DDBaseNavController.m in Sources */,
 				8E8A470A1DB32779009F2A01 /* HMMarketViewController.m in Sources */,
+				8E8A473B1DB33011009F2A01 /* DDProductsModel.m in Sources */,
 				8E8A470D1DB32779009F2A01 /* HMMenuTableViewCell2.m in Sources */,
 				8E8A47271DB32779009F2A01 /* HMNetworkTools.m in Sources */,
 				8E8A47111DB32779009F2A01 /* HMVerticalTitleButton.m in Sources */,
-				8E8A471F1DB32779009F2A01 /* DDMarketViewModel.m in Sources */,
-				8E8A472D1DB32779009F2A01 /* DDProductSelectVC.m in Sources */,
 				8E8A47081DB32779009F2A01 /* hideBottomBarNavagationControl.m in Sources */,
 				8E8A472A1DB32779009F2A01 /* DDKindViewCell.m in Sources */,
 				8E8A470C1DB32779009F2A01 /* HMMeViewController.m in Sources */,
@@ -688,12 +705,15 @@
 				8E8A47141DB32779009F2A01 /* HMYouHuiQuanController.m in Sources */,
 				8E8A47301DB32779009F2A01 /* DDTitleView.m in Sources */,
 				5B06744D1DB1371500299600 /* AppDelegate.m in Sources */,
+				8E8A473E1DB37765009F2A01 /* DDProductSelectVC.m in Sources */,
+				8E8A47351DB32C37009F2A01 /* DDMarketViewModel.m in Sources */,
 				8E8A47071DB32779009F2A01 /* HBTableBarController.m in Sources */,
 				8E8A47251DB32779009F2A01 /* UIButton+CustomButton.m in Sources */,
 				8E8A47061DB32779009F2A01 /* DDBaseViewController.m in Sources */,
 				8E8A470F1DB32779009F2A01 /* HMMeTableViewCell1.m in Sources */,
 				8E8A47181DB32779009F2A01 /* HMShoppingViewController.m in Sources */,
 				5BEC4FC31DB1192100CA99B0 /* main.m in Sources */,
+				8E8A47381DB32CFD009F2A01 /* DDCategoriesModel.m in Sources */,
 				8E8A47211DB32779009F2A01 /* NSArray+Log.m in Sources */,
 				8E8A471D1DB32779009F2A01 /* WecomeAnimation.m in Sources */,
 				5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */,

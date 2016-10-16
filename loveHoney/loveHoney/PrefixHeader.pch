@@ -24,6 +24,7 @@
 #import <Masonry/Masonry.h>
 #import <AFNetworking/AFNetworking.h>
 #import "UIImageView+WebCache.h"
+#import "SVProgressHUD.h"
 
 //类
 #import "ConstntDefine.h"

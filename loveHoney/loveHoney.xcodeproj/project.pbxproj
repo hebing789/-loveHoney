@@ -26,7 +26,7 @@
 		5B01F9981DB37D1800E3A1EE /* HMCustomerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F9201DB37D1700E3A1EE /* HMCustomerController.m */; };
 		5B01F9991DB37D1800E3A1EE /* HMHelpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F9231DB37D1700E3A1EE /* HMHelpController.m */; };
 		5B01F99A1DB37D1800E3A1EE /* HMMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F9251DB37D1700E3A1EE /* HMMeViewController.m */; };
-		5B01F99B1DB37D1800E3A1EE /* HMShoppingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F9291DB37D1700E3A1EE /* HMShoppingController.m */; };
+		5B01F99B1DB37D1800E3A1EE /* HMStoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F9291DB37D1700E3A1EE /* HMStoreController.m */; };
 		5B01F99C1DB37D1800E3A1EE /* HMSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F92C1DB37D1700E3A1EE /* HMSettingController.m */; };
 		5B01F99D1DB37D1800E3A1EE /* HMSharedController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F92F1DB37D1700E3A1EE /* HMSharedController.m */; };
 		5B01F99E1DB37D1800E3A1EE /* HMMenuTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F9321DB37D1700E3A1EE /* HMMenuTableViewCell2.m */; };
@@ -113,8 +113,8 @@
 		5B01F9231DB37D1700E3A1EE /* HMHelpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMHelpController.m; sourceTree = "<group>"; };
 		5B01F9241DB37D1700E3A1EE /* HMMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMMeViewController.h; sourceTree = "<group>"; };
 		5B01F9251DB37D1700E3A1EE /* HMMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMMeViewController.m; sourceTree = "<group>"; };
-		5B01F9281DB37D1700E3A1EE /* HMShoppingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMShoppingController.h; sourceTree = "<group>"; };
-		5B01F9291DB37D1700E3A1EE /* HMShoppingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMShoppingController.m; sourceTree = "<group>"; };
+		5B01F9281DB37D1700E3A1EE /* HMStoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStoreController.h; sourceTree = "<group>"; };
+		5B01F9291DB37D1700E3A1EE /* HMStoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMStoreController.m; sourceTree = "<group>"; };
 		5B01F92B1DB37D1700E3A1EE /* HMSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSettingController.h; sourceTree = "<group>"; };
 		5B01F92C1DB37D1700E3A1EE /* HMSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSettingController.m; sourceTree = "<group>"; };
 		5B01F92E1DB37D1700E3A1EE /* HMSharedController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSharedController.h; sourceTree = "<group>"; };
@@ -355,8 +355,8 @@
 		5B01F9271DB37D1700E3A1EE /* myShop */ = {
 			isa = PBXGroup;
 			children = (
-				5B01F9281DB37D1700E3A1EE /* HMShoppingController.h */,
-				5B01F9291DB37D1700E3A1EE /* HMShoppingController.m */,
+				5B01F9281DB37D1700E3A1EE /* HMStoreController.h */,
+				5B01F9291DB37D1700E3A1EE /* HMStoreController.m */,
 			);
 			path = myShop;
 			sourceTree = "<group>";
@@ -824,7 +824,7 @@
 				5B01F9B51DB37D1800E3A1EE /* NSArray+Log.m in Sources */,
 				5B01F98E1DB37D1800E3A1EE /* DDBaseNavController.m in Sources */,
 				5B01F9931DB37D1800E3A1EE /* HMTabbarButton.m in Sources */,
-				5B01F99B1DB37D1800E3A1EE /* HMShoppingController.m in Sources */,
+				5B01F99B1DB37D1800E3A1EE /* HMStoreController.m in Sources */,
 				5B01F9A81DB37D1800E3A1EE /* HMYouHuiQuanController.m in Sources */,
 				5B01F9C11DB37D1800E3A1EE /* DDProductSelectVC.m in Sources */,
 				5B01F9911DB37D1800E3A1EE /* hideBottomBarNavagationControl.m in Sources */,

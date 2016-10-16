@@ -70,7 +70,7 @@
     [self addChildViewController:homeVC andTitle:@"首页" andImageName:@"v2_home" andSelectedImageName:@"v2_home_r"andIndex:0];
     [self addChildViewController:marketVC andTitle:@"闪电超市" andImageName:@"freshReservation" andSelectedImageName:@"freshReservation_r"andIndex:1];
 //    [self addChildViewController:shoppingVC andTitle:@"购物车" andImageName:@"shopCart" andSelectedImageName:@"shopCart_r"andIndex:2];
-    [self addChildViewController:profileVC andTitle:@"我的" andImageName:@"v2_my" andSelectedImageName:@"v2_my_r"andIndex:3];
+    [self addChildViewController:profileVC andTitle:@"我的" andImageName:@"v2_my" andSelectedImageName:@"v2_my_r"andIndex:2];
     
 }
 
@@ -102,32 +102,32 @@
 
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     
-    if(item.tag ==2){
-        //由于这个tabbar的点击事件无法拦截,跳转后dismiss都会直接回到购物车页面
-        
-        //需要创建一个,设置属性传过来不行
-        HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
-        DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:shoppingVC];
-        //使用谁推过去,dismiss就显示谁的逻辑不行
-//        UIViewController* lastViewController=self.childViewControllers[0];
-
-//        [shoppingVC setCallback:^{
-//                  [self.itemAry addObject:item];
-//           
+//    if(item.tag ==2){
+//        //由于这个tabbar的点击事件无法拦截,跳转后dismiss都会直接回到购物车页面
+//        
+//        //需要创建一个,设置属性传过来不行
+//        HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
+//        DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:shoppingVC];
+//        //使用谁推过去,dismiss就显示谁的逻辑不行
+////        UIViewController* lastViewController=self.childViewControllers[0];
+//
+////        [shoppingVC setCallback:^{
+////                  [self.itemAry addObject:item];
+////           
+////            
+//////            
+//////        }];
+//    
+//        [self presentViewController: navVC animated:YES completion:^{
+//
 //            
 //            
 //        }];
-        
-        [self presentViewController: navVC animated:YES completion:^{
-
-            
-            
-        }];
-        
-
-        return;
-    }
-    
+//        
+//
+//        return;
+//    }
+//    
     NSInteger index = 0;
 //    NSLog(@"%ld",(long)item.tag);
     for (UIView* subview in tabBar.subviews) {

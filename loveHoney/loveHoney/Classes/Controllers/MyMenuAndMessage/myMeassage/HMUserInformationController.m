@@ -1,25 +1,27 @@
 //
-//  HMTableViewController.m
+//  HMUserInformationController.m
 //  loveHoney
 //
-//  Created by gaojie on 16/10/15.
+//  Created by 李亚 on 16/10/16.
 //  Copyright © 2016年 hebing. All rights reserved.
 //
 
-#import "HMTableViewController.h"
-#import "HMTableViewCell.h"
-@interface HMTableViewController ()
+#import "HMUserInformationController.h"
+
+@interface HMUserInformationController ()
 
 @end
 
-@implementation HMTableViewController
+@implementation HMUserInformationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
     
-    
-    
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,23 +32,24 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
+#warning Incomplete implementation, return the number of sections
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+#warning Incomplete implementation, return the number of rows
     return 0;
 }
 
-
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell1" forIndexPath:indexPath];
-//    
-//    
-//    return cell;
-//}
-
+/*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    return cell;
+}
+*/
 
 /*
 // Override to support conditional editing of the table view.

@@ -1,5 +1,5 @@
 //
-//  DDProductViewCell.h
+//  DDTitleView.h
 //  loveHoney
 //
 //  Created by deepindo on 2016/10/15.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DDProductViewCell : UITableViewCell
+@interface DDTitleView : UIView
+
++(instancetype)ddTitleView;
 
 @end

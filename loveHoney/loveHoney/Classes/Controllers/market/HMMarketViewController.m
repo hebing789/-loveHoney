@@ -10,10 +10,6 @@
 #import "DDProductKindView.h"
 #import "DDProductSelectVC.h"
 #import "DDKindViewCell.h"
-
-
-
-//#import "DDMarketViewModel.h"
 #import "DDCategoriesModel.h"
 
 static NSString *productKindViewCellId = @"productKindViewCellId";
@@ -25,8 +21,6 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
 @property(nonatomic,weak)DDProductSelectVC *productSelectVC;
 
 @property(nonatomic,strong)NSArray *categoriesList;
-
-
 
 @end
 
@@ -51,56 +45,32 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
     [self setupLeftKindSelectView];
     
     [self setupRightProductSelectViewController];
-    
+
     [self loadNetworkData];
 
 }
 
 
 -(void)loadNetworkData{
+    
+    [SVProgressHUD showInfoWithStatus:@"正在加载数据"];
 
-    [DDMarketViewModel loadSuperMarketDataWithFinished:^(NSDictionary *dataDict, NSError *error) {
+    [DDCategoriesModel loadSuperMarketDataWithFinished:^(NSArray<DDCategoriesModel *> *categoriesList, NSError *error) {
         //有问题
         if (error != nil){
             //显示提醒,网络不好, 重新尝试
+            [UIView animateWithDuration:0.5 animations:^{
+                [SVProgressHUD showErrorWithStatus:@"网络不好, 请重新尝试"];
+            }];
+            [SVProgressHUD dismiss];
             
             return;
         }
+        [SVProgressHUD dismiss];
         
         //没有问题的---传值--刷新界面
-        self.categoriesList = dataDict[@"categories"];
-        self.productSelectVC.productsList = dataDict[@"products"];
-        
-    }];
-
-
-}
-
-- (void)loadMarketCategoriesList{
-    //设置参数
-    NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    [param setValue:@"5" forKey:@"call"];
-    
-    //请示网络数据
-    [DSHTTPClient postUrlString:@"supermarket.json.php" withParam:param withSuccessBlock:^(id responseObject) {
-        
-        
-        
-        NSDictionary *data = responseObject[@"data"];
-        NSDictionary *categoriesList = data[@"categories"];
-
-        NSMutableArray *nmArray = [NSMutableArray array];
-        
-        for (NSDictionary *dict in categoriesList) {
-            [nmArray addObject:[DDCategoriesModel categoriesWithDict:dict]];
-        }
-        NSLog(@"%@",nmArray);
-        self.categoriesList = [NSArray arrayWithArray:nmArray];
-        
-    } withFailedBlock:^(NSError *error) {
-        NSLog(@"%@",error);
-    } withErrorBlock:^(NSString *message) {
-        NSLog(@"%@",message);
+        self.categoriesList = categoriesList;
+        self.productSelectVC.categoriesList = categoriesList;
     }];
     
 }
@@ -108,6 +78,8 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
 -(void)setupLeftKindSelectView{
 
     DDProductKindView *productKindView = [[DDProductKindView alloc]initWithFrame:CGRectMake(0, 0, screemW * 0.2, self.view.bounds.size.height)];
+    productKindView.backgroundColor = [UIColor whiteColor];
+    productKindView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.productKindView = productKindView;
     [self.view addSubview:productKindView];
     

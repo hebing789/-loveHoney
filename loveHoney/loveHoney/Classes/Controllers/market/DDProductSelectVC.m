@@ -9,12 +9,11 @@
 #import "DDProductSelectVC.h"
 #import "DDProductViewCell.h"
 #import "DDProductsModel.h"
+#import "DDCategoriesModel.h"
 
 static NSString *productSelectCellId = @"productSelectCellId";
 
 @interface DDProductSelectVC ()
-
-
 
 @property(nonatomic,weak)UITableView *tableView;
 
@@ -22,12 +21,12 @@ static NSString *productSelectCellId = @"productSelectCellId";
 
 @implementation DDProductSelectVC
 
--(void)setProductsList:(NSArray<DDProductsModel *> *)productsList
-{
-    _productsList = productsList;
+
+-(void)setCategoriesList:(NSArray *)categoriesList{
+    
+    _categoriesList = categoriesList;
     
     [self.tableView reloadData];
-
 }
 
 -(void)viewDidLoad{
@@ -37,13 +36,14 @@ static NSString *productSelectCellId = @"productSelectCellId";
 
     [self setupTableView];
     
-//    [self loadMarketProductsList];
 }
 
 -(void)setupTableView{
 
     UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView = tableView;
+    self.tableView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:tableView];
     
     self.tableView.showsVerticalScrollIndicator = NO;
@@ -60,51 +60,30 @@ static NSString *productSelectCellId = @"productSelectCellId";
 
 }
 
-
-- (void)loadMarketProductsList{
-    //设置参数
-    NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    [param setValue:@"5" forKey:@"call"];
-    
-    //请示网络数据
-    [DSHTTPClient postUrlString:@"supermarket.json.php" withParam:param withSuccessBlock:^(id responseObject) {
-        NSDictionary *data = responseObject[@"data"];
-        NSDictionary *productsList = data[@"products"];
-        
-        NSMutableArray *nmArray = [NSMutableArray array];
-        
-        for (NSDictionary *dict in productsList) {
-            [nmArray addObject:[DDProductsModel productsWithDict:dict]];
-        }
-        NSLog(@"%@",nmArray);
-        self.productsList = [NSArray arrayWithArray:nmArray];
-        
-    } withFailedBlock:^(NSError *error) {
-        NSLog(@"%@",error);
-    } withErrorBlock:^(NSString *message) {
-        NSLog(@"%@",message);
-    }];
-    
-}
-
-
-
-
 //数据源方法
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 20;
+
+    return self.categoriesList.count;
 
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    
+    DDCategoriesModel *cModel = self.categoriesList[section];
+
+    return cModel.products.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DDProductViewCell *cell = [tableView dequeueReusableCellWithIdentifier:productSelectCellId forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    DDCategoriesModel *cModel = self.categoriesList[indexPath.section];
+    DDProductsModel *pModel = cModel.products[indexPath.row];
+
+    cell.model = pModel;
     
     return cell;
 }
@@ -118,6 +97,13 @@ static NSString *productSelectCellId = @"productSelectCellId";
 
     return 30;
 
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    DDCategoriesModel *cModel = self.categoriesList[section];
+    
+    return cModel.name;
+    
 }
 
 @end

@@ -114,6 +114,14 @@
                     <constraint firstItem="wuE-pT-X7q" firstAttribute="bottom" secondItem="FIY-cK-SWI" secondAttribute="bottom" id="vhk-nC-SG1"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="buyCountLabel" destination="hrt-DL-oVg" id="ndY-Qr-j3x"/>
+                <outlet property="iconView" destination="FIY-cK-SWI" id="oHe-ip-1cI"/>
+                <outlet property="marketPriceLabel" destination="h0X-EH-0Em" id="xln-tO-1MN"/>
+                <outlet property="nameLabel" destination="NTD-jJ-p6H" id="TSr-0I-hFP"/>
+                <outlet property="priceLabel" destination="wuE-pT-X7q" id="k63-xN-SCZ"/>
+                <outlet property="specificsLabel" destination="uMv-N8-5sy" id="z6a-k5-GcA"/>
+            </connections>
             <point key="canvasLocation" x="-103.5" y="-103"/>
         </tableViewCell>
     </objects>

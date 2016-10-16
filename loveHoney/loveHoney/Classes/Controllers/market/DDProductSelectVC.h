@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface DDProductSelectVC : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
-@property(nonatomic,strong)NSArray<DDProductsModel *> *productsList;
+@property(nonatomic,strong)NSArray *categoriesList;
 
 @end

@@ -34,7 +34,7 @@
 #import "HMHomeController.h"
 #import "DDBaseNavController.h"
 #import "DDBaseViewController.h"
-#import "DDMarketViewModel.h"
+
 
 //分类与工具类
 #import "UIView+UIframe.h"

@@ -32,6 +32,12 @@
     _model = model;
     
     self.kindLabel.text = model.name;
+    self.selectedBackgroundView = self.markView;
+    
+}
+
+-(void)setSelected:(BOOL)selected animated:(BOOL)animated{
+    [super setSelected:selected animated:animated];
     
 }
 

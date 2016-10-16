@@ -45,6 +45,11 @@
 		8EC8BC8A1DB229DA00AFCD51 /* DDTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC8BC891DB229DA00AFCD51 /* DDTitleView.m */; };
 		8EC8BC8C1DB229EC00AFCD51 /* DDTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EC8BC8B1DB229EC00AFCD51 /* DDTitleView.xib */; };
 		8EF7C0041DB2575000E637DA /* DDProductSelectVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7C0031DB2575000E637DA /* DDProductSelectVC.m */; };
+		8EF7C0071DB27C8900E637DA /* DDMarketViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7C0061DB27C8900E637DA /* DDMarketViewModel.m */; };
+		8EF7C0101DB2866900E637DA /* DDProductViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7C00E1DB2866900E637DA /* DDProductViewCell.m */; };
+		8EF7C0111DB2866900E637DA /* DDProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF7C00F1DB2866900E637DA /* DDProductViewCell.xib */; };
+		8EF7C0151DB2869800E637DA /* DDKindViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7C0131DB2869800E637DA /* DDKindViewCell.m */; };
+		8EF7C0161DB2869800E637DA /* DDKindViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF7C0141DB2869800E637DA /* DDKindViewCell.xib */; };
 		EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +120,14 @@
 		8EC8BC8B1DB229EC00AFCD51 /* DDTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDTitleView.xib; sourceTree = "<group>"; };
 		8EF7C0021DB2575000E637DA /* DDProductSelectVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProductSelectVC.h; sourceTree = "<group>"; };
 		8EF7C0031DB2575000E637DA /* DDProductSelectVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProductSelectVC.m; sourceTree = "<group>"; };
+		8EF7C0051DB27C8900E637DA /* DDMarketViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMarketViewModel.h; sourceTree = "<group>"; };
+		8EF7C0061DB27C8900E637DA /* DDMarketViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMarketViewModel.m; sourceTree = "<group>"; };
+		8EF7C00D1DB2866900E637DA /* DDProductViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProductViewCell.h; sourceTree = "<group>"; };
+		8EF7C00E1DB2866900E637DA /* DDProductViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProductViewCell.m; sourceTree = "<group>"; };
+		8EF7C00F1DB2866900E637DA /* DDProductViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDProductViewCell.xib; sourceTree = "<group>"; };
+		8EF7C0121DB2869800E637DA /* DDKindViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDKindViewCell.h; sourceTree = "<group>"; };
+		8EF7C0131DB2869800E637DA /* DDKindViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDKindViewCell.m; sourceTree = "<group>"; };
+		8EF7C0141DB2869800E637DA /* DDKindViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDKindViewCell.xib; sourceTree = "<group>"; };
 		9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loveHoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,6 +282,8 @@
 			isa = PBXGroup;
 			children = (
 				5B06743D1DB1371500299600 /* .gitkeep */,
+				8EF7C0051DB27C8900E637DA /* DDMarketViewModel.h */,
+				8EF7C0061DB27C8900E637DA /* DDMarketViewModel.m */,
 			);
 			path = Modles;
 			sourceTree = "<group>";
@@ -382,6 +397,12 @@
 				8EC8BC881DB229DA00AFCD51 /* DDTitleView.h */,
 				8EC8BC891DB229DA00AFCD51 /* DDTitleView.m */,
 				8EC8BC8B1DB229EC00AFCD51 /* DDTitleView.xib */,
+				8EF7C00D1DB2866900E637DA /* DDProductViewCell.h */,
+				8EF7C00E1DB2866900E637DA /* DDProductViewCell.m */,
+				8EF7C00F1DB2866900E637DA /* DDProductViewCell.xib */,
+				8EF7C0121DB2869800E637DA /* DDKindViewCell.h */,
+				8EF7C0131DB2869800E637DA /* DDKindViewCell.m */,
+				8EF7C0141DB2869800E637DA /* DDKindViewCell.xib */,
 			);
 			path = ProductKindView;
 			sourceTree = "<group>";
@@ -475,12 +496,14 @@
 				5B0674541DB1371500299600 /* .gitkeep in Resources */,
 				8EC8BC8C1DB229EC00AFCD51 /* DDTitleView.xib in Resources */,
 				5B06744E1DB1371500299600 /* .gitkeep in Resources */,
+				8EF7C0161DB2869800E637DA /* DDKindViewCell.xib in Resources */,
 				5B06745D1DB1371500299600 /* .gitkeep in Resources */,
 				5B0674661DB13AF400299600 /* Assets 00-09-05-008.xcassets in Resources */,
 				5B0674501DB1371500299600 /* .gitkeep in Resources */,
 				5B06745A1DB1371500299600 /* .gitkeep in Resources */,
 				5B0674551DB1371500299600 /* .gitkeep in Resources */,
 				5B0674561DB1371500299600 /* .gitkeep in Resources */,
+				8EF7C0111DB2866900E637DA /* DDProductViewCell.xib in Resources */,
 				5B06745F1DB1371500299600 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +569,8 @@
 				5B06745E1DB1371500299600 /* UIView+UIframe.m in Sources */,
 				5B0674521DB1371500299600 /* hideBottomBarNavagationControl.m in Sources */,
 				5B0674721DB13FD400299600 /* HMShoppingViewController.m in Sources */,
+				8EF7C0151DB2869800E637DA /* DDKindViewCell.m in Sources */,
+				8EF7C0071DB27C8900E637DA /* DDMarketViewModel.m in Sources */,
 				8EF7C0041DB2575000E637DA /* DDProductSelectVC.m in Sources */,
 				5B01F7671DB1C48D00E3A1EE /* NSArray+Log.m in Sources */,
 				5B0674511DB1371500299600 /* HBTableBarController.m in Sources */,
@@ -562,6 +587,7 @@
 				5B06746F1DB13F9F00299600 /* HMMeViewController.m in Sources */,
 				5B01F75F1DB1B0AC00E3A1EE /* HMNetworkTools.m in Sources */,
 				5BEC4FC31DB1192100CA99B0 /* main.m in Sources */,
+				8EF7C0101DB2866900E637DA /* DDProductViewCell.m in Sources */,
 				5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

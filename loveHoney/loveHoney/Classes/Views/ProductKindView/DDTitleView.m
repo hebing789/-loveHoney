@@ -17,10 +17,6 @@
 
 @implementation DDTitleView
 
--(void)awakeFromNib{
-
-    
-}
 
 
 +(instancetype)ddTitleView{

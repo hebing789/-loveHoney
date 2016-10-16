@@ -7,6 +7,7 @@
 //
 
 #import "HMHomeController.h"
+#import "HMUpCell.h"
 
 @interface HMHomeController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -21,6 +22,9 @@
     [super viewDidLoad];
     
     self.view.backgroundColor=[UIColor blueColor];
+    
+    [self.tableView registerClass:[HMUpCell class] forCellReuseIdentifier:@"upcell"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
     [self setupTableView];
 }
@@ -75,25 +79,49 @@
     UIView *BtnView = [[UIView alloc] initWithFrame:CGRectMake(0, 150, [UIScreen mainScreen].bounds.size.width, 100)];
     BtnView.backgroundColor = [UIColor redColor];
     [HDView addSubview:BtnView];
+    
+    for (int i; i<4; i++) {
+        CGFloat btnW = [UIScreen mainScreen].bounds.size.width / 4;
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(i*btnW, 0, btnW, BtnView.size.height)];
+        btn.backgroundColor = [UIColor cyanColor];
+        [BtnView addSubview:btn];
+    }
+    
 }
 
 
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    if(section == 0)
+    {
+        return 4;
+    }
+        return 1;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"" forIndexPath:indexPath];
-    return cell;
+    if (indexPath.section == 0) {
+          HMUpCell *cell = [tableView dequeueReusableCellWithIdentifier:@"upcell" forIndexPath:indexPath];
+            return cell;
+    }
+    if (indexPath.section == 1) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        return cell;
+    }
+    return 0;
 }
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0){
+        return 200;
+    }
+    return 100;
+}
 
 
 @end

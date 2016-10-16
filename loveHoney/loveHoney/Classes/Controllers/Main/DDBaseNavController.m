@@ -23,12 +23,13 @@
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     //子控制器的数量
-    NSInteger count = viewController.childViewControllers.count;
+    NSInteger count = self.childViewControllers.count;
     
     //判断子控制器的数量
     if (count > 0) {
-        
+        //自定义barButton能实现效果
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"" imageName:@"v2_goback" target:self action:@selector(back)];
+//        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"v2_goback"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]  style:UIBarButtonItemStylePlain target:self action:@selector(back)];
         
         //隐藏底部
         viewController.hidesBottomBarWhenPushed = YES;
@@ -40,7 +41,7 @@
 
 -(void)back{
 
-    [self.navigationController popViewControllerAnimated:YES];
+    [self popViewControllerAnimated:YES];
 
 }
 

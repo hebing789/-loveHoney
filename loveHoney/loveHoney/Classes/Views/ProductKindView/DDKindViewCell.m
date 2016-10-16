@@ -7,6 +7,7 @@
 //
 
 #import "DDKindViewCell.h"
+#import "DDCategoriesModel.h"
 
 @interface DDKindViewCell ()
 
@@ -21,13 +22,17 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
+    
+    
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+-(void)setModel:(DDCategoriesModel *)model
+{
+    _model = model;
+    
+    self.kindLabel.text = model.name;
+    
 }
 
 @end

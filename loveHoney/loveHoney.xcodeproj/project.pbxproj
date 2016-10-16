@@ -12,6 +12,8 @@
 		5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674631DB1375400299600 /* DSHTTPClient.m */; };
 		5B0674661DB13AF400299600 /* Assets 00-09-05-008.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674651DB13AF400299600 /* Assets 00-09-05-008.xcassets */; };
 		5BEC4FC31DB1192100CA99B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC4FC21DB1192100CA99B0 /* main.m */; };
+		6AEF43BF1DB32D8D00817043 /* HMUserInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEF43BE1DB32D8D00817043 /* HMUserInformationController.m */; };
+		6AEF43C21DB32E0500817043 /* HMSystemInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEF43C11DB32E0500817043 /* HMSystemInformationController.m */; };
 		8E8A47011DB32779009F2A01 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A46991DB32779009F2A01 /* .gitkeep */; };
 		8E8A47021DB32779009F2A01 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A469B1DB32779009F2A01 /* .gitkeep */; };
 		8E8A47031DB32779009F2A01 /* HMHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A469D1DB32779009F2A01 /* HMHomeController.m */; };
@@ -77,6 +79,10 @@
 		5BEC4FBE1DB1192100CA99B0 /* loveHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loveHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEC4FC21DB1192100CA99B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BEC4FD21DB1192100CA99B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AEF43BD1DB32D8D00817043 /* HMUserInformationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMUserInformationController.h; sourceTree = "<group>"; };
+		6AEF43BE1DB32D8D00817043 /* HMUserInformationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMUserInformationController.m; sourceTree = "<group>"; };
+		6AEF43C01DB32E0500817043 /* HMSystemInformationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSystemInformationController.h; sourceTree = "<group>"; };
+		6AEF43C11DB32E0500817043 /* HMSystemInformationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSystemInformationController.m; sourceTree = "<group>"; };
 		8E8A46991DB32779009F2A01 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		8E8A469B1DB32779009F2A01 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		8E8A469C1DB32779009F2A01 /* HMHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMHomeController.h; sourceTree = "<group>"; };
@@ -235,6 +241,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6AEF43BC1DB32D1500817043 /* messageGroup */ = {
+			isa = PBXGroup;
+			children = (
+				6AEF43BD1DB32D8D00817043 /* HMUserInformationController.h */,
+				6AEF43BE1DB32D8D00817043 /* HMUserInformationController.m */,
+				6AEF43C01DB32E0500817043 /* HMSystemInformationController.h */,
+				6AEF43C11DB32E0500817043 /* HMSystemInformationController.m */,
+			);
+			name = messageGroup;
+			sourceTree = "<group>";
+		};
 		8E8A46971DB32779009F2A01 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +353,7 @@
 		8E8A46BA1DB32779009F2A01 /* myMeassage */ = {
 			isa = PBXGroup;
 			children = (
+				6AEF43BC1DB32D1500817043 /* messageGroup */,
 				8E8A46BB1DB32779009F2A01 /* HMMyMessageController.h */,
 				8E8A46BC1DB32779009F2A01 /* HMMyMessageController.m */,
 			);
@@ -664,6 +682,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E8A47031DB32779009F2A01 /* HMHomeController.m in Sources */,
+				6AEF43BF1DB32D8D00817043 /* HMUserInformationController.m in Sources */,
 				8E8A47241DB32779009F2A01 /* UIBarButtonItem+DDBarButtonItem.m in Sources */,
 				8E8A472E1DB32779009F2A01 /* DDProductViewCell.m in Sources */,
 				8E8A472C1DB32779009F2A01 /* DDProductKindView.m in Sources */,
@@ -672,6 +691,7 @@
 				8E8A47191DB32779009F2A01 /* HMTableViewController.m in Sources */,
 				5B0674611DB1371500299600 /* ViewController.m in Sources */,
 				8E8A471C1DB32779009F2A01 /* WelcomCell.m in Sources */,
+				6AEF43C21DB32E0500817043 /* HMSystemInformationController.m in Sources */,
 				8E8A47131DB32779009F2A01 /* HMMyMeNuController.m in Sources */,
 				8E8A47231DB32779009F2A01 /* NotificationDefine.m in Sources */,
 				8E8A47051DB32779009F2A01 /* DDBaseNavController.m in Sources */,

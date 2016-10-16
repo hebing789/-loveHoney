@@ -48,7 +48,7 @@
 //    DDBaseNavController* nvmyMenuContr= [[DDBaseNavController alloc]initWithRootViewController:myMenuContr];
     //无效果
    
-    
+    myMenuContr.navigationItem.title = @"我的订单";
     [[self viewController].navigationController pushViewController:myMenuContr animated:YES];
     
     
@@ -58,6 +58,7 @@
     
     NSLog(@"优惠券");
     HMYouHuiQuanController* youhui = [[HMYouHuiQuanController alloc]init];
+    youhui.navigationItem.title = @"优惠券";
     [[self viewController].navigationController pushViewController:youhui animated:YES];
     
 
@@ -67,6 +68,7 @@
 - (IBAction)toMyMessage:(id)sender {
     NSLog(@"我的消息");
     HMMyMessageController* messageControl= [[HMMyMessageController alloc]init];
+//    messageControl.navigationItem.title = @"我的消息";
       [[self viewController].navigationController pushViewController:messageControl animated:YES];
 }
 

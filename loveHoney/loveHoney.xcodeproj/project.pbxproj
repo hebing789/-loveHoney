@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B01F9C81DB3A9D000E3A1EE /* HMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F9C71DB3A9D000E3A1EE /* HMWebViewController.m */; };
 		5B06744D1DB1371500299600 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674211DB1371500299600 /* AppDelegate.m */; };
 		5B0674611DB1371500299600 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B06744C1DB1371500299600 /* ViewController.m */; };
 		5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674631DB1375400299600 /* DSHTTPClient.m */; };
@@ -81,6 +82,8 @@
 /* Begin PBXFileReference section */
 		055F5C9A44396790450CF0E2 /* Pods-loveHoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.debug.xcconfig"; sourceTree = "<group>"; };
 		5B01F75C1DB1ADA000E3A1EE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5B01F9C61DB3A9D000E3A1EE /* HMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWebViewController.h; sourceTree = "<group>"; };
+		5B01F9C71DB3A9D000E3A1EE /* HMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWebViewController.m; sourceTree = "<group>"; };
 		5B0674201DB1371500299600 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B0674211DB1371500299600 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5B06744B1DB1371500299600 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -223,6 +226,27 @@
 				F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B01F9C91DB3B0F300E3A1EE /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5B01F9CA1DB3B0FF00E3A1EE /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		5B01F9CB1DB3B10A00E3A1EE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 		5B06734A1DB1324400299600 /* Base.lproj */ = {
@@ -379,6 +403,9 @@
 		8E8A47611DB38CC9009F2A01 /* address */ = {
 			isa = PBXGroup;
 			children = (
+				5B01F9CB1DB3B10A00E3A1EE /* controller */,
+				5B01F9CA1DB3B0FF00E3A1EE /* model */,
+				5B01F9C91DB3B0F300E3A1EE /* view */,
 				8E8A47621DB38CC9009F2A01 /* HMAddressController.h */,
 				8E8A47631DB38CC9009F2A01 /* HMAddressController.m */,
 			);
@@ -593,6 +620,8 @@
 				8E8A47B41DB38CCA009F2A01 /* NotificationDefine.h */,
 				8E8A47B51DB38CCA009F2A01 /* NotificationDefine.m */,
 				8E8A47B61DB38CCA009F2A01 /* TableConstant.h */,
+				5B01F9C61DB3A9D000E3A1EE /* HMWebViewController.h */,
+				5B01F9C71DB3A9D000E3A1EE /* HMWebViewController.m */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -808,6 +837,7 @@
 				8E8A47D81DB38CCA009F2A01 /* HBTableBarController.m in Sources */,
 				8E8A47ED1DB38CCA009F2A01 /* HMMyMessageController.m in Sources */,
 				8E8A48021DB38CCA009F2A01 /* NotificationDefine.m in Sources */,
+				5B01F9C81DB3A9D000E3A1EE /* HMWebViewController.m in Sources */,
 				8E8A47D71DB38CCA009F2A01 /* DDBaseViewController.m in Sources */,
 				8E8A483F1DB3C805009F2A01 /* DDProductKindView.m in Sources */,
 				5B0674611DB1371500299600 /* ViewController.m in Sources */,

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "HBTableBarController.h"
 #import "WecomeAnimation.h"
+#import "HMWebViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,37 +18,123 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-   
+    
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    
-    //获取当前版本号:
-    NSDictionary* dic=[NSBundle mainBundle].infoDictionary;
-    NSString* currentVersion=dic[@"CFBundleShortVersionString"];
-    
-    NSString* old=[[NSUserDefaults standardUserDefaults] objectForKey:@"version"];
-    if ([old isEqualToString:currentVersion]) {
-        HBTableBarController* tabbar=[[HBTableBarController alloc]init];
-        
-        self.window.rootViewController=tabbar;
-        
-    }else{
-        WecomeAnimation* welcome=[[WecomeAnimation alloc]init];
-        
-        self.window.rootViewController=welcome;
-        
-        //保存上次成功的版本号
-        [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:@"version"];
-        [[NSUserDefaults standardUserDefaults]synchronize];
-    }
+    self.window.backgroundColor=[UIColor whiteColor];
 
-    [self.window makeKeyAndVisible];
-    [UIApplication sharedApplication].statusBarHidden=NO;
-    [UIApplication sharedApplication].statusBarStyle= UIStatusBarStyleLightContent ;
+    //先加载数据,加载成功后就,切换控制器
+    [self addAdsVideo:^{
+        
+       //
+        
+        
+    }];
+    
+    //2秒后切换控制器
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        //            获取当前版本号:
+        NSDictionary* dic=[NSBundle mainBundle].infoDictionary;
+        NSString* currentVersion=dic[@"CFBundleShortVersionString"];
+        
+        NSString* old=[[NSUserDefaults standardUserDefaults] objectForKey:@"version"];
+        if ([old isEqualToString:currentVersion]) {
+            HBTableBarController* tabbar=[[HBTableBarController alloc]init];
+            
+            self.window.rootViewController=tabbar;
+            
+        }else{
+            WecomeAnimation* welcome=[[WecomeAnimation alloc]init];
+            
+            self.window.rootViewController=welcome;
+            
+            //保存上次成功的版本号
+            [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:@"version"];
+            [[NSUserDefaults standardUserDefaults]synchronize];
+        }
+        
+        //                [self.window makeKeyAndVisible];
+        [UIApplication sharedApplication].statusBarHidden=NO;
+        [UIApplication sharedApplication].statusBarStyle= UIStatusBarStyleLightContent ;
+        
+        
+        
+    });
 
-    return YES;
+
+
+        return YES;
+  }
+
+-(void)addAdsVideo:(void(^)())back{
+    //法1,没有实现
+//    HMWebViewController* web = [[HMWebViewController alloc]init];
+//    self.window.rootViewController = web;
+//    [self.window makeKeyAndVisible];
+    
+    [self ads:^(NSDictionary *data) {
+        
+        NSDictionary* dic1 = data[@"data"];
+        
+//        web.urlString= dic1[@"img_big_name"];
+  
+        
+        UIImageView* imgView = [[UIImageView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+        
+        
+        [imgView sd_setImageWithURL:[NSURL URLWithString:dic1[@"img_big_name"]]];
+        
+        
+        
+        [self.window addSubview:imgView];
+        
+        [self.window makeKeyAndVisible];
+        
+        
+        [UIView animateWithDuration:1 delay:1 options:UIViewAnimationOptionLayoutSubviews animations:^{
+            
+            imgView.transform = CGAffineTransformMakeScale(2, 2);
+            imgView.alpha = 0;
+        } completion:^(BOOL finished) {
+            [imgView removeFromSuperview];
+            
+        }];
+
+        if (back) {
+            back();
+     
+        }
+        
+        
+    }];
+    
+    
 }
 
-
+// 程序启动广告
+//图片广告
+- (void)ads:(void(^)(NSDictionary*))dataBlock{
+    
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    
+    [param setValue:@"7" forKey:@"call"];
+    
+    
+    [DSHTTPClient postUrlString:@"ad.json.php" withParam:param withSuccessBlock:^(id data) {
+        
+        NSLog(@"%@",data);
+        if (dataBlock) {
+            dataBlock(data);
+        }
+        
+    } withFailedBlock:^(NSError *error) {
+        NSLog(@"%@",error);
+    } withErrorBlock:^(NSString *message) {
+        NSLog(@"%@",message);
+    }];
+    
+    
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

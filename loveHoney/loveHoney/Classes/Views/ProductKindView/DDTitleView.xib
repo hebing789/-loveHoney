@@ -20,12 +20,13 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                             <real key="value" value="0.5"/>
                         </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
                             <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="keyPath">
-                            <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
                         </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                     </userDefinedRuntimeAttributes>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="人民大会堂" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A3B-If-Pf3">

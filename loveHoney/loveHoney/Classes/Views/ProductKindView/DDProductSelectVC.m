@@ -7,6 +7,7 @@
 //
 
 #import "DDProductSelectVC.h"
+#import "DDProductViewCell.h"
 
 static NSString *productSelectCellId = @"productSelectCellId";
 
@@ -21,7 +22,7 @@ static NSString *productSelectCellId = @"productSelectCellId";
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    self.view = [[UIView alloc]initWithFrame:CGRectMake(screemW *0.25, 64, screemW * 0.75, screemH)];
+    self.view = [[UIView alloc]initWithFrame:CGRectMake(screemW *0.2, 64, screemW * 0.8, screemH)];
 
     [self setupTableView];
 }
@@ -33,12 +34,16 @@ static NSString *productSelectCellId = @"productSelectCellId";
     [self.view addSubview:tableView];
     
     self.tableView.showsVerticalScrollIndicator = NO;
+
     [tableView makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:productSelectCellId];
+    
+    
+    UINib *nib = [UINib nibWithNibName:@"DDProductViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:productSelectCellId];
 
 }
 
@@ -54,10 +59,15 @@ static NSString *productSelectCellId = @"productSelectCellId";
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:productSelectCellId forIndexPath:indexPath];
-    cell.textLabel.text = @"商品商品商品商品商品商品商品商品商品商品";
+    DDProductViewCell *cell = [tableView dequeueReusableCellWithIdentifier:productSelectCellId forIndexPath:indexPath];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    return 100;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{

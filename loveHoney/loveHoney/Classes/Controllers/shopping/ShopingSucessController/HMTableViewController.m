@@ -1,22 +1,21 @@
 //
-//  HMMyMeNuController.m
+//  HMTableViewController.m
 //  loveHoney
 //
-//  Created by hebing on 16/10/16.
+//  Created by gaojie on 16/10/15.
 //  Copyright © 2016年 hebing. All rights reserved.
 //
 
-#import "HMMyMeNuController.h"
+#import "HMTableViewController.h"
 
-@interface HMMyMeNuController ()
+@interface HMTableViewController ()
 
 @end
 
-@implementation HMMyMeNuController
+@implementation HMTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor=[UIColor redColor];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

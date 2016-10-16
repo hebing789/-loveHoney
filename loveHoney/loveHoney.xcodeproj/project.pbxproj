@@ -65,6 +65,7 @@
 		5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674631DB1375400299600 /* DSHTTPClient.m */; };
 		5B0674661DB13AF400299600 /* Assets 00-09-05-008.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674651DB13AF400299600 /* Assets 00-09-05-008.xcassets */; };
 		5BEC4FC31DB1192100CA99B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC4FC21DB1192100CA99B0 /* main.m */; };
+		6AEF43CA1DB3791E00817043 /* HMSystemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AEF43C91DB3791E00817043 /* HMSystemCell.m */; };
 		EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */; };
 /* End PBXBuildFile section */
 
@@ -170,6 +171,8 @@
 		5BEC4FBE1DB1192100CA99B0 /* loveHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loveHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEC4FC21DB1192100CA99B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BEC4FD21DB1192100CA99B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AEF43C81DB3791E00817043 /* HMSystemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSystemCell.h; sourceTree = "<group>"; };
+		6AEF43C91DB3791E00817043 /* HMSystemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSystemCell.m; sourceTree = "<group>"; };
 		9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loveHoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -293,6 +296,7 @@
 		37BF761C1DB360B80016098D /* MyMenuAndMessage */ = {
 			isa = PBXGroup;
 			children = (
+				6AEF43C71DB3787400817043 /* HMcell */,
 				37BF761D1DB360B80016098D /* myMeassage */,
 				37BF76201DB360B80016098D /* myMenu */,
 				37BF76231DB360B80016098D /* youhuiQuan */,
@@ -543,6 +547,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6AEF43C71DB3787400817043 /* HMcell */ = {
+			isa = PBXGroup;
+			children = (
+				6AEF43C81DB3791E00817043 /* HMSystemCell.h */,
+				6AEF43C91DB3791E00817043 /* HMSystemCell.m */,
+			);
+			path = HMcell;
+			sourceTree = "<group>";
+		};
 		F91E465377817DC3DBC7ACA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -729,6 +742,7 @@
 				37BF76821DB360B80016098D /* WelcomCell.m in Sources */,
 				37BF767E1DB360B80016098D /* HMShoppingViewController.m in Sources */,
 				37BF76931DB360B80016098D /* DDProductSelectVC.m in Sources */,
+				6AEF43CA1DB3791E00817043 /* HMSystemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

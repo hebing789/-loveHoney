@@ -59,6 +59,7 @@
 		37BF76951DB360B80016098D /* DDProductViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BF76601DB360B80016098D /* DDProductViewCell.xib */; };
 		37BF76961DB360B80016098D /* DDTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF76621DB360B80016098D /* DDTitleView.m */; };
 		37BF76971DB360B80016098D /* DDTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37BF76631DB360B80016098D /* DDTitleView.xib */; };
+		37BF769A1DB3741D0016098D /* HMDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF76991DB3741D0016098D /* HMDownCell.m */; };
 		5B06744D1DB1371500299600 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674211DB1371500299600 /* AppDelegate.m */; };
 		5B0674611DB1371500299600 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B06744C1DB1371500299600 /* ViewController.m */; };
 		5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674631DB1375400299600 /* DSHTTPClient.m */; };
@@ -156,6 +157,8 @@
 		37BF76611DB360B80016098D /* DDTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTitleView.h; sourceTree = "<group>"; };
 		37BF76621DB360B80016098D /* DDTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTitleView.m; sourceTree = "<group>"; };
 		37BF76631DB360B80016098D /* DDTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDTitleView.xib; sourceTree = "<group>"; };
+		37BF76981DB3741D0016098D /* HMDownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMDownCell.h; sourceTree = "<group>"; };
+		37BF76991DB3741D0016098D /* HMDownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMDownCell.m; sourceTree = "<group>"; };
 		5B01F75C1DB1ADA000E3A1EE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5B0674201DB1371500299600 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B0674211DB1371500299600 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				37BF75F91DB360B80016098D /* HMHomeController.m */,
 				37BF75FA1DB360B80016098D /* HMUpCell.h */,
 				37BF75FB1DB360B80016098D /* HMUpCell.m */,
+				37BF76981DB3741D0016098D /* HMDownCell.h */,
+				37BF76991DB3741D0016098D /* HMDownCell.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -716,6 +721,7 @@
 				37BF768E1DB360B80016098D /* UIView+UIframe.m in Sources */,
 				37BF76961DB360B80016098D /* DDTitleView.m in Sources */,
 				37BF76831DB360B80016098D /* WecomeAnimation.m in Sources */,
+				37BF769A1DB3741D0016098D /* HMDownCell.m in Sources */,
 				37BF76721DB360B80016098D /* HMMeViewController.m in Sources */,
 				5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */,
 				37BF766D1DB360B80016098D /* HMTabBar.m in Sources */,

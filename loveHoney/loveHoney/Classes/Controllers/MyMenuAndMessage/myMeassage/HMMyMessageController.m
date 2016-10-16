@@ -9,26 +9,32 @@
 #import "HMMyMessageController.h"
 #import "HMUserInformationController.h"
 #import "HMSystemInformationController.h"
-@interface HMMyMessageController ()
+@interface HMMyMessageController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UIView *tableViewUser;
 @property (nonatomic,strong)UITableView *tableViewSystem;
 @end
 
+static NSString *reuseId = @"tableCell";
+
 @implementation HMMyMessageController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     UIView *tableViewUser = [[UIView alloc]init];
-    UITableView *tableViewSystem = [[UITableView alloc]init];
+    UITableView *tableViewSystem = [[UITableView alloc]initWithFrame:[UIScreen mainScreen].bounds style:UITableViewStyleGrouped];
     self.tableViewUser = tableViewUser;
     self.tableViewSystem = tableViewSystem;
     tableViewUser.backgroundColor = [UIColor whiteColor];
-//    tableViewSystem.backgroundColor = [UIColor blueColor];
     
     self.view = self.tableViewSystem;
     self.tableViewSystem.hidden = NO;
     self.tableViewUser.hidden = YES;
+    
+    tableViewSystem.dataSource = self;
+    
+    tableViewSystem.delegate = self;
     
     [self createTopView];
     
@@ -112,4 +118,56 @@
             break;
     }
 }
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 10;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 2;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [[UITableViewCell alloc]init];
+    
+    if (cell == nil) {
+        
+        cell = [tableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
+    }
+    
+    cell.textLabel.text = @"测试";
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.0001;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 10;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end

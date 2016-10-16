@@ -18,8 +18,18 @@
      return self;
 }
 
+//-(instancetype)initWithFrame:(CGRect)frame{
+//    if (self = [super initWithFrame:frame]) {
+//        
+//        [self setupUI];
+//    }
+//    return self;
+//    
+//}
+
 
 - (void)setupUI{
+//    self.contentView.backgroundColor = [UIColor redColor];
     UIImageView *imgView = [UIImageView new];
    
     imgView.backgroundColor = [UIColor blackColor];

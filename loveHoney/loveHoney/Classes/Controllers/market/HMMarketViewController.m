@@ -9,6 +9,7 @@
 #import "HMMarketViewController.h"
 #import "DDProductKindView.h"
 #import "DDProductSelectVC.h"
+#import "DDKindViewCell.h"
 
 static NSString *productKindViewCellId = @"productKindViewCellId";
 
@@ -32,11 +33,13 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
     [self setupLeftKindSelectView];
     
     [self setupRightProductSelectViewController];
+
 }
+
 
 -(void)setupLeftKindSelectView{
 
-    DDProductKindView *productKindView = [[DDProductKindView alloc]initWithFrame:CGRectMake(0, 0, screemW * 0.25, self.view.bounds.size.height)];
+    DDProductKindView *productKindView = [[DDProductKindView alloc]initWithFrame:CGRectMake(0, 0, screemW * 0.2, self.view.bounds.size.height)];
     self.productKindView = productKindView;
     [self.view addSubview:productKindView];
     
@@ -44,7 +47,8 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
     productKindView.delegate = self;
     self.productKindView.showsVerticalScrollIndicator = NO;
     
-    [productKindView registerClass:[UITableViewCell class] forCellReuseIdentifier:productKindViewCellId];
+    UINib *nib = [UINib nibWithNibName:@"DDKindViewCell" bundle:nil];
+    [productKindView registerNib:nib forCellReuseIdentifier:productKindViewCellId];
 
 }
 
@@ -64,10 +68,9 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:productKindViewCellId forIndexPath:indexPath];
+    DDKindViewCell *cell = [tableView dequeueReusableCellWithIdentifier:productKindViewCellId forIndexPath:indexPath];
     
-    cell.textLabel.text = @"粮油米面";
-    cell.backgroundColor = [UIColor lightGrayColor];
+//    cell.backgroundColor = [UIColor lightGrayColor];
     
     return cell;
 }

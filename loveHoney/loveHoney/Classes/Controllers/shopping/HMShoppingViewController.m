@@ -7,7 +7,7 @@
 //
 
 #import "HMShoppingViewController.h"
-
+#import "HMTableViewController.h"
 @interface HMShoppingViewController ()
 
 @end
@@ -25,13 +25,13 @@
 }
 //设置UI界面
 - (void)setUpUI{
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"v2_goback"] style:UIBarButtonItemStylePlain target:self action:@selector(ClickBtn:)];
-    UIButton *backBtn = [[UIButton alloc]init];
-    [backBtn addTarget:self action:@selector(ClickBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [backBtn setImage:[UIImage imageNamed:@"v2_goback"] forState:UIControlStateNormal];
-    UIBarButtonItem *btnLeftItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
-    self.navigationItem.leftBarButtonItem = btnLeftItem;
-    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"v2_goback"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(ClickBtn:)];
+//    UIButton *backBtn = [[UIButton alloc]init];
+//    [backBtn addTarget:self action:@selector(ClickBtn:) forControlEvents:UIControlEventTouchUpInside];
+//    [backBtn setImage:[UIImage imageNamed:@"v2_goback"] forState:UIControlStateNormal];
+//    UIBarButtonItem *btnLeftItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
+//    self.navigationItem.leftBarButtonItem = btnLeftItem;
+//    
     UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"v2_shop_empty"]];
  
     [self.view addSubview:imageView];
@@ -105,6 +105,7 @@
 {
 
     NSLog(@"点击逛逛按钮");
+    //[self.navigationController pushViewController:[[HMTableViewController alloc]init] animated:YES];
     [self dismissViewControllerAnimated:YES completion:^{
         
         if (_callback) {

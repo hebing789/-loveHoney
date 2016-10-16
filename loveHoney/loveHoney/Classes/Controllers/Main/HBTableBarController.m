@@ -12,31 +12,35 @@
 #import "HMShoppingViewController.h"
 #import "HMMeViewController.h"
 #import "hideBottomBarNavagationControl.h"
+#import "HMTabBar.h"
 
 @interface HBTableBarController ()
 
-@property(nonatomic,weak) HMShoppingViewController *shoppingVC;
-//解决dismiss后调回之前present的页面问题,购物页面present问题
-//@property(nonatomic,assign)NSInteger lastiIndex;
-//
-//@property(nonatomic,weak)UITabBarItem* lastItem;
-//
-@property(nonatomic,strong)NSMutableArray* itemAry;
+
+//解决dismiss后调回之前present的页面问题,购物页面present问题用属性记录无法实现
+
 @end
 
 @implementation HBTableBarController
 
-//-(NSMutableArray *)itemAry{
-//    
-//    if (_itemAry == nil) {
-//        _itemAry= [NSMutableArray new];
-//    }
-//    return _itemAry;
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //自定义购物车按钮 的tabBar;
+    HMTabBar* tarBar= [[HMTabBar alloc]init];
     
+    [tarBar setButClickCallback:^{
+        HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
+        DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:shoppingVC];
+        
+        
+        [self presentViewController: navVC animated:YES completion:^{
+
+        }];
+        
+        
+    }];
+    [self setValue:tarBar forKey:@"tabBar"];
     
 }
 
@@ -58,15 +62,15 @@
 {
     HMHomeController *homeVC = [[HMHomeController alloc]init];
     HMMarketViewController *marketVC = [[HMMarketViewController alloc]init];
-    HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
+//    HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
 //    self.shoppingVC=shoppingVC;
     HMMeViewController *profileVC = [[HMMeViewController alloc]init];
     
     
     [self addChildViewController:homeVC andTitle:@"首页" andImageName:@"v2_home" andSelectedImageName:@"v2_home_r"andIndex:0];
     [self addChildViewController:marketVC andTitle:@"闪电超市" andImageName:@"freshReservation" andSelectedImageName:@"freshReservation_r"andIndex:1];
-    [self addChildViewController:shoppingVC andTitle:@"购物车" andImageName:@"shopCart" andSelectedImageName:@"shopCart_r"andIndex:2];
-    [self addChildViewController:profileVC andTitle:@"我的" andImageName:@"v2_my" andSelectedImageName:@"v2_my_r"andIndex:3];
+//    [self addChildViewController:shoppingVC andTitle:@"购物车" andImageName:@"shopCart" andSelectedImageName:@"shopCart_r"andIndex:2];
+    [self addChildViewController:profileVC andTitle:@"我的" andImageName:@"v2_my" andSelectedImageName:@"v2_my_r"andIndex:2];
     
 }
 
@@ -98,32 +102,32 @@
 
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item{
     
-    if(item.tag ==2){
-        //由于这个tabbar的点击事件无法拦截,跳转后dismiss都会直接回到购物车页面
-        
-        //需要创建一个,设置属性传过来不行
-        HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
-        DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:shoppingVC];
-        //使用谁推过去,dismiss就显示谁的逻辑不行
-//        UIViewController* lastViewController=self.childViewControllers[0];
-
-//        [shoppingVC setCallback:^{
-//                  [self.itemAry addObject:item];
-//           
+//    if(item.tag ==2){
+//        //由于这个tabbar的点击事件无法拦截,跳转后dismiss都会直接回到购物车页面
+//        
+//        //需要创建一个,设置属性传过来不行
+//        HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
+//        DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:shoppingVC];
+//        //使用谁推过去,dismiss就显示谁的逻辑不行
+////        UIViewController* lastViewController=self.childViewControllers[0];
+//
+////        [shoppingVC setCallback:^{
+////                  [self.itemAry addObject:item];
+////           
+////            
+//////            
+//////        }];
+//    
+//        [self presentViewController: navVC animated:YES completion:^{
+//
 //            
 //            
 //        }];
-        
-        [self presentViewController: navVC animated:YES completion:^{
-
-            
-            
-        }];
-        
-
-        return;
-    }
-    
+//        
+//
+//        return;
+//    }
+//    
     NSInteger index = 0;
 //    NSLog(@"%ld",(long)item.tag);
     for (UIView* subview in tabBar.subviews) {
@@ -171,23 +175,6 @@
     
 }
 
-////ary里面一直为空,跳转页面更改无效
-//-(void)viewWillAppear:(BOOL)animated{
-//    [super viewWillAppear:YES];
-//    
-//    if (self.itemAry.count == 0) {
-//        if (self.tabBarItem.tag ==0) {
-//            [self.itemAry addObject:self.tabBarItem];
-//        }
-//        
-//        [self tabBar:self.tabBar didSelectItem:self.itemAry[0]];
-//        
-//    }else{
-//        [self tabBar:self.tabBar didSelectItem:self.itemAry[self.itemAry.count - 1]];
-//       
-//    }
-//    [self tabBar:self.tabBar didSelectItem:self.itemAry[0]];
-//}
 
 
 @end

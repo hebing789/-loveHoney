@@ -7,6 +7,7 @@
 //
 
 #import "HMHomeController.h"
+#import "HMUpCell.h"
 
 @interface HMHomeController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -20,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor=[UIColor blueColor];
+//    self.view.backgroundColor=[UIColor blueColor];
     
     [self setupTableView];
 }
@@ -31,6 +32,12 @@
     self.tableView = tableView;
     self.view = tableView;
     
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+//    self.tableView.backgroundColor = [UIColor redColor];
+    [self.tableView registerClass:[HMUpCell class] forCellReuseIdentifier:@"upcell"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+
     
     [self setupScroll];
     
@@ -75,25 +82,50 @@
     UIView *BtnView = [[UIView alloc] initWithFrame:CGRectMake(0, 150, [UIScreen mainScreen].bounds.size.width, 100)];
     BtnView.backgroundColor = [UIColor redColor];
     [HDView addSubview:BtnView];
+            CGFloat btnW = [UIScreen mainScreen].bounds.size.width / 4;
+    for (int i = 0; i<4; i++) {
+
+        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(i*btnW, 0, btnW, BtnView.size.height)];
+        btn.backgroundColor = [UIColor cyanColor];
+        [BtnView addSubview:btn];
+    }
+    
 }
 
 
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    if(section == 0)
+    {
+        return 4;
+    }
+        return 1;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"" forIndexPath:indexPath];
+    UITableViewCell *cell;
+    if (indexPath.section == 0) {
+          cell = [tableView dequeueReusableCellWithIdentifier:@"upcell" forIndexPath:indexPath];
+            return cell;
+    }
+    if (indexPath.section == 1) {
+         cell= [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+        return cell;
+    }
     return cell;
 }
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 0){
+        return 200;
+    }
+    return 100;
+}
 
 
 @end

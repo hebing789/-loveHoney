@@ -11,4 +11,5 @@ target 'loveHoney' do
     pod 'SDWebImage'
     pod 'MJRefresh', '~> 3.1'
     pod 'SDCycleScrollView', '~> 1.65'
+    pod 'SVProgressHUD'
 end

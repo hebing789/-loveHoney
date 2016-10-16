@@ -9,6 +9,16 @@
 #import "HMMeViewController.h"
 #import "HMMeTableViewCell1.h"
 #import "HMMenuTableViewCell2.h"
+
+#import "HMSettingController.h"
+
+#import "HMAddressController.h"
+#import "HMStoreController.h"
+#import "HMSharedController.h"
+#import "HMCustomerController.h"
+#import "HMHelpController.h"
+
+
 static NSString* cellMenu=@"HMMeNuViewControllerCell1";
 static NSString* cellMe=@"HMMeViewControllerCell2";
 @interface HMMeViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -63,9 +73,7 @@ static NSString* cellMe=@"HMMeViewControllerCell2";
                    
                      ];
 
-
-        
-        
+       
     }
     return _dataAry;
 }
@@ -205,6 +213,19 @@ static NSString* cellMe=@"HMMeViewControllerCell2";
 -(void)toSetting{
     
     NSLog(@"设置页面");
+    
+    
+    
+    
+    
+}
+
+//跳转页面
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    
+    
 }
 
 

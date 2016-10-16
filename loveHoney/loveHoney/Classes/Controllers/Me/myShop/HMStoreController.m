@@ -6,13 +6,13 @@
 //  Copyright © 2016年 hebing. All rights reserved.
 //
 
-#import "HMShoppingController.h"
+#import "HMStoreController.h"
 
-@interface HMShoppingController ()
+@interface HMStoreController ()
 
 @end
 
-@implementation HMShoppingController
+@implementation HMStoreController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

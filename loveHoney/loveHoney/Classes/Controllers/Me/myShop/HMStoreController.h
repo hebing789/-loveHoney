@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HMShoppingController : UIViewController
+@interface HMStoreController : UIViewController
 
 @end

@@ -20,11 +20,16 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     
     if( self= [super initWithFrame:frame]){
-//        
+//
+        
 //        self.titleLabel.font=[UIFont systemFontOfSize:15];
 //        
 //        self.titleLabel.textAlignment = NSTextAlignmentCenter;
 //        self.titleLabel.textColor=[UIColor darkGrayColor];
+        
+        [self setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+        
+        
         
         
     }

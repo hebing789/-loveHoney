@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37BF754D1DB311F00016098D /* HMUpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BF754C1DB311F00016098D /* HMUpCell.m */; };
 		5B01F75F1DB1B0AC00E3A1EE /* HMNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F75E1DB1B0AC00E3A1EE /* HMNetworkTools.m */; };
 		5B01F7641DB1C45A00E3A1EE /* NotificationDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F7621DB1C45A00E3A1EE /* NotificationDefine.m */; };
 		5B01F7671DB1C48D00E3A1EE /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F7661DB1C48D00E3A1EE /* NSArray+Log.m */; };
@@ -58,6 +59,8 @@
 
 /* Begin PBXFileReference section */
 		055F5C9A44396790450CF0E2 /* Pods-loveHoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.debug.xcconfig"; sourceTree = "<group>"; };
+		37BF754B1DB311F00016098D /* HMUpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMUpCell.h; sourceTree = "<group>"; };
+		37BF754C1DB311F00016098D /* HMUpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMUpCell.m; sourceTree = "<group>"; };
 		5B01F75C1DB1ADA000E3A1EE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5B01F75D1DB1B0AC00E3A1EE /* HMNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMNetworkTools.h; sourceTree = "<group>"; };
 		5B01F75E1DB1B0AC00E3A1EE /* HMNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMNetworkTools.m; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 		37FD840B1DB22C5F00AC21C2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37BF754B1DB311F00016098D /* HMUpCell.h */,
+				37BF754C1DB311F00016098D /* HMUpCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -641,6 +646,7 @@
 				8EC8BC8A1DB229DA00AFCD51 /* DDTitleView.m in Sources */,
 				5B01F78D1DB29B2E00E3A1EE /* HMMyMeNuController.m in Sources */,
 				8E63D0F21DB1D32F00D85260 /* UIBarButtonItem+DDBarButtonItem.m in Sources */,
+				37BF754D1DB311F00016098D /* HMUpCell.m in Sources */,
 				5B0674691DB13F7600299600 /* HMHomeController.m in Sources */,
 				5B06746C1DB13F8C00299600 /* HMMarketViewController.m in Sources */,
 				8E63D0EA1DB1CDDA00D85260 /* DDProductKindView.m in Sources */,

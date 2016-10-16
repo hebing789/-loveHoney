@@ -63,9 +63,7 @@ static NSString* cellMe=@"HMMeViewControllerCell2";
                    
                      ];
 
-
-        
-        
+       
     }
     return _dataAry;
 }
@@ -205,6 +203,10 @@ static NSString* cellMe=@"HMMeViewControllerCell2";
 -(void)toSetting{
     
     NSLog(@"设置页面");
+    
+    
+    
+    
 }
 
 

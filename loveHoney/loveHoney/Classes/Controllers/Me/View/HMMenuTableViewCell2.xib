@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HMMeNuViewControllerCell1" rowHeight="62" id="KGk-i7-Jjw" customClass="HMMenuTableViewCell2">
+            <rect key="frame" x="0.0" y="0.0" width="325" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="325" height="61"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5h-DF-oRj" customClass="HMVerticalTitleButton">
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="我的订单" image="v2_my_order_icon">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="toMyMenu:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FDH-GX-rxw"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBZ-pO-l3t" customClass="HMVerticalTitleButton">
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="我的消息" image="v2_my_message_icon">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="toMyMessage:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6bE-jC-gg5"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSi-Ra-LAa" customClass="HMVerticalTitleButton">
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" title="优惠券" image="v2_my_coupon_icon">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="toFree:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dUn-oD-Mp8"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="tSi-Ra-LAa" secondAttribute="bottom" id="1nq-4b-ABD"/>
+                    <constraint firstItem="tSi-Ra-LAa" firstAttribute="height" secondItem="F5h-DF-oRj" secondAttribute="height" id="3yT-0J-Gn0"/>
+                    <constraint firstItem="RBZ-pO-l3t" firstAttribute="leading" secondItem="tSi-Ra-LAa" secondAttribute="trailing" constant="1" id="Ffr-Hj-rWD"/>
+                    <constraint firstItem="RBZ-pO-l3t" firstAttribute="width" secondItem="F5h-DF-oRj" secondAttribute="width" id="Mzd-Xy-ccC"/>
+                    <constraint firstItem="tSi-Ra-LAa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="N8H-4z-dMT"/>
+                    <constraint firstAttribute="bottom" secondItem="RBZ-pO-l3t" secondAttribute="bottom" id="PoL-b8-y6i"/>
+                    <constraint firstItem="F5h-DF-oRj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Va2-mI-8uX"/>
+                    <constraint firstItem="F5h-DF-oRj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Vc8-l7-4rO"/>
+                    <constraint firstItem="tSi-Ra-LAa" firstAttribute="leading" secondItem="F5h-DF-oRj" secondAttribute="trailing" constant="1" id="WdP-9Z-Xba"/>
+                    <constraint firstAttribute="trailing" secondItem="RBZ-pO-l3t" secondAttribute="trailing" id="do0-sX-fpV"/>
+                    <constraint firstItem="RBZ-pO-l3t" firstAttribute="height" secondItem="F5h-DF-oRj" secondAttribute="height" id="kPR-CT-8KK"/>
+                    <constraint firstItem="RBZ-pO-l3t" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nzd-TS-gIw"/>
+                    <constraint firstAttribute="bottom" secondItem="F5h-DF-oRj" secondAttribute="bottom" id="qZW-ab-sdz"/>
+                    <constraint firstItem="tSi-Ra-LAa" firstAttribute="width" secondItem="F5h-DF-oRj" secondAttribute="width" id="sWl-c3-POc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="myMenu" destination="F5h-DF-oRj" id="Q1n-UT-iJf"/>
+                <outlet property="myMessage" destination="RBZ-pO-l3t" id="Ges-fV-UX1"/>
+                <outlet property="youHuiQuan" destination="tSi-Ra-LAa" id="0Cg-ae-otP"/>
+            </connections>
+            <point key="canvasLocation" x="35.5" y="108"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="v2_my_coupon_icon" width="32" height="22"/>
+        <image name="v2_my_message_icon" width="32" height="22"/>
+        <image name="v2_my_order_icon" width="32" height="22"/>
+    </resources>
+</document>

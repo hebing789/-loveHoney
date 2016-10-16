@@ -21,7 +21,7 @@
 //
 //@property(nonatomic,weak)UITabBarItem* lastItem;
 //
-//@property(nonatomic,strong)NSMutableArray* itemAry;
+@property(nonatomic,strong)NSMutableArray* itemAry;
 @end
 
 @implementation HBTableBarController
@@ -86,13 +86,9 @@
     [vc.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor darkGrayColor]} forState:UIControlStateSelected];
     
     DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:vc];
-    
-    if (vc.tabBarItem.tag == 3) {
-         [self addChildViewController:vc];
-    }else{
-        
-        [self addChildViewController:navVC];
-    }
+     [self addChildViewController:navVC];
+////    后面要Push如果当前控制器没有导航控制器push不过去,在此可以获取navegationBar,利用生命周期写,更简单
+
     
     
 }
@@ -108,15 +104,12 @@
         //需要创建一个,设置属性传过来不行
         HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
         DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:shoppingVC];
-//        [self.itemAry addObject:item];
+        //使用谁推过去,dismiss就显示谁的逻辑不行
+//        UIViewController* lastViewController=self.childViewControllers[0];
+
 //        [shoppingVC setCallback:^{
-//            
-//            if (self.itemAry.count ==1) {
-//                [self tabBar:tabBar didSelectItem: self.itemAry[0]];
-//            }else{
-//            
-//            [self tabBar:tabBar didSelectItem: self.itemAry[self.itemAry.count-2]];
-//            }
+//                  [self.itemAry addObject:item];
+//           
 //            
 //            
 //        }];
@@ -177,6 +170,24 @@
     
     
 }
+
+////ary里面一直为空,跳转页面更改无效
+//-(void)viewWillAppear:(BOOL)animated{
+//    [super viewWillAppear:YES];
+//    
+//    if (self.itemAry.count == 0) {
+//        if (self.tabBarItem.tag ==0) {
+//            [self.itemAry addObject:self.tabBarItem];
+//        }
+//        
+//        [self tabBar:self.tabBar didSelectItem:self.itemAry[0]];
+//        
+//    }else{
+//        [self tabBar:self.tabBar didSelectItem:self.itemAry[self.itemAry.count - 1]];
+//       
+//    }
+//    [self tabBar:self.tabBar didSelectItem:self.itemAry[0]];
+//}
 
 
 @end

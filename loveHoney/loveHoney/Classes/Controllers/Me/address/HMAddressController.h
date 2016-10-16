@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface HMAddressController : UITableViewController
+@property(nonatomic,strong)NSMutableArray* dataAry;
 
 @end

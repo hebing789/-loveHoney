@@ -36,6 +36,8 @@
 #import "DDBaseViewController.h"
 #import "DDMarketViewModel.h"
 
+#import "HMWebViewController.h"
+
 //分类与工具类
 #import "UIView+UIframe.h"
 #import "HMNetworkTools.h"

@@ -177,4 +177,38 @@
 
 
 
+// 程序启动广告
+//站内信广告
+- (void)system{
+    
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    
+    [param setValue:@"10" forKey:@"call"];
+    
+    
+    [DSHTTPClient postUrlString:@"SystemMessage.json.php" withParam:param withSuccessBlock:^(id data) {
+        NSLog(@"%@",data);
+    } withFailedBlock:^(NSError *error) {
+        NSLog(@"%@",error);
+    } withErrorBlock:^(NSString *message) {
+        NSLog(@"%@",message);
+    }];
+    
+    
+}
+
+-(void)loadView{
+    [super loadView];
+    self.view.backgroundColor=[UIColor whiteColor];
+    
+   }
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+
+
+    
+}
+
 @end

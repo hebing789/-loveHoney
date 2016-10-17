@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="108" id="9mO-jv-EuT" customClass="HMShoping1TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="719" height="108"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9mO-jv-EuT" id="pQN-Vm-3IW">
+                <frame key="frameInset" width="719" height="107"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_lighting" translatesAutoresizingMaskIntoConstraints="NO" id="HxG-OL-zmO"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reddot" translatesAutoresizingMaskIntoConstraints="NO" id="3um-tq-Cm3"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="闪电超市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4p-vJ-KM2">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="晚上10:00前送$30元免运费,10点后$50元免运费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fol-xv-plN">
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="g4p-vJ-KM2" firstAttribute="bottom" secondItem="HxG-OL-zmO" secondAttribute="bottom" id="AO7-Bp-kr8"/>
+                    <constraint firstItem="fol-xv-plN" firstAttribute="top" secondItem="g4p-vJ-KM2" secondAttribute="bottom" constant="30" id="Hx8-8P-Uhy"/>
+                    <constraint firstItem="3um-tq-Cm3" firstAttribute="top" secondItem="HxG-OL-zmO" secondAttribute="bottom" constant="30" id="RNx-Eq-37R"/>
+                    <constraint firstItem="HxG-OL-zmO" firstAttribute="leading" secondItem="pQN-Vm-3IW" secondAttribute="leading" constant="10" id="TLN-tJ-aQE"/>
+                    <constraint firstItem="HxG-OL-zmO" firstAttribute="top" secondItem="pQN-Vm-3IW" secondAttribute="top" constant="10" id="g0Q-6N-eWU"/>
+                    <constraint firstItem="fol-xv-plN" firstAttribute="leading" secondItem="g4p-vJ-KM2" secondAttribute="leading" id="iwR-fQ-r9Y"/>
+                    <constraint firstItem="3um-tq-Cm3" firstAttribute="leading" secondItem="pQN-Vm-3IW" secondAttribute="leading" constant="10" id="ya3-uU-bva"/>
+                    <constraint firstItem="g4p-vJ-KM2" firstAttribute="leading" secondItem="HxG-OL-zmO" secondAttribute="trailing" constant="10" id="yfa-vk-KFZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-263.5" y="-181"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_lighting" width="20" height="20"/>
+        <image name="reddot" width="14" height="14"/>
+    </resources>
+</document>

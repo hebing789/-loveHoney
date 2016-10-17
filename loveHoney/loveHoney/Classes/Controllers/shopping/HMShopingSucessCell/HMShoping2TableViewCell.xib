@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" rowHeight="60" id="ezA-q8-HBL" customClass="HMShoping2TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ezA-q8-HBL" id="64u-ym-9n3">
+                <frame key="frameInset" width="393" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收货时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEC-fc-N2q">
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="闪电送,及时达              可预订" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCG-M7-ewI">
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="1" green="0.16006735059999999" blue="0.22580034309999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_go" translatesAutoresizingMaskIntoConstraints="NO" id="Ns5-D5-Y6R"/>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Ns5-D5-Y6R" secondAttribute="trailing" constant="10" id="1y6-d4-Gxx"/>
+                    <constraint firstItem="SEC-fc-N2q" firstAttribute="leading" secondItem="64u-ym-9n3" secondAttribute="leading" constant="10" id="47Z-PR-EkY"/>
+                    <constraint firstItem="Ns5-D5-Y6R" firstAttribute="centerY" secondItem="64u-ym-9n3" secondAttribute="centerY" id="AJj-Mn-V5N"/>
+                    <constraint firstItem="OCG-M7-ewI" firstAttribute="centerY" secondItem="64u-ym-9n3" secondAttribute="centerY" id="WS4-iy-eF4"/>
+                    <constraint firstItem="OCG-M7-ewI" firstAttribute="leading" secondItem="SEC-fc-N2q" secondAttribute="trailing" constant="10" id="efe-Dh-cRe"/>
+                    <constraint firstItem="SEC-fc-N2q" firstAttribute="centerY" secondItem="64u-ym-9n3" secondAttribute="centerY" id="gBF-W6-NBB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-419.5" y="27"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_go" width="5" height="10"/>
+    </resources>
+</document>

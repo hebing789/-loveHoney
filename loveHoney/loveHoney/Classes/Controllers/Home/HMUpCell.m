@@ -31,10 +31,9 @@
 - (void)setupUI{
 //    self.contentView.backgroundColor = [UIColor redColor];
     UIImageView *imgView = [UIImageView new];
+    self.imgView = imgView;
     imgView.image = [UIImage imageNamed:@"v2_common_footer"];
-//    imgView.center=self.center;
-//    imgView.contentMode = UIViewContentModeScaleAspectFill;
-//    [imgView sizeToFit];
+
     
     
     imgView.frame = CGRectMake(self.frame.size.width *0.2, 20, self.frame.size.width *0.6, 60);
@@ -48,5 +47,17 @@
 //        make.bottom.equalTo(self.contentView).offset(0);
 //    }];
 }
+
+
+- (void)setModel:(HMActivitiesModel *)model{
+    
+    _model = model;
+    
+    [self.imgView sd_setImageWithURL: [NSURL URLWithString: model.img]];
+    
+}
+
+
+
 
 @end

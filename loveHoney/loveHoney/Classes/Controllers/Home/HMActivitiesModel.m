@@ -61,7 +61,6 @@
             [temData addObject:model];
             
             
-            
         }];
         
         

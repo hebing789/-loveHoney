@@ -13,18 +13,27 @@
 #import "HMVerticalButton.h"
 #import "HMFocusModel.h"
 #import "HMIconsModel.h"
+#import "HMActivitiesModel.h"
 
 @interface HMHomeController () <UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,weak)SDCycleScrollView*cycleScrollView;
 @property (nonatomic,weak)UITableView *tableView;
-@property (nonatomic,strong) NSArray *modelArr;
-@property (nonatomic,strong)NSArray *modelArray;
+@property (nonatomic,strong) NSArray *focusArr;
+@property (nonatomic,strong)NSArray *iconsArr;
+///btn下面的数据
+@property (nonatomic,strong)NSArray *cellModelArr;
 
 @property (nonatomic,weak)UIView*HDView;
 
 @end
 
 @implementation HMHomeController
+
+-(void)setCellModelArr:(NSArray *)cellModelArr{
+    
+    _cellModelArr =cellModelArr;
+    [self.tableView reloadData];
+}
 
 
 - (void)viewDidLoad {
@@ -34,9 +43,23 @@
     
     [self setupTableView];
     
+    [self getShoppingAry];
     
 }
 
+-(void)getShoppingAry{  [HMActivitiesModel activitiesModelWithSuccess:^(NSArray<HMActivitiesModel *> *arr) {
+//    NSMutableArray *cellModelArr = [NSMutableArray array];
+    self.cellModelArr = arr;
+    
+//    [arr enumerateObjectsUsingBlock:^(HMActivitiesModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        [cellModelArr addObject:obj.img];
+//    }];
+    
+} error:^{
+    
+}];
+    
+}
 - (void)setupTableView{
     
     UITableView *tableView = [[UITableView alloc] init];
@@ -69,17 +92,17 @@
     //轮播器模块
     
     [HMFocusModel focusModelWithSuccess:^(NSArray<HMFocusModel *> *arr) {
-        self.modelArr = arr;
+//        self.focusArr = arr;
         NSMutableArray* temData = [NSMutableArray new];
-        
-        
-        CGRect frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 150);
-        
-        SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:frame delegate:self placeholderImage:[UIImage imageNamed:@"grey1"]];
         [arr enumerateObjectsUsingBlock:^(HMFocusModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             [temData addObject:obj.img];
             
         }];
+
+        
+        CGRect frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 150);
+        
+        SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:frame delegate:self placeholderImage:[UIImage imageNamed:@"grey1"]];
         self.cycleScrollView.imageURLStringsGroup = temData;
         
         //        self.cycleScrollView.imageURLStringsGroup = arr;
@@ -89,6 +112,9 @@
         
         
         [self.HDView addSubview:cycleScrollView];
+        
+        [self.view setNeedsLayout];
+        [self.tableView setNeedsLayout ];
         
         
     } error:^{
@@ -127,28 +153,45 @@
     
    [HMIconsModel iconsModelWithSuccess:^(NSArray<HMIconsModel *> *arr) {
        
-       self.modelArray = arr;
+//       self.iconsArr = arr;
        
        UIView *BtnView = [[UIView alloc] initWithFrame:CGRectMake(0, 150, [UIScreen mainScreen].bounds.size.width, 100)];
        BtnView.backgroundColor = [UIColor redColor];
        [HDView addSubview:BtnView];
        CGFloat btnW = [UIScreen mainScreen].bounds.size.width / 4;
        
-       NSArray* butTitleAry = @[
-                                @"",
-                                @"",
-                                @"",
-                                @""
-                                ];
+       NSMutableArray *iconsArr = [NSMutableArray array];
+       NSMutableArray *butTitleAry = [NSMutableArray array];
+       [arr enumerateObjectsUsingBlock:^(HMIconsModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+           [iconsArr addObject:obj.img];
+           [butTitleAry addObject:obj.name];
+       }];
+       
+       
+ 
        for (int i = 0; i<4; i++) {
            
            HMVerticalButton *btn = [[HMVerticalButton alloc] initWithFrame:CGRectMake(i*btnW, 0, btnW, BtnView.size.height)];
-           [btn setImage:[UIImage imageNamed:@"icon_icons_holder"] forState:UIControlStateNormal];
+//           [btn setImage:[UIImage imageNamed:iconsArr[i]] forState:UIControlStateNormal];
+//           [[SDWebImageManager sharedManager] downloadImageWithURL:iconsArr[i] options:nil progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//               
+//           } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+//               
+//           }];
+           NSURL *url = [NSURL URLWithString:iconsArr[i]];
+//           [btn.imageView sd_setImageWithURL:url placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//               
+//           } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//               
+//           }];
+           [btn.imageView sd_setImageWithURL:url];
            
            [btn setTitle:butTitleAry[i] forState:UIControlStateNormal];
            
            btn.backgroundColor = [UIColor cyanColor];
            [BtnView addSubview:btn];
+           [self.view setNeedsLayout];
+           [self.tableView setNeedsLayout ];
        }
 
        
@@ -168,7 +211,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if(section == 0)
     {
-        return 4;
+        return self.cellModelArr.count;
     }
         return 1;
 }
@@ -176,15 +219,37 @@
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell;
     if (indexPath.section == 0) {
-          cell = [tableView dequeueReusableCellWithIdentifier:@"upcell" forIndexPath:indexPath];
+      HMUpCell*    cell1 = [tableView dequeueReusableCellWithIdentifier:@"upcell" forIndexPath:indexPath];
+        cell = cell1;
+        
+      
+      cell1.model = self.cellModelArr[indexPath.row];
+        
+        
+        
+//        NSURL *url = [NSURL URLWithString:self.cellModelArr[indexPath.row]];
+//        [cell.imageView sd_setImageWithURL:url placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//            
+//        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//            
+//        }];
+        
+        
+        
             return cell;
     }
+    
+    
     if (indexPath.section == 1) {
          cell= [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         return cell;
     }
     return cell;
 }
+
+
+
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0){

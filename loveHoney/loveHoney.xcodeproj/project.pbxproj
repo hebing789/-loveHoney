@@ -47,6 +47,8 @@
 		5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674631DB1375400299600 /* DSHTTPClient.m */; };
 		5B0674661DB13AF400299600 /* Assets 00-09-05-008.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674651DB13AF400299600 /* Assets 00-09-05-008.xcassets */; };
 		5BEC4FC31DB1192100CA99B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC4FC21DB1192100CA99B0 /* main.m */; };
+		6AF663C11DB4675B00C24296 /* HMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF663C01DB4675B00C24296 /* HMModel.m */; };
+		6AF663C51DB47E1E00C24296 /* HMSystemCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF663C41DB47E1E00C24296 /* HMSystemCell2.m */; };
 		8E8A47D01DB38CCA009F2A01 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A47411DB38CC9009F2A01 /* .gitkeep */; };
 		8E8A47D51DB38CCA009F2A01 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A474B1DB38CC9009F2A01 /* .gitkeep */; };
 		8E8A47D61DB38CCA009F2A01 /* DDBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A474D1DB38CC9009F2A01 /* DDBaseNavController.m */; };
@@ -165,6 +167,10 @@
 		5BEC4FBE1DB1192100CA99B0 /* loveHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loveHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEC4FC21DB1192100CA99B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BEC4FD21DB1192100CA99B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AF663BF1DB4675B00C24296 /* HMModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMModel.h; sourceTree = "<group>"; };
+		6AF663C01DB4675B00C24296 /* HMModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMModel.m; sourceTree = "<group>"; };
+		6AF663C31DB47E1E00C24296 /* HMSystemCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSystemCell2.h; sourceTree = "<group>"; };
+		6AF663C41DB47E1E00C24296 /* HMSystemCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSystemCell2.m; sourceTree = "<group>"; };
 		8E8A47411DB38CC9009F2A01 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		8E8A474B1DB38CC9009F2A01 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		8E8A474C1DB38CC9009F2A01 /* DDBaseNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseNavController.h; sourceTree = "<group>"; };
@@ -505,6 +511,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6AF663BE1DB4671600C24296 /* HMModel */ = {
+			isa = PBXGroup;
+			children = (
+				6AF663BF1DB4675B00C24296 /* HMModel.h */,
+				6AF663C01DB4675B00C24296 /* HMModel.m */,
+			);
+			path = HMModel;
+			sourceTree = "<group>";
+		};
 		8E8A473F1DB38CC9009F2A01 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +591,7 @@
 		8E8A477E1DB38CC9009F2A01 /* MyMenuAndMessage */ = {
 			isa = PBXGroup;
 			children = (
+				6AF663BE1DB4671600C24296 /* HMModel */,
 				8E8A477F1DB38CC9009F2A01 /* HMcell */,
 				8E8A47821DB38CC9009F2A01 /* myMeassage */,
 				8E8A47891DB38CC9009F2A01 /* myMenu */,
@@ -589,6 +605,8 @@
 			children = (
 				8E8A47801DB38CC9009F2A01 /* HMSystemCell.h */,
 				8E8A47811DB38CC9009F2A01 /* HMSystemCell.m */,
+				6AF663C31DB47E1E00C24296 /* HMSystemCell2.h */,
+				6AF663C41DB47E1E00C24296 /* HMSystemCell2.m */,
 			);
 			path = HMcell;
 			sourceTree = "<group>";
@@ -909,6 +927,7 @@
 			files = (
 				8E8A47D81DB38CCA009F2A01 /* HBTableBarController.m in Sources */,
 				5B01FBE41DB3F35100E3A1EE /* HMAdrressCell.m in Sources */,
+				6AF663C51DB47E1E00C24296 /* HMSystemCell2.m in Sources */,
 				8E8A47ED1DB38CCA009F2A01 /* HMMyMessageController.m in Sources */,
 				8E8A48021DB38CCA009F2A01 /* NotificationDefine.m in Sources */,
 				5B01F9C81DB3A9D000E3A1EE /* HMWebViewController.m in Sources */,
@@ -934,6 +953,7 @@
 				32CD9BC41DB4B044009751FE /* HMShoping4TableViewCell.m in Sources */,
 				8E8A483D1DB3C805009F2A01 /* DDKindViewCell.m in Sources */,
 				8E8A47D61DB38CCA009F2A01 /* DDBaseNavController.m in Sources */,
+				6AF663C11DB4675B00C24296 /* HMModel.m in Sources */,
 				5B01FBE91DB3F35100E3A1EE /* HMSettingController.m in Sources */,
 				5B01FBE61DB3F35100E3A1EE /* HMHelpController.m in Sources */,
 				8E8A47EF1DB38CCA009F2A01 /* HMUserInformationController.m in Sources */,

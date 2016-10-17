@@ -10,6 +10,7 @@
 #import "HMAddresModel.h"
 #import "HMAdrressCell.h"
 
+#import "HMAddAddressController.h"
 #import "HMEditAdrController.h"
 static NSString* cellId= @"HMAddressControllerCell";
 @interface HMAddressController ()
@@ -91,10 +92,16 @@ static NSString* cellId= @"HMAddressControllerCell";
 
 -(void)addAdressInfor{
     
-    HMEditAdrController* edit =[[HMEditAdrController alloc]init];
+    HMAddAddressController* add =[[HMAddAddressController alloc]init];
     
-    
-    [self.navigationController pushViewController:edit animated:YES];
+    [add setCallbackClick:^(HMAddresModel *model) {
+        [self.dataAry addObject:model];
+        [self.tableView reloadData];
+        
+        
+        
+    }];
+    [self.navigationController pushViewController:add animated:YES];
     
     
     

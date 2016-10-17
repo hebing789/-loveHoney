@@ -31,6 +31,7 @@ static NSString* cellId = @"HMEditAdrControllerCell1";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.textFiled0 becomeFirstResponder];
     self.tableView.sectionHeaderHeight=0;
     self.tableView.sectionFooterHeight=10;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
@@ -44,6 +45,8 @@ static NSString* cellId = @"HMEditAdrControllerCell1";
 }
 
 -(void)save{
+    
+    
     self.model.accept_name = self.textFiled0.text;
     //字符串转成nsnuber;
     self.model.telphone = [NSNumber numberWithInteger:[self.textFiled2.text integerValue]];
@@ -51,6 +54,53 @@ static NSString* cellId = @"HMEditAdrControllerCell1";
     self.model.addr_for_dealer = self.textFiled4.text;
     self.model.address = self.textFiled5.text;
     
+    //判断逻辑
+    if (self.model.accept_name.length ==0 ) {
+        
+        [SVProgressHUD setBackgroundColor:[UIColor darkGrayColor]];
+        [SVProgressHUD showImage:[[UIImage imageNamed:@"v2_orderSuccess"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] status:@"我们需要你的大名"];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            [SVProgressHUD dismiss];
+            
+            
+        });
+        
+        return;
+    }
+    
+    //默认有一个数字是0
+    //法1
+    //    if ([NSString stringWithFormat:@"%ld",(long)[self.model.telphone integerValue]].length==0||[NSString stringWithFormat:@"%ld",(long)[self.model.telphone integerValue]].length==1) {
+    //法2
+    if ([[NSString stringWithFormat:@"%ld",(long)[self.model.telphone integerValue]] isEqualToString:@"0"]) {
+        
+        [SVProgressHUD showImage:[[UIImage imageNamed:@"v2_orderSuccess"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] status:@"我们需要你的手机号"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            [SVProgressHUD dismiss];
+            
+            
+        });
+        return;
+    }
+    
+    if (self.model.address.length ==0 ) {
+        
+        [SVProgressHUD setBackgroundColor:[UIColor darkGrayColor]];
+        [SVProgressHUD showImage:[[UIImage imageNamed:@"v2_orderSuccess"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] status:@"我们需要你的详细地址"];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            [SVProgressHUD dismiss];
+            
+            
+        });
+        
+        return;
+    }
+      
     if (_callbackClick) {
         _callbackClick(NO);
         
@@ -150,7 +200,7 @@ static NSString* cellId = @"HMEditAdrControllerCell1";
             
              self.textFiled2 = textFiled;
             cell.textLabel.text = @"手机号码";
-            
+            textFiled.keyboardType = UIKeyboardTypePhonePad;
               textFiled.text= [NSString stringWithFormat:@"%@",self.model.telphone];
             
         }else if (indexPath.row ==3){

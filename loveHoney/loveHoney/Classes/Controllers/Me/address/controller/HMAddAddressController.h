@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class HMAddresModel;
 @interface HMAddAddressController : UITableViewController
-
+@property(nonatomic,copy) void(^callbackClick)(HMAddresModel*);
 @end

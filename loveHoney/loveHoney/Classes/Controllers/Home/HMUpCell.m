@@ -31,14 +31,22 @@
 - (void)setupUI{
 //    self.contentView.backgroundColor = [UIColor redColor];
     UIImageView *imgView = [UIImageView new];
-   
-    imgView.backgroundColor = [UIColor blackColor];
+    imgView.image = [UIImage imageNamed:@"v2_common_footer"];
+//    imgView.center=self.center;
+//    imgView.contentMode = UIViewContentModeScaleAspectFill;
+//    [imgView sizeToFit];
+    
+    
+    imgView.frame = CGRectMake(self.frame.size.width *0.2, 20, self.frame.size.width *0.6, 60);
+//    imgView.backgroundColor = [UIColor blackColor];
+    
     [self.contentView addSubview:imgView];
     
-    [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.equalTo(self.contentView).offset(5);
-        make.bottom.equalTo(self.contentView).offset(0);
-    }];
+//    [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.top.equalTo(self.contentView).offset(15);
+//        make.right.equalTo(self.contentView).offset(-15);
+//        make.bottom.equalTo(self.contentView).offset(0);
+//    }];
 }
 
 @end

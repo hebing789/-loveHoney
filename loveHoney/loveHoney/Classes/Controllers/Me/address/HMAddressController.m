@@ -76,7 +76,8 @@ static NSString* cellId= @"HMAddressControllerCell";
     UIButton* btn = [[UIButton alloc]initWithFrame:addAdress.bounds];
     [btn setTitle:@"新增地址" forState:UIControlStateNormal];
     btn.titleLabel.textAlignment  = NSTextAlignmentCenter;
-    btn.titleLabel.textColor = [UIColor blackColor];
+//    btn.titleLabel.textColor = [UIColor blackColor];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(addAdressInfor) forControlEvents:UIControlEventTouchUpInside];
     [addAdress addSubview:btn];
     
@@ -122,6 +123,14 @@ static NSString* cellId= @"HMAddressControllerCell";
         HMEditAdrController* edit =[[HMEditAdrController alloc]init];
         
         edit.model=model;
+        [edit setCallbackClick:^(BOOL isDelete) {
+            if (isDelete == YES) {
+                [self.dataAry removeObject:model];
+            }
+            
+            [self.tableView reloadData];
+          
+        }];
         
         [self.navigationController pushViewController:edit animated:YES];
         

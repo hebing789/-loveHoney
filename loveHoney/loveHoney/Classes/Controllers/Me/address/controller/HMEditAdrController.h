@@ -11,5 +11,5 @@
 @interface HMEditAdrController : UITableViewController
 
 @property(nonatomic,strong)HMAddresModel* model;
-@property(nonatomic,copy) void(^callbackClick)(HMAddresModel*);
+@property(nonatomic,copy) void(^callbackClick)(BOOL);
 @end

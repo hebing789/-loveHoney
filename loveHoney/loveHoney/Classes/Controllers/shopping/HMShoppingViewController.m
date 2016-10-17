@@ -43,6 +43,7 @@
     [self.view addSubview:lable];
     
     UIButton *btn = [[UIButton alloc]init];
+    
     [btn setTitle:@"去逛逛" forState:UIControlStateNormal];
     [btn setBackgroundImage:[UIImage imageNamed:@"btn.png"]  forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];

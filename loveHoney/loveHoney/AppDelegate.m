@@ -22,16 +22,67 @@
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor=[UIColor whiteColor];
 
-    //先加载数据,加载成功后就,切换控制器
-    [self addAdsVideo:^{
+    [self setNetWork];
+//    //先加载数据,加载成功后就,切换控制器
+   
+    
+   
+
+
+        return YES;
+  }
+-(void)setNetWork{
+    
+    AFNetworkReachabilityManager *reach = [AFNetworkReachabilityManager sharedManager];
+    
+    //当网络类型改变的时候,block就会被调用
+    [reach setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         
-       //
-        
-        
+        switch (status) {
+                
+                case AFNetworkReachabilityStatusReachableViaWWAN:
+            {
+                
+                [self addAdsVideo:^{
+                    
+                    
+                }];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [self setwindowRootViewController];
+                });
+                
+            }
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+            {
+                [self addAdsVideo:^{
+                    
+                    
+                }];
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [self setwindowRootViewController];
+                });
+                
+            }
+                break;
+           
+            default:
+            {
+               [self setwindowRootViewController];
+ 
+            }
+                break;
+        }
     }];
     
-    //2秒后切换控制器
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //开启监控
+    [reach startMonitoring];
+    
+    
+}
+
+-(void)setwindowRootViewController{
+
         
         //            获取当前版本号:
         NSDictionary* dic=[NSBundle mainBundle].infoDictionary;
@@ -53,18 +104,14 @@
             [[NSUserDefaults standardUserDefaults]synchronize];
         }
         
-        //                [self.window makeKeyAndVisible];
+        [self.window makeKeyAndVisible];
         [UIApplication sharedApplication].statusBarHidden=NO;
         [UIApplication sharedApplication].statusBarStyle= UIStatusBarStyleLightContent ;
         
         
-        
-    });
+    
 
-
-
-        return YES;
-  }
+}
 
 -(void)addAdsVideo:(void(^)())back{
     //法1,没有实现

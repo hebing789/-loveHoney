@@ -25,9 +25,7 @@ static NSString* cellId = @"HMEditAdrControllerCell1";
     self.tableView.sectionHeaderHeight=0;
     self.tableView.sectionFooterHeight=10;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
-    
-    
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,41 +54,41 @@ static NSString* cellId = @"HMEditAdrControllerCell1";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     
     if (indexPath.section==0) {
-        UILabel* lab = [[UILabel alloc]init];
+        UITextField* textFiled = [[UITextField alloc]init];
 //        lab.x = 150;
 //        lab.y = 0;
       
         if(indexPath.row ==0){
             cell.textLabel.text = @"联系人";
-            lab.text = self.model.accept_name;
+            textFiled.text = self.model.accept_name;
             
         }else if (indexPath.row ==1){
             cell.textLabel.text = @"删除当前地址";
-            lab.text= [NSString stringWithFormat:@"%@",self.model.gender];
+            textFiled.text= [NSString stringWithFormat:@"%@",self.model.gender];
             
         }else if (indexPath.row ==2){
             cell.textLabel.text = @"手机号码";
             
-              lab.text= [NSString stringWithFormat:@"%@",self.model.telphone];
+              textFiled.text= [NSString stringWithFormat:@"%@",self.model.telphone];
             
         }else if (indexPath.row ==3){
             cell.textLabel.text = @"所在城市";
-             lab.text = self.model.province_name;
+             textFiled.text = self.model.province_name;
             
         }else if (indexPath.row ==4){
             cell.textLabel.text = @"所在地区";
-            lab.text = self.model.addr_for_dealer;
+            textFiled.text = self.model.addr_for_dealer;
             
         }else if (indexPath.row ==5){
             cell.textLabel.text = @"详细地址";
-            lab.text = self.model.address;
+            textFiled.text = self.model.address;
         }
-        [lab sizeToFit];
-        lab.frame = CGRectMake(200, 0, lab.frame.size.width, cell.contentView.frame.size.height);
+        [textFiled sizeToFit];
+        textFiled.frame = CGRectMake(200, 0, textFiled.frame.size.width, cell.contentView.frame.size.height);
         
-        lab.textColor= [UIColor darkGrayColor];
+        textFiled.textColor= [UIColor darkGrayColor];
         
-          [cell.contentView addSubview:lab];
+          [cell.contentView addSubview:textFiled];
 
          cell.textLabel.textColor = [UIColor darkGrayColor];
 

@@ -8,10 +8,15 @@
 
 #import "HMHomeController.h"
 #import "HMUpCell.h"
+#import "HMDownCell.h"
+//#import "HMVerticalTitleButton.h"
+#import "HMVerticalButton.h"
+#import "HMFocusModel.h"
 
 @interface HMHomeController () <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,weak)UITableView *tableView;
+@property (nonatomic,strong) NSArray *modelArr;
 
 @end
 
@@ -24,6 +29,14 @@
 //    self.view.backgroundColor=[UIColor blueColor];
     
     [self setupTableView];
+    
+    [HMFocusModel focusModelWithSuccess:^(NSArray<HMFocusModel *> *arr) {
+        self.modelArr = arr;
+    } error:^{
+        
+    }];
+    
+  
 }
 
 - (void)setupTableView{
@@ -36,7 +49,7 @@
     self.tableView.delegate = self;
 //    self.tableView.backgroundColor = [UIColor redColor];
     [self.tableView registerClass:[HMUpCell class] forCellReuseIdentifier:@"upcell"];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerClass:[HMDownCell class] forCellReuseIdentifier:@"cell"];
 
     
     [self setupScroll];
@@ -83,9 +96,20 @@
     BtnView.backgroundColor = [UIColor redColor];
     [HDView addSubview:BtnView];
             CGFloat btnW = [UIScreen mainScreen].bounds.size.width / 4;
+    
+    NSArray* butTitleAry = @[
+                           @"",
+                            @"",
+                            @"",
+                            @""
+                           ];
     for (int i = 0; i<4; i++) {
 
-        UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(i*btnW, 0, btnW, BtnView.size.height)];
+        HMVerticalButton *btn = [[HMVerticalButton alloc] initWithFrame:CGRectMake(i*btnW, 0, btnW, BtnView.size.height)];
+        [btn setImage:[UIImage imageNamed:@"icon_icons_holder"] forState:UIControlStateNormal];
+        
+        [btn setTitle:butTitleAry[i] forState:UIControlStateNormal];
+        
         btn.backgroundColor = [UIColor cyanColor];
         [BtnView addSubview:btn];
     }
@@ -122,7 +146,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0){
-        return 200;
+        return 100;
     }
     return 100;
 }

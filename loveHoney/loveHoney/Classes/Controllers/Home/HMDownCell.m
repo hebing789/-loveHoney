@@ -8,6 +8,10 @@
 
 #import "HMDownCell.h"
 
+@interface HMDownCell ()<UICollectionViewDataSource>
+
+@end
+
 @implementation HMDownCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -18,7 +22,53 @@
 }
 
 - (void)setupUI{
-    UICollectionView *collectionV = [[UICollectionView alloc] init];
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    
+    flowLayout.itemSize = CGSizeMake(80, 100);
+    
+    flowLayout.sectionInset = UIEdgeInsetsMake(20 , 20, 20, 20);
+    
+    flowLayout.minimumLineSpacing = 20;
+    
+    UICollectionView *collectionV = [[UICollectionView alloc] initWithFrame:self.contentView.bounds collectionViewLayout:flowLayout];
+    
+    //设置背景颜色
+    collectionV.backgroundColor = [UIColor redColor];
+    
+    
+    //设置代理
+    collectionV.dataSource = self;
+    
+    [self.contentView addSubview:collectionV];
+    
+    [collectionV registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"collectionViewCell"];
+    
+}
+
+
+
+
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    
+    return 20;
+    
+}
+
+
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"collectionViewCell" forIndexPath:indexPath];
+    
+    
+    return cell;
+    
     
 }
 

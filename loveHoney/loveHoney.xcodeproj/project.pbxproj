@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37AF37A91DB472E20092FFA3 /* HMDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF379F1DB472E20092FFA3 /* HMDownCell.m */; };
+		37AF37AA1DB472E20092FFA3 /* HMFocusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF37A11DB472E20092FFA3 /* HMFocusModel.m */; };
+		37AF37AB1DB472E20092FFA3 /* HMHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF37A31DB472E20092FFA3 /* HMHomeController.m */; };
+		37AF37AC1DB472E20092FFA3 /* HMUpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF37A51DB472E20092FFA3 /* HMUpCell.m */; };
+		37AF37AD1DB472E20092FFA3 /* HMVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF37A71DB472E20092FFA3 /* HMVerticalButton.m */; };
 		5B01F9C81DB3A9D000E3A1EE /* HMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F9C71DB3A9D000E3A1EE /* HMWebViewController.m */; };
 		5B01FBE01DB3F35100E3A1EE /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B01FBB81DB3F35100E3A1EE /* .gitkeep */; };
 		5B01FBE11DB3F35100E3A1EE /* HMEditAdrController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01FBBC1DB3F35100E3A1EE /* HMEditAdrController.m */; };
@@ -32,10 +37,6 @@
 		6AF663C11DB4675B00C24296 /* HMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF663C01DB4675B00C24296 /* HMModel.m */; };
 		6AF663C51DB47E1E00C24296 /* HMSystemCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AF663C41DB47E1E00C24296 /* HMSystemCell2.m */; };
 		8E8A47D01DB38CCA009F2A01 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A47411DB38CC9009F2A01 /* .gitkeep */; };
-		8E8A47D11DB38CCA009F2A01 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A47431DB38CC9009F2A01 /* .gitkeep */; };
-		8E8A47D21DB38CCA009F2A01 /* HMDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A47451DB38CC9009F2A01 /* HMDownCell.m */; };
-		8E8A47D31DB38CCA009F2A01 /* HMHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A47471DB38CC9009F2A01 /* HMHomeController.m */; };
-		8E8A47D41DB38CCA009F2A01 /* HMUpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A47491DB38CC9009F2A01 /* HMUpCell.m */; };
 		8E8A47D51DB38CCA009F2A01 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8E8A474B1DB38CC9009F2A01 /* .gitkeep */; };
 		8E8A47D61DB38CCA009F2A01 /* DDBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A474D1DB38CC9009F2A01 /* DDBaseNavController.m */; };
 		8E8A47D71DB38CCA009F2A01 /* DDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8A474F1DB38CC9009F2A01 /* DDBaseViewController.m */; };
@@ -86,6 +87,16 @@
 
 /* Begin PBXFileReference section */
 		055F5C9A44396790450CF0E2 /* Pods-loveHoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.debug.xcconfig"; sourceTree = "<group>"; };
+		37AF379E1DB472E20092FFA3 /* HMDownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMDownCell.h; sourceTree = "<group>"; };
+		37AF379F1DB472E20092FFA3 /* HMDownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMDownCell.m; sourceTree = "<group>"; };
+		37AF37A01DB472E20092FFA3 /* HMFocusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFocusModel.h; sourceTree = "<group>"; };
+		37AF37A11DB472E20092FFA3 /* HMFocusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFocusModel.m; sourceTree = "<group>"; };
+		37AF37A21DB472E20092FFA3 /* HMHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMHomeController.h; sourceTree = "<group>"; };
+		37AF37A31DB472E20092FFA3 /* HMHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMHomeController.m; sourceTree = "<group>"; };
+		37AF37A41DB472E20092FFA3 /* HMUpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMUpCell.h; sourceTree = "<group>"; };
+		37AF37A51DB472E20092FFA3 /* HMUpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMUpCell.m; sourceTree = "<group>"; };
+		37AF37A61DB472E20092FFA3 /* HMVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMVerticalButton.h; sourceTree = "<group>"; };
+		37AF37A71DB472E20092FFA3 /* HMVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMVerticalButton.m; sourceTree = "<group>"; };
 		5B01F75C1DB1ADA000E3A1EE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5B01F9C61DB3A9D000E3A1EE /* HMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWebViewController.h; sourceTree = "<group>"; };
 		5B01F9C71DB3A9D000E3A1EE /* HMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWebViewController.m; sourceTree = "<group>"; };
@@ -133,13 +144,6 @@
 		6AF663C31DB47E1E00C24296 /* HMSystemCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSystemCell2.h; sourceTree = "<group>"; };
 		6AF663C41DB47E1E00C24296 /* HMSystemCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSystemCell2.m; sourceTree = "<group>"; };
 		8E8A47411DB38CC9009F2A01 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		8E8A47431DB38CC9009F2A01 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		8E8A47441DB38CC9009F2A01 /* HMDownCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMDownCell.h; sourceTree = "<group>"; };
-		8E8A47451DB38CC9009F2A01 /* HMDownCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMDownCell.m; sourceTree = "<group>"; };
-		8E8A47461DB38CC9009F2A01 /* HMHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMHomeController.h; sourceTree = "<group>"; };
-		8E8A47471DB38CC9009F2A01 /* HMHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMHomeController.m; sourceTree = "<group>"; };
-		8E8A47481DB38CC9009F2A01 /* HMUpCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMUpCell.h; sourceTree = "<group>"; };
-		8E8A47491DB38CC9009F2A01 /* HMUpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMUpCell.m; sourceTree = "<group>"; };
 		8E8A474B1DB38CC9009F2A01 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		8E8A474C1DB38CC9009F2A01 /* DDBaseNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBaseNavController.h; sourceTree = "<group>"; };
 		8E8A474D1DB38CC9009F2A01 /* DDBaseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBaseNavController.m; sourceTree = "<group>"; };
@@ -234,6 +238,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37AF379D1DB472E20092FFA3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				37AF379E1DB472E20092FFA3 /* HMDownCell.h */,
+				37AF379F1DB472E20092FFA3 /* HMDownCell.m */,
+				37AF37A01DB472E20092FFA3 /* HMFocusModel.h */,
+				37AF37A11DB472E20092FFA3 /* HMFocusModel.m */,
+				37AF37A21DB472E20092FFA3 /* HMHomeController.h */,
+				37AF37A31DB472E20092FFA3 /* HMHomeController.m */,
+				37AF37A41DB472E20092FFA3 /* HMUpCell.h */,
+				37AF37A51DB472E20092FFA3 /* HMUpCell.m */,
+				37AF37A61DB472E20092FFA3 /* HMVerticalButton.h */,
+				37AF37A71DB472E20092FFA3 /* HMVerticalButton.m */,
+				37AF37A81DB472E20092FFA3 /* view */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		37AF37A81DB472E20092FFA3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		545D9F0547DDDAF0A5BF1B96 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,7 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				8E8A47411DB38CC9009F2A01 /* .gitkeep */,
-				8E8A47421DB38CC9009F2A01 /* Home */,
+				37AF379D1DB472E20092FFA3 /* Home */,
 				8E8A474A1DB38CC9009F2A01 /* Main */,
 				5B01FBB71DB3F35100E3A1EE /* Me */,
 				8E8A47591DB38CC9009F2A01 /* market */,
@@ -452,20 +481,6 @@
 				8E8A479A1DB38CCA009F2A01 /* Welcome */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		8E8A47421DB38CC9009F2A01 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				8E8A47431DB38CC9009F2A01 /* .gitkeep */,
-				8E8A47441DB38CC9009F2A01 /* HMDownCell.h */,
-				8E8A47451DB38CC9009F2A01 /* HMDownCell.m */,
-				8E8A47461DB38CC9009F2A01 /* HMHomeController.h */,
-				8E8A47471DB38CC9009F2A01 /* HMHomeController.m */,
-				8E8A47481DB38CC9009F2A01 /* HMUpCell.h */,
-				8E8A47491DB38CC9009F2A01 /* HMUpCell.m */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		8E8A474A1DB38CC9009F2A01 /* Main */ = {
@@ -797,7 +812,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E8A47D11DB38CCA009F2A01 /* .gitkeep in Resources */,
 				8E8A48431DB3C805009F2A01 /* DDTitleView.xib in Resources */,
 				5B0674661DB13AF400299600 /* Assets 00-09-05-008.xcassets in Resources */,
 				5B01FBE01DB3F35100E3A1EE /* .gitkeep in Resources */,
@@ -889,13 +903,12 @@
 				8E8A47F31DB38CCA009F2A01 /* HMTableViewCell.m in Sources */,
 				5B01FBEF1DB3F35100E3A1EE /* HMVerticalTitleButton.m in Sources */,
 				8E8A47DE1DB38CCA009F2A01 /* HMMarketViewController.m in Sources */,
-				8E8A47D41DB38CCA009F2A01 /* HMUpCell.m in Sources */,
 				5B01FBE21DB3F35100E3A1EE /* HMAddressController.m in Sources */,
 				8E8A481C1DB3C7A8009F2A01 /* DDCategoriesModel.m in Sources */,
 				8E8A47F01DB38CCA009F2A01 /* HMMyMeNuController.m in Sources */,
-				8E8A47D31DB38CCA009F2A01 /* HMHomeController.m in Sources */,
 				8E8A48041DB38CCA009F2A01 /* UIButton+CustomButton.m in Sources */,
 				5B06744D1DB1371500299600 /* AppDelegate.m in Sources */,
+				37AF37AC1DB472E20092FFA3 /* HMUpCell.m in Sources */,
 				5B01FBE31DB3F35100E3A1EE /* HMAddresModel.m in Sources */,
 				8E8A47DD1DB38CCA009F2A01 /* DDProductSelectVC.m in Sources */,
 				5B01FBED1DB3F35100E3A1EE /* HMMeTableViewCell1.m in Sources */,
@@ -913,6 +926,7 @@
 				8E8A48031DB38CCA009F2A01 /* UIBarButtonItem+DDBarButtonItem.m in Sources */,
 				5B01FBEB1DB3F35100E3A1EE /* HMMenuTableViewCell2.m in Sources */,
 				8E8A47EC1DB38CCA009F2A01 /* HMSystemCell.m in Sources */,
+				37AF37A91DB472E20092FFA3 /* HMDownCell.m in Sources */,
 				8E8A48421DB3C805009F2A01 /* DDTitleView.m in Sources */,
 				8E8A47DB1DB38CCA009F2A01 /* HMTabbarButton.m in Sources */,
 				5B01FBEA1DB3F35100E3A1EE /* HMSharedController.m in Sources */,
@@ -924,9 +938,11 @@
 				5BEC4FC31DB1192100CA99B0 /* main.m in Sources */,
 				8E8A47EE1DB38CCA009F2A01 /* HMSystemInformationController.m in Sources */,
 				8E8A47FA1DB38CCA009F2A01 /* WecomeAnimation.m in Sources */,
+				37AF37AA1DB472E20092FFA3 /* HMFocusModel.m in Sources */,
+				37AF37AB1DB472E20092FFA3 /* HMHomeController.m in Sources */,
 				5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */,
+				37AF37AD1DB472E20092FFA3 /* HMVerticalButton.m in Sources */,
 				8E8A47DA1DB38CCA009F2A01 /* HMTabBar.m in Sources */,
-				8E8A47D21DB38CCA009F2A01 /* HMDownCell.m in Sources */,
 				8E8A47F91DB38CCA009F2A01 /* WelcomCell.m in Sources */,
 				8E8A47F11DB38CCA009F2A01 /* HMYouHuiQuanController.m in Sources */,
 			);

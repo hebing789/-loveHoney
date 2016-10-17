@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HMModel.h"
 @interface HMSystemCell : UITableViewCell
+
+@property (nonatomic,strong)HMModel *model;
+
+@property (nonatomic,strong)UILabel *leftLable;
+
+@property (nonatomic,strong)UIButton *rightBtn;
 
 @end

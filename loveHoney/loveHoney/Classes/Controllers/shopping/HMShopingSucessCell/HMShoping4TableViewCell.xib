@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell4" rowHeight="55" id="9Pf-KI-XCx" customClass="HMShoping4TableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="347" height="55"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Pf-KI-XCx" id="5Ye-dA-1XX">
+                <frame key="frameInset" width="347" height="54.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[精选]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmr-Py-zAj">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="爱先锋*泰国龙眼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qph-Ea-SAh">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$9.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvH-Q1-G1m">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLU-FI-7xP">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESj-vE-VbU">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="bOX-A6-dJp"/>
+                            <constraint firstAttribute="height" constant="30" id="wCf-gb-Mmi"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="v2_reduce"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLD-Ms-Z4B">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="jIx-js-G1k"/>
+                            <constraint firstAttribute="height" constant="30" id="mDh-kk-Apc"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="v2_increase"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ESj-vE-VbU" firstAttribute="leading" secondItem="SvH-Q1-G1m" secondAttribute="trailing" constant="10" id="1NQ-yo-IiK"/>
+                    <constraint firstItem="MLD-Ms-Z4B" firstAttribute="centerY" secondItem="5Ye-dA-1XX" secondAttribute="centerY" id="7CT-Tw-r53"/>
+                    <constraint firstItem="fmr-Py-zAj" firstAttribute="centerY" secondItem="5Ye-dA-1XX" secondAttribute="centerY" id="P7w-yP-jup"/>
+                    <constraint firstItem="pLU-FI-7xP" firstAttribute="centerY" secondItem="5Ye-dA-1XX" secondAttribute="centerY" id="R8E-z8-GNj"/>
+                    <constraint firstAttribute="trailing" secondItem="MLD-Ms-Z4B" secondAttribute="trailing" constant="10" id="TYl-56-fo9"/>
+                    <constraint firstItem="ESj-vE-VbU" firstAttribute="centerY" secondItem="5Ye-dA-1XX" secondAttribute="centerY" id="Xzg-1T-uYx"/>
+                    <constraint firstItem="MLD-Ms-Z4B" firstAttribute="leading" secondItem="pLU-FI-7xP" secondAttribute="trailing" constant="10" id="dKK-px-znc"/>
+                    <constraint firstItem="Qph-Ea-SAh" firstAttribute="centerY" secondItem="5Ye-dA-1XX" secondAttribute="centerY" id="ii2-Ec-wmc"/>
+                    <constraint firstItem="pLU-FI-7xP" firstAttribute="leading" secondItem="ESj-vE-VbU" secondAttribute="trailing" constant="10" id="jcV-PE-s5D"/>
+                    <constraint firstItem="Qph-Ea-SAh" firstAttribute="leading" secondItem="fmr-Py-zAj" secondAttribute="trailing" constant="2" id="jl6-gS-9GC"/>
+                    <constraint firstItem="fmr-Py-zAj" firstAttribute="leading" secondItem="5Ye-dA-1XX" secondAttribute="leading" constant="10" id="uR6-tc-2oO"/>
+                    <constraint firstItem="SvH-Q1-G1m" firstAttribute="centerY" secondItem="5Ye-dA-1XX" secondAttribute="centerY" id="z7D-SQ-JUg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-447.5" y="498.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="v2_increase" width="54" height="54"/>
+        <image name="v2_reduce" width="27" height="27"/>
+    </resources>
+</document>

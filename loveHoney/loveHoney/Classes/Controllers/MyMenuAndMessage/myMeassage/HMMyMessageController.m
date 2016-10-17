@@ -7,18 +7,31 @@
 //
 
 #import "HMMyMessageController.h"
-#import "HMUserInformationController.h"
-#import "HMSystemInformationController.h"
+#import "HMModel.h"
+#import "HMSystemCell.h"
+#import "HMSystemCell2.h"
+
 @interface HMMyMessageController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UIView *tableViewUser;
 @property (nonatomic,strong)UITableView *tableViewSystem;
+
+@property (nonatomic,strong)NSArray *modelArray;
+
 @end
 
 static NSString *reuseId = @"tableCell";
 
+static NSString *reuseId2 = @"tableCell2";
+
 @implementation HMMyMessageController
 
-
+- (void)setModelArray:(NSArray *)modelArray
+{
+    _modelArray = modelArray;
+    
+    [self.tableViewSystem reloadData];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -36,9 +49,27 @@ static NSString *reuseId = @"tableCell";
     
     tableViewSystem.delegate = self;
     
+//    tableViewSystem.sectionHeaderHeight = 100;
+    tableViewSystem.sectionIndexColor = [UIColor whiteColor];
+    
     [self createTopView];
     
     [self createTableUser];
+    
+    [HMModel modelWithSuccess:^(NSArray *mArray) {
+        
+        self.modelArray = mArray;
+        
+        NSLog(@"%@",self.modelArray);
+        
+    } error:^{
+        
+        
+    }];
+    
+    [self.tableViewSystem registerClass:[HMSystemCell class] forCellReuseIdentifier:reuseId];
+    
+    [self.tableViewSystem registerClass:[HMSystemCell2 class] forCellReuseIdentifier:reuseId2];
 }
 
 - (void)createTableUser
@@ -121,26 +152,43 @@ static NSString *reuseId = @"tableCell";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 10;
+    return self.modelArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+   return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc]init];
     
-    if (cell == nil) {
+    HMSystemCell2 *cell2 = [tableView dequeueReusableCellWithIdentifier:reuseId2 forIndexPath:indexPath];
+    
+    cell2.model = self.modelArray[indexPath.section];
+    
+    HMSystemCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
+    
+    cell.model = self.modelArray[indexPath.section];
+    
+    [cell.rightBtn addTarget:self action:@selector(clickBtn:andCell2:) forControlEvents:UIControlEventTouchUpInside];
+    
+    if (indexPath.row % 2) {
+
+        return cell;
+    }
+    else{
         
-        cell = [tableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
+        return cell2;
     }
     
-    cell.textLabel.text = @"测试";
     
-    return cell;
+}
+
+- (void)clickBtn:(HMSystemCell *)cell andCell2:(HMSystemCell2 *)cell2
+{
+    
+    NSLog(@"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

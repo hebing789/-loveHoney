@@ -1,15 +1,15 @@
 //
-//  HMFocusModel.m
+//  HMActivitiesModel.m
 //  loveHoney
 //
-//  Created by 黄凯 on 16/10/16.
+//  Created by 黄凯 on 16/10/17.
 //  Copyright © 2016年 hebing. All rights reserved.
 //
 
-#import "HMFocusModel.h"
-#import "DSHTTPClient.h"
+#import "HMActivitiesModel.h"
 
-@implementation HMFocusModel
+@implementation HMActivitiesModel
+
 - (instancetype)initWithDict:(NSDictionary *)dict{
     
     //完成初始化
@@ -44,18 +44,20 @@
 -(void)setValue:(id)value forUndefinedKey:(NSString *)key{
     
 }
-+ (void)focusModelWithSuccess:(void (^)(NSArray<HMFocusModel *> *))successBlock error:(void (^)())errorBlock
-{
+
+
++(void)activitiesModelWithSuccess:(void (^)(NSArray<HMActivitiesModel *> *))successBlock error:(void (^)())errorBlock{
+    
     [DSHTTPClient postUrlString:@"http://iosapi.itcast.cn/loveBeen/focus.json.php" withParam:@{@"call":@1} withSuccessBlock:^(NSDictionary *data) {
         NSLog(@"%@",data);
         
         NSDictionary *dataDict = data[@"data"];
         
-        NSArray* ary = dataDict[@"focus"];
+        NSArray* ary = dataDict[@"activities"];
         
         NSMutableArray* temData = [NSMutableArray new];
         [ary enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            HMFocusModel* model = [HMFocusModel modelWithDict:obj];
+            HMActivitiesModel* model = [HMActivitiesModel modelWithDict:obj];
             [temData addObject:model];
             
             
@@ -72,6 +74,7 @@
     } withErrorBlock:^(NSString *message) {
         
     }];
+    
 }
 
 @end

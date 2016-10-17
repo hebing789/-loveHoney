@@ -12,6 +12,8 @@
 		37AF37AB1DB472E20092FFA3 /* HMHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF37A31DB472E20092FFA3 /* HMHomeController.m */; };
 		37AF37AC1DB472E20092FFA3 /* HMUpCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF37A51DB472E20092FFA3 /* HMUpCell.m */; };
 		37AF37AD1DB472E20092FFA3 /* HMVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF37A71DB472E20092FFA3 /* HMVerticalButton.m */; };
+		37AF37B01DB481C90092FFA3 /* HMIconsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF37AF1DB481C90092FFA3 /* HMIconsModel.m */; };
+		37AF37B31DB4828E0092FFA3 /* HMActivitiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AF37B21DB4828E0092FFA3 /* HMActivitiesModel.m */; };
 		5B01F9C81DB3A9D000E3A1EE /* HMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01F9C71DB3A9D000E3A1EE /* HMWebViewController.m */; };
 		5B01FBE01DB3F35100E3A1EE /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 5B01FBB81DB3F35100E3A1EE /* .gitkeep */; };
 		5B01FBE11DB3F35100E3A1EE /* HMEditAdrController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01FBBC1DB3F35100E3A1EE /* HMEditAdrController.m */; };
@@ -95,6 +97,10 @@
 		37AF37A51DB472E20092FFA3 /* HMUpCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMUpCell.m; sourceTree = "<group>"; };
 		37AF37A61DB472E20092FFA3 /* HMVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMVerticalButton.h; sourceTree = "<group>"; };
 		37AF37A71DB472E20092FFA3 /* HMVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMVerticalButton.m; sourceTree = "<group>"; };
+		37AF37AE1DB481C90092FFA3 /* HMIconsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMIconsModel.h; sourceTree = "<group>"; };
+		37AF37AF1DB481C90092FFA3 /* HMIconsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMIconsModel.m; sourceTree = "<group>"; };
+		37AF37B11DB4828E0092FFA3 /* HMActivitiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMActivitiesModel.h; sourceTree = "<group>"; };
+		37AF37B21DB4828E0092FFA3 /* HMActivitiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMActivitiesModel.m; sourceTree = "<group>"; };
 		5B01F75C1DB1ADA000E3A1EE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5B01F9C61DB3A9D000E3A1EE /* HMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMWebViewController.h; sourceTree = "<group>"; };
 		5B01F9C71DB3A9D000E3A1EE /* HMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMWebViewController.m; sourceTree = "<group>"; };
@@ -232,13 +238,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3780AFDD1DB4A8F2005437A5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		37AF379D1DB472E20092FFA3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				37AF379E1DB472E20092FFA3 /* HMDownCell.h */,
-				37AF379F1DB472E20092FFA3 /* HMDownCell.m */,
+				3780AFDD1DB4A8F2005437A5 /* model */,
 				37AF37A01DB472E20092FFA3 /* HMFocusModel.h */,
 				37AF37A11DB472E20092FFA3 /* HMFocusModel.m */,
+				37AF37AE1DB481C90092FFA3 /* HMIconsModel.h */,
+				37AF37AF1DB481C90092FFA3 /* HMIconsModel.m */,
+				37AF37B11DB4828E0092FFA3 /* HMActivitiesModel.h */,
+				37AF37B21DB4828E0092FFA3 /* HMActivitiesModel.m */,
+				37AF379E1DB472E20092FFA3 /* HMDownCell.h */,
+				37AF379F1DB472E20092FFA3 /* HMDownCell.m */,
 				37AF37A21DB472E20092FFA3 /* HMHomeController.h */,
 				37AF37A31DB472E20092FFA3 /* HMHomeController.m */,
 				37AF37A41DB472E20092FFA3 /* HMUpCell.h */,
@@ -872,6 +890,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E8A47D81DB38CCA009F2A01 /* HBTableBarController.m in Sources */,
+				37AF37B31DB4828E0092FFA3 /* HMActivitiesModel.m in Sources */,
 				5B01FBE41DB3F35100E3A1EE /* HMAdrressCell.m in Sources */,
 				8E8A47ED1DB38CCA009F2A01 /* HMMyMessageController.m in Sources */,
 				8E8A48021DB38CCA009F2A01 /* NotificationDefine.m in Sources */,
@@ -922,6 +941,7 @@
 				37AF37AB1DB472E20092FFA3 /* HMHomeController.m in Sources */,
 				5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */,
 				37AF37AD1DB472E20092FFA3 /* HMVerticalButton.m in Sources */,
+				37AF37B01DB481C90092FFA3 /* HMIconsModel.m in Sources */,
 				8E8A47DA1DB38CCA009F2A01 /* HMTabBar.m in Sources */,
 				8E8A47F91DB38CCA009F2A01 /* WelcomCell.m in Sources */,
 				8E8A47F11DB38CCA009F2A01 /* HMYouHuiQuanController.m in Sources */,

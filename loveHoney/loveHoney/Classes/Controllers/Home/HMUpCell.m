@@ -48,14 +48,14 @@
     
 }
 
-//
-//- (void)setModel:(HMActivitiesModel *)model{
-//    
-//    _model = model;
-//    
-//    [self.cellImg sd_setImageWithURL: [NSURL URLWithString: model.img]];
-//    
-//}
+
+- (void)setModel:(HMActivitiesModel *)model{
+    
+    _model = model;
+    
+    [self.cellImg sd_setImageWithURL: [NSURL URLWithString: model.img]];
+    
+}
 
 
 

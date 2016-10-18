@@ -81,12 +81,9 @@ static NSString* cellId= @"HMAddressControllerCell";
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(addAdressInfor) forControlEvents:UIControlEventTouchUpInside];
     [addAdress addSubview:btn];
-    
-   
     self.addAdress = addAdress;
     //可以实现效果,但是创建后不会销毁
     [[UIApplication sharedApplication].keyWindow addSubview:addAdress];
-    
 
 }
 
@@ -97,13 +94,9 @@ static NSString* cellId= @"HMAddressControllerCell";
     [add setCallbackClick:^(HMAddresModel *model) {
         [self.dataAry addObject:model];
         [self.tableView reloadData];
-        
-        
-        
-    }];
+       }];
     [self.navigationController pushViewController:add animated:YES];
-    
-    
+
     
 }
 -(void)viewWillDisappear:(BOOL)animated{

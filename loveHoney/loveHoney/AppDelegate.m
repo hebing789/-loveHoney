@@ -169,7 +169,7 @@
     
     [DSHTTPClient postUrlString:@"ad.json.php" withParam:param withSuccessBlock:^(id data) {
         
-        NSLog(@"%@",data);
+//        NSLog(@"%@",data);
         if (dataBlock) {
             dataBlock(data);
         }

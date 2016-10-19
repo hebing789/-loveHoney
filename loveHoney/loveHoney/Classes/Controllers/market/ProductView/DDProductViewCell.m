@@ -36,8 +36,8 @@
 {
     _model = model;
     
-    self.priceLabel.text = model.price;
-    self.marketPriceLabel.text = model.market_price;
+    self.priceLabel.text = [NSString stringWithFormat:@"$%@",model.price];
+    self.marketPriceLabel.text = [NSString stringWithFormat:@"$%@",model.market_price];
     self.specificsLabel.text = model.specifics;
     self.nameLabel.text = model.name;
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:model.img]];

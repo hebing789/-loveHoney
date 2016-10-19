@@ -96,8 +96,6 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(kindBtnDidSelected:) name:@"productBrowser" object:nil];
 
-
-
 }
 
 

@@ -54,6 +54,8 @@
 
 
 #define KAddShoppingNotName @"KAddShoppingNotName"
+#define kPlusProduct @"kPlusProduct"
+#define kMinusProduct @"kMinusProduct"
 
 #define screemW    [UIScreen mainScreen].bounds.size.width
 #define screemH    [UIScreen mainScreen].bounds.size.height

@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="495" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="495" height="149"/>
+                <frame key="frameInset" width="495" height="149.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v2_placeholder_square" translatesAutoresizingMaskIntoConstraints="NO" id="FIY-cK-SWI">
@@ -43,6 +43,9 @@
                             <constraint firstAttribute="width" constant="27" id="qjN-Zk-k4E"/>
                         </constraints>
                         <state key="normal" title="Button" image="v2_increase"/>
+                        <connections>
+                            <action selector="plusBtnDidClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qeU-T7-ot9"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uMv-N8-5sy">
                         <constraints>
@@ -53,7 +56,7 @@
                         <color key="textColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrt-DL-oVg">
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrt-DL-oVg">
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="Dzb-Ic-ZlZ"/>
                             <constraint firstAttribute="height" constant="15" id="y37-il-Xda"/>
@@ -76,12 +79,15 @@
                             <constraint firstAttribute="height" constant="18" id="nx8-F6-sO9"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQW-Cf-eox">
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQW-Cf-eox">
                         <constraints>
                             <constraint firstAttribute="width" constant="27" id="IJJ-pu-vKj"/>
                             <constraint firstAttribute="height" constant="27" id="jBd-zg-tvJ"/>
                         </constraints>
                         <state key="normal" title="Button" image="v2_reduce"/>
+                        <connections>
+                            <action selector="minusBtnDidClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="N8J-T9-3Sf"/>
+                        </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jingxuan.png" translatesAutoresizingMaskIntoConstraints="NO" id="OT4-v2-cdG">
                         <constraints>
@@ -118,11 +124,12 @@
                 <outlet property="buyCountLabel" destination="hrt-DL-oVg" id="ndY-Qr-j3x"/>
                 <outlet property="iconView" destination="FIY-cK-SWI" id="oHe-ip-1cI"/>
                 <outlet property="marketPriceLabel" destination="h0X-EH-0Em" id="xln-tO-1MN"/>
+                <outlet property="minusBtn" destination="PQW-Cf-eox" id="P27-LG-52p"/>
                 <outlet property="nameLabel" destination="NTD-jJ-p6H" id="TSr-0I-hFP"/>
                 <outlet property="priceLabel" destination="wuE-pT-X7q" id="k63-xN-SCZ"/>
                 <outlet property="specificsLabel" destination="uMv-N8-5sy" id="z6a-k5-GcA"/>
             </connections>
-            <point key="canvasLocation" x="-103.5" y="-103"/>
+            <point key="canvasLocation" x="57" y="-110"/>
         </tableViewCell>
     </objects>
     <resources>

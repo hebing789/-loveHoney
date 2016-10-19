@@ -36,6 +36,9 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
     _categoriesList = categoriesList;
     
     [self.productKindView reloadData];
+    
+    NSIndexPath *initIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.productKindView selectRowAtIndexPath:initIndexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
 
 }
 
@@ -96,6 +99,7 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
 
 
 }
+
 
 -(void)kindBtnDidSelected:(NSNotification *)notification{
 

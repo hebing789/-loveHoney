@@ -21,12 +21,14 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    self.contentView.backgroundColor = [UIColor colorWithRed:239/256.0 green:239/256.0 blue:239/256.0 alpha:1];
+    
     UIView *view = [[UIView alloc]init];
     view.backgroundColor = [UIColor whiteColor];
     self.selectedBackgroundView = view;
     
     UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, 3, 5, self.bounds.size.height - 6)];
-    lineView.backgroundColor = [UIColor orangeColor];
+    lineView.backgroundColor = kThemeColor;
     [view addSubview:lineView];
     
     

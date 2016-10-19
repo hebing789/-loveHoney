@@ -23,6 +23,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *buyCountLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *minusBtn;
+
+@property(nonatomic,assign)NSInteger currentCount;
 
 @end
 
@@ -39,6 +42,26 @@
     self.nameLabel.text = model.name;
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:model.img]];
 
+}
+
+- (IBAction)plusBtnDidClick:(id)sender {
+    
+    NSLog(@"添加");
+    self.minusBtn.hidden = NO;
+    self.buyCountLabel.hidden = NO;
+    self.currentCount ++;
+    self.buyCountLabel.text = [NSString stringWithFormat:@"%ld",self.currentCount];
+    
+}
+
+- (IBAction)minusBtnDidClick:(id)sender {
+    NSLog(@"移除");
+    self.currentCount --;
+    self.buyCountLabel.text = [NSString stringWithFormat:@"%ld",self.currentCount];
+    if (self.currentCount == 0) {
+        self.minusBtn.hidden = YES;
+        self.buyCountLabel.hidden = YES;
+    }
 }
 
 

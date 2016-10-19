@@ -125,10 +125,6 @@ static NSString *productSelectCellId = @"productSelectCellId";
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
 
-    CGFloat offsetY = scrollView.contentOffset.y;
-    
-    CGPoint point = CGPointMake(0.3 * screemW, offsetY);
-    
     NSIndexPath *indexPath = self.tableView.indexPathsForVisibleRows.firstObject;
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"productBrowser" object:nil userInfo:@{@"indexPath" : indexPath}];

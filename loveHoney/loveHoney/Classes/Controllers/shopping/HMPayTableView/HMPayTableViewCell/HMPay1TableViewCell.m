@@ -8,7 +8,28 @@
 
 #import "HMPay1TableViewCell.h"
 
+@interface HMPay1TableViewCell()
+
+
+
+
+@end
+
 @implementation HMPay1TableViewCell
+
+-(void)setTitle:(NSString *)title{
+    self.payLable.text = title;
+    _title =title;
+    
+}
+
+-(void)setImg:(NSString *)img{
+    
+    _img =img;
+    _iconImg.image = [UIImage imageNamed:img];
+    
+}
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];

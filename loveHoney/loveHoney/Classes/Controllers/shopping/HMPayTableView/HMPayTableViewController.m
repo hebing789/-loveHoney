@@ -14,10 +14,14 @@
 #import "HMPay4TableViewCell.h"
 #import "HMPay5TableViewCell.h"
 
+
 #define KeyWindow  [UIApplication sharedApplication].keyWindow
 @interface HMPayTableViewController ()
 @property(nonatomic,weak)UIButton *button;
 @property(nonatomic,weak)UILabel *lab;
+@property(nonatomic,strong)NSMutableArray* dataAryTitle;
+
+@property(nonatomic,strong)NSMutableArray* dataAryImg;
 @end
 
 @implementation HMPayTableViewController
@@ -149,6 +153,22 @@
     return 1;
 }
 
+-(NSMutableArray *)dataAryImg{
+    
+    if (_dataAryImg==nil) {
+        _dataAryImg = [NSMutableArray arrayWithObjects:@"v2_weixin",@"icon_qq",@"zhifubao",@"v2_dao", nil];
+    }
+    return _dataAryImg;
+}
+
+-(NSMutableArray *)dataAryTitle{
+    
+    if (_dataAryTitle ==nil) {
+        _dataAryTitle = [NSMutableArray arrayWithObjects:@"微信支付",@"QQ钱包",@"支付宝支付",@"货到付款", nil];
+    }
+ 
+    return _dataAryTitle;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell;
@@ -159,6 +179,10 @@
     }
     if (indexPath.section == 1) {
          HMPay1TableViewCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"paycell1" forIndexPath:indexPath];
+        
+        cell2.title= self.dataAryTitle[indexPath.row];
+        cell2.img = self.dataAryImg[indexPath.row];
+        
         cell = cell2;
     }
 //    if (indexPath.section == 2) {

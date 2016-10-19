@@ -54,6 +54,12 @@
     
 }
 
+-(void)dealloc{
+ 
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
+
 -(void)changeShopBangeValue:(NSNotification*)noti{
     static long long i =0;
     i++;

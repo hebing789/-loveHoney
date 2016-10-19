@@ -13,10 +13,13 @@
 #import "HMTableShoping3ViewCell.h"
 #import "HMShoping4TableViewCell.h"
 #import "HMPayTableViewController.h"
+
 #define KeyWindow     [UIApplication sharedApplication].keyWindow
 @interface HMTableViewController ()
 @property(nonatomic,weak)UIButton *button;
 @property(nonatomic,weak)UILabel *lab;
+
+@property(nonatomic,strong)NSMutableArray* dataAry;
 @end
 
 @implementation HMTableViewController
@@ -104,6 +107,10 @@
     UIView* footView=[[UIView alloc]init];
     self.tableView.tableFooterView = footView;
     footView.backgroundColor = [UIColor whiteColor];
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addData:) name:KAddShoppingNotName object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addData:) name:KAddShoppingNotName object:nil];
 //    [self.tableView.tableFooterView setUserInteractionEnabled:NO];
     //self.tableView.tableFooterView.backgroundColor = [UIColor grayColor];
 //    UIButton *selectBtn = [[UIButton alloc]init];
@@ -181,6 +188,29 @@
 
 }
 
+-(NSMutableArray *)dataAry{
+    
+    if (_dataAry==nil) {
+        _dataAry = [NSMutableArray new];
+    }
+    return  _dataAry;
+}
+
+//页面
+-(void)addData:(NSNotification*)notic{
+    
+    NSLog(@"%@",notic);
+    
+//    self.dataAry addObject:<#(nonnull id)#>
+    
+    
+}
+
+-(void)dealloc{
+    
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 
 
 

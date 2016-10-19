@@ -146,7 +146,13 @@ static NSString *productSelectCellId = @"productSelectCellId";
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-      NSLog(@"组%ld, 行%ld", indexPath.section, indexPath.row);
+
+    DDCategoriesModel *cModel = self.categoriesList[indexPath.section];
+    DDProductsModel *pModel = cModel.products[indexPath.row];
+    
+    HMWebViewController *webVC = [[HMWebViewController alloc]init];
+    webVC.model = pModel;
+    [self.navigationController pushViewController:webVC animated:YES];
 
 }
 

@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class DDProductsModel;
 
 @interface HMWebViewController : UIViewController
 
 @property(nonatomic,copy) NSString* urlString;
 
 @property(nonatomic,copy) NSString* imgUrlString;
+
+@property(nonatomic,strong)DDProductsModel *model;
 
 @end

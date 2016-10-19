@@ -12,6 +12,7 @@
 #import "HMShoping2TableViewCell.h"
 #import "HMTableShoping3ViewCell.h"
 #import "HMShoping4TableViewCell.h"
+#import "HMPayTableViewController.h"
 #define KeyWindow     [UIApplication sharedApplication].keyWindow
 @interface HMTableViewController ()
 @property(nonatomic,weak)UIButton *button;
@@ -19,6 +20,69 @@
 @end
 
 @implementation HMTableViewController
+- (void)viewWillAppear:(BOOL)animated{
+
+    UIButton *selectBtn = [[UIButton alloc]init];
+    self.button = selectBtn;
+    [selectBtn setEnabled:YES];
+    [selectBtn setTitle:@"选好了" forState:UIControlStateNormal];
+    [self.tableView.tableFooterView bringSubviewToFront:selectBtn];
+    [selectBtn setBackgroundImage:[UIImage imageNamed:@"v2_coupon_verify_normal"] forState:UIControlStateNormal];
+    [selectBtn setBackgroundImage:[UIImage imageNamed:@"v2_coupon_verify_selected"] forState:UIControlStateSelected];
+    [selectBtn addTarget:self action:@selector(clickSelectBtn:) forControlEvents:UIControlEventTouchUpInside];
+    //     [self.tableView.tableFooterView addSubview:selectBtn];
+    //    self.tableView.tableFooterView.userInteractionEnabled = YES;
+    [KeyWindow  addSubview:selectBtn];
+    
+    
+    UILabel *lable = [[UILabel alloc]init];
+    [KeyWindow addSubview:lable];
+    self.lab = lable;
+    //    lable.layer.borderWidth = 1;
+    //    lable.layer.backgroundColor = (__bridge CGColorRef _Nullable)([UIColor blueColor]);
+    lable.text = @"$9.9";
+    lable.textColor = [UIColor redColor];
+    [lable  mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        
+        
+        make.bottom.mas_equalTo(KeyWindow.mas_bottom).offset(-20);
+        
+        make.left.mas_equalTo(KeyWindow.mas_left).offset(5);
+        make.right.mas_equalTo(selectBtn.mas_left );
+        make.height.mas_equalTo(50);
+        
+        //make.width.mas_equalTo(screemW * 1/4);
+        
+    }];
+    
+    
+    //    UIView* view = [[UIView alloc]init];
+    //    view.frame = CGRectMake(0, 0, screemW, screemH);
+    //
+    //    view.alpha = 0.8;
+    //    [self.view addSubview:view];
+    //    [self.view bringSubviewToFront:view];
+    //    [view addSubview:selectBtn];
+    
+    
+    [selectBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        
+        
+        make.bottom.mas_equalTo(KeyWindow.mas_bottom).offset(-20);
+        
+        make.right.mas_equalTo(KeyWindow.mas_left).offset(screemW);
+        
+        make.height.mas_equalTo(50);
+        
+        make.width.mas_equalTo(80);
+        
+    }];
+
+
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,63 +104,63 @@
     footView.backgroundColor = [UIColor whiteColor];
 //    [self.tableView.tableFooterView setUserInteractionEnabled:NO];
     //self.tableView.tableFooterView.backgroundColor = [UIColor grayColor];
-    UIButton *selectBtn = [[UIButton alloc]init];
-    self.button = selectBtn;
-    [selectBtn setEnabled:YES];
-    [selectBtn setTitle:@"选好了" forState:UIControlStateNormal];
-    [self.tableView.tableFooterView bringSubviewToFront:selectBtn];
-    [selectBtn setBackgroundImage:[UIImage imageNamed:@"v2_coupon_verify_normal"] forState:UIControlStateNormal];
-   [selectBtn setBackgroundImage:[UIImage imageNamed:@"v2_coupon_verify_selected"] forState:UIControlStateSelected];
-    [selectBtn addTarget:self action:@selector(clickSelectBtn:) forControlEvents:UIControlEventTouchUpInside];
-//     [self.tableView.tableFooterView addSubview:selectBtn];
-//    self.tableView.tableFooterView.userInteractionEnabled = YES;
-    [KeyWindow  addSubview:selectBtn];
-    
-
-     UILabel *lable = [[UILabel alloc]init];
-    [KeyWindow addSubview:lable];
-    self.lab = lable;
-//    lable.layer.borderWidth = 1;
-//    lable.layer.backgroundColor = (__bridge CGColorRef _Nullable)([UIColor blueColor]);
-    lable.text = @"$9.9";
-    lable.textColor = [UIColor redColor];
-    [lable  mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        
-        
-        make.bottom.mas_equalTo(KeyWindow.mas_bottom).offset(-20);
-        
-        make.left.mas_equalTo(KeyWindow.mas_left).offset(5);
-        make.right.mas_equalTo(selectBtn.mas_left );
-        make.height.mas_equalTo(50);
-        
-        //make.width.mas_equalTo(screemW * 1/4);
-        
-    }];
-    
-    
-//    UIView* view = [[UIView alloc]init];
-//    view.frame = CGRectMake(0, 0, screemW, screemH);
+//    UIButton *selectBtn = [[UIButton alloc]init];
+//    self.button = selectBtn;
+//    [selectBtn setEnabled:YES];
+//    [selectBtn setTitle:@"选好了" forState:UIControlStateNormal];
+//    [self.tableView.tableFooterView bringSubviewToFront:selectBtn];
+//    [selectBtn setBackgroundImage:[UIImage imageNamed:@"v2_coupon_verify_normal"] forState:UIControlStateNormal];
+//   [selectBtn setBackgroundImage:[UIImage imageNamed:@"v2_coupon_verify_selected"] forState:UIControlStateSelected];
+//    [selectBtn addTarget:self action:@selector(clickSelectBtn:) forControlEvents:UIControlEventTouchUpInside];
+////     [self.tableView.tableFooterView addSubview:selectBtn];
+////    self.tableView.tableFooterView.userInteractionEnabled = YES;
+//    [KeyWindow  addSubview:selectBtn];
 //    
-//    view.alpha = 0.8;
-//    [self.view addSubview:view];
-//    [self.view bringSubviewToFront:view];
-//    [view addSubview:selectBtn];
-    
-    
-    [selectBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        
-        
-        make.bottom.mas_equalTo(KeyWindow.mas_bottom).offset(-20);
-        
-        make.right.mas_equalTo(KeyWindow.mas_left).offset(screemW);
-        
-        make.height.mas_equalTo(50);
-        
-        make.width.mas_equalTo(80);
-        
-    }];
+//
+//     UILabel *lable = [[UILabel alloc]init];
+//    [KeyWindow addSubview:lable];
+//    self.lab = lable;
+////    lable.layer.borderWidth = 1;
+////    lable.layer.backgroundColor = (__bridge CGColorRef _Nullable)([UIColor blueColor]);
+//    lable.text = @"$9.9";
+//    lable.textColor = [UIColor redColor];
+//    [lable  mas_makeConstraints:^(MASConstraintMaker *make) {
+//        
+//        
+//        
+//        make.bottom.mas_equalTo(KeyWindow.mas_bottom).offset(-20);
+//        
+//        make.left.mas_equalTo(KeyWindow.mas_left).offset(5);
+//        make.right.mas_equalTo(selectBtn.mas_left );
+//        make.height.mas_equalTo(50);
+//        
+//        //make.width.mas_equalTo(screemW * 1/4);
+//        
+//    }];
+//    
+//    
+////    UIView* view = [[UIView alloc]init];
+////    view.frame = CGRectMake(0, 0, screemW, screemH);
+////    
+////    view.alpha = 0.8;
+////    [self.view addSubview:view];
+////    [self.view bringSubviewToFront:view];
+////    [view addSubview:selectBtn];
+//    
+//    
+//    [selectBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        
+//        
+//        
+//        make.bottom.mas_equalTo(KeyWindow.mas_bottom).offset(-20);
+//        
+//        make.right.mas_equalTo(KeyWindow.mas_left).offset(screemW);
+//        
+//        make.height.mas_equalTo(50);
+//        
+//        make.width.mas_equalTo(80);
+//        
+//    }];
     
     
     
@@ -109,7 +173,7 @@
 
 
     NSLog(@"点击选好了按钮点击事件");
-
+    [self.navigationController pushViewController:[[HMPayTableViewController alloc]init] animated:YES];
 
 
 

@@ -14,7 +14,7 @@
 #import "HMFocusModel.h"
 #import "HMIconsModel.h"
 #import "HMActivitiesModel.h"
-
+#import "HMFreshShopModel.h"
 #import "HMWebViewController.h"
 
 @interface HMHomeController () <UITableViewDataSource,UITableViewDelegate>
@@ -31,9 +31,12 @@
 ///btn下面的数据//年货图片数据
 @property (nonatomic,strong)NSArray *cellModelArr;
 
-
+//collctionvew的数据
+@property(nonatomic,strong)NSMutableArray* dataAry;
 
 @property (nonatomic,weak)UIView*HDView;
+
+@property(nonatomic,strong)NSArray* btnDataAry;
 
 @end
 
@@ -52,10 +55,29 @@
     
     [self getShoppingAry];
     
- 
+      [self getDATA];
     
     
 
+}
+
+//collctionvew的数据
+-(void)getDATA{
+    
+    [HMFreshShopModel modelWithSucess:^(NSMutableArray *ary) {
+        
+        self.dataAry =ary;
+        
+        [self.tableView reloadData
+         ];
+        
+        
+        
+        
+    } andError:^{
+        
+    }];
+    
 }
 //年货图片数据刷新
 -(void)setCellModelArr:(NSArray *)cellModelArr{
@@ -106,8 +128,10 @@
         
         [arr enumerateObjectsUsingBlock:^(HMIconsModel * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             
+            self.btnDataAry =arr;
             UIButton* btn = self.iconsArr[idx];
-            
+            btn.tag = idx;
+            [btn addTarget:self action:@selector(toBtnWebController:) forControlEvents:UIControlEventTouchUpInside];
             //btn添加网络图片
             UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:obj.img]]];
             [btn setImage:img forState:UIControlStateNormal];
@@ -122,6 +146,16 @@
     
 }
 
+-(void)toBtnWebController:(UIButton*)btn{
+    HMWebViewController* web = [[HMWebViewController alloc]init];
+    HMIconsModel* model = self.btnDataAry[btn.tag];
+    
+    web.urlString = model.customURL;
+    
+    
+    [self.navigationController pushViewController:web animated:YES];
+    
+}
 
 - (void)setupTableView{
     
@@ -238,7 +272,7 @@
     if (indexPath.section == 1) {
        HMDownCell*  cell2= [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         
-        
+        cell2.dataAry = self.dataAry;
         cell=cell2;
         return cell;
     }
@@ -254,9 +288,11 @@
         return 150;
     }
     
-    return screemH;
-//    HMDownCell* cell = [tableView dequeueReusableCellWithIdentifier:@"upcell"  forIndexPath:indexPath];
-//    return [cell getHight];
+//    return 3*screemH;
+    
+    //从缓存翅中取不行
+    HMDownCell* cell = [[HMDownCell alloc]init];
+    return [cell getHight];
 }
 
 

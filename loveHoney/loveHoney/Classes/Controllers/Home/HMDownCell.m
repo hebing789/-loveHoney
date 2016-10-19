@@ -18,7 +18,7 @@ static NSString* cellId = @"HMDownCell1";
 
 @property(nonatomic,weak)UICollectionView *collectionV;
 
-@property(nonatomic,strong)NSMutableArray* dataAry;
+
 
 @end
 
@@ -70,30 +70,34 @@ static NSString* cellId = @"HMDownCell1";
     [self.contentView addSubview:collectionV];
     
 //    [collectionV registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"collectionViewCell"];
-    
+    //这句话写上就不能滚动了
+    [collectionV setScrollEnabled: NO];
     UINib* nib = [UINib nibWithNibName:@"HMFreshShopCell" bundle:nil];
     [collectionV registerNib:nib forCellWithReuseIdentifier:cellId];
     
-    [self getDATA];
-    
-}
-
--(void)getDATA{
-    
-    [HMFreshShopModel modelWithSucess:^(NSMutableArray *ary) {
-        
-        self.dataAry =ary;
-        
-        [self.collectionV reloadData];
-        
-    } andError:^{
-        
-    }];
     
     
 }
 
 
+
+
+
+-(void)setDataAry:(NSMutableArray *)dataAry{
+    
+    _dataAry =dataAry;
+    
+    [self.collectionV setNeedsLayout];
+    [self.collectionV reloadData];
+}
+//数据来直接需要再返回一次行高
+-(CGFloat)getHight{
+    
+    return screemH*7-430;
+    
+    //要网络来了再返回一次;
+    return self.dataAry.count/2*282 +282;
+}
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
@@ -129,7 +133,7 @@ static NSString* cellId = @"HMDownCell1";
     
     [super layoutSubviews];
     
-    self.collectionV.frame = CGRectMake(0, 0, screemW, screemH);
+    self.collectionV.frame = CGRectMake(0, 0, screemW, self.dataAry.count/2*282 +282);
     
 
  
@@ -139,6 +143,8 @@ static NSString* cellId = @"HMDownCell1";
         HMFreshShopModel* model = self.dataAry[indexPath.item];
     
     HMWebViewController* web = [HMWebViewController new];
+    
+    //这个数据跳转和超市页面的数据有关,自身数据无此数据
     web.urlString = model.img;
     [[self viewController].navigationController pushViewController:web animated:YES];
     
@@ -157,9 +163,6 @@ static NSString* cellId = @"HMDownCell1";
     
 }
 
--(CGFloat)getHight{
-    
-    return CGRectGetMaxY(self.collectionV.frame);
-}
+
 
 @end

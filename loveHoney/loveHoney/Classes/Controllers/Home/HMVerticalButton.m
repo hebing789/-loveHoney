@@ -52,12 +52,12 @@
 
 -(CGRect)imageRectForContentRect:(CGRect)contentRect{
     
-       return CGRectMake(contentRect.size.width/2-40, 5, 80, 50);
+       return CGRectMake(contentRect.size.width/2-25, 15, 50, 30);
 }
 
 -(CGRect)titleRectForContentRect:(CGRect)contentRect{
 
-    return CGRectMake(0, CGRectGetMaxY(self.imageView.frame)+5 ,contentRect.size.width ,20);
+    return CGRectMake(0, CGRectGetMaxY(self.imageView.frame)+15 ,contentRect.size.width ,20);
     
 
 }

@@ -133,7 +133,7 @@ static NSString* cellId = @"HMDownCell1";
         //转换坐标
         CGRect rect = [cell convertRect:foodImgView.frame toView:self.view];
         
-        [[DDAnimationTools sharedTool]startAnimationWithView:foodImgView startRect:rect endRect:CGPointMake(SCREEN_WIDTH/4*2.5, SCREEN_HEIGHT-49) finish:^(BOOL finish) {
+        [[DDAnimationTools sharedTool]leftBigImgStartAnimationWithView:foodImgView startRect:rect endRect:CGPointMake(SCREEN_WIDTH/4*2.5, SCREEN_HEIGHT-49) finish:^(BOOL finish) {
             UIView *view = [self viewController].tabBarController.tabBar.subviews[3];
             [DDAnimationTools shakeAnimation:view];
         }];

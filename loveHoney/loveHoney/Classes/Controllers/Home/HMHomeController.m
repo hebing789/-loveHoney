@@ -232,10 +232,30 @@
 
     [self.tableView registerClass:[HMUpCell class] forCellReuseIdentifier:@"upcell"];
     [self.tableView registerClass:[HMDownCell class] forCellReuseIdentifier:@"cell"];
+    
+    UIView* footView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screemW, 50)];
+//    footView.backgroundColor = [UIColor darkGrayColor];
+    
+    UIButton* btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, screemW, 50)];
+    
+    [btn setTitle:@"点击查看更多商品 >" forState:UIControlStateNormal];
+    
+    [btn addTarget:self action:@selector(toMarket) forControlEvents:UIControlEventTouchUpInside];
+    
+    [footView addSubview:btn];
+//    @{NSForegroundColorAttributeName:[UIColor darkGrayColor]}
+//    [btn setAttributedTitle:<#(nullable NSAttributedString *)#> forState:UIControlStateNormal];
+    btn.titleLabel.textColor = [UIColor darkGrayColor];
+    
+    self.tableView.tableFooterView = footView;
 
 }
 
-
+-(void)toMarket{
+    //获得当前控制器的tabController, 调用.selectedIndex = _index;
+    [self.tabBarController setSelectedIndex:1];
+    
+}
 
 - (void)setupScrollAndBtn{
     

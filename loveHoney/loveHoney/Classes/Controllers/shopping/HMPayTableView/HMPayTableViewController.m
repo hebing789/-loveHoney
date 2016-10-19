@@ -22,6 +22,8 @@
 @property(nonatomic,strong)NSMutableArray* dataAryTitle;
 
 @property(nonatomic,strong)NSMutableArray* dataAryImg;
+
+@property(nonatomic,weak)UIButton *lastBtn;
 @end
 
 @implementation HMPayTableViewController
@@ -182,6 +184,15 @@
         
         cell2.title= self.dataAryTitle[indexPath.row];
         cell2.img = self.dataAryImg[indexPath.row];
+        
+        [cell2 setCallback:^(UIButton *btn) {
+            self.lastBtn.selected =NO;
+            
+            btn.selected = YES;
+            
+            self.lastBtn = btn;
+            
+        }];
         
         cell = cell2;
     }

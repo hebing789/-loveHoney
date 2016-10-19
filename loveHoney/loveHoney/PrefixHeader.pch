@@ -25,6 +25,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "UIImageView+WebCache.h"
 #import "SVProgressHUD.h"
+#import "POP.h"
 
 //类
 #import "ConstntDefine.h"

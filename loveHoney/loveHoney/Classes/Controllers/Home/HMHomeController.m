@@ -57,10 +57,73 @@
     
       [self getDATA];
     
-    
 
+
+    
+ 
+    
+    NSArray* idleImages= @[
+                           [UIImage imageNamed:@"v2_pullRefresh1"],
+                           [UIImage imageNamed:@"v2_pullRefresh2"]
+    
+                           ];
+    
+    NSArray* pullingImages= @[
+                              [UIImage imageNamed:@"v2_pullRefresh1"],
+                              [UIImage imageNamed:@"v2_pullRefresh2"]
+                           ];
+    
+    NSArray* refreshingImages= @[
+                                 [UIImage imageNamed:@"v2_pullRefresh1"],
+                                 [UIImage imageNamed:@"v2_pullRefresh2"]
+                           ];
+    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(getFreshData)];
+    // 设置普通状态的动画图片
+    [header setImages:idleImages forState:MJRefreshStateIdle];
+    // 设置即将刷新状态的动画图片（一松开就会刷新的状态）
+    [header setImages:pullingImages forState:MJRefreshStatePulling];
+    // 设置正在刷新状态的动画图片
+    [header setImages:refreshingImages forState:MJRefreshStateRefreshing];
+    // 设置header
+    self.tableView.mj_header = header;
+  
+////    // 隐藏时间
+    header.lastUpdatedTimeLabel.hidden = YES;
+////
+////    // 隐藏状态
+//    header.stateLabel.hidden = YES;
+    // 马上进入刷新状态
+    [self.tableView.header beginRefreshing];
+    
+    // 设置文字
+    [header setTitle:@"下拉刷新" forState:MJRefreshStateIdle];
+    [header setTitle:@"松手开始刷新" forState:MJRefreshStatePulling];
+    [header setTitle:@"正在刷新" forState:MJRefreshStateRefreshing];
+    
+    // 设置字体
+    header.stateLabel.font = [UIFont systemFontOfSize:15];
+    header.lastUpdatedTimeLabel.font = [UIFont systemFontOfSize:14];
+    
+    // 设置颜色
+    header.stateLabel.textColor = [UIColor darkGrayColor];
+    header.lastUpdatedTimeLabel.textColor = [UIColor blueColor];
 }
 
+
+-(void)getFreshData{
+    
+    [self getFocusVideoAry];
+    
+    [self getBtnData];
+    
+    [self getShoppingAry];
+    
+    [self getDATA];
+    
+    
+    
+}
 //collctionvew的数据
 -(void)getDATA{
     
@@ -70,7 +133,8 @@
         
         [self.tableView reloadData
          ];
-        
+        [self.tableView.header endRefreshing];
+
         
         
         

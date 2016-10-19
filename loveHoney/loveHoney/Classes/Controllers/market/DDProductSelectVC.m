@@ -10,6 +10,7 @@
 #import "DDProductViewCell.h"
 #import "DDProductsModel.h"
 #import "DDCategoriesModel.h"
+#import "DDAnimationTools.h"
 
 static NSString *productSelectCellId = @"productSelectCellId";
 
@@ -93,9 +94,36 @@ static NSString *productSelectCellId = @"productSelectCellId";
     
     DDCategoriesModel *cModel = self.categoriesList[indexPath.section];
     DDProductsModel *pModel = cModel.products[indexPath.row];
-
-    cell.model = pModel;
     
+    cell.model = pModel;
+
+    //点击block赋值
+    cell.clickBlock = ^(UIImageView *iconView, NSInteger integer){
+    
+        CGRect rect = [tableView rectForRowAtIndexPath:indexPath];
+        //获取当前cell 相对于self.view 当前的坐标
+        rect.origin.y = rect.origin.y - [tableView contentOffset].y;
+        rect.origin.x = rect.origin.x - SCREEN_WIDTH/4;
+        CGRect imageViewRect = iconView.frame;
+        imageViewRect.origin.y = rect.origin.y+imageViewRect.origin.y;
+        imageViewRect.origin.x = -(rect.origin.x+imageViewRect.origin.x);
+        
+        [[DDAnimationTools sharedTool]startAnimationWithView:iconView startRect:imageViewRect endRect:CGPointMake(SCREEN_WIDTH/4*2.5, SCREEN_HEIGHT-49) finish:^(BOOL finish) {
+            UIView *view = self.tabBarController.tabBar.subviews[3];
+            [DDAnimationTools shakeAnimation:view];
+        }];
+        
+        UIViewController *vc = self.tabBarController.viewControllers[2];
+        NSInteger badgeValue = [vc.tabBarItem.badgeValue integerValue];
+        badgeValue += integer;
+        NSString *str = [NSString stringWithFormat:@"%zd", badgeValue];
+        if ([str isEqualToString:@"0"]) {
+            str = nil;
+        }
+        vc.tabBarItem.badgeValue = str;
+        
+    };
+
     return cell;
 }
 
@@ -118,8 +146,13 @@ static NSString *productSelectCellId = @"productSelectCellId";
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    DDCategoriesModel *cModel = self.categoriesList[indexPath.section];
+    DDProductsModel *pModel = cModel.products[indexPath.row];
     
-    NSLog(@"组%ld, 行%ld", indexPath.section, indexPath.row);
+    HMWebViewController *webVC = [[HMWebViewController alloc]init];
+    webVC.model = pModel;
+    [self.navigationController pushViewController:webVC animated:YES];
 
 }
 

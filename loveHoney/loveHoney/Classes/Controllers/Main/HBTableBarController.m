@@ -22,6 +22,7 @@
 //解决dismiss后调回之前present的页面问题,购物页面present问题用属性记录无法实现
 @property(nonatomic,weak)HMHomeController *homeVC;
 @property(nonatomic,strong)NSMutableArray* dataAry;
+@property (nonatomic ,assign) NSInteger index;
 
 @end
 
@@ -152,6 +153,9 @@
 
         return;
     }
+    
+    //tag值为2的时候不记录,其他的时候都记录
+    _index = item.tag;
 //
     NSInteger index = 0;
 //    NSLog(@"%ld",(long)item.tag);
@@ -250,35 +254,38 @@
 -(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController{
     
     DDBaseNavController* nv = (DDBaseNavController*)viewController;
-    _lastViewController = nv.childViewControllers.firstObject;
-    UITabBarItem*  last =_lastViewController.tabBarItem;
-    [self.dataAry addObject:last];
     
-    
-    if (_dataAry.count>2) {
-        
-        [_dataAry removeObjectAtIndex:0];
-    }
-    
+    //数组记录有bug,
+//    _lastViewController = nv.childViewControllers.firstObject;
+//    UITabBarItem*  last =_lastViewController.tabBarItem;
+//    [self.dataAry addObject:last];
+//    
+//    
+//    if (_dataAry.count>2) {
+//        
+//        [_dataAry removeObjectAtIndex:0];
+//    }
+//    
     
     if ([nv.childViewControllers.firstObject isKindOfClass:[HMShoppingViewController class]])
         //跳转拦截
       
     {  NSLog(@"跳转");
         
-        UITabBarItem* lastitem = self.dataAry[0];
-        if (self.dataAry.count ==1) {
-            //注意跳转方法名
-              [self setSelectedIndex:_homeVC.tabBarItem.tag];
-//            [self tabBar:self.tabBar didSelectItem:_homeVC.tabBarItem.];
-        }else{
-            //能看到动画效果,但是没有页面跳转
-            [self setSelectedIndex:lastitem.tag];
-//            [self tabBar:self.tabBar didSelectItem:lastitem];
-        }
-        
+//        UITabBarItem* lastitem = self.dataAry[0];
+//        if (self.dataAry.count ==1) {
+//            //注意跳转方法名
+//              [self setSelectedIndex:_homeVC.tabBarItem.tag];
+////            [self tabBar:self.tabBar didSelectItem:_homeVC.tabBarItem.];
+//        }else{
+//            //能看到动画效果,但是没有页面跳转
+//            [self setSelectedIndex:lastitem.tag];
+//            NSLog(@"");
+////            [self tabBar:self.tabBar didSelectItem:lastitem];
+//        }
+//        
 
-
+        self.selectedIndex = _index;
 
     
     }

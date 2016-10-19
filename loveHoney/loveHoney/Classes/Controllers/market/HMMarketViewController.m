@@ -89,6 +89,21 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
     
     UINib *nib = [UINib nibWithNibName:@"DDKindViewCell" bundle:nil];
     [productKindView registerNib:nib forCellReuseIdentifier:productKindViewCellId];
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(kindBtnDidSelected:) name:@"productBrowser" object:nil];
+
+
+
+}
+
+-(void)kindBtnDidSelected:(NSNotification *)notification{
+
+    NSIndexPath *indexPath = notification.userInfo[@"indexPath"];
+    
+    NSIndexPath *initIndexPath = [NSIndexPath indexPathForRow:indexPath.section inSection:0];
+    [self.productKindView selectRowAtIndexPath:initIndexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+
 
 }
 
@@ -104,7 +119,6 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
 
 //数据源方法
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
     return self.categoriesList.count;
 }
 
@@ -117,6 +131,22 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
     cell.model = model;
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+//    if (self.kindBlock) {
+//        self.kindBlock(indexPath);
+//    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"selectKind" object:nil userInfo:@{@"indextPath" : indexPath}];
+
+}
+
+-(void)dealloc{
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
 }
 
 @end

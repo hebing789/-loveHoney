@@ -29,6 +29,8 @@
     lineView.backgroundColor = [UIColor orangeColor];
     [view addSubview:lineView];
     
+    
+    
 }
 
 -(void)setModel:(DDCategoriesModel *)model
@@ -39,9 +41,9 @@
 
 }
 
-//-(void)setSelected:(BOOL)selected animated:(BOOL)animated{
-//    [super setSelected:selected animated:animated];
-//    
-//}
+-(void)setSelected:(BOOL)selected animated:(BOOL)animated{
+    [super setSelected:selected animated:animated];
+    
+}
 
 @end

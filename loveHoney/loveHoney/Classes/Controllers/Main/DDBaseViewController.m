@@ -9,7 +9,8 @@
 #import "DDBaseViewController.h"
 #import "DDTitleView.h"
 #import <Masonry.h>
-
+#import "HMAddressController.h"
+#import "HMSearchController.h"
 @interface DDBaseViewController ()
 
 @end
@@ -81,20 +82,33 @@
 
 -(void)jumpToAdressView{
 
-    NSLog(@"跳到地址视图");
+//    NSLog(@"跳到地址视图");
+    HMAddressController* add =[[HMAddressController alloc]init];
+    
+    add.navigationItem.title = @"我的搜获地址";
+    
+    [self.navigationController pushViewController:add animated:YES];
+    
 
 }
 
 
 -(void)scanBtnDidClick{
-
-    NSLog(@"点击扫描按钮了");
+    
+       NSLog(@"点击扫描按钮了");
 
 }
 
 -(void)searchBtnDidClick{
 
-    NSLog(@"点击搜索按钮了");
+//    NSLog(@"点击搜索按钮了");
+    
+    
+    HMSearchController* search = [[HMSearchController alloc]init];
+    
+    [self.navigationController pushViewController:search animated:YES];
+    
+
 
 }
 

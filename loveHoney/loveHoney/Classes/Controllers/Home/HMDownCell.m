@@ -20,6 +20,9 @@ static NSString* cellId = @"HMDownCell1";
 
 @property(nonatomic,weak)UICollectionView *collectionV;
 
+//转换坐标用
+@property(nonatomic,weak)UIView* view;
+
 
 
 @end
@@ -45,6 +48,9 @@ static NSString* cellId = @"HMDownCell1";
 //}
 
 - (void)setupUI{
+    
+    UIView* view = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.view =view;
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     
     flowLayout.itemSize = CGSizeMake(screemW*0.5-6, 270);
@@ -123,7 +129,9 @@ static NSString* cellId = @"HMDownCell1";
     cell.model =self.dataAry[indexPath.item];
     
     [cell setCallback:^(UIImageView *foodImgView) {
-        CGRect rect = [cell convertRect:foodImgView.frame toView:collectionView];
+        
+        //转换坐标
+        CGRect rect = [cell convertRect:foodImgView.frame toView:self.view];
         
         [[DDAnimationTools sharedTool]startAnimationWithView:foodImgView startRect:rect endRect:CGPointMake(SCREEN_WIDTH/4*2.5, SCREEN_HEIGHT-49) finish:^(BOOL finish) {
             UIView *view = [self viewController].tabBarController.tabBar.subviews[3];

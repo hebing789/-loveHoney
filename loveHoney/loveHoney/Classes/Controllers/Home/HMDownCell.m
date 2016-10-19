@@ -13,6 +13,8 @@
 
 #import "HMWebViewController.h"
 
+#import "DDAnimationTools.h"
+
 static NSString* cellId = @"HMDownCell1";
 @interface HMDownCell ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
@@ -119,6 +121,33 @@ static NSString* cellId = @"HMDownCell1";
     cell.contentView.backgroundColor = [UIColor redColor];
     
     cell.model =self.dataAry[indexPath.item];
+    
+    [cell setCallback:^(UIImageView *foodImgView) {
+        CGRect rect = [cell convertRect:foodImgView.frame toView:collectionView];
+        
+        [[DDAnimationTools sharedTool]startAnimationWithView:foodImgView startRect:rect endRect:CGPointMake(SCREEN_WIDTH/4*2.5, SCREEN_HEIGHT-49) finish:^(BOOL finish) {
+            UIView *view = [self viewController].tabBarController.tabBar.subviews[3];
+            [DDAnimationTools shakeAnimation:view];
+        }];
+        
+        
+        
+        UIViewController *vc = [self viewController].tabBarController.viewControllers[2];
+        NSInteger badgeValue = [vc.tabBarItem.badgeValue integerValue];
+        badgeValue += 1;
+        NSString *str = [NSString stringWithFormat:@"%zd", badgeValue];
+        if ([str isEqualToString:@"0"]) {
+            str = nil;
+        }
+        vc.tabBarItem.badgeValue = str;
+        
+    }];
+        
+        
+//      
+        
+    
+
     
     cell.contentView.backgroundColor = [UIColor colorWithRed:255 green:255 blue:255 alpha:1];
     

@@ -35,7 +35,8 @@
     //自定义购物车按钮 的tabBar;
 //    HMTabBar* tarBar= [[HMTabBar alloc]init];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeShopBangeValue:) name:KAddShoppingNotName object:nil];
+    //两边的联动最后不发通知
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changeShopBangeValue:) name:KAddShoppingNotName object:nil];
     
     self.delegate =  self;
     //自定义无法实现badgeValue的增加
@@ -60,18 +61,20 @@
     [[NSNotificationCenter defaultCenter]removeObserver:self];
 }
 
--(void)changeShopBangeValue:(NSNotification*)noti{
-    static long long i =0;
-    i++;
-    self.shoppingVC.tabBarItem.badgeValue = [NSString stringWithFormat:@"%lld",i] ;
-    
-//     self.shoppingVC.tabBarItem.badgeValue = @"99";
-    self.shoppingVC.tabBarItem.badgeColor = [UIColor redColor];
-    
-    [self.tabBar setNeedsLayout];
-    
-    
-}
+//-(void)changeShopBangeValue:(NSNotification*)noti{
+//
+//    //获取当前的bandgeValue;
+////    NSInteger* index = [NSValue valueWith  self.shoppingVC.tabBarItem.badgeValue
+//    
+////    self.shoppingVC.tabBarItem.badgeValue = [NSString stringWithFormat:@"%lld",i] ;
+//    
+////     self.shoppingVC.tabBarItem.badgeValue = @"99";
+//    self.shoppingVC.tabBarItem.badgeColor = [UIColor redColor];
+//    
+//    [self.tabBar setNeedsLayout];
+//    
+//    
+//}
 
 -(instancetype)init{
     if (self=[super init]) {

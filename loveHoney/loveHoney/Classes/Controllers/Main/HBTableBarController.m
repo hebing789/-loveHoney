@@ -14,6 +14,7 @@
 #import "hideBottomBarNavagationControl.h"
 #import "HMTabBar.h"
 
+#import "HMTableViewController.h"
 @interface HBTableBarController ()<UITabBarControllerDelegate>
 
 @property(nonatomic,weak)HMShoppingViewController *shoppingVC;
@@ -128,28 +129,35 @@
     if(item.tag ==2){
         //由于这个tabbar的点击事件无法拦截,跳转后dismiss都会直接回到购物车页面
         
-        //需要创建一个,设置属性传过来不行
-        HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
-        DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:shoppingVC];
-//        //使用谁推过去,dismiss就显示谁的逻辑不行
-//        [shoppingVC setCallback:^{
-//            
-//            UITabBarItem* lastitem = self.dataAry[0];
-//            if (self.dataAry.count ==1) {
-//                [self tabBar:tabBar didSelectItem:_homeVC.tabBarItem];
-//            }else{
-//                //能看到动画效果,但是没有页面跳转
-//                [self tabBar:tabBar didSelectItem:lastitem];
-//            }
-//            
-//            
-//        }];
-        [self presentViewController: navVC animated:YES completion:^{
+       
+      
+        
+        if(!self.shoppingVC.tabBarItem.badgeValue){
+            
+            //需要创建一个,设置属性传过来不行
+            HMShoppingViewController *shoppingVC = [[HMShoppingViewController alloc]init];
+            DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:shoppingVC];
+            
+            [self presentViewController: navVC animated:YES completion:^{
+                
+            }];
+            
+        }else{
+            
+            //需要创建一个,设置属性传过来不行
+            HMTableViewController *shoppingVC = [[HMTableViewController alloc]init];
+            shoppingVC.navigationItem.title = @"购物车";
+            DDBaseNavController *navVC = [[DDBaseNavController alloc]initWithRootViewController:shoppingVC];
+            
+            [self presentViewController: navVC animated:YES completion:^{
+                
+            }];
 
             
             
-        }];
-        
+          
+            
+        }
 
         return;
     }

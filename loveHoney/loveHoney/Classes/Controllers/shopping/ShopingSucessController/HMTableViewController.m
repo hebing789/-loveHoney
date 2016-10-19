@@ -86,6 +86,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+       self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"v2_goback"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(ClickBtn:)];
     //self.view.backgroundColor = [UIColor grayColor];
     
     UINib* nib1= [UINib nibWithNibName:@"HMTableViewCell" bundle:nil];
@@ -255,5 +257,19 @@
     [self.lab removeFromSuperview];
 
 }
+
+//按钮点击事件
+- (void)ClickBtn:(UIButton *)btn
+{
+    
+    //    NSLog(@"点击逛逛按钮");
+    //[self.navigationController pushViewController:[[HMTableViewController alloc]init] animated:YES];
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+       
+    }];
+    
+}
+
 
 @end

@@ -105,7 +105,7 @@
 - (void)ClickBtn:(UIButton *)btn
 {
 
-    NSLog(@"点击逛逛按钮");
+//    NSLog(@"点击逛逛按钮");
     //[self.navigationController pushViewController:[[HMTableViewController alloc]init] animated:YES];
     [self dismissViewControllerAnimated:YES completion:^{
         

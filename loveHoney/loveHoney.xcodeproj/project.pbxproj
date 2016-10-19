@@ -111,6 +111,23 @@
 		8E19666F1DB7A4F900D2C851 /* HMNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E19660A1DB7A4F900D2C851 /* HMNetworkTools.m */; };
 		8E1966701DB7A4F900D2C851 /* UIView+UIframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E19660C1DB7A4F900D2C851 /* UIView+UIframe.m */; };
 		8E1966711DB7A4F900D2C851 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8E19660E1DB7A4F900D2C851 /* .gitkeep */; };
+		8E1966841DB7B14F00D2C851 /* AD in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966731DB7B14F00D2C851 /* AD */; };
+		8E1966851DB7B14F00D2C851 /* FocusURL.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966741DB7B14F00D2C851 /* FocusURL.plist */; };
+		8E1966861DB7B14F00D2C851 /* HelpPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966751DB7B14F00D2C851 /* HelpPlist.plist */; };
+		8E1966871DB7B14F00D2C851 /* Mine in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966761DB7B14F00D2C851 /* Mine */; };
+		8E1966881DB7B14F00D2C851 /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966771DB7B14F00D2C851 /* MinePlist.plist */; };
+		8E1966891DB7B14F00D2C851 /* MyAdress in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966781DB7B14F00D2C851 /* MyAdress */; };
+		8E19668A1DB7B14F00D2C851 /* MyCoupon in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966791DB7B14F00D2C851 /* MyCoupon */; };
+		8E19668B1DB7B14F00D2C851 /* MyOrders in Resources */ = {isa = PBXBuildFile; fileRef = 8E19667A1DB7B14F00D2C851 /* MyOrders */; };
+		8E19668C1DB7B14F00D2C851 /* Search in Resources */ = {isa = PBXBuildFile; fileRef = 8E19667B1DB7B14F00D2C851 /* Search */; };
+		8E19668D1DB7B14F00D2C851 /* SearchProduct in Resources */ = {isa = PBXBuildFile; fileRef = 8E19667C1DB7B14F00D2C851 /* SearchProduct */; };
+		8E19668E1DB7B14F00D2C851 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = 8E19667D1DB7B14F00D2C851 /* supermarket */; };
+		8E19668F1DB7B14F00D2C851 /* SystemMessage in Resources */ = {isa = PBXBuildFile; fileRef = 8E19667E1DB7B14F00D2C851 /* SystemMessage */; };
+		8E1966901DB7B14F00D2C851 /* UserMessage in Resources */ = {isa = PBXBuildFile; fileRef = 8E19667F1DB7B14F00D2C851 /* UserMessage */; };
+		8E1966911DB7B14F00D2C851 /* 促销 in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966801DB7B14F00D2C851 /* 促销 */; };
+		8E1966921DB7B14F00D2C851 /* 系统消息 in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966811DB7B14F00D2C851 /* 系统消息 */; };
+		8E1966931DB7B14F00D2C851 /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966821DB7B14F00D2C851 /* 首页新鲜热卖 */; };
+		8E1966941DB7B14F00D2C851 /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966831DB7B14F00D2C851 /* 首页焦点按钮 */; };
 		EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */; };
 /* End PBXBuildFile section */
 
@@ -298,6 +315,23 @@
 		8E19660B1DB7A4F900D2C851 /* UIView+UIframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIframe.h"; sourceTree = "<group>"; };
 		8E19660C1DB7A4F900D2C851 /* UIView+UIframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIframe.m"; sourceTree = "<group>"; };
 		8E19660E1DB7A4F900D2C851 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		8E1966731DB7B14F00D2C851 /* AD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AD; sourceTree = "<group>"; };
+		8E1966741DB7B14F00D2C851 /* FocusURL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FocusURL.plist; sourceTree = "<group>"; };
+		8E1966751DB7B14F00D2C851 /* HelpPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HelpPlist.plist; sourceTree = "<group>"; };
+		8E1966761DB7B14F00D2C851 /* Mine */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mine; sourceTree = "<group>"; };
+		8E1966771DB7B14F00D2C851 /* MinePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MinePlist.plist; sourceTree = "<group>"; };
+		8E1966781DB7B14F00D2C851 /* MyAdress */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyAdress; sourceTree = "<group>"; };
+		8E1966791DB7B14F00D2C851 /* MyCoupon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyCoupon; sourceTree = "<group>"; };
+		8E19667A1DB7B14F00D2C851 /* MyOrders */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyOrders; sourceTree = "<group>"; };
+		8E19667B1DB7B14F00D2C851 /* Search */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Search; sourceTree = "<group>"; };
+		8E19667C1DB7B14F00D2C851 /* SearchProduct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SearchProduct; sourceTree = "<group>"; };
+		8E19667D1DB7B14F00D2C851 /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = supermarket; sourceTree = "<group>"; };
+		8E19667E1DB7B14F00D2C851 /* SystemMessage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SystemMessage; sourceTree = "<group>"; };
+		8E19667F1DB7B14F00D2C851 /* UserMessage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UserMessage; sourceTree = "<group>"; };
+		8E1966801DB7B14F00D2C851 /* 促销 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "促销"; sourceTree = "<group>"; };
+		8E1966811DB7B14F00D2C851 /* 系统消息 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "系统消息"; sourceTree = "<group>"; };
+		8E1966821DB7B14F00D2C851 /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页新鲜热卖"; sourceTree = "<group>"; };
+		8E1966831DB7B14F00D2C851 /* 首页焦点按钮 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页焦点按钮"; sourceTree = "<group>"; };
 		9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loveHoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -824,6 +858,7 @@
 		8E1965F31DB7A4F900D2C851 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				8E1966721DB7B14F00D2C851 /* Resouce */,
 				8E1965F41DB7A4F900D2C851 /* catogry */,
 				8E1965F81DB7A4F900D2C851 /* common */,
 				8E1966001DB7A4F900D2C851 /* Extension */,
@@ -887,6 +922,30 @@
 				8E19660E1DB7A4F900D2C851 /* .gitkeep */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		8E1966721DB7B14F00D2C851 /* Resouce */ = {
+			isa = PBXGroup;
+			children = (
+				8E1966731DB7B14F00D2C851 /* AD */,
+				8E1966741DB7B14F00D2C851 /* FocusURL.plist */,
+				8E1966751DB7B14F00D2C851 /* HelpPlist.plist */,
+				8E1966761DB7B14F00D2C851 /* Mine */,
+				8E1966771DB7B14F00D2C851 /* MinePlist.plist */,
+				8E1966781DB7B14F00D2C851 /* MyAdress */,
+				8E1966791DB7B14F00D2C851 /* MyCoupon */,
+				8E19667A1DB7B14F00D2C851 /* MyOrders */,
+				8E19667B1DB7B14F00D2C851 /* Search */,
+				8E19667C1DB7B14F00D2C851 /* SearchProduct */,
+				8E19667D1DB7B14F00D2C851 /* supermarket */,
+				8E19667E1DB7B14F00D2C851 /* SystemMessage */,
+				8E19667F1DB7B14F00D2C851 /* UserMessage */,
+				8E1966801DB7B14F00D2C851 /* 促销 */,
+				8E1966811DB7B14F00D2C851 /* 系统消息 */,
+				8E1966821DB7B14F00D2C851 /* 首页新鲜热卖 */,
+				8E1966831DB7B14F00D2C851 /* 首页焦点按钮 */,
+			);
+			path = Resouce;
 			sourceTree = "<group>";
 		};
 		F91E465377817DC3DBC7ACA2 /* Frameworks */ = {
@@ -959,9 +1018,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E1966891DB7B14F00D2C851 /* MyAdress in Resources */,
+				8E19668F1DB7B14F00D2C851 /* SystemMessage in Resources */,
 				8E19666D1DB7A4F900D2C851 /* .gitkeep in Resources */,
 				8E19663D1DB7A4F900D2C851 /* HMMeTableViewCell1.xib in Resources */,
 				8E1966191DB7A4F900D2C851 /* HMFreshShopCell.xib in Resources */,
+				8E19668D1DB7B14F00D2C851 /* SearchProduct in Resources */,
 				8E1966621DB7A4F900D2C851 /* .gitkeep in Resources */,
 				8E1966661DB7A4F900D2C851 /* .gitkeep in Resources */,
 				5B0674661DB13AF400299600 /* Assets 00-09-05-008.xcassets in Resources */,
@@ -969,22 +1031,36 @@
 				8E1966281DB7A4F900D2C851 /* DDKindViewCell.xib in Resources */,
 				8E19665E1DB7A4F900D2C851 /* HMTableViewCell.xib in Resources */,
 				8E1966531DB7A4F900D2C851 /* HMPayTableViewCell.xib in Resources */,
+				8E1966911DB7B14F00D2C851 /* 促销 in Resources */,
 				8E19662E1DB7A4F900D2C851 /* .gitkeep in Resources */,
 				8E19665C1DB7A4F900D2C851 /* HMTableShoping3ViewCell.xib in Resources */,
 				8E1966221DB7A4F900D2C851 /* .gitkeep in Resources */,
+				8E1966861DB7B14F00D2C851 /* HelpPlist.plist in Resources */,
 				8E1966511DB7A4F900D2C851 /* HMPay5TableViewCell.xib in Resources */,
+				8E1966841DB7B14F00D2C851 /* AD in Resources */,
 				8E19662B1DB7A4F900D2C851 /* DDProductViewCell.xib in Resources */,
+				8E19668A1DB7B14F00D2C851 /* MyCoupon in Resources */,
+				8E19668B1DB7B14F00D2C851 /* MyOrders in Resources */,
+				8E1966871DB7B14F00D2C851 /* Mine in Resources */,
+				8E19668E1DB7B14F00D2C851 /* supermarket in Resources */,
 				8E1966581DB7A4F900D2C851 /* HMShoping2TableViewCell.xib in Resources */,
 				8E19664B1DB7A4F900D2C851 /* HMPay2TableViewCell.xib in Resources */,
 				8E19662D1DB7A4F900D2C851 /* DDTitleView.xib in Resources */,
 				8E1966611DB7A4F900D2C851 /* .gitkeep in Resources */,
 				8E19660F1DB7A4F900D2C851 /* .gitkeep in Resources */,
+				8E1966931DB7B14F00D2C851 /* 首页新鲜热卖 in Resources */,
+				8E19668C1DB7B14F00D2C851 /* Search in Resources */,
 				8E19663B1DB7A4F900D2C851 /* HMMenuTableViewCell2.xib in Resources */,
 				8E1966491DB7A4F900D2C851 /* HMPay1TableViewCell.xib in Resources */,
 				8E1966561DB7A4F900D2C851 /* HMShoping1TableViewCell.xib in Resources */,
+				8E1966941DB7B14F00D2C851 /* 首页焦点按钮 in Resources */,
+				8E1966921DB7B14F00D2C851 /* 系统消息 in Resources */,
 				8E1966651DB7A4F900D2C851 /* .gitkeep in Resources */,
 				8E19664D1DB7A4F900D2C851 /* HMPay3TableViewCell.xib in Resources */,
 				8E19665A1DB7A4F900D2C851 /* HMShoping4TableViewCell.xib in Resources */,
+				8E1966851DB7B14F00D2C851 /* FocusURL.plist in Resources */,
+				8E1966901DB7B14F00D2C851 /* UserMessage in Resources */,
+				8E1966881DB7B14F00D2C851 /* MinePlist.plist in Resources */,
 				8E19664F1DB7A4F900D2C851 /* HMPay4TableViewCell.xib in Resources */,
 				8E1966711DB7A4F900D2C851 /* .gitkeep in Resources */,
 				8E19661A1DB7A4F900D2C851 /* .gitkeep in Resources */,

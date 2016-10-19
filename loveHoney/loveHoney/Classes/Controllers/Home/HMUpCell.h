@@ -10,6 +10,6 @@
 #import "HMActivitiesModel.h"
 @interface HMUpCell : UITableViewCell
 @property(nonatomic,weak)HMActivitiesModel *model;
-@property(nonatomic,weak)UIImageView *imgView;
+@property(nonatomic,weak)UIImageView *cellImg;
 
 @end

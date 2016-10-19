@@ -88,6 +88,10 @@
 		375DF01E1DB4E3E7001393E6 /* HMNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 375DEFBF1DB4E3E7001393E6 /* HMNetworkTools.m */; };
 		375DF01F1DB4E3E7001393E6 /* UIView+UIframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 375DEFC11DB4E3E7001393E6 /* UIView+UIframe.m */; };
 		375DF0201DB4E3E7001393E6 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 375DEFC31DB4E3E7001393E6 /* .gitkeep */; };
+		5B01FBF61DB53A7300E3A1EE /* HMSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01FBF51DB53A7300E3A1EE /* HMSearchController.m */; };
+		5B01FBFB1DB6890700E3A1EE /* HMFreshShopModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01FBFA1DB6890700E3A1EE /* HMFreshShopModel.m */; };
+		5B01FC021DB68D1000E3A1EE /* HMFreshShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01FC001DB68D1000E3A1EE /* HMFreshShopCell.m */; };
+		5B01FC031DB68D1000E3A1EE /* HMFreshShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B01FC011DB68D1000E3A1EE /* HMFreshShopCell.xib */; };
 		5B06744D1DB1371500299600 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674211DB1371500299600 /* AppDelegate.m */; };
 		5B0674611DB1371500299600 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B06744C1DB1371500299600 /* ViewController.m */; };
 		5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674631DB1375400299600 /* DSHTTPClient.m */; };
@@ -241,6 +245,13 @@
 		375DEFC11DB4E3E7001393E6 /* UIView+UIframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIframe.m"; sourceTree = "<group>"; };
 		375DEFC31DB4E3E7001393E6 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		5B01F75C1DB1ADA000E3A1EE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5B01FBF41DB53A7300E3A1EE /* HMSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSearchController.h; sourceTree = "<group>"; };
+		5B01FBF51DB53A7300E3A1EE /* HMSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSearchController.m; sourceTree = "<group>"; };
+		5B01FBF91DB6890700E3A1EE /* HMFreshShopModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFreshShopModel.h; sourceTree = "<group>"; };
+		5B01FBFA1DB6890700E3A1EE /* HMFreshShopModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFreshShopModel.m; sourceTree = "<group>"; };
+		5B01FBFF1DB68D1000E3A1EE /* HMFreshShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMFreshShopCell.h; sourceTree = "<group>"; };
+		5B01FC001DB68D1000E3A1EE /* HMFreshShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMFreshShopCell.m; sourceTree = "<group>"; };
+		5B01FC011DB68D1000E3A1EE /* HMFreshShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMFreshShopCell.xib; sourceTree = "<group>"; };
 		5B0674201DB1371500299600 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B0674211DB1371500299600 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5B06744B1DB1371500299600 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -296,6 +307,8 @@
 		375DEF111DB4E3E7001393E6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5B01FBF81DB688C400E3A1EE /* model */,
+				5B01FBF71DB688BC00E3A1EE /* view */,
 				375DEF121DB4E3E7001393E6 /* HMActivitiesModel.h */,
 				375DEF131DB4E3E7001393E6 /* HMActivitiesModel.m */,
 				375DEF141DB4E3E7001393E6 /* HMDownCell.h */,
@@ -310,29 +323,14 @@
 				375DEF1D1DB4E3E7001393E6 /* HMUpCell.m */,
 				375DEF1E1DB4E3E7001393E6 /* HMVerticalButton.h */,
 				375DEF1F1DB4E3E7001393E6 /* HMVerticalButton.m */,
-				375DEF201DB4E3E7001393E6 /* model */,
-				375DEF211DB4E3E7001393E6 /* view */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		375DEF201DB4E3E7001393E6 /* model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		375DEF211DB4E3E7001393E6 /* view */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = view;
 			sourceTree = "<group>";
 		};
 		375DEF221DB4E3E7001393E6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5B01FBF31DB53A0800E3A1EE /* controller */,
 				375DEF231DB4E3E7001393E6 /* .gitkeep */,
 				375DEF241DB4E3E7001393E6 /* DDBaseNavController.h */,
 				375DEF251DB4E3E7001393E6 /* DDBaseNavController.m */,
@@ -737,6 +735,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5B01FBF31DB53A0800E3A1EE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B01FBF41DB53A7300E3A1EE /* HMSearchController.h */,
+				5B01FBF51DB53A7300E3A1EE /* HMSearchController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		5B01FBF71DB688BC00E3A1EE /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5B01FBFF1DB68D1000E3A1EE /* HMFreshShopCell.h */,
+				5B01FC001DB68D1000E3A1EE /* HMFreshShopCell.m */,
+				5B01FC011DB68D1000E3A1EE /* HMFreshShopCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		5B01FBF81DB688C400E3A1EE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5B01FBF91DB6890700E3A1EE /* HMFreshShopModel.h */,
+				5B01FBFA1DB6890700E3A1EE /* HMFreshShopModel.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		5B06734A1DB1324400299600 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -862,6 +888,7 @@
 				375DEFFA1DB4E3E7001393E6 /* HMMeTableViewCell1.xib in Resources */,
 				375DEFE81DB4E3E7001393E6 /* DDProductViewCell.xib in Resources */,
 				375DF0041DB4E3E7001393E6 /* .gitkeep in Resources */,
+				5B01FC031DB68D1000E3A1EE /* HMFreshShopCell.xib in Resources */,
 				375DF0121DB4E3E7001393E6 /* .gitkeep in Resources */,
 				375DF0151DB4E3E7001393E6 /* .gitkeep in Resources */,
 				375DEFD81DB4E3E7001393E6 /* .gitkeep in Resources */,
@@ -945,6 +972,7 @@
 				375DEFE71DB4E3E7001393E6 /* DDProductViewCell.m in Sources */,
 				375DEFFC1DB4E3E7001393E6 /* HMSystemCell.m in Sources */,
 				375DF01A1DB4E3E7001393E6 /* NotificationDefine.m in Sources */,
+				5B01FBFB1DB6890700E3A1EE /* HMFreshShopModel.m in Sources */,
 				375DEFF11DB4E3E7001393E6 /* HMCustomerController.m in Sources */,
 				375DEFEE1DB4E3E7001393E6 /* HMAddressController.m in Sources */,
 				375DEFFD1DB4E3E7001393E6 /* HMSystemCell2.m in Sources */,
@@ -998,10 +1026,12 @@
 				375DEFF71DB4E3E7001393E6 /* HMMenuTableViewCell2.m in Sources */,
 				375DF0001DB4E3E7001393E6 /* HMSystemInformationController.m in Sources */,
 				375DEFFF1DB4E3E7001393E6 /* HMMyMessageController.m in Sources */,
+				5B01FC021DB68D1000E3A1EE /* HMFreshShopCell.m in Sources */,
 				375DEFD51DB4E3E7001393E6 /* HMIconsModel.m in Sources */,
 				375DF0101DB4E3E7001393E6 /* HMTableViewController.m in Sources */,
 				375DEFD41DB4E3E7001393E6 /* HMHomeController.m in Sources */,
 				375DEFFB1DB4E3E7001393E6 /* HMVerticalTitleButton.m in Sources */,
+				5B01FBF61DB53A7300E3A1EE /* HMSearchController.m in Sources */,
 				375DEFED1DB4E3E7001393E6 /* HMEditAdrController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,7 @@
 
 @interface HMIconsModel : NSObject
 
+@property(nonatomic,copy) NSString*customURL;
 @property(nonatomic,copy)NSString *img;
 
 @property(nonatomic,copy)NSString *name;

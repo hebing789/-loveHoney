@@ -47,7 +47,7 @@
 + (void)focusModelWithSuccess:(void (^)(NSArray<HMFocusModel *> *))successBlock error:(void (^)())errorBlock
 {
     [DSHTTPClient postUrlString:@"http://iosapi.itcast.cn/loveBeen/focus.json.php" withParam:@{@"call":@1} withSuccessBlock:^(NSDictionary *data) {
-        NSLog(@"%@",data);
+//        NSLog(@"%@",data);
         
         NSDictionary *dataDict = data[@"data"];
         

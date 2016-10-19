@@ -18,42 +18,57 @@
      return self;
 }
 
-//-(instancetype)initWithFrame:(CGRect)frame{
-//    if (self = [super initWithFrame:frame]) {
-//        
-//        [self setupUI];
-//    }
-//    return self;
-//    
-//}
 
 
 - (void)setupUI{
-//    self.contentView.backgroundColor = [UIColor redColor];
-    UIImageView *imgView = [UIImageView new];
-    self.imgView = imgView;
-    imgView.image = [UIImage imageNamed:@"v2_common_footer"];
 
+    UIImageView *cellImg = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, screemW-10   , 140)];
+    self.cellImg = cellImg;
     
+    self.cellImg.image = [UIImage imageNamed:@"v2_placeholder_square"];
     
-    imgView.frame = CGRectMake(self.frame.size.width *0.2, 20, self.frame.size.width *0.6, 60);
+//    self.imageView.image =[UIImage imageNamed:@"v2_placeholder_square"];
+    ;
 //    imgView.backgroundColor = [UIColor blackColor];
     
-    [self.contentView addSubview:imgView];
+    [self.contentView addSubview:cellImg];
     
-//    [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.top.equalTo(self.contentView).offset(15);
-//        make.right.equalTo(self.contentView).offset(-15);
-//        make.bottom.equalTo(self.contentView).offset(0);
+    [self setNeedsLayout];
+    
+//    [cellImg mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.top.equalTo(self.contentView).offset(5);
+//        make.right.equalTo(self.contentView).offset(-5);
+//        make.bottom.equalTo(self.contentView).offset(-5);
 //    }];
+    
+    //站位图片不显示的原因??
+//    cellImg.image = [UIImage imageNamed:@"v2_connnect_error"];
+   
+//    [cellImg sizeToFit];
+    
 }
 
 
 - (void)setModel:(HMActivitiesModel *)model{
     
     _model = model;
+    self.cellImg.image = [UIImage imageNamed:@"v2_placeholder_square"];
     
-    [self.imgView sd_setImageWithURL: [NSURL URLWithString: model.img]];
+    //没有实现占位图
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self.cellImg sd_setImageWithURL: [NSURL URLWithString: model.img]];
+
+            [self setNeedsLayout];
+        });
+
+    });
+    
+    
+    
+   
     
 }
 

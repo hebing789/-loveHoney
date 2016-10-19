@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HMVerticalButton : UIButton
-
+//-(void)initButton:(UIButton*)btn;
 @end

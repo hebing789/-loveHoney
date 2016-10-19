@@ -41,6 +41,8 @@
     [but setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     
     [but addTarget:self action:@selector(butClick) forControlEvents:UIControlEventTouchUpInside];
+    
+//    UIBarButtonItem* btnItem = [[UIBarButtonItem alloc]initWithCustomView:but];
     [self addSubview:but];
     
  

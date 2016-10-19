@@ -12,52 +12,37 @@
 #import "HMShoping2TableViewCell.h"
 #import "HMTableShoping3ViewCell.h"
 #import "HMShoping4TableViewCell.h"
+#import "HMPayTableViewController.h"
+
 #define KeyWindow     [UIApplication sharedApplication].keyWindow
 @interface HMTableViewController ()
 @property(nonatomic,weak)UIButton *button;
 @property(nonatomic,weak)UILabel *lab;
+
+@property(nonatomic,strong)NSMutableArray* dataAry;
 @end
 
 @implementation HMTableViewController
+- (void)viewWillAppear:(BOOL)animated{
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    //self.view.backgroundColor = [UIColor grayColor];
-    
-    UINib* nib1= [UINib nibWithNibName:@"HMTableViewCell" bundle:nil];
-    UINib* nib2= [UINib nibWithNibName:@"HMShoping1TableViewCell" bundle:nil];
-    UINib* nib3= [UINib nibWithNibName:@"HMShoping2TableViewCell" bundle:nil];
-    UINib* nib4= [UINib nibWithNibName:@"HMTableShoping3ViewCell" bundle:nil];
-    UINib* nib5= [UINib nibWithNibName:@"HMShoping4TableViewCell" bundle:nil];
-    [self.tableView registerNib:nib1 forCellReuseIdentifier:@"cell0"];
-    [self.tableView registerNib:nib2 forCellReuseIdentifier:@"cell1"];
-    [self.tableView registerNib:nib3 forCellReuseIdentifier:@"cell2"];
-    [self.tableView registerNib:nib4 forCellReuseIdentifier:@"cell3"];
-    [self.tableView registerNib:nib5 forCellReuseIdentifier:@"cell4"];
-   
-    UIView* footView=[[UIView alloc]init];
-    self.tableView.tableFooterView = footView;
-    footView.backgroundColor = [UIColor whiteColor];
-//    [self.tableView.tableFooterView setUserInteractionEnabled:NO];
-    //self.tableView.tableFooterView.backgroundColor = [UIColor grayColor];
     UIButton *selectBtn = [[UIButton alloc]init];
     self.button = selectBtn;
     [selectBtn setEnabled:YES];
     [selectBtn setTitle:@"选好了" forState:UIControlStateNormal];
     [self.tableView.tableFooterView bringSubviewToFront:selectBtn];
     [selectBtn setBackgroundImage:[UIImage imageNamed:@"v2_coupon_verify_normal"] forState:UIControlStateNormal];
-   [selectBtn setBackgroundImage:[UIImage imageNamed:@"v2_coupon_verify_selected"] forState:UIControlStateSelected];
+    [selectBtn setBackgroundImage:[UIImage imageNamed:@"v2_coupon_verify_selected"] forState:UIControlStateSelected];
     [selectBtn addTarget:self action:@selector(clickSelectBtn:) forControlEvents:UIControlEventTouchUpInside];
-//     [self.tableView.tableFooterView addSubview:selectBtn];
-//    self.tableView.tableFooterView.userInteractionEnabled = YES;
+    //     [self.tableView.tableFooterView addSubview:selectBtn];
+    //    self.tableView.tableFooterView.userInteractionEnabled = YES;
     [KeyWindow  addSubview:selectBtn];
     
-
-     UILabel *lable = [[UILabel alloc]init];
+    
+    UILabel *lable = [[UILabel alloc]init];
     [KeyWindow addSubview:lable];
     self.lab = lable;
-//    lable.layer.borderWidth = 1;
-//    lable.layer.backgroundColor = (__bridge CGColorRef _Nullable)([UIColor blueColor]);
+    //    lable.layer.borderWidth = 1;
+    //    lable.layer.backgroundColor = (__bridge CGColorRef _Nullable)([UIColor blueColor]);
     lable.text = @"$9.9";
     lable.textColor = [UIColor redColor];
     [lable  mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -75,13 +60,13 @@
     }];
     
     
-//    UIView* view = [[UIView alloc]init];
-//    view.frame = CGRectMake(0, 0, screemW, screemH);
-//    
-//    view.alpha = 0.8;
-//    [self.view addSubview:view];
-//    [self.view bringSubviewToFront:view];
-//    [view addSubview:selectBtn];
+    //    UIView* view = [[UIView alloc]init];
+    //    view.frame = CGRectMake(0, 0, screemW, screemH);
+    //
+    //    view.alpha = 0.8;
+    //    [self.view addSubview:view];
+    //    [self.view bringSubviewToFront:view];
+    //    [view addSubview:selectBtn];
     
     
     [selectBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -97,6 +82,94 @@
         make.width.mas_equalTo(80);
         
     }];
+
+
+
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+       self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"v2_goback"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(ClickBtn:)];
+    //self.view.backgroundColor = [UIColor grayColor];
+    
+    UINib* nib1= [UINib nibWithNibName:@"HMTableViewCell" bundle:nil];
+    UINib* nib2= [UINib nibWithNibName:@"HMShoping1TableViewCell" bundle:nil];
+    UINib* nib3= [UINib nibWithNibName:@"HMShoping2TableViewCell" bundle:nil];
+    UINib* nib4= [UINib nibWithNibName:@"HMTableShoping3ViewCell" bundle:nil];
+    UINib* nib5= [UINib nibWithNibName:@"HMShoping4TableViewCell" bundle:nil];
+    [self.tableView registerNib:nib1 forCellReuseIdentifier:@"cell0"];
+    [self.tableView registerNib:nib2 forCellReuseIdentifier:@"cell1"];
+    [self.tableView registerNib:nib3 forCellReuseIdentifier:@"cell2"];
+    [self.tableView registerNib:nib4 forCellReuseIdentifier:@"cell3"];
+    [self.tableView registerNib:nib5 forCellReuseIdentifier:@"cell4"];
+   
+    UIView* footView=[[UIView alloc]init];
+    self.tableView.tableFooterView = footView;
+    footView.backgroundColor = [UIColor whiteColor];
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addData:) name:KAddShoppingNotName object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addData:) name:KAddShoppingNotName object:nil];
+//    [self.tableView.tableFooterView setUserInteractionEnabled:NO];
+    //self.tableView.tableFooterView.backgroundColor = [UIColor grayColor];
+//    UIButton *selectBtn = [[UIButton alloc]init];
+//    self.button = selectBtn;
+//    [selectBtn setEnabled:YES];
+//    [selectBtn setTitle:@"选好了" forState:UIControlStateNormal];
+//    [self.tableView.tableFooterView bringSubviewToFront:selectBtn];
+//    [selectBtn setBackgroundImage:[UIImage imageNamed:@"v2_coupon_verify_normal"] forState:UIControlStateNormal];
+//   [selectBtn setBackgroundImage:[UIImage imageNamed:@"v2_coupon_verify_selected"] forState:UIControlStateSelected];
+//    [selectBtn addTarget:self action:@selector(clickSelectBtn:) forControlEvents:UIControlEventTouchUpInside];
+////     [self.tableView.tableFooterView addSubview:selectBtn];
+////    self.tableView.tableFooterView.userInteractionEnabled = YES;
+//    [KeyWindow  addSubview:selectBtn];
+//    
+//
+//     UILabel *lable = [[UILabel alloc]init];
+//    [KeyWindow addSubview:lable];
+//    self.lab = lable;
+////    lable.layer.borderWidth = 1;
+////    lable.layer.backgroundColor = (__bridge CGColorRef _Nullable)([UIColor blueColor]);
+//    lable.text = @"$9.9";
+//    lable.textColor = [UIColor redColor];
+//    [lable  mas_makeConstraints:^(MASConstraintMaker *make) {
+//        
+//        
+//        
+//        make.bottom.mas_equalTo(KeyWindow.mas_bottom).offset(-20);
+//        
+//        make.left.mas_equalTo(KeyWindow.mas_left).offset(5);
+//        make.right.mas_equalTo(selectBtn.mas_left );
+//        make.height.mas_equalTo(50);
+//        
+//        //make.width.mas_equalTo(screemW * 1/4);
+//        
+//    }];
+//    
+//    
+////    UIView* view = [[UIView alloc]init];
+////    view.frame = CGRectMake(0, 0, screemW, screemH);
+////    
+////    view.alpha = 0.8;
+////    [self.view addSubview:view];
+////    [self.view bringSubviewToFront:view];
+////    [view addSubview:selectBtn];
+//    
+//    
+//    [selectBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        
+//        
+//        
+//        make.bottom.mas_equalTo(KeyWindow.mas_bottom).offset(-20);
+//        
+//        make.right.mas_equalTo(KeyWindow.mas_left).offset(screemW);
+//        
+//        make.height.mas_equalTo(50);
+//        
+//        make.width.mas_equalTo(80);
+//        
+//    }];
     
     
     
@@ -109,12 +182,35 @@
 
 
     NSLog(@"点击选好了按钮点击事件");
-
+    [self.navigationController pushViewController:[[HMPayTableViewController alloc]init] animated:YES];
 
 
 
 }
 
+-(NSMutableArray *)dataAry{
+    
+    if (_dataAry==nil) {
+        _dataAry = [NSMutableArray new];
+    }
+    return  _dataAry;
+}
+
+//页面
+-(void)addData:(NSNotification*)notic{
+    
+    NSLog(@"%@",notic);
+    
+//    self.dataAry addObject:<#(nonnull id)#>
+    
+    
+}
+
+-(void)dealloc{
+    
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 
 
 
@@ -191,5 +287,19 @@
     [self.lab removeFromSuperview];
 
 }
+
+//按钮点击事件
+- (void)ClickBtn:(UIButton *)btn
+{
+    
+    //    NSLog(@"点击逛逛按钮");
+    //[self.navigationController pushViewController:[[HMTableViewController alloc]init] animated:YES];
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+       
+    }];
+    
+}
+
 
 @end

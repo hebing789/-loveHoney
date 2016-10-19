@@ -58,6 +58,17 @@ static NSString *productSelectCellId = @"productSelectCellId";
     UINib *nib = [UINib nibWithNibName:@"DDProductViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:productSelectCellId];
 
+   
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollToIndex:) name:@"selectKind" object:nil];
+   
+}
+
+-(void)scrollToIndex: (NSNotification *)notification{
+
+    NSIndexPath *indexPath = notification.userInfo[@"indextPath"];
+    
+    NSIndexPath *productIndexPath = [NSIndexPath indexPathForRow:0 inSection:indexPath.row];
+    [self.tableView scrollToRowAtIndexPath:productIndexPath atScrollPosition:UITableViewScrollPositionTop animated:NO];
 }
 
 //数据源方法
@@ -104,6 +115,29 @@ static NSString *productSelectCellId = @"productSelectCellId";
     
     return cModel.name;
     
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSLog(@"组%ld, 行%ld", indexPath.section, indexPath.row);
+
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+
+    CGFloat offsetY = scrollView.contentOffset.y;
+    
+    CGPoint point = CGPointMake(0.3 * screemW, offsetY);
+    
+    NSIndexPath *indexPath = self.tableView.indexPathsForVisibleRows.firstObject;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"productBrowser" object:nil userInfo:@{@"indexPath" : indexPath}];
+
+}
+
+-(void)dealloc{
+
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

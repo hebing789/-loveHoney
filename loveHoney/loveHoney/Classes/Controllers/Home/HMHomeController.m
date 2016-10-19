@@ -55,7 +55,7 @@
     
     [self getShoppingAry];
     
-      [self getDATA];
+//      [self getDATA];
     
 
 
@@ -119,35 +119,19 @@
     
     [self getShoppingAry];
     
-    [self getDATA];
-    
-    
-    
-}
-//collctionvew的数据
--(void)getDATA{
-    
-    [HMFreshShopModel modelWithSucess:^(NSMutableArray *ary) {
-        
-        self.dataAry =ary;
-        
-        [self.tableView reloadData
-         ];
-        [self.tableView.header endRefreshing];
 
-        
-        
-        
-    } andError:^{
-        
-    }];
+    
+    
     
 }
+
 //年货图片数据刷新
 -(void)setCellModelArr:(NSArray *)cellModelArr{
     
     _cellModelArr =cellModelArr;
     [self.tableView reloadData];
+    [self.tableView.header endRefreshing];
+
 }
 
 //年货图片数据tableView
@@ -157,7 +141,8 @@
     
     self.cellModelArr = arr;
         
-        
+        [self.tableView.header endRefreshing];
+
     
     
     
@@ -356,7 +341,7 @@
     if (indexPath.section == 1) {
        HMDownCell*  cell2= [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         
-        cell2.dataAry = self.dataAry;
+//        cell2.dataAry = self.dataAry;
         cell=cell2;
         return cell;
     }

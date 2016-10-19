@@ -357,6 +357,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5B01FD8B1DB7E44800E3A1EE /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		5B06734A1DB1324400299600 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +505,7 @@
 		8E1965541DB7A4F900D2C851 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				5B01FD8B1DB7E44800E3A1EE /* model */,
 				8E1965551DB7A4F900D2C851 /* HMSearchController.h */,
 				8E1965561DB7A4F900D2C851 /* HMSearchController.m */,
 			);

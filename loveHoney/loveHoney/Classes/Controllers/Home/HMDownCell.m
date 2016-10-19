@@ -17,8 +17,8 @@
 
 static NSString* cellId = @"HMDownCell1";
 @interface HMDownCell ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@property(nonatomic,strong)NSMutableArray* dataAry;
 
-@property(nonatomic,weak)UICollectionView *collectionV;
 
 //转换坐标用
 @property(nonatomic,weak)UIView* view;
@@ -82,7 +82,7 @@ static NSString* cellId = @"HMDownCell1";
     [collectionV setScrollEnabled: NO];
     UINib* nib = [UINib nibWithNibName:@"HMFreshShopCell" bundle:nil];
     [collectionV registerNib:nib forCellWithReuseIdentifier:cellId];
-    
+        [self getDATA];
     
     
 }
@@ -170,7 +170,7 @@ static NSString* cellId = @"HMDownCell1";
     
     [super layoutSubviews];
     
-    self.collectionV.frame = CGRectMake(0, 0, screemW, self.dataAry.count/2*282 +282);
+    self.collectionV.frame = CGRectMake(0, 0, screemW, [self getHight]);
     
 
  
@@ -200,6 +200,22 @@ static NSString* cellId = @"HMDownCell1";
     
 }
 
-
+//collctionvew的数据
+-(void)getDATA{
+    
+    [HMFreshShopModel modelWithSucess:^(NSMutableArray *ary) {
+        
+        self.dataAry =ary;
+        
+       
+        
+        
+        
+        
+    } andError:^{
+        
+    }];
+    
+}
 
 @end

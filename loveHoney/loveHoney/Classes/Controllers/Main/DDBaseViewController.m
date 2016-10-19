@@ -107,7 +107,7 @@
     HMSearchController* search = [[HMSearchController alloc]init];
     
     [self.navigationController pushViewController:search animated:YES];
-    
+//    [self presentViewController:search animated:YES completion:nil];
 
 
 }

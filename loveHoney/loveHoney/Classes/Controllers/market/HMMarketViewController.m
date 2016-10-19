@@ -139,10 +139,6 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-//    if (self.kindBlock) {
-//        self.kindBlock(indexPath);
-//    }
-    
     [[NSNotificationCenter defaultCenter] postNotificationName:@"selectKind" object:nil userInfo:@{@"indextPath" : indexPath}];
 
 }

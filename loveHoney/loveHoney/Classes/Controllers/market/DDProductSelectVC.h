@@ -13,6 +13,5 @@
 
 @property(nonatomic,strong)NSArray *categoriesList;
 
-@property(nonatomic,copy)void(^productBlock)(NSIndexPath *);
 
 @end

@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="495" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="495" height="149.5"/>
+                <frame key="frameInset" width="495" height="149"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v2_placeholder_square" translatesAutoresizingMaskIntoConstraints="NO" id="FIY-cK-SWI">
@@ -58,7 +58,7 @@
                     </label>
                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrt-DL-oVg">
                         <constraints>
-                            <constraint firstAttribute="width" constant="50" id="Dzb-Ic-ZlZ"/>
+                            <constraint firstAttribute="width" constant="30" id="Dzb-Ic-ZlZ"/>
                             <constraint firstAttribute="height" constant="15" id="y37-il-Xda"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>

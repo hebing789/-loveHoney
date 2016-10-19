@@ -10,6 +10,5 @@
 
 @interface HMMarketViewController : DDBaseViewController<UITableViewDataSource,UITableViewDelegate>
 
-@property(nonatomic,copy) void(^kindBlock)(NSIndexPath *);
 
 @end

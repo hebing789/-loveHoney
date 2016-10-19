@@ -129,7 +129,7 @@ static NSString* cellId = @"HMDownCell1";
     
     [super layoutSubviews];
     
-    self.collectionV.frame = CGRectMake(0, 0, screemW, 3*screemH);
+    self.collectionV.frame = CGRectMake(0, 0, screemW, screemH);
     
 
  

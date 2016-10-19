@@ -25,7 +25,7 @@
     UIImageView *cellImg = [[UIImageView alloc]initWithFrame:CGRectMake(5, 5, screemW-10   , 140)];
     self.cellImg = cellImg;
     
-   
+    self.cellImg.image = [UIImage imageNamed:@"v2_placeholder_square"];
     
 //    self.imageView.image =[UIImage imageNamed:@"v2_placeholder_square"];
     ;
@@ -43,7 +43,7 @@
     
     //站位图片不显示的原因??
 //    cellImg.image = [UIImage imageNamed:@"v2_connnect_error"];
-//    self.cellImg.image = [UIImage imageNamed:@"v2_placeholder_square"];
+   
 //    [cellImg sizeToFit];
     
 }
@@ -52,8 +52,23 @@
 - (void)setModel:(HMActivitiesModel *)model{
     
     _model = model;
+    self.cellImg.image = [UIImage imageNamed:@"v2_placeholder_square"];
     
-    [self.cellImg sd_setImageWithURL: [NSURL URLWithString: model.img]];
+    //没有实现占位图
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [self.cellImg sd_setImageWithURL: [NSURL URLWithString: model.img]];
+
+            [self setNeedsLayout];
+        });
+
+    });
+    
+    
+    
+   
     
 }
 

@@ -254,9 +254,9 @@
         return 150;
     }
     
-    return screemH*3;
-    HMDownCell* cell = [tableView dequeueReusableCellWithIdentifier:@"upcell"  forIndexPath:indexPath];
-    return [cell getHight];
+    return screemH;
+//    HMDownCell* cell = [tableView dequeueReusableCellWithIdentifier:@"upcell"  forIndexPath:indexPath];
+//    return [cell getHight];
 }
 
 

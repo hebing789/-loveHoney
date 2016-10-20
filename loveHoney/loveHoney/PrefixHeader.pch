@@ -62,5 +62,7 @@
 
 #define pathAddress [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,  NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"address.data"]
 
+#define pathShopping [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,  NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"shopping.db"]
+
 
 #endif /* PrefixHeader_pch */

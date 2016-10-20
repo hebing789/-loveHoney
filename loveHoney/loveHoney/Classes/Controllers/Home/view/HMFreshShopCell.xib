@@ -47,12 +47,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihj-XC-AFz">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="rvr-Rk-4tb"/>
+                        </constraints>
                         <state key="normal" image="v2_increase"/>
                         <connections>
                             <action selector="addFoodToShopping:" destination="gTV-IL-0wX" eventType="touchUpInside" id="AWE-TB-Ihx"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ql-25-HY6">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="58G-zO-EOA"/>
+                        </constraints>
                         <state key="normal" image="v2_reduce"/>
                         <connections>
                             <action selector="reduceShopping:" destination="gTV-IL-0wX" eventType="touchUpInside" id="I9z-K9-PKp"/>

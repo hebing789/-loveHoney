@@ -9,8 +9,11 @@
 #import "DDBaseViewController.h"
 #import "DDTitleView.h"
 #import <Masonry.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface DDBaseViewController ()
+
+
 
 @end
 
@@ -89,6 +92,10 @@
 -(void)scanBtnDidClick{
 
     NSLog(@"点击扫描按钮了");
+    
+    //1.输入
+    
+    //
 
 }
 

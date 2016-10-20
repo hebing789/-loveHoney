@@ -68,8 +68,8 @@ static NSString* cellId = @"HMDownCell1";
     
     self.collectionV = collectionV;
     //设置背景颜色
-//    collectionV.backgroundColor = [UIColor colorWithRed:235 green:235 blue:235 alpha:1];
-    collectionV.backgroundColor = [UIColor lightGrayColor];
+    collectionV.backgroundColor = [UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1];
+//    collectionV.backgroundColor = [UIColor lightGrayColor];
     
     collectionV.delegate =self;
     //设置代理

@@ -50,6 +50,8 @@
     
     _numLab.text = [NSString stringWithFormat:@"%ld",(long)num];
     
+//    [HBSQLiteTools sharedTools]
+    
     
 }
 

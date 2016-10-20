@@ -47,7 +47,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor =[UIColor whiteColor];
+    self.view.backgroundColor =[UIColor colorWithRed:235/255.0 green:235/255.0 blue:235/255.0 alpha:1];
     UISearchBar * bar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, screemW - 120, 40)];
     self.navigationItem.titleView = bar;
     self.searchBar = bar;

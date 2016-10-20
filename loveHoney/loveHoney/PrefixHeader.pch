@@ -64,5 +64,6 @@
 
 #define pathShopping [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,  NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"shopping.db"]
 
+#import "HBSQLiteTools.h"
 
 #endif /* PrefixHeader_pch */

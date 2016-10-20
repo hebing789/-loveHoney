@@ -332,9 +332,11 @@
     if (indexPath.section == 0) {
       HMUpCell*    cell1 = [tableView dequeueReusableCellWithIdentifier:@"upcell" forIndexPath:indexPath];
         cell = cell1;
-        
-        
-      cell1.model = self.cellModelArr[indexPath.row];
+        //先加载占位图
+        if(self.cellModelArr[indexPath.row]){
+             cell1.model = self.cellModelArr[indexPath.row];
+        }
+     
         
   
             return cell;

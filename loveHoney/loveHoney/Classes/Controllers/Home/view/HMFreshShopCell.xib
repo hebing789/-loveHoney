@@ -15,7 +15,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="233" height="302"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vgo-AP-e4A">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v2_placeholder_square" translatesAutoresizingMaskIntoConstraints="NO" id="vgo-AP-e4A">
                         <constraints>
                             <constraint firstAttribute="height" constant="180" id="9cj-7o-1Rz"/>
                         </constraints>
@@ -79,5 +79,6 @@
         <image name="buyOne.png" width="60" height="25"/>
         <image name="jingxuan.png" width="60" height="24"/>
         <image name="v2_increase" width="27" height="27"/>
+        <image name="v2_placeholder_square" width="200" height="200"/>
     </resources>
 </document>

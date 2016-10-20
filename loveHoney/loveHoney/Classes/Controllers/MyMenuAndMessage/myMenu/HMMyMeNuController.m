@@ -7,22 +7,44 @@
 //
 
 #import "HMMyMeNuController.h"
-
+#import "HMDingModel.h"
+#import "HMDingCell.h"
 @interface HMMyMeNuController ()
+
+@property (nonatomic,strong)NSArray *modelArray;
 
 @end
 
+
+static NSString *reuseId = @"HMDingCell";
 @implementation HMMyMeNuController
+
+-(void)setModelArray:(NSArray *)modelArray
+{
+    _modelArray = modelArray;
+    
+    [self.tableView reloadData];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.view.backgroundColor=[UIColor redColor];
+
+//    [self.tableView registerClass:[HMDingCell class] forCellReuseIdentifier:reuseId];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    UINib *nib = [UINib nibWithNibName:@"HMDingCell" bundle:nil];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerNib:nib forCellReuseIdentifier:reuseId];
+    
+    [HMDingModel modelWithSuccess:^(NSArray *nmArray) {
+        
+        self.modelArray = nmArray;
+        
+//        NSLog(@"%@",nmArray);
+        
+    } error:^{
+        
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,24 +56,30 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 0;
+    return self.modelArray.count;
 }
 
 
-/*- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    HMDingCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
 
+    HMDingModel *model = self.modelArray[indexPath.row];
+    
+    cell.model = model;
     
     return cell;
 }
-*/
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 200;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

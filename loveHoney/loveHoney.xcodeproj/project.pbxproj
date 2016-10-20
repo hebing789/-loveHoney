@@ -110,6 +110,8 @@
 		5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674631DB1375400299600 /* DSHTTPClient.m */; };
 		5B0674661DB13AF400299600 /* Assets 00-09-05-008.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B0674651DB13AF400299600 /* Assets 00-09-05-008.xcassets */; };
 		5BEC4FC31DB1192100CA99B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BEC4FC21DB1192100CA99B0 /* main.m */; };
+		6A8660BE1DB79C3600FEC491 /* HMYouModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8660BD1DB79C3600FEC491 /* HMYouModel.m */; };
+		6A8660C31DB79CFB00FEC491 /* HMYouCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8660C11DB79CFB00FEC491 /* HMYouCell.m */; };
 		EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */; };
 /* End PBXBuildFile section */
 
@@ -295,6 +297,10 @@
 		5BEC4FBE1DB1192100CA99B0 /* loveHoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = loveHoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BEC4FC21DB1192100CA99B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5BEC4FD21DB1192100CA99B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A8660BC1DB79C3600FEC491 /* HMYouModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMYouModel.h; sourceTree = "<group>"; };
+		6A8660BD1DB79C3600FEC491 /* HMYouModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMYouModel.m; sourceTree = "<group>"; };
+		6A8660C01DB79CFB00FEC491 /* HMYouCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMYouCell.h; sourceTree = "<group>"; };
+		6A8660C11DB79CFB00FEC491 /* HMYouCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMYouCell.m; sourceTree = "<group>"; };
 		9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loveHoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -652,6 +658,8 @@
 		5B01FCCE1DB7696900E3A1EE /* youhuiQuan */ = {
 			isa = PBXGroup;
 			children = (
+				6A8660BF1DB79CC000FEC491 /* HMYouCell */,
+				6A8660BB1DB79C3600FEC491 /* HMYouModel */,
 				5B01FCCF1DB7696900E3A1EE /* HMYouHuiQuanController.h */,
 				5B01FCD01DB7696900E3A1EE /* HMYouHuiQuanController.m */,
 			);
@@ -892,6 +900,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6A8660BB1DB79C3600FEC491 /* HMYouModel */ = {
+			isa = PBXGroup;
+			children = (
+				6A8660BC1DB79C3600FEC491 /* HMYouModel.h */,
+				6A8660BD1DB79C3600FEC491 /* HMYouModel.m */,
+			);
+			path = HMYouModel;
+			sourceTree = "<group>";
+		};
+		6A8660BF1DB79CC000FEC491 /* HMYouCell */ = {
+			isa = PBXGroup;
+			children = (
+				6A8660C01DB79CFB00FEC491 /* HMYouCell.h */,
+				6A8660C11DB79CFB00FEC491 /* HMYouCell.m */,
+			);
+			path = HMYouCell;
+			sourceTree = "<group>";
+		};
 		F91E465377817DC3DBC7ACA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1121,7 +1147,9 @@
 				5B01FD4F1DB7696A00E3A1EE /* HMSharedController.m in Sources */,
 				5B01FD5B1DB7696A00E3A1EE /* HMMyMeNuController.m in Sources */,
 				5B01FD561DB7696A00E3A1EE /* HMSystemCell2.m in Sources */,
+				6A8660C31DB79CFB00FEC491 /* HMYouCell.m in Sources */,
 				5B01FD6C1DB7696A00E3A1EE /* HMShoping1TableViewCell.m in Sources */,
+				6A8660BE1DB79C3600FEC491 /* HMYouModel.m in Sources */,
 				5B01FD291DB7696A00E3A1EE /* HMHomeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

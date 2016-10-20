@@ -31,25 +31,70 @@ static NSString* cellId= @"HMAddressControllerCell";
 //}
 
 -(void)setDataAry:(NSMutableArray *)dataAry{
-    
+    #pragma mark - 归档
+
     _dataAry = dataAry;
       [self. tableView reloadData];
 }
+-(void)back{
+    
+    
+    BOOL success = [NSKeyedArchiver archiveRootObject:self.dataAry toFile:pathAddress];
+    if(success){
+        NSLog(@"保存成功");
+        NSLog(@"%@",pathAddress);
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+}
+
+#pragma mark - 解归档
+
+
+
+
+
+
+
+////怎样调用一个类方法
+//+ (NSString *)path
+//{
+//    
+//    NSString *chachePath = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask , YES)lastObject];
+//    
+//    return [chachePath stringByAppendingPathComponent:@"address"];
+//}
+
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [HMAddresModel modelWithSucess:^(NSMutableArray *ary) {
+    
+    //重写back,在back的时候存数据
+            self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"v2_goback"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]  style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+
+    //进入就本地读取,否则网络加载
+    NSMutableArray* ary = [NSKeyedUnarchiver unarchiveObjectWithFile:pathAddress];
+    self.dataAry = ary;
+    
+    if (!_dataAry) {
         
-        self.dataAry = ary;
-    } andError:^{
+        [HMAddresModel modelWithSucess:^(NSMutableArray *ary) {
+            
+            self.dataAry = ary;
+        } andError:^{
+            
+            [SVProgressHUD showErrorWithStatus:@"网络链接错误"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [SVProgressHUD dismiss];
+            });
+        }];
         
-        [SVProgressHUD showErrorWithStatus:@"网络链接错误"];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [SVProgressHUD dismiss];
-        });
-    }];
+    }
+    
+    
     
      self.tableView.tableFooterView =[UIView new];
     self.tableView.tableHeaderView.height =20;

@@ -35,10 +35,12 @@
                 </tabBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYk-6h-kXW" userLabel="容器">
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border_new" translatesAutoresizingMaskIntoConstraints="NO" id="lHj-j5-va1" userLabel="边框"/>
+                        <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border_new" translatesAutoresizingMaskIntoConstraints="NO" id="lHj-j5-va1" userLabel="边框">
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scan_line" translatesAutoresizingMaskIntoConstraints="NO" id="ux1-eZ-5HH" userLabel="冲击波">
                             <constraints>
-                                <constraint firstAttribute="height" constant="2" id="WwJ-OI-MQw"/>
+                                <constraint firstAttribute="height" constant="10" id="WwJ-OI-MQw"/>
                             </constraints>
                         </imageView>
                     </subviews>
@@ -54,21 +56,21 @@
                         <constraint firstItem="ux1-eZ-5HH" firstAttribute="width" secondItem="YYk-6h-kXW" secondAttribute="width" multiplier="1.2" id="yDu-eh-wrS"/>
                     </constraints>
                 </view>
-                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3l-ml-la6" userLabel="left">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t3l-ml-la6" userLabel="left">
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                 </view>
-                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nes-SV-CzP" userLabel="right">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nes-SV-CzP" userLabel="right">
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
-                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVa-Jb-4hT" userLabel="bottom">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cVa-Jb-4hT" userLabel="bottom">
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                 </view>
-                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HEK-35-9hc" userLabel="top">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HEK-35-9hc" userLabel="top">
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="将二维码/条形码放入框内, 即可自动扫描" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLO-7z-MCe" userLabel="ResultLab">
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>

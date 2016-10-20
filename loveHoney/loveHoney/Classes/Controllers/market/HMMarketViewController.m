@@ -65,7 +65,6 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
             [UIView animateWithDuration:0.5 animations:^{
                 [SVProgressHUD showErrorWithStatus:@"网络不好, 请重新尝试"];
             }];
-            [SVProgressHUD dismiss];
             
             return;
         }
@@ -76,6 +75,13 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
         self.productSelectVC.categoriesList = categoriesList;
     }];
     
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    SVProgressHUD 
+
 }
 
 -(void)setupLeftKindSelectView{
@@ -142,6 +148,7 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
 }
 
 -(void)dealloc{
+
 
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 

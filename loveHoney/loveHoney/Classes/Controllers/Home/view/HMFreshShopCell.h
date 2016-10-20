@@ -10,4 +10,5 @@
 @class HMFreshShopModel;
 @interface HMFreshShopCell : UICollectionViewCell
 @property(nonatomic,strong)HMFreshShopModel* model;
+@property(nonatomic,copy) void(^callback)(UIImageView *);
 @end

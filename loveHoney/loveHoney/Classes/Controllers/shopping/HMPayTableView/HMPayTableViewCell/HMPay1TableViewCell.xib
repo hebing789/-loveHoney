@@ -28,7 +28,10 @@
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xk6-gJ-Lkh">
                         <state key="normal" image="v2_noselected"/>
-                        <state key="highlighted" image="v2_selected"/>
+                        <state key="selected" image="v2_selected"/>
+                        <connections>
+                            <action selector="ClickPayBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fwE-DT-x2B"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -43,6 +46,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="iconImg" destination="Gtm-NG-wwT" id="ShU-mD-n8e"/>
+                <outlet property="payBtn" destination="Xk6-gJ-Lkh" id="FXq-TQ-ySf"/>
                 <outlet property="payLable" destination="F9O-s3-mrj" id="nVg-68-ReV"/>
             </connections>
             <point key="canvasLocation" x="78" y="79"/>

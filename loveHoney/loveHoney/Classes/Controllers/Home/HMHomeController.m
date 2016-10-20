@@ -55,35 +55,83 @@
     
     [self getShoppingAry];
     
-      [self getDATA];
-    
+//      [self getDATA];
     
 
+
+    
+ 
+    
+    NSArray* idleImages= @[
+                           [UIImage imageNamed:@"v2_pullRefresh1"],
+                           [UIImage imageNamed:@"v2_pullRefresh2"]
+    
+                           ];
+    
+    NSArray* pullingImages= @[
+                              [UIImage imageNamed:@"v2_pullRefresh1"],
+                              [UIImage imageNamed:@"v2_pullRefresh2"]
+                           ];
+    
+    NSArray* refreshingImages= @[
+                                 [UIImage imageNamed:@"v2_pullRefresh1"],
+                                 [UIImage imageNamed:@"v2_pullRefresh2"]
+                           ];
+    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(getFreshData)];
+    // 设置普通状态的动画图片
+    [header setImages:idleImages forState:MJRefreshStateIdle];
+    // 设置即将刷新状态的动画图片（一松开就会刷新的状态）
+    [header setImages:pullingImages forState:MJRefreshStatePulling];
+    // 设置正在刷新状态的动画图片
+    [header setImages:refreshingImages forState:MJRefreshStateRefreshing];
+    // 设置header
+    self.tableView.mj_header = header;
+  
+////    // 隐藏时间
+    header.lastUpdatedTimeLabel.hidden = YES;
+////
+////    // 隐藏状态
+//    header.stateLabel.hidden = YES;
+    // 马上进入刷新状态
+    [self.tableView.header beginRefreshing];
+    
+    // 设置文字
+    [header setTitle:@"下拉刷新" forState:MJRefreshStateIdle];
+    [header setTitle:@"松手开始刷新" forState:MJRefreshStatePulling];
+    [header setTitle:@"正在刷新" forState:MJRefreshStateRefreshing];
+    
+    // 设置字体
+    header.stateLabel.font = [UIFont systemFontOfSize:15];
+    header.lastUpdatedTimeLabel.font = [UIFont systemFontOfSize:14];
+    
+    // 设置颜色
+    header.stateLabel.textColor = [UIColor darkGrayColor];
+    header.lastUpdatedTimeLabel.textColor = [UIColor blueColor];
 }
 
-//collctionvew的数据
--(void)getDATA{
+
+-(void)getFreshData{
     
-    [HMFreshShopModel modelWithSucess:^(NSMutableArray *ary) {
-        
-        self.dataAry =ary;
-        
-        [self.tableView reloadData
-         ];
-        
-        
-        
-        
-    } andError:^{
-        
-    }];
+    [self getFocusVideoAry];
+    
+    [self getBtnData];
+    
+    [self getShoppingAry];
+    
+
+    
+    
     
 }
+
 //年货图片数据刷新
 -(void)setCellModelArr:(NSArray *)cellModelArr{
     
     _cellModelArr =cellModelArr;
     [self.tableView reloadData];
+    [self.tableView.header endRefreshing];
+
 }
 
 //年货图片数据tableView
@@ -93,7 +141,8 @@
     
     self.cellModelArr = arr;
         
-        
+        [self.tableView.header endRefreshing];
+
     
     
     
@@ -168,10 +217,30 @@
 
     [self.tableView registerClass:[HMUpCell class] forCellReuseIdentifier:@"upcell"];
     [self.tableView registerClass:[HMDownCell class] forCellReuseIdentifier:@"cell"];
+    
+    UIView* footView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screemW, 50)];
+//    footView.backgroundColor = [UIColor darkGrayColor];
+    
+    UIButton* btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, screemW, 50)];
+    
+    [btn setTitle:@"点击查看更多商品 >" forState:UIControlStateNormal];
+    
+    [btn addTarget:self action:@selector(toMarket) forControlEvents:UIControlEventTouchUpInside];
+    
+    [footView addSubview:btn];
+//    @{NSForegroundColorAttributeName:[UIColor darkGrayColor]}
+//    [btn setAttributedTitle:<#(nullable NSAttributedString *)#> forState:UIControlStateNormal];
+    btn.titleLabel.textColor = [UIColor darkGrayColor];
+    
+    self.tableView.tableFooterView = footView;
 
 }
 
-
+-(void)toMarket{
+    //获得当前控制器的tabController, 调用.selectedIndex = _index;
+    [self.tabBarController setSelectedIndex:1];
+    
+}
 
 - (void)setupScrollAndBtn{
     
@@ -272,7 +341,7 @@
     if (indexPath.section == 1) {
        HMDownCell*  cell2= [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         
-        cell2.dataAry = self.dataAry;
+//        cell2.dataAry = self.dataAry;
         cell=cell2;
         return cell;
     }

@@ -14,4 +14,6 @@
 
 @property(nonatomic,strong)DDProductsModel *model;
 
+@property(nonatomic,copy)void(^clickBlock)(UIImageView *, NSInteger);
+
 @end

@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface HMDownCell : UITableViewCell
+
+@property(nonatomic,weak)UICollectionView *collectionV;
 //-(CGFloat)getDATA;
 -(CGFloat)getHight;
-@property(nonatomic,strong)NSMutableArray* dataAry;
+
 @end

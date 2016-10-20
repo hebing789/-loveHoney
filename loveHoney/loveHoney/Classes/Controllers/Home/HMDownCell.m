@@ -13,10 +13,15 @@
 
 #import "HMWebViewController.h"
 
+#import "DDAnimationTools.h"
+
 static NSString* cellId = @"HMDownCell1";
 @interface HMDownCell ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@property(nonatomic,strong)NSMutableArray* dataAry;
 
-@property(nonatomic,weak)UICollectionView *collectionV;
+
+//转换坐标用
+@property(nonatomic,weak)UIView* view;
 
 
 
@@ -43,6 +48,9 @@ static NSString* cellId = @"HMDownCell1";
 //}
 
 - (void)setupUI{
+    
+    UIView* view = [[UIView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.view =view;
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     
     flowLayout.itemSize = CGSizeMake(screemW*0.5-6, 270);
@@ -74,7 +82,7 @@ static NSString* cellId = @"HMDownCell1";
     [collectionV setScrollEnabled: NO];
     UINib* nib = [UINib nibWithNibName:@"HMFreshShopCell" bundle:nil];
     [collectionV registerNib:nib forCellWithReuseIdentifier:cellId];
-    
+        [self getDATA];
     
     
 }
@@ -120,6 +128,35 @@ static NSString* cellId = @"HMDownCell1";
     
     cell.model =self.dataAry[indexPath.item];
     
+    [cell setCallback:^(UIImageView *foodImgView) {
+        
+        //转换坐标
+        CGRect rect = [cell convertRect:foodImgView.frame toView:self.view];
+        
+        [[DDAnimationTools sharedTool]leftBigImgStartAnimationWithView:foodImgView startRect:rect endRect:CGPointMake(SCREEN_WIDTH/4*2.5, SCREEN_HEIGHT-49) finish:^(BOOL finish) {
+            UIView *view = [self viewController].tabBarController.tabBar.subviews[3];
+            [DDAnimationTools shakeAnimation:view];
+        }];
+        
+        
+        
+        UIViewController *vc = [self viewController].tabBarController.viewControllers[2];
+        NSInteger badgeValue = [vc.tabBarItem.badgeValue integerValue];
+        badgeValue += 1;
+        NSString *str = [NSString stringWithFormat:@"%zd", badgeValue];
+        if ([str isEqualToString:@"0"]) {
+            str = nil;
+        }
+        vc.tabBarItem.badgeValue = str;
+        
+    }];
+        
+        
+//      
+        
+    
+
+    
     cell.contentView.backgroundColor = [UIColor colorWithRed:255 green:255 blue:255 alpha:1];
     
     return cell;
@@ -133,7 +170,7 @@ static NSString* cellId = @"HMDownCell1";
     
     [super layoutSubviews];
     
-    self.collectionV.frame = CGRectMake(0, 0, screemW, self.dataAry.count/2*282 +282);
+    self.collectionV.frame = CGRectMake(0, 0, screemW, [self getHight]);
     
 
  
@@ -163,6 +200,22 @@ static NSString* cellId = @"HMDownCell1";
     
 }
 
-
+//collctionvew的数据
+-(void)getDATA{
+    
+    [HMFreshShopModel modelWithSucess:^(NSMutableArray *ary) {
+        
+        self.dataAry =ary;
+        
+       
+        
+        
+        
+        
+    } andError:^{
+        
+    }];
+    
+}
 
 @end

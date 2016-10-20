@@ -8,6 +8,8 @@
 
 #import "HMFreshShopCell.h"
 #import "HMFreshShopModel.h"
+
+#import "DDAnimationTools.h"
 @interface HMFreshShopCell()
 
 @property (weak, nonatomic) IBOutlet UIImageView *foodImgView;
@@ -23,9 +25,21 @@
 @implementation HMFreshShopCell
 - (IBAction)addFoodToShopping:(id)sender {
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:KAddShoppingNotName object:self.model userInfo:nil];
+    if(_callback){
+        _callback(self.foodImgView);
+    }
     
-    
+//    //两边的联动最后不发通知
+////    [[NSNotificationCenter defaultCenter] postNotificationName:KAddShoppingNotName object:self.model userInfo:nil];
+
+                   //获取当前cell 相对于self.view 当前的坐标
+//                   rect.origin.y = rect.origin.y - [tableView contentOffset].y;
+//                   rect.origin.x = rect.origin.x - SCREEN_WIDTH/4;
+//                   CGRect imageViewRect = iconView.frame;
+//                   imageViewRect.origin.y = rect.origin.y+imageViewRect.origin.y;
+//                   imageViewRect.origin.x = -(rect.origin.x+imageViewRect.origin.x);
+//                   
+                    
     
 }
 
@@ -43,6 +57,19 @@
         self.btnMaiYI.hidden = YES;
         
     }
+    
+}
+- (UIViewController *)viewController
+{
+    //获取当前view的superView对应的控制器
+    UIResponder *next = [self nextResponder];
+    do {
+        if ([next isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)next;
+        }
+        next = [next nextResponder];
+    } while (next != nil);
+    return nil;
     
 }
 

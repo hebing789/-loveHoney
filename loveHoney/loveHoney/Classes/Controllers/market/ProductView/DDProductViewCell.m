@@ -45,24 +45,29 @@
 }
 
 - (IBAction)plusBtnDidClick:(id)sender {
-    
-    NSLog(@"添加");
     self.minusBtn.hidden = NO;
     self.buyCountLabel.hidden = NO;
     self.currentCount ++;
     self.buyCountLabel.text = [NSString stringWithFormat:@"%ld",self.currentCount];
     
+    if (self.clickBlock) {
+        self.clickBlock(self.iconView, 1);
+    }
+    
+//    [[NSNotificationCenter defaultCenter] postNotificationName:kPlusProduct object:nil userInfo:nil];
 }
 
 - (IBAction)minusBtnDidClick:(id)sender {
-    NSLog(@"移除");
     self.currentCount --;
     self.buyCountLabel.text = [NSString stringWithFormat:@"%ld",self.currentCount];
-    if (self.currentCount == 0) {
-        self.minusBtn.hidden = YES;
-        self.buyCountLabel.hidden = YES;
+    self.minusBtn.hidden = self.currentCount == 0 ? YES : NO;
+    self.buyCountLabel.hidden = self.currentCount == 0 ? YES : NO;
+    
+    if (self.clickBlock) {
+        self.clickBlock(nil, -1);
     }
+    
+//    [[NSNotificationCenter defaultCenter] postNotificationName:kMinusProduct object:nil userInfo:nil];
 }
-
 
 @end

@@ -80,7 +80,7 @@ static NSString *productKindViewCellId = @"productKindViewCellId";
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     
-    SVProgressHUD 
+    [SVProgressHUD dismiss];
 
 }
 

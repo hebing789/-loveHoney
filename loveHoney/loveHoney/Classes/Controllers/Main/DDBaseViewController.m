@@ -9,9 +9,13 @@
 #import "DDBaseViewController.h"
 #import "DDTitleView.h"
 #import <Masonry.h>
+#import "DDQRCodeViewController.h"
 #import "HMAddressController.h"
 #import "HMSearchController.h"
-@interface DDBaseViewController ()
+
+@interface DDBaseViewController ()<DDQRCodeViewControllerDelegate>
+
+
 
 @end
 
@@ -94,9 +98,38 @@
 
 
 -(void)scanBtnDidClick{
-    
-       NSLog(@"点击扫描按钮了");
 
+    DDQRCodeViewController *qrVc = [[DDQRCodeViewController alloc] init];
+    qrVc.delegate = self;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:qrVc];
+    
+    // 设置扫描完成后的回调
+    __weak typeof (self) wSelf = self;
+    [qrVc setCompletionWithBlock:^(NSString *resultAsString) {
+        [wSelf.navigationController popViewControllerAnimated:YES];
+    }];
+
+    [self presentViewController:nav animated:YES completion:nil];
+
+}
+
+#pragma mark - 代理方法
+- (void)reader:(DDQRCodeViewController *)reader didScanResult:(NSString *)result
+{
+    if ([result containsString:@"http"] || [result containsString:@"://"]) {
+        UIWebView *webView = [[UIWebView alloc]init];
+        
+        NSURL *url = [NSURL URLWithString:result];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        [webView loadRequest:request];
+    }
+    else{
+        [self dismissViewControllerAnimated:YES completion:^{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeController" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }];
+    }
+    
 }
 
 -(void)searchBtnDidClick{

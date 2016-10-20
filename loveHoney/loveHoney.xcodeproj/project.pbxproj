@@ -133,6 +133,8 @@
 		8E1966921DB7B14F00D2C851 /* 系统消息 in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966811DB7B14F00D2C851 /* 系统消息 */; };
 		8E1966931DB7B14F00D2C851 /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966821DB7B14F00D2C851 /* 首页新鲜热卖 */; };
 		8E1966941DB7B14F00D2C851 /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = 8E1966831DB7B14F00D2C851 /* 首页焦点按钮 */; };
+		8EF7D3241DB86331001F6982 /* DDQRCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF7D3211DB86331001F6982 /* DDQRCodeView.xib */; };
+		8EF7D3251DB86331001F6982 /* DDQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7D3231DB86331001F6982 /* DDQRCodeViewController.m */; };
 		EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */; };
 /* End PBXBuildFile section */
 
@@ -346,6 +348,9 @@
 		8E1966811DB7B14F00D2C851 /* 系统消息 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "系统消息"; sourceTree = "<group>"; };
 		8E1966821DB7B14F00D2C851 /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页新鲜热卖"; sourceTree = "<group>"; };
 		8E1966831DB7B14F00D2C851 /* 首页焦点按钮 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页焦点按钮"; sourceTree = "<group>"; };
+		8EF7D3211DB86331001F6982 /* DDQRCodeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDQRCodeView.xib; sourceTree = "<group>"; };
+		8EF7D3221DB86331001F6982 /* DDQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDQRCodeViewController.h; sourceTree = "<group>"; };
+		8EF7D3231DB86331001F6982 /* DDQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDQRCodeViewController.m; sourceTree = "<group>"; };
 		9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loveHoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -969,6 +974,7 @@
 			isa = PBXGroup;
 			children = (
 				8E1966061DB7A4F900D2C851 /* .gitkeep */,
+				8EF7D3201DB86331001F6982 /* QRCode */,
 				8E1966071DB7A4F900D2C851 /* DDAnimationTools.h */,
 				8E1966081DB7A4F900D2C851 /* DDAnimationTools.m */,
 				8E1966091DB7A4F900D2C851 /* HMNetworkTools.h */,
@@ -1009,6 +1015,16 @@
 				8E1966831DB7B14F00D2C851 /* 首页焦点按钮 */,
 			);
 			path = Resouce;
+			sourceTree = "<group>";
+		};
+		8EF7D3201DB86331001F6982 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				8EF7D3211DB86331001F6982 /* DDQRCodeView.xib */,
+				8EF7D3221DB86331001F6982 /* DDQRCodeViewController.h */,
+				8EF7D3231DB86331001F6982 /* DDQRCodeViewController.m */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		F91E465377817DC3DBC7ACA2 /* Frameworks */ = {
@@ -1099,6 +1115,7 @@
 				8E19665C1DB7A4F900D2C851 /* HMTableShoping3ViewCell.xib in Resources */,
 				8E1966221DB7A4F900D2C851 /* .gitkeep in Resources */,
 				8E1966861DB7B14F00D2C851 /* HelpPlist.plist in Resources */,
+				8EF7D3241DB86331001F6982 /* DDQRCodeView.xib in Resources */,
 				8E1966511DB7A4F900D2C851 /* HMPay5TableViewCell.xib in Resources */,
 				8E1966841DB7B14F00D2C851 /* AD in Resources */,
 				8E19662B1DB7A4F900D2C851 /* DDProductViewCell.xib in Resources */,
@@ -1192,6 +1209,7 @@
 				8E1966261DB7A4F900D2C851 /* DDProductsModel.m in Sources */,
 				8E1966331DB7A4F900D2C851 /* HMAdrressCell.m in Sources */,
 				8E19662A1DB7A4F900D2C851 /* DDProductViewCell.m in Sources */,
+				8EF7D3251DB86331001F6982 /* DDQRCodeViewController.m in Sources */,
 				8E1966541DB7A4F900D2C851 /* HMPayTableViewController.m in Sources */,
 				8E19665F1DB7A4F900D2C851 /* HMShoppingViewController.m in Sources */,
 				8E19665B1DB7A4F900D2C851 /* HMTableShoping3ViewCell.m in Sources */,

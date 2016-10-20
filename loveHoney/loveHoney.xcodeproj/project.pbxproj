@@ -16,6 +16,7 @@
 		6A8660CD1DB8584100FEC491 /* HMYouCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A8660C81DB8584100FEC491 /* HMYouCell.xib */; };
 		6A8660CE1DB8584100FEC491 /* HMYouModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8660CB1DB8584100FEC491 /* HMYouModel.m */; };
 		6A8660D21DB85AD600FEC491 /* HMDingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8660D11DB85AD600FEC491 /* HMDingCell.m */; };
+		6A8660D61DB85F0B00FEC491 /* HMDingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8660D51DB85F0B00FEC491 /* HMDingModel.m */; };
 		8E19660F1DB7A4F900D2C851 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8E19653B1DB7A4F900D2C851 /* .gitkeep */; };
 		8E1966101DB7A4F900D2C851 /* HMActivitiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E19653E1DB7A4F900D2C851 /* HMActivitiesModel.m */; };
 		8E1966111DB7A4F900D2C851 /* HMDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1965401DB7A4F900D2C851 /* HMDownCell.m */; };
@@ -155,6 +156,8 @@
 		6A8660CB1DB8584100FEC491 /* HMYouModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMYouModel.m; sourceTree = "<group>"; };
 		6A8660D01DB85AD600FEC491 /* HMDingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMDingCell.h; sourceTree = "<group>"; };
 		6A8660D11DB85AD600FEC491 /* HMDingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMDingCell.m; sourceTree = "<group>"; };
+		6A8660D41DB85F0B00FEC491 /* HMDingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMDingModel.h; sourceTree = "<group>"; };
+		6A8660D51DB85F0B00FEC491 /* HMDingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMDingModel.m; sourceTree = "<group>"; };
 		8E19653B1DB7A4F900D2C851 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		8E19653D1DB7A4F900D2C851 /* HMActivitiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMActivitiesModel.h; sourceTree = "<group>"; };
 		8E19653E1DB7A4F900D2C851 /* HMActivitiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMActivitiesModel.m; sourceTree = "<group>"; };
@@ -453,6 +456,15 @@
 				6A8660D11DB85AD600FEC491 /* HMDingCell.m */,
 			);
 			path = HMDingCell;
+			sourceTree = "<group>";
+		};
+		6A8660D31DB85ED800FEC491 /* HMDingModel */ = {
+			isa = PBXGroup;
+			children = (
+				6A8660D41DB85F0B00FEC491 /* HMDingModel.h */,
+				6A8660D51DB85F0B00FEC491 /* HMDingModel.m */,
+			);
+			path = HMDingModel;
 			sourceTree = "<group>";
 		};
 		8E1965391DB7A4F900D2C851 /* Classes */ = {
@@ -771,6 +783,7 @@
 		8E1965B51DB7A4F900D2C851 /* myMenu */ = {
 			isa = PBXGroup;
 			children = (
+				6A8660D31DB85ED800FEC491 /* HMDingModel */,
 				6A8660CF1DB85A7C00FEC491 /* HMDingCell */,
 				8E1965B61DB7A4F900D2C851 /* HMMyMeNuController.h */,
 				8E1965B71DB7A4F900D2C851 /* HMMyMeNuController.m */,
@@ -1220,6 +1233,7 @@
 				8E1966521DB7A4F900D2C851 /* HMPayTableViewCell.m in Sources */,
 				8E1966301DB7A4F900D2C851 /* HMEditAdrController.m in Sources */,
 				8E19662F1DB7A4F900D2C851 /* HMAddAddressController.m in Sources */,
+				6A8660D61DB85F0B00FEC491 /* HMDingModel.m in Sources */,
 				8E1966161DB7A4F900D2C851 /* HMVerticalButton.m in Sources */,
 				8E1966341DB7A4F900D2C851 /* HMCustomerController.m in Sources */,
 				8E19666C1DB7A4F900D2C851 /* UIButton+CustomButton.m in Sources */,

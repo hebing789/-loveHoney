@@ -252,14 +252,24 @@ static NSString* cellMe=@"HMMeViewControllerCell2";
     }
     if (indexPath.section ==2) {
         
+      
+        
         //先跳出弹窗,然后再跳转页面;
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"分享到" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
         
         UIAlertAction* action1 = [UIAlertAction actionWithTitle:@"微信好友" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            //比如微信登录，其他登录可以参考文档或者代码，或者让Xcode自动提示。
+            [OpenShare WeixinAuth:@"snsapi_userinfo" Success:^(NSDictionary *message) {
+//                NSLog(@"微信登录成功:\n%@",message);
+            } Fail:^(NSDictionary *message, NSError *error) {
+//                NSLog(@"微信登录失败:\n%@\n%@",message,error);
+            }];
             
-            HMSharedController* shared = [[HMSharedController alloc]init];
-            shared.navigationItem.title = @"微信登录";
-            [self.navigationController pushViewController:shared animated:YES];
+//            [OpenShare shareToWeixinSession:<#(OSMessage *)#> Success:<#^(OSMessage *message)success#> Fail:<#^(OSMessage *message, NSError *error)fail#>
+            
+//            HMSharedController* shared = [[HMSharedController alloc]init];
+//            shared.navigationItem.title = @"微信登录";
+//            [self.navigationController pushViewController:shared animated:YES];
         }];
         
         [alert addAction:action1];
@@ -267,10 +277,21 @@ static NSString* cellMe=@"HMMeViewControllerCell2";
         
         
         UIAlertAction* action2 = [UIAlertAction actionWithTitle:@"微信朋友圈" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//            
+//            HMSharedController* shared = [[HMSharedController alloc]init];
+//            shared.navigationItem.title = @"微信朋友圈";
+//            [self.navigationController pushViewController:shared animated:YES];
+      
+            //分享纯文本消息到微信朋友圈，其他类型可以参考示例代码
+            OSMessage *msg=[[OSMessage alloc]init];
+            msg.title=@"爱鲜蜂,爱祖国";
+            [OpenShare shareToWeixinTimeline:msg Success:^(OSMessage *message) {
+                //                NSLog(@"微信分享到朋友圈成功：\n%@",message);
+            } Fail:^(OSMessage *message, NSError *error) {
+                //                NSLog(@"微信分享到朋友圈失败：\n%@\n%@",error,message);
+            }];
             
-            HMSharedController* shared = [[HMSharedController alloc]init];
-            shared.navigationItem.title = @"微信朋友圈";
-            [self.navigationController pushViewController:shared animated:YES];
+            
         }];
         
         [alert addAction:action2];
@@ -279,9 +300,17 @@ static NSString* cellMe=@"HMMeViewControllerCell2";
         
         UIAlertAction* action3 = [UIAlertAction actionWithTitle:@"新浪微博" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
-            HMSharedController* shared = [[HMSharedController alloc]init];
-            shared.navigationItem.title = @"微博登录";
-            [self.navigationController pushViewController:shared animated:YES];
+            [OpenShare WeiboAuth:@"新浪微博" redirectURI:@"" Success:^(NSDictionary *message) {
+                
+                
+            } Fail:^(NSDictionary *message, NSError *error) {
+                
+            }];
+
+//            
+//            HMSharedController* shared = [[HMSharedController alloc]init];
+//            shared.navigationItem.title = @"微博登录";
+//            [self.navigationController pushViewController:shared animated:YES];
         }];
         
         [alert addAction:action3];
@@ -289,9 +318,19 @@ static NSString* cellMe=@"HMMeViewControllerCell2";
         
         UIAlertAction* action4 = [UIAlertAction actionWithTitle:@"QQ空间" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
-            HMSharedController* shared = [[HMSharedController alloc]init];
-            shared.navigationItem.title = @"QQ空间";
-            [self.navigationController pushViewController:shared animated:YES];
+            OSMessage* me = [[OSMessage alloc]init];
+            me.title=@"爱鲜蜂,爱祖国";
+            [OpenShare shareToQQZone:me Success:^(OSMessage *message) {
+                //打开之后不能回到当前APP;
+//                [self dismissViewControllerAnimated:YES completion:nil];
+                
+            } Fail:^(OSMessage *message, NSError *error) {
+//                [self dismissViewControllerAnimated:YES completion:nil];
+                
+            }];
+//            HMSharedController* shared = [[HMSharedController alloc]init];
+//            shared.navigationItem.title = @"QQ空间";
+//            [self.navigationController pushViewController:shared animated:YES];
         }];
         
         [alert addAction:action4];

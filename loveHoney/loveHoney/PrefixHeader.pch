@@ -28,6 +28,7 @@
 #import "POP.h"
 #import "MJRefresh.h"
 #import "FMDB.h"
+#import "OpenShareHeader.h"
 
 //类
 #import "ConstntDefine.h"

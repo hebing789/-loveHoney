@@ -20,6 +20,7 @@
 @property(nonatomic,weak)UIButton *button;
 @property(nonatomic,weak)UILabel *lab;
 @property(nonatomic,strong)NSMutableArray* dataAryTitle;
+@property(nonatomic,weak)UIView *kView;
 
 @property(nonatomic,strong)NSMutableArray* dataAryImg;
 
@@ -36,6 +37,7 @@
     
     UIView *view = [[UIView alloc]init];
     [KeyWindow addSubview:view];
+    self.kView = view;
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
        
         make.bottom.mas_equalTo(KeyWindow.mas_bottom).offset(0);
@@ -338,6 +340,8 @@
     [self.button removeFromSuperview];
     
     [self.lab removeFromSuperview];
+    
+    [self.kView removeFromSuperview];
 
 
 }

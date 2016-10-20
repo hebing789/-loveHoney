@@ -38,12 +38,21 @@
 
 @property(nonatomic,strong)NSArray* btnDataAry;
 
+//@property(nonatomic,weak)HMDownCell* cell;
+
 @end
 
 @implementation HMHomeController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    
+//    //优化,设置属性 //优化,设置属性//设置属性后高度有问题,最后一个cell在footview后面
+//
+//    HMDownCell* cell = [[HMDownCell alloc]init];
+//    
+//    self.cell = cell;
+
     
     [self setupTableView];
     
@@ -208,6 +217,7 @@
 
 - (void)setupTableView{
     
+    
     UITableView *tableView = [[UITableView alloc] init];
     self.tableView = tableView;
     self.view = tableView;
@@ -365,6 +375,8 @@
 //    return 3*screemH;
     
     //从缓存翅中取不行
+    
+    //优化,设置属性//设置属性后高度有问题,最后一个cell在footview后面
     HMDownCell* cell = [[HMDownCell alloc]init];
     return [cell getHight];
 }

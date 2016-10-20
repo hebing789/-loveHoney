@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B01FD911DB8B16600E3A1EE /* HBSQLiteTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B01FD901DB8B16600E3A1EE /* HBSQLiteTools.m */; };
 		5B06744D1DB1371500299600 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674211DB1371500299600 /* AppDelegate.m */; };
 		5B0674611DB1371500299600 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B06744C1DB1371500299600 /* ViewController.m */; };
 		5B0674641DB1375400299600 /* DSHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0674631DB1375400299600 /* DSHTTPClient.m */; };
@@ -144,6 +145,8 @@
 /* Begin PBXFileReference section */
 		055F5C9A44396790450CF0E2 /* Pods-loveHoney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.debug.xcconfig"; sourceTree = "<group>"; };
 		5B01F75C1DB1ADA000E3A1EE /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5B01FD8F1DB8B16600E3A1EE /* HBSQLiteTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HBSQLiteTools.h; sourceTree = "<group>"; };
+		5B01FD901DB8B16600E3A1EE /* HBSQLiteTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBSQLiteTools.m; sourceTree = "<group>"; };
 		5B0674201DB1371500299600 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5B0674211DB1371500299600 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5B06744B1DB1371500299600 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -990,6 +993,8 @@
 				8E19660A1DB7A4F900D2C851 /* HMNetworkTools.m */,
 				8E19660B1DB7A4F900D2C851 /* UIView+UIframe.h */,
 				8E19660C1DB7A4F900D2C851 /* UIView+UIframe.m */,
+				5B01FD8F1DB8B16600E3A1EE /* HBSQLiteTools.h */,
+				5B01FD901DB8B16600E3A1EE /* HBSQLiteTools.m */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -1082,7 +1087,7 @@
 				TargetAttributes = {
 					5BEC4FBD1DB1192100CA99B0 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = TZEHFE7VA2;
+						DevelopmentTeam = B98X4L36B7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1225,6 +1230,7 @@
 				8E19662A1DB7A4F900D2C851 /* DDProductViewCell.m in Sources */,
 				8EF7D3251DB86331001F6982 /* DDQRCodeViewController.m in Sources */,
 				8E1966541DB7A4F900D2C851 /* HMPayTableViewController.m in Sources */,
+				5B01FD911DB8B16600E3A1EE /* HBSQLiteTools.m in Sources */,
 				8E19665F1DB7A4F900D2C851 /* HMShoppingViewController.m in Sources */,
 				8E19665B1DB7A4F900D2C851 /* HMTableShoping3ViewCell.m in Sources */,
 				8E1966321DB7A4F900D2C851 /* HMAddresModel.m in Sources */,
@@ -1398,14 +1404,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = TZEHFE7VA2;
+				DEVELOPMENT_TEAM = B98X4L36B7;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = loveHoney/PrefixHeader.pch;
 				INFOPLIST_FILE = loveHoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dd.loveHoney;
+				PRODUCT_BUNDLE_IDENTIFIER = hebing.loveHoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1416,14 +1422,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = TZEHFE7VA2;
+				DEVELOPMENT_TEAM = B98X4L36B7;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = loveHoney/PrefixHeader.pch;
 				INFOPLIST_FILE = loveHoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dd.loveHoney;
+				PRODUCT_BUNDLE_IDENTIFIER = hebing.loveHoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

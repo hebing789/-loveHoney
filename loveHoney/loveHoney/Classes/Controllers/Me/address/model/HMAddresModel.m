@@ -9,6 +9,48 @@
 #import "HMAddresModel.h"
 
 @implementation HMAddresModel
+
+
+-(instancetype)initWithCoder:(NSCoder *)aDecoder{
+    
+    if (self = [super init]) {
+       self.accept_name= [aDecoder decodeObjectForKey:@"accept_name"];
+         self.telphone= [aDecoder decodeObjectForKey:@"telphone"];
+        self.address =  [aDecoder decodeObjectForKey:@"address"];
+        self.province_name = [aDecoder decodeObjectForKey:@"province_name"];
+        
+        
+      self.city_name =  [aDecoder decodeObjectForKey:@"city_name"];
+        self.gender =  [aDecoder decodeObjectForKey:@"gender"];
+       
+        self.addr_for_dealer = [aDecoder decodeObjectForKey:@"addr_for_dealer"];
+
+    }
+    
+    
+    return self;
+    
+}
+
+
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    
+    
+    [aCoder encodeObject:self.accept_name forKey:@"accept_name"];
+    [aCoder encodeObject:self.telphone forKey:@"telphone"];
+    [aCoder encodeObject:self.address forKey:@"address"];
+    [aCoder encodeObject:self.province_name forKey:@"province_name"];
+    
+    [aCoder encodeObject:self.city_name forKey:@"city_name"];
+    [aCoder encodeObject:self.gender forKey:@"gender"];
+    [aCoder encodeObject:self.addr_for_dealer forKey:@"addr_for_dealer"];
+    
+
+    
+}
+
+
+
 - (instancetype)initWithDict:(NSDictionary *)dict{
     
     //完成初始化

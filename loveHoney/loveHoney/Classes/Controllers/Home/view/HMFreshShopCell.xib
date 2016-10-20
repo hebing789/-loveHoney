@@ -17,7 +17,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="v2_placeholder_square" translatesAutoresizingMaskIntoConstraints="NO" id="vgo-AP-e4A">
                         <constraints>
-                            <constraint firstAttribute="height" constant="180" id="9cj-7o-1Rz"/>
+                            <constraint firstAttribute="height" constant="170" id="9cj-7o-1Rz"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yha-D4-lj0">
@@ -27,41 +27,66 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jingxuan.png" translatesAutoresizingMaskIntoConstraints="NO" id="u1Q-Vu-C0A">
                         <constraints>
-                            <constraint firstAttribute="width" constant="50" id="kcn-xy-48u"/>
+                            <constraint firstAttribute="width" constant="35" id="kcn-xy-48u"/>
+                            <constraint firstAttribute="height" constant="20" id="tth-ms-uk6"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPM-gh-Rc1">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="EQU-g8-kYj"/>
+                            <constraint firstAttribute="width" constant="50" id="d5Z-ko-aaz"/>
+                        </constraints>
+                        <state key="normal" image="buyOne.png"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sh-Et-0ZW">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="gHE-7P-mzs"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihj-XC-AFz">
                         <state key="normal" image="v2_increase"/>
                         <connections>
                             <action selector="addFoodToShopping:" destination="gTV-IL-0wX" eventType="touchUpInside" id="AWE-TB-Ihx"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPM-gh-Rc1">
-                        <state key="normal" image="buyOne.png"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ql-25-HY6">
+                        <state key="normal" image="v2_reduce"/>
+                        <connections>
+                            <action selector="reduceShopping:" destination="gTV-IL-0wX" eventType="touchUpInside" id="I9z-K9-PKp"/>
+                        </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sh-Et-0ZW">
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YhX-vK-ago">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="lPM-gh-Rc1" firstAttribute="leading" secondItem="u1Q-Vu-C0A" secondAttribute="trailing" constant="10" id="0Yp-Ru-1Xj"/>
-                <constraint firstItem="Ihj-XC-AFz" firstAttribute="bottom" secondItem="u1Q-Vu-C0A" secondAttribute="bottom" id="3Rk-19-OLg"/>
-                <constraint firstItem="6Sh-Et-0ZW" firstAttribute="top" secondItem="u1Q-Vu-C0A" secondAttribute="bottom" constant="5" id="4Dy-Wj-SBE"/>
-                <constraint firstAttribute="trailing" secondItem="Ihj-XC-AFz" secondAttribute="trailing" constant="10" id="7Vf-N5-lrC"/>
+                <constraint firstItem="lPM-gh-Rc1" firstAttribute="leading" secondItem="u1Q-Vu-C0A" secondAttribute="trailing" constant="5" id="0Yp-Ru-1Xj"/>
+                <constraint firstItem="6Sh-Et-0ZW" firstAttribute="top" secondItem="u1Q-Vu-C0A" secondAttribute="bottom" id="4Dy-Wj-SBE"/>
+                <constraint firstItem="Ihj-XC-AFz" firstAttribute="bottom" secondItem="6Sh-Et-0ZW" secondAttribute="bottom" id="9QJ-Hw-Zcf"/>
+                <constraint firstItem="YhX-vK-ago" firstAttribute="top" secondItem="6Sh-Et-0ZW" secondAttribute="top" id="BDw-vk-If6"/>
+                <constraint firstItem="Ihj-XC-AFz" firstAttribute="top" secondItem="6Sh-Et-0ZW" secondAttribute="top" id="KE8-bL-T71"/>
                 <constraint firstItem="6Sh-Et-0ZW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="M9w-ag-Cah"/>
                 <constraint firstItem="u1Q-Vu-C0A" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="Pz0-7C-gTm"/>
                 <constraint firstAttribute="trailing" secondItem="vgo-AP-e4A" secondAttribute="trailing" constant="5" id="Th5-LV-5jq"/>
+                <constraint firstItem="Ihj-XC-AFz" firstAttribute="leading" secondItem="YhX-vK-ago" secondAttribute="trailing" constant="5" id="U4O-Ta-3gQ"/>
+                <constraint firstItem="9ql-25-HY6" firstAttribute="bottom" secondItem="6Sh-Et-0ZW" secondAttribute="bottom" id="bE8-VT-vJo"/>
                 <constraint firstItem="vgo-AP-e4A" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="brr-Qj-drR"/>
+                <constraint firstItem="YhX-vK-ago" firstAttribute="bottom" secondItem="6Sh-Et-0ZW" secondAttribute="bottom" id="by4-gy-7pN"/>
                 <constraint firstItem="Yha-D4-lj0" firstAttribute="top" secondItem="vgo-AP-e4A" secondAttribute="bottom" constant="10" id="cXA-tn-fJk"/>
                 <constraint firstItem="u1Q-Vu-C0A" firstAttribute="top" secondItem="Yha-D4-lj0" secondAttribute="bottom" constant="5" id="ckC-i6-JsO"/>
                 <constraint firstItem="vgo-AP-e4A" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="gZe-iT-YAN"/>
+                <constraint firstItem="9ql-25-HY6" firstAttribute="top" secondItem="6Sh-Et-0ZW" secondAttribute="top" id="hqr-T5-cv5"/>
                 <constraint firstItem="Yha-D4-lj0" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="iGF-3I-4FZ"/>
+                <constraint firstAttribute="trailing" secondItem="Ihj-XC-AFz" secondAttribute="trailing" constant="5" id="pZt-7E-hMp"/>
                 <constraint firstItem="lPM-gh-Rc1" firstAttribute="bottom" secondItem="u1Q-Vu-C0A" secondAttribute="bottom" id="rND-zA-EpG"/>
                 <constraint firstItem="lPM-gh-Rc1" firstAttribute="top" secondItem="u1Q-Vu-C0A" secondAttribute="top" id="s4j-48-Psw"/>
-                <constraint firstItem="Ihj-XC-AFz" firstAttribute="top" secondItem="u1Q-Vu-C0A" secondAttribute="top" id="uob-EG-nKb"/>
+                <constraint firstItem="YhX-vK-ago" firstAttribute="leading" secondItem="9ql-25-HY6" secondAttribute="trailing" constant="5" id="zdU-MH-8AX"/>
             </constraints>
             <size key="customSize" width="233" height="302"/>
             <connections>
@@ -70,7 +95,9 @@
                 <outlet property="btnMaiYI" destination="lPM-gh-Rc1" id="Lkf-V9-2Tb"/>
                 <outlet property="foodImgView" destination="vgo-AP-e4A" id="yz4-NS-pfu"/>
                 <outlet property="nameLab" destination="Yha-D4-lj0" id="kPk-Kr-u9e"/>
+                <outlet property="numLab" destination="YhX-vK-ago" id="08p-1W-hiD"/>
                 <outlet property="priceLable" destination="6Sh-Et-0ZW" id="SOL-5N-e2v"/>
+                <outlet property="reduceBtn" destination="9ql-25-HY6" id="QDf-aX-10o"/>
             </connections>
             <point key="canvasLocation" x="-51.5" y="212"/>
         </collectionViewCell>
@@ -80,5 +107,6 @@
         <image name="jingxuan.png" width="60" height="24"/>
         <image name="v2_increase" width="27" height="27"/>
         <image name="v2_placeholder_square" width="200" height="200"/>
+        <image name="v2_reduce" width="27" height="27"/>
     </resources>
 </document>

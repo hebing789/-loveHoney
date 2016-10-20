@@ -26,7 +26,17 @@
     
     self.moneyLabel.text = [NSString stringWithFormat:@"$%@",model.order_amount];
     
+//    [model.photo enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        NSString *imgSrc = obj[@"name"];
+//        NSURL *url = [NSURL URLWithString:imgSrc];
+//        [self.icon1 sd_setImageWithURL:url];
+//    }];
     
+    NSURL *url = [NSURL URLWithString:@"http://img01.bqstatic.com/upload/goods/1000011290/1000011290_27698.jpg"];
+    [self.icon1 sd_setImageWithURL:url];
+    [self.icon2 sd_setImageWithURL:url];
+    [self.icon3 sd_setImageWithURL:url];
+    [self.icon4 sd_setImageWithURL:url];
 }
 
 - (void)awakeFromNib {

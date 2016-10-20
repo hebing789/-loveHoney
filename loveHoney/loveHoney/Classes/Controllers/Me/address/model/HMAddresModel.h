@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HMAddresModel : NSObject
+@interface HMAddresModel : NSObject<NSCoding>
 
 ///联系人
 @property(nonatomic,copy) NSString*accept_name;

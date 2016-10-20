@@ -60,7 +60,7 @@ static NSString *reuseId2 = @"tableCell2";
         
         self.modelArray = mArray;
         
-        NSLog(@"%@",self.modelArray);
+//        NSLog(@"%@",self.modelArray);
         
     } error:^{
         

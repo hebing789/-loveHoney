@@ -29,10 +29,14 @@
     NSDictionary *parmas = @{@"call":@13};
     
     [DSHTTPClient postUrlString:@"MyOrders.json.php" withParam:parmas withSuccessBlock:^(NSDictionary *responseObject) {
+
+//        NSLog(@"%@",responseObject);
         
-        NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!!");
+        NSLog(@"@@@@@@@@@@@@@@@@@@@@@@@@@");
+        
         NSLog(@"%@",responseObject);
-        NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!!");
+        
+        NSLog(@"@@@@@@@@@@@@@@@@@@@@@@@@@");
         
         NSMutableArray *nmArray = [[NSMutableArray alloc]init];
         
@@ -40,9 +44,9 @@
         
         [array enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             
-            HMDingModel *model = [HMDingModel modelWithDict:obj];
-            
-            [nmArray addObject:model];
+                        HMDingModel *model = [HMDingModel modelWithDict:obj];
+                        
+                        [nmArray addObject:model];
             
         }];
         

@@ -83,7 +83,8 @@
      [self.contentView addSubview:editBut];
     
      [self.editBut sizeToFit];
-    self.editBut.frame = CGRectMake(screemW -self.editBut.frame.size.width-30 , self.center.y, self.editBut.frame.size.width, self.editBut.frame.size.height);
+//    y值是cententy不用-高度
+    self.editBut.frame = CGRectMake(screemW -self.editBut.frame.size.width-30-20 , self.center.y, self.editBut.frame.size.width+20, self.editBut.frame.size.height+20);
     
 
 }

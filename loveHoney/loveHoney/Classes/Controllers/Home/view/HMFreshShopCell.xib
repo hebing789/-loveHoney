@@ -27,16 +27,24 @@
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jingxuan.png" translatesAutoresizingMaskIntoConstraints="NO" id="u1Q-Vu-C0A">
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="kcn-xy-48u"/>
+                            <constraint firstAttribute="width" constant="35" id="kcn-xy-48u"/>
+                            <constraint firstAttribute="height" constant="20" id="tth-ms-uk6"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihj-XC-AFz">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="oGG-Rd-L6e"/>
+                        </constraints>
                         <state key="normal" image="v2_increase"/>
                         <connections>
                             <action selector="addFoodToShopping:" destination="gTV-IL-0wX" eventType="touchUpInside" id="AWE-TB-Ihx"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPM-gh-Rc1">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="EQU-g8-kYj"/>
+                            <constraint firstAttribute="width" constant="50" id="d5Z-ko-aaz"/>
+                        </constraints>
                         <state key="normal" image="buyOne.png"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Sh-Et-0ZW">
@@ -50,6 +58,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ql-25-HY6">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="8w5-Op-eCr"/>
+                        </constraints>
                         <state key="normal" image="v2_reduce"/>
                         <connections>
                             <action selector="reduceShopping:" destination="gTV-IL-0wX" eventType="touchUpInside" id="I9z-K9-PKp"/>
@@ -58,7 +69,7 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="lPM-gh-Rc1" firstAttribute="leading" secondItem="u1Q-Vu-C0A" secondAttribute="trailing" constant="10" id="0Yp-Ru-1Xj"/>
+                <constraint firstItem="lPM-gh-Rc1" firstAttribute="leading" secondItem="u1Q-Vu-C0A" secondAttribute="trailing" constant="5" id="0Yp-Ru-1Xj"/>
                 <constraint firstItem="Ihj-XC-AFz" firstAttribute="bottom" secondItem="u1Q-Vu-C0A" secondAttribute="bottom" id="3Rk-19-OLg"/>
                 <constraint firstItem="6Sh-Et-0ZW" firstAttribute="top" secondItem="u1Q-Vu-C0A" secondAttribute="bottom" constant="5" id="4Dy-Wj-SBE"/>
                 <constraint firstAttribute="trailing" secondItem="Ihj-XC-AFz" secondAttribute="trailing" constant="10" id="7Vf-N5-lrC"/>

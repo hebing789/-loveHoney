@@ -101,6 +101,7 @@ static NSString* cellId = @"HMDownCell1";
 //数据来直接需要再返回一次行高
 -(CGFloat)getHight{
     
+    return 278*32/2+282;
     return screemH*7-430;
     
     //要网络来了再返回一次;
@@ -113,7 +114,7 @@ static NSString* cellId = @"HMDownCell1";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    return  self.dataAry.count==0?50:self.dataAry.count;
+    return  self.dataAry.count==0?32:self.dataAry.count;
     
 }
 

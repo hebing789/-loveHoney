@@ -16,6 +16,8 @@
 
 @property (nonatomic,copy)NSString *buy_num;
 
+@property (nonatomic,strong)NSArray *order_goods;
+
 + (instancetype)modelWithDict:(NSDictionary *)dict;
 
 + (void)modelWithSuccess:(void(^)(NSArray *))successBlock error:(void(^)())errorBlock;

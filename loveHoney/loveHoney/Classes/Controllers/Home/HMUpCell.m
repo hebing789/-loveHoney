@@ -52,10 +52,10 @@
 - (void)setModel:(HMActivitiesModel *)model{
     
     _model = model;
-    self.cellImg.image = [UIImage imageNamed:@"v2_placeholder_square"];
+//    self.cellImg.image = [UIImage imageNamed:@"v2_placeholder_square"];
     
     //没有实现占位图
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+   
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
@@ -64,7 +64,6 @@
             [self setNeedsLayout];
         });
 
-    });
     
     
     

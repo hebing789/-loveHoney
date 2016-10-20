@@ -113,7 +113,7 @@ static NSString* cellId = @"HMDownCell1";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    return  self.dataAry.count;
+    return  self.dataAry.count==0?50:self.dataAry.count;
     
 }
 
@@ -126,7 +126,12 @@ static NSString* cellId = @"HMDownCell1";
     
     cell.contentView.backgroundColor = [UIColor redColor];
     
-    cell.model =self.dataAry[indexPath.item];
+    //加载占位图,网络数据来了显示数据
+    if (self.dataAry[indexPath.item]) {
+        cell.model =self.dataAry[indexPath.item];
+
+    }
+    
     
     [cell setCallback:^(UIImageView *foodImgView) {
         

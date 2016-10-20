@@ -10,4 +10,14 @@
 
 @interface HMDingModel : NSObject
 
+@property (nonatomic,copy)NSString *lastUpdateTime;
+
+@property (nonatomic,copy)NSString *order_amount;
+
+@property (nonatomic,copy)NSString *buy_num;
+
++ (instancetype)modelWithDict:(NSDictionary *)dict;
+
++ (void)modelWithSuccess:(void(^)(NSArray *))successBlock error:(void(^)())errorBlock;
+
 @end

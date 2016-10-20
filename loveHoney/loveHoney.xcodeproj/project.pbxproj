@@ -17,6 +17,7 @@
 		6A8660CE1DB8584100FEC491 /* HMYouModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8660CB1DB8584100FEC491 /* HMYouModel.m */; };
 		6A8660D21DB85AD600FEC491 /* HMDingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8660D11DB85AD600FEC491 /* HMDingCell.m */; };
 		6A8660D61DB85F0B00FEC491 /* HMDingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A8660D51DB85F0B00FEC491 /* HMDingModel.m */; };
+		6A8660DB1DB86F8900FEC491 /* HMDingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A8660DA1DB86F8900FEC491 /* HMDingCell.xib */; };
 		8E19660F1DB7A4F900D2C851 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 8E19653B1DB7A4F900D2C851 /* .gitkeep */; };
 		8E1966101DB7A4F900D2C851 /* HMActivitiesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E19653E1DB7A4F900D2C851 /* HMActivitiesModel.m */; };
 		8E1966111DB7A4F900D2C851 /* HMDownCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1965401DB7A4F900D2C851 /* HMDownCell.m */; };
@@ -158,6 +159,7 @@
 		6A8660D11DB85AD600FEC491 /* HMDingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMDingCell.m; sourceTree = "<group>"; };
 		6A8660D41DB85F0B00FEC491 /* HMDingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMDingModel.h; sourceTree = "<group>"; };
 		6A8660D51DB85F0B00FEC491 /* HMDingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMDingModel.m; sourceTree = "<group>"; };
+		6A8660DA1DB86F8900FEC491 /* HMDingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HMDingCell.xib; sourceTree = "<group>"; };
 		8E19653B1DB7A4F900D2C851 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		8E19653D1DB7A4F900D2C851 /* HMActivitiesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMActivitiesModel.h; sourceTree = "<group>"; };
 		8E19653E1DB7A4F900D2C851 /* HMActivitiesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMActivitiesModel.m; sourceTree = "<group>"; };
@@ -454,6 +456,7 @@
 			children = (
 				6A8660D01DB85AD600FEC491 /* HMDingCell.h */,
 				6A8660D11DB85AD600FEC491 /* HMDingCell.m */,
+				6A8660DA1DB86F8900FEC491 /* HMDingCell.xib */,
 			);
 			path = HMDingCell;
 			sourceTree = "<group>";
@@ -1090,6 +1093,7 @@
 				8E1966621DB7A4F900D2C851 /* .gitkeep in Resources */,
 				8E1966661DB7A4F900D2C851 /* .gitkeep in Resources */,
 				5B0674661DB13AF400299600 /* Assets 00-09-05-008.xcassets in Resources */,
+				6A8660DB1DB86F8900FEC491 /* HMDingCell.xib in Resources */,
 				8E1966471DB7A4F900D2C851 /* .gitkeep in Resources */,
 				8E1966281DB7A4F900D2C851 /* DDKindViewCell.xib in Resources */,
 				8E19665E1DB7A4F900D2C851 /* HMTableViewCell.xib in Resources */,

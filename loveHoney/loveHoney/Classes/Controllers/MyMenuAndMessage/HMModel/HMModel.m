@@ -30,7 +30,7 @@
     
     [DSHTTPClient postUrlString:@"SystemMessage.json.php" withParam:parmas withSuccessBlock:^(NSDictionary *responseObject) {
         
-        NSLog(@"%@",responseObject);
+//        NSLog(@"%@",responseObject);
         
         NSMutableArray *nmArray = [[NSMutableArray alloc]init];
         

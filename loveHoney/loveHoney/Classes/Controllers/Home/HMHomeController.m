@@ -274,7 +274,7 @@
 
        
        UIView *BtnView = [[UIView alloc] initWithFrame:CGRectMake(0, 150, [UIScreen mainScreen].bounds.size.width, 100)];
-       BtnView.backgroundColor = [UIColor redColor];
+//       BtnView.backgroundColor = [UIColor redColor];
        [HDView addSubview:BtnView];
        CGFloat btnW = [UIScreen mainScreen].bounds.size.width / 4;
        
@@ -301,7 +301,7 @@
            
            [btn setTitle:butTitleAry[i] forState:UIControlStateNormal];
            
-           btn.backgroundColor = [UIColor cyanColor];
+//           btn.backgroundColor = [UIColor cyanColor];
            [BtnView addSubview:btn];
            
            [self.iconsArr addObject:btn];

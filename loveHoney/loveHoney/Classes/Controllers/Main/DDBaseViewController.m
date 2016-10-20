@@ -12,6 +12,7 @@
 #import "DDQRCodeViewController.h"
 #import "HMAddressController.h"
 #import "HMSearchController.h"
+#import "DDScanViewController.h"
 
 @interface DDBaseViewController ()<DDQRCodeViewControllerDelegate>
 
@@ -116,12 +117,20 @@
 #pragma mark - 代理方法
 - (void)reader:(DDQRCodeViewController *)reader didScanResult:(NSString *)result
 {
-    if ([result containsString:@"http"] || [result containsString:@"://"]) {
-        UIWebView *webView = [[UIWebView alloc]init];
-        
-        NSURL *url = [NSURL URLWithString:result];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        [webView loadRequest:request];
+    
+    if ([result containsString:@"http://"] || [result containsString:@"https://"]) {
+    
+        [self dismissViewControllerAnimated:NO completion:^{
+            
+            DDScanViewController *scanVC = [[DDScanViewController alloc] init];
+            scanVC.urlStr = result;
+            
+//            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:scanVC];
+//            [self presentViewController:nav animated:YES completion:nil];
+
+            [self.navigationController pushViewController:scanVC animated:YES];
+        }];
+
     }
     else{
         [self dismissViewControllerAnimated:YES completion:^{
@@ -133,15 +142,10 @@
 }
 
 -(void)searchBtnDidClick{
-
-//    NSLog(@"点击搜索按钮了");
-    
     
     HMSearchController* search = [[HMSearchController alloc]init];
     
     [self.navigationController pushViewController:search animated:YES];
-//    [self presentViewController:search animated:YES completion:nil];
-
 
 }
 

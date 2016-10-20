@@ -33,14 +33,14 @@
                     </items>
                     <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 </tabBar>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYk-6h-kXW" userLabel="容器">
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYk-6h-kXW" userLabel="容器">
                     <subviews>
                         <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border_new" translatesAutoresizingMaskIntoConstraints="NO" id="lHj-j5-va1" userLabel="边框">
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scan_line" translatesAutoresizingMaskIntoConstraints="NO" id="ux1-eZ-5HH" userLabel="冲击波">
                             <constraints>
-                                <constraint firstAttribute="height" constant="10" id="WwJ-OI-MQw"/>
+                                <constraint firstAttribute="height" constant="15" id="WwJ-OI-MQw"/>
                             </constraints>
                         </imageView>
                     </subviews>

@@ -28,6 +28,8 @@ static NSString *productSelectCellId = @"productSelectCellId";
     _categoriesList = categoriesList;
     
     [self.tableView reloadData];
+    
+    [self.tableView.tableFooterView setHidden:NO];
 }
 
 -(void)viewDidLoad{
@@ -36,6 +38,8 @@ static NSString *productSelectCellId = @"productSelectCellId";
     self.view = [[UIView alloc]initWithFrame:CGRectMake(screemW *0.2, 64, screemW * 0.8, screemH)];
 
     [self setupTableView];
+    
+    [self setupRefreshControl];
     
 }
 
@@ -59,9 +63,41 @@ static NSString *productSelectCellId = @"productSelectCellId";
     UINib *nib = [UINib nibWithNibName:@"DDProductViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:productSelectCellId];
 
+    UIImageView *rightFooterView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, screemW * 0.8, 100)];
+    rightFooterView.image = [UIImage imageNamed:@"v2_placeholder_full_size"];
+    self.tableView.tableFooterView = rightFooterView;
+    [self.tableView.tableFooterView setHidden:YES];
    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(scrollToIndex:) name:@"selectKind" object:nil];
    
+}
+
+-(void)setupRefreshControl{
+    NSArray* idleImages= @[[UIImage imageNamed:@"v2_pullRefresh1"],
+                           [UIImage imageNamed:@"v2_pullRefresh2"]];
+
+    MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(refreshData)];
+
+    [header setImages:idleImages forState:MJRefreshStateIdle];
+    [header setImages:idleImages forState:MJRefreshStatePulling];
+    [header setImages:idleImages forState:MJRefreshStateRefreshing];
+    self.tableView.mj_header = header;
+    header.lastUpdatedTimeLabel.hidden = YES;
+    [self.tableView.mj_header beginRefreshing];
+    [header setTitle:@"下拉刷新" forState:MJRefreshStateIdle];
+    [header setTitle:@"松手开始刷新" forState:MJRefreshStatePulling];
+    [header setTitle:@"正在刷新" forState:MJRefreshStateRefreshing];
+    header.stateLabel.font = [UIFont systemFontOfSize:15];
+    header.lastUpdatedTimeLabel.font = [UIFont systemFontOfSize:14];
+    header.stateLabel.textColor = [UIColor darkGrayColor];
+    header.lastUpdatedTimeLabel.textColor = [UIColor blueColor];
+}
+
+-(void)refreshData{
+
+    [self.tableView reloadData];
+    
+    [self.tableView.mj_header endRefreshing];
 }
 
 -(void)scrollToIndex: (NSNotification *)notification{
@@ -142,7 +178,6 @@ static NSString *productSelectCellId = @"productSelectCellId";
     DDCategoriesModel *cModel = self.categoriesList[section];
     
     return cModel.name;
-    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

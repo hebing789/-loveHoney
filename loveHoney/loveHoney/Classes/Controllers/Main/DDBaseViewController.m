@@ -89,7 +89,7 @@
 //    NSLog(@"跳到地址视图");
     HMAddressController* add =[[HMAddressController alloc]init];
     
-    add.navigationItem.title = @"我的搜获地址";
+    add.navigationItem.title = @"我的收货地址";
     
     [self.navigationController pushViewController:add animated:YES];
     

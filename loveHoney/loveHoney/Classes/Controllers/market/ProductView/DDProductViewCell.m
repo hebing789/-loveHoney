@@ -37,7 +37,14 @@
     _model = model;
     
     self.priceLabel.text = [NSString stringWithFormat:@"$%@",model.price];
-    self.marketPriceLabel.text = [NSString stringWithFormat:@"$%@",model.market_price];
+
+    //文字加横线效果
+    self.marketPriceLabel.textAlignment = NSTextAlignmentCenter;
+    self.marketPriceLabel.textColor = [UIColor grayColor]; // 横线的颜色跟随label字体颜色改变
+    NSMutableAttributedString *newmarketPrice = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"$%@",model.market_price]];
+    [newmarketPrice addAttribute:NSStrikethroughStyleAttributeName value:@(NSUnderlinePatternSolid | NSUnderlineStyleSingle) range:NSMakeRange(0, newmarketPrice.length)];
+    self.marketPriceLabel.attributedText = newmarketPrice;
+    
     self.specificsLabel.text = model.specifics;
     self.nameLabel.text = model.name;
     [self.iconView sd_setImageWithURL:[NSURL URLWithString:model.img]];

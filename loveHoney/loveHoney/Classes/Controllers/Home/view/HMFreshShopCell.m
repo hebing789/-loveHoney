@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnMaiYI;
 @property (weak, nonatomic) IBOutlet UIButton *addBtn;
 @property (weak, nonatomic) IBOutlet UILabel *priceLable;
+@property (weak, nonatomic) IBOutlet UIButton *reduceBtn;
+@property (weak, nonatomic) IBOutlet UILabel *numLab;
 
 @end
 
@@ -39,9 +41,49 @@
 //                   imageViewRect.origin.y = rect.origin.y+imageViewRect.origin.y;
 //                   imageViewRect.origin.x = -(rect.origin.x+imageViewRect.origin.x);
 //                   
-                    
+    self.numLab.hidden =NO;
+    
+    self.reduceBtn.hidden =NO;
+    
+    NSInteger num = [_numLab.text integerValue];
+    num++;
+    
+    _numLab.text = [NSString stringWithFormat:@"%ld",(long)num];
+    
     
 }
+
+- (IBAction)reduceShopping:(id)sender {
+    
+    
+    UIViewController *vc = [self viewController].tabBarController.viewControllers[2];
+    NSInteger badgeValue = [vc.tabBarItem.badgeValue integerValue];
+    badgeValue -= 1;
+    NSString *str = [NSString stringWithFormat:@"%zd", badgeValue];
+    if ([str isEqualToString:@"0"]) {
+        str = nil;
+    }
+    vc.tabBarItem.badgeValue = str;
+    
+    NSInteger num = [_numLab.text integerValue];
+    num--;
+    
+    _numLab.text = [NSString stringWithFormat:@"%ld",(long)num];
+    
+    
+    UIView *view = [self viewController].tabBarController.tabBar.subviews[3];
+     [DDAnimationTools shakeAnimation:view];
+    
+    if (num==0) {
+        _numLab.hidden = YES;
+        _reduceBtn.hidden =YES;
+    }
+
+    
+    
+    
+}
+
 
 -(void)setModel:(HMFreshShopModel *)model{
     _model = model;
@@ -75,6 +117,10 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
+    self.numLab.hidden =YES;
+    
+    self.reduceBtn.hidden =YES;
   
     
     

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HMSearchController : UIViewController
+@interface HMSearchController : UITableViewController
 
 @end

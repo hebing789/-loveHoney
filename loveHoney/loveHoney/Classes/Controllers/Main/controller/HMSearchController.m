@@ -22,6 +22,8 @@
 
 @property(nonatomic,strong)NSMutableArray* labDataAry;
 
+//@property(nonatomic,assign)NSInteger* rowNuber;
+@property(nonatomic,weak)UICollectionView *collectionV;
 
 @end
 
@@ -74,54 +76,6 @@
 //    [self.view addSubview:bar];
 
     
-    UIView * bottomView=[[UIView alloc]init];
-    
-    
-//    bottomView.backgroundColor = [UIColor redColor];
-    
-    self.view.userInteractionEnabled =YES;
-    [self.view addSubview:bottomView];
-    
-    UILabel* headLab = [[UILabel alloc]initWithFrame:CGRectMake(20, 64+15, screemW, 20)];
-    headLab.text=@"热门收索:";
-    headLab.textColor = [UIColor darkGrayColor];
-    
-    [self.view addSubview:headLab];
-    
-    for (int i =0; i<11; i++) {
-        UILabel* lb=[[UILabel alloc]init];
-        
-        lb.layer.borderColor =(__bridge CGColorRef _Nullable)([UIColor darkGrayColor]);
-        lb.layer.borderWidth=1;
-        
-        lb.layer.cornerRadius = 15;
-        lb.layer.masksToBounds = YES;
-        
-      
-        
-        UITapGestureRecognizer* tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(addShopView)];
-         lb.userInteractionEnabled =YES;
-        [lb addGestureRecognizer:tap];
-        
-        
-        lb.backgroundColor = [UIColor lightGrayColor];
-//          lb.backgroundColor = [UIColor colorWithRed:213.0 green:20.0 blue:20.0 alpha:1];
-//        [lb setText:[NSString stringWithFormat:@"%d",i]];
-        lb.textColor=[UIColor blackColor];
-        
-        lb.font=[UIFont systemFontOfSize:14];
-        [lb sizeToFit];
-        
-        lb.textAlignment = NSTextAlignmentCenter;
-//        lb.frame=CGRectMake(_lastX, _lastY, lb.frame.size.width+40, lb.frame.size.height);
-        
-        [self.labDataAry addObject:lb];
-        [bottomView addSubview:lb];
-        
-           }
-    
-    bottomView.frame=CGRectMake(0, 100, screenW, _lastY);
-    bottomView.userInteractionEnabled =YES;
     
     [self searchWithSuccussBlock:^(NSArray *ary) {
         
@@ -141,7 +95,15 @@
         
     }];
     
-    
+    [self.tableView registerClass:[HMDownCell class] forCellReuseIdentifier:@"cell"];
+    self.tableView.tableFooterView = [UIView new];
+
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //从缓存翅中取不行
+    HMDownCell* cell = [[HMDownCell alloc]init];
+    return [cell getHight];
 }
 ////将要开始编辑时的回调，返回为NO，则不能编辑
 //
@@ -190,19 +152,27 @@
     
     //        HMWebViewController* web = [[HMWebViewController alloc]init];
     
-    //实现滚动
-    UIScrollView* scorView= [[UIScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+//    //实现滚动
+//    UIScrollView* scorView= [[UIScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+//    
+//    //滚动和所有点击事件都没有,原因
+//    HMDownCell* cell = [[HMDownCell alloc]init];
+//    
+//    [cell.collectionV setScrollEnabled: YES];
+//    
+//    [scorView addSubview:cell];
+//    
+//    [self.view addSubview:cell];
+//    
+//    [self.view setNeedsLayout];
     
-    //滚动和所有点击事件都没有,原因
-    HMDownCell* cell = [[HMDownCell alloc]init];
+    self.collectionV.hidden = NO;
     
-    [cell.collectionV setScrollEnabled: YES];
-    
-    [scorView addSubview:cell];
-    
-    [self.view addSubview:cell];
-    
-    [self.view setNeedsLayout];
+    self.bottomView.hidden =YES;
+//
+//    [self.tableView setNeedsLayout];
+//    
+//    [self.tableView reloadData];
 
     
 }
@@ -250,6 +220,87 @@
     
     
 }
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+ 
+//    UITableViewCell* cell;
+    
+   
+        HMDownCell*  cell2= [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    
+    self.collectionV =  cell2.collectionV;
+    //    bottomView.backgroundColor = [UIColor redColor];
+    cell2.collectionV.hidden = YES;
+    
+    UIView * bottomView=[[UIView alloc]init];
+    
+    self.bottomView = bottomView;
+
+    
+    
+    self.view.userInteractionEnabled =YES;
+    [cell2.contentView addSubview:bottomView];
+    
+    
+    UILabel* headLab = [[UILabel alloc]initWithFrame:CGRectMake(20, -30, screemW, 20)];
+    headLab.text=@"热门收索:";
+    headLab.textColor = [UIColor darkGrayColor];
+    
+    [bottomView addSubview:headLab];
+    
+    for (int i =0; i<11; i++) {
+        UILabel* lb=[[UILabel alloc]init];
+        
+        lb.layer.borderColor =(__bridge CGColorRef _Nullable)([UIColor darkGrayColor]);
+        lb.layer.borderWidth=1;
+        
+        lb.layer.cornerRadius = 15;
+        lb.layer.masksToBounds = YES;
+        
+        
+        
+        UITapGestureRecognizer* tap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(addShopView)];
+        lb.userInteractionEnabled =YES;
+        [lb addGestureRecognizer:tap];
+        
+        
+        lb.backgroundColor = [UIColor lightGrayColor];
+        //          lb.backgroundColor = [UIColor colorWithRed:213.0 green:20.0 blue:20.0 alpha:1];
+        //        [lb setText:[NSString stringWithFormat:@"%d",i]];
+        lb.textColor=[UIColor blackColor];
+        
+        lb.font=[UIFont systemFontOfSize:14];
+        [lb sizeToFit];
+        
+        lb.textAlignment = NSTextAlignmentCenter;
+        //        lb.frame=CGRectMake(_lastX, _lastY, lb.frame.size.width+40, lb.frame.size.height);
+        
+        [self.labDataAry addObject:lb];
+        [bottomView addSubview:lb];
+        
+    }
+    
+    bottomView.frame=CGRectMake(0, 100, screenW, _lastY);
+    bottomView.userInteractionEnabled =YES;
+
+    
+        //        cell2.dataAry = self.dataAry;
+    
+        return cell2;
+
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [self addShopView];
+}
+
 
 -(void)viewDidLayoutSubviews{
     

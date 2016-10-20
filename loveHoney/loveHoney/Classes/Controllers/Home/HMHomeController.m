@@ -55,7 +55,7 @@
     
     [self getShoppingAry];
     
-      [self getDATA];
+//      [self getDATA];
     
 
 
@@ -119,35 +119,19 @@
     
     [self getShoppingAry];
     
-    [self getDATA];
-    
-    
-    
-}
-//collctionvew的数据
--(void)getDATA{
-    
-    [HMFreshShopModel modelWithSucess:^(NSMutableArray *ary) {
-        
-        self.dataAry =ary;
-        
-        [self.tableView reloadData
-         ];
-        [self.tableView.header endRefreshing];
 
-        
-        
-        
-    } andError:^{
-        
-    }];
+    
+    
     
 }
+
 //年货图片数据刷新
 -(void)setCellModelArr:(NSArray *)cellModelArr{
     
     _cellModelArr =cellModelArr;
     [self.tableView reloadData];
+    [self.tableView.header endRefreshing];
+
 }
 
 //年货图片数据tableView
@@ -157,7 +141,8 @@
     
     self.cellModelArr = arr;
         
-        
+        [self.tableView.header endRefreshing];
+
     
     
     
@@ -232,10 +217,33 @@
 
     [self.tableView registerClass:[HMUpCell class] forCellReuseIdentifier:@"upcell"];
     [self.tableView registerClass:[HMDownCell class] forCellReuseIdentifier:@"cell"];
+    
+    UIView* footView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, screemW, 50)];
+//    footView.backgroundColor = [UIColor darkGrayColor];
+    
+    UIButton* btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, screemW, 50)];
+    
+    [btn setTitle:@"点击查看更多商品 >" forState:UIControlStateNormal];
+    
+    [btn addTarget:self action:@selector(toMarket) forControlEvents:UIControlEventTouchUpInside];
+    
+    [footView addSubview:btn];
+    
+    
+//    @{NSForegroundColorAttributeName:[UIColor darkGrayColor]}
+    [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal
+     ];
+    btn.titleLabel.textColor = [UIColor darkGrayColor];
+    
+    self.tableView.tableFooterView = footView;
 
 }
 
-
+-(void)toMarket{
+    //获得当前控制器的tabController, 调用.selectedIndex = _index;
+    [self.tabBarController setSelectedIndex:1];
+    
+}
 
 - (void)setupScrollAndBtn{
     
@@ -266,7 +274,7 @@
 
        
        UIView *BtnView = [[UIView alloc] initWithFrame:CGRectMake(0, 150, [UIScreen mainScreen].bounds.size.width, 100)];
-       BtnView.backgroundColor = [UIColor redColor];
+//       BtnView.backgroundColor = [UIColor redColor];
        [HDView addSubview:BtnView];
        CGFloat btnW = [UIScreen mainScreen].bounds.size.width / 4;
        
@@ -293,7 +301,7 @@
            
            [btn setTitle:butTitleAry[i] forState:UIControlStateNormal];
            
-           btn.backgroundColor = [UIColor cyanColor];
+//           btn.backgroundColor = [UIColor cyanColor];
            [BtnView addSubview:btn];
            
            [self.iconsArr addObject:btn];
@@ -336,7 +344,7 @@
     if (indexPath.section == 1) {
        HMDownCell*  cell2= [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
         
-        cell2.dataAry = self.dataAry;
+//        cell2.dataAry = self.dataAry;
         cell=cell2;
         return cell;
     }

@@ -22,4 +22,8 @@ typedef void(^animationFinishedBlock)(BOOL finish);
 
 +(void)shakeAnimation:(UIView *)shakeView;
 
+- (void)leftBigImgStartAnimationWithView:(UIView *)view startRect:(CGRect)startRect endRect:(CGPoint)endPoint finish:(animationFinishedBlock)completion;
+    
+
+
 @end

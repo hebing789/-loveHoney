@@ -7,8 +7,8 @@
 //
 
 #import "HMHelpController.h"
-
-@interface HMHelpController ()<UITextViewDelegate>
+#import <MessageUI/MessageUI.h>
+@interface HMHelpController ()<UITextViewDelegate,MFMessageComposeViewControllerDelegate>
 
 @property(nonatomic,strong)UITextView *textView;
 
@@ -117,11 +117,19 @@
     }
     if (self.textView.text.length >=15)
     {
+//        //这个发短信,只能调出发短信窗口,不能自动发送短信
+//
+//        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"sms://15692107411"]];
+       
+//        MFMessageComposeViewControllerDelegate
+//        [self messageComposeViewController:self didFinishWithResult:<#(MessageComposeResult)#>]
+        [self showMessageView:@[@"15692107411"] title:@"发送短信" body:self.textView.text];
+       
         [SVProgressHUD showSuccessWithStatus:@"谢谢您的反馈"];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
             [SVProgressHUD dismiss];
-                [self.navigationController popViewControllerAnimated:YES];
+            
         });
 
 
@@ -130,7 +138,68 @@
     }
     [self.view endEditing:YES];
 }
+-(void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    switch (result) {
+        case MessageComposeResultSent:
+        { //信息传送成功
+            [SVProgressHUD showSuccessWithStatus:@"发送成功"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                
+                [SVProgressHUD dismiss];
+                //注意pop的位置
+                  [self.navigationController popViewControllerAnimated:YES];
+              
+            });
+        }
+            break;
+        case MessageComposeResultFailed:
+            //信息传送失败
+        { //信息传送成功
+            [SVProgressHUD showSuccessWithStatus:@"发送失败"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                
+                [SVProgressHUD dismiss];
+                [self.navigationController popViewControllerAnimated:YES];
+            });
+        }
+            
+            break;
+        case MessageComposeResultCancelled:
+            //信息被用户取消传送
+            
+            break;
+        default:
+            break;
+    }
+    
+}
 
+//发送短信
+-(void)showMessageView:(NSArray *)phones title:(NSString *)title body:(NSString *)body
+{
+    if( [MFMessageComposeViewController canSendText] )
+    {
+        MFMessageComposeViewController * controller = [[MFMessageComposeViewController alloc] init];
+        controller.recipients = phones;
+        controller.navigationBar.tintColor = [UIColor redColor];
+        controller.body = body;
+        controller.messageComposeDelegate = self;
+        [self presentViewController:controller animated:YES completion:nil];
+        [[[[controller viewControllers] lastObject] navigationItem] setTitle:title];//修改短信界面标题
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示信息"
+                                                        message:@"该设备不支持短信功能"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"确定"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];

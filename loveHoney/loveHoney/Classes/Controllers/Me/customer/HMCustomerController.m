@@ -69,6 +69,14 @@ static NSString*cellId = @"HMCustomerControllerCell";
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"400-8484-842" message:nil preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* action1 = [UIAlertAction actionWithTitle:@"拨打" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            //2种都能实现
+             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://15692107411"]];
+            
+//            NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",@"15692107411"];
+//            UIWebView * callWebview = [[UIWebView alloc] init];
+//            [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+//            [self.view addSubview:callWebview];
           
         }];
         

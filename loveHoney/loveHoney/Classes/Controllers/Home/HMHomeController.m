@@ -228,8 +228,11 @@
     [btn addTarget:self action:@selector(toMarket) forControlEvents:UIControlEventTouchUpInside];
     
     [footView addSubview:btn];
+    
+    
 //    @{NSForegroundColorAttributeName:[UIColor darkGrayColor]}
-//    [btn setAttributedTitle:<#(nullable NSAttributedString *)#> forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal
+     ];
     btn.titleLabel.textColor = [UIColor darkGrayColor];
     
     self.tableView.tableFooterView = footView;

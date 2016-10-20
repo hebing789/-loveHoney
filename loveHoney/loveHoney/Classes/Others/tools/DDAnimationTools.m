@@ -48,7 +48,7 @@
     CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     basicAnimation.removedOnCompletion = YES;
     basicAnimation.fromValue = [NSNumber numberWithFloat:1.2];
-    basicAnimation.toValue = [NSNumber numberWithFloat:0.2];
+    basicAnimation.toValue = [NSNumber numberWithFloat:0.0];
     basicAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     
     //组合
@@ -122,7 +122,7 @@
     CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
     basicAnimation.removedOnCompletion = YES;
     basicAnimation.fromValue = [NSNumber numberWithFloat:1.2];
-    basicAnimation.toValue = [NSNumber numberWithFloat:0.1];
+    basicAnimation.toValue = [NSNumber numberWithFloat:0.0];
     basicAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     
     //组合

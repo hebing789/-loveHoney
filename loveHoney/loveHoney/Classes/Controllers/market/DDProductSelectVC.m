@@ -158,7 +158,15 @@ static NSString *productSelectCellId = @"productSelectCellId";
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
 
-    NSIndexPath *indexPath = self.tableView.indexPathsForVisibleRows.firstObject;
+    NSArray *array = self.tableView.indexPathsForVisibleRows;
+    
+    if (array.count == 0)
+    {
+        return;
+    }
+    NSIndexPath *indexPath = array.firstObject;
+    
+    
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"productBrowser" object:nil userInfo:@{@"indexPath" : indexPath}];
 

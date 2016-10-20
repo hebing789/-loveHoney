@@ -20,6 +20,7 @@
 @property(nonatomic,weak)UIButton *button;
 @property(nonatomic,weak)UILabel *lab;
 @property(nonatomic,strong)NSMutableArray* dataAryTitle;
+@property(nonatomic,weak)UIView *kView;
 
 @property(nonatomic,strong)NSMutableArray* dataAryImg;
 
@@ -34,6 +35,20 @@
 }
 - (void)viewWillAppear:(BOOL)animated{
     
+    UIView *view = [[UIView alloc]init];
+    [KeyWindow addSubview:view];
+    self.kView = view;
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.bottom.mas_equalTo(KeyWindow.mas_bottom).offset(0);
+        
+        make.left.mas_equalTo(KeyWindow.mas_left).offset(0);
+        make.right.mas_equalTo(KeyWindow.mas_right);
+        make.height.mas_equalTo(40);
+
+        
+    }];
+    
     UIButton *sureBtn = [[UIButton alloc]init];
     self.button = sureBtn;
     [sureBtn setEnabled:YES];
@@ -42,14 +57,15 @@
     [sureBtn setBackgroundImage:[UIImage imageNamed:@"v2_coupon_verify_normal"] forState:UIControlStateNormal];
     [sureBtn setBackgroundImage:[UIImage imageNamed:@"v2_coupon_verify_selected"] forState:UIControlStateSelected];
     [sureBtn addTarget:self action:@selector(clickSureBtn:) forControlEvents:UIControlEventTouchUpInside];
+    sureBtn.titleLabel.font = [UIFont systemFontOfSize: 12.0];
     //     [self.tableView.tableFooterView addSubview:selectBtn];
     //    self.tableView.tableFooterView.userInteractionEnabled = YES;
-    KeyWindow.backgroundColor = [UIColor whiteColor];
-    [KeyWindow  addSubview:sureBtn];
+    view.backgroundColor = [UIColor whiteColor];
+    [view  addSubview:sureBtn];
     
     
     UILabel *lable = [[UILabel alloc]init];
-    [KeyWindow addSubview:lable];
+    [view addSubview:lable];
     self.lab = lable;
     //    lable.layer.borderWidth = 1;
     //    lable.layer.backgroundColor = (__bridge CGColorRef _Nullable)([UIColor blueColor]);
@@ -59,11 +75,11 @@
         
         
         
-        make.bottom.mas_equalTo(KeyWindow.mas_bottom).offset(-20);
+        make.bottom.mas_equalTo(view.mas_bottom).offset(0);
         
-        make.left.mas_equalTo(KeyWindow.mas_left).offset(5);
+        make.left.mas_equalTo(view.mas_left).offset(5);
         make.right.mas_equalTo(sureBtn.mas_left );
-        make.height.mas_equalTo(50);
+        make.height.mas_equalTo(30);
         
         //make.width.mas_equalTo(screemW * 1/4);
         
@@ -83,13 +99,13 @@
         
         
         
-        make.bottom.mas_equalTo(KeyWindow.mas_bottom).offset(-20);
+        make.bottom.mas_equalTo(KeyWindow.mas_bottom).offset(0);
         
         make.right.mas_equalTo(KeyWindow.mas_left).offset(screemW);
         
-        make.height.mas_equalTo(50);
+        make.height.mas_equalTo(40);
         
-        make.width.mas_equalTo(80);
+        make.width.mas_equalTo(60);
         
     }];
     
@@ -116,10 +132,10 @@
     
     UIView* footView=[[UIView alloc]init];
     self.tableView.tableFooterView = footView;
-    //footView.backgroundColor = [UIColor whiteColor];
-    self.tableView.sectionFooterHeight = 0;
-    self.tableView.sectionHeaderHeight = 0;
-    
+    self.navigationItem.title = @"结算付款";
+    footView.backgroundColor = [UIColor clearColor];
+//    self.tableView.sectionFooterHeight = 1;
+//    self.tableView.sectionHeaderHeight = 1;
     
     
     
@@ -222,13 +238,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     if (indexPath.section == 2) {
-        return 80;
+        return 60;
     }
 
     if (indexPath.section == 4) {
-        return 100;
+        return 80;
     }
-    return 50;
+    return 40;
 
 
 }
@@ -255,6 +271,10 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 20.0f;
+}
 //- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 //
 //    UIView *view = [[UIView alloc]init];
@@ -320,6 +340,8 @@
     [self.button removeFromSuperview];
     
     [self.lab removeFromSuperview];
+    
+    [self.kView removeFromSuperview];
 
 
 }

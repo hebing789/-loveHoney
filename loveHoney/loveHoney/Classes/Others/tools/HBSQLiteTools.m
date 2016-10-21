@@ -38,24 +38,72 @@
         self.queue = [[FMDatabaseQueue alloc]initWithPath:pathShopping];
         NSLog(@"shop>>>:%@",pathShopping);
         
-//        [self creatTable];
+        [self creatTable];
         
     }
     return self;
     
 }
 
--(void)creatTable{
-//    NSString* sql = 
-    
-//    @"CREATE TABLE IF NOT EXISTS \"shopping\" (
-//    \"price\" ,
-//    \"name\"
-//    )";
-    
+//- (void)createTables {
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"tables.sql" ofType:nil];
+//    NSError *error = nil;
+//    // 加载所有的建表语句
+//    NSString *sql = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+//    if (error) {
+//        NSLog(@"加载数据库建表语句错误--%@", error);
+//    }
+//    
+//    // 创建表
+//    [self.queue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+//        [db executeStatements:sql];
+//    }];
+//}
 
+-(void)creatTable{
+    
+            NSString* sql = @"CREATE TABLE IF NOT EXISTS shopping ( price, name)";
+
+    //事物写法不会
+//            // 创建表
+//            [self.queue inTransaction:^(FMDatabase *db, BOOL *rollback) {
+//                [db executeStatements:sql];
+//            }];
     
     
+    
+    [_queue inDatabase:^(FMDatabase *db) {
+        
+      BOOL result =  [db executeStatements:sql];
+        
+        if (result) {
+            NSLog(@"创建成功");
+        }else{
+            
+            NSLog(@"创建失败");
+        }
+        
+        
+        
+    }];
+
 }
+
+//-(void)insetWithName:(NSString*)name andWithPrice:(CGFloat)price{
+//    
+//    NSString* sql =@"INSERT ";
+//     [self.queue inDatabase:^(FMDatabase *db) {
+//         
+//         
+//         
+//         
+//         
+//         
+//     }];
+//    
+//    
+//    
+//}
+
 
 @end

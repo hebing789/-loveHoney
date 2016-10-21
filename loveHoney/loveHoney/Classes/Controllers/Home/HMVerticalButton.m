@@ -52,7 +52,7 @@
 
 -(CGRect)imageRectForContentRect:(CGRect)contentRect{
     
-       return CGRectMake(contentRect.size.width/2-25, 15, 50, 30);
+       return CGRectMake(contentRect.size.width/2-25, 15, 50, 34);
 }
 
 -(CGRect)titleRectForContentRect:(CGRect)contentRect{

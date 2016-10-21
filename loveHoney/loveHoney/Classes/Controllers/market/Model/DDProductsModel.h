@@ -40,13 +40,10 @@
 //品牌id
 @property(nonatomic,copy)NSString *brand_id;
 
-
-
-
-
 -(instancetype)initWithDict:(NSDictionary *)dict;
 
 +(instancetype)productsWithDict:(NSDictionary *)dict;
 
+//-(void)setValue:(id)value forUndefinedKey:(NSString *)key;
 
 @end

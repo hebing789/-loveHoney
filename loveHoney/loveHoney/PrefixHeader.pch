@@ -37,7 +37,7 @@
 #import "HMHomeController.h"
 #import "DDBaseNavController.h"
 #import "DDBaseViewController.h"
-
+#import "DDDetailViewControll.h"
 
 #import "HMWebViewController.h"
 

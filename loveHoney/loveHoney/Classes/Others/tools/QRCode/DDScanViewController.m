@@ -35,6 +35,7 @@
     NSURL *url = [NSURL URLWithString:urlStr];
     
     NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:url];
+    [urlRequest setValue:@"iphone" forHTTPHeaderField:@"User-Agent"];
     
     [(UIWebView *)self.view loadRequest:urlRequest];
 }

@@ -12,7 +12,7 @@
 
 static NSString *reuseId = @"detailProduct";
 
-@interface DDDetailViewControll ()<UITableViewDataSource,UITableViewDelegate>
+@interface DDDetailViewControll ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 
 @property(nonatomic,weak)UITableView *tableView;
 
@@ -27,7 +27,8 @@ static NSString *reuseId = @"detailProduct";
 
     [self setupTableView];
     
-
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"分享" imageName:nil target:self action:@selector(shareThePage)];
+    
 }
 
 -(void)setupTableView{
@@ -48,6 +49,36 @@ static NSString *reuseId = @"detailProduct";
     [self.view addSubview:productToolBar];
 }
 
+-(void)shareThePage{
+    NSLog(@"分享");
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"分享到" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *wechatFriend = [UIAlertAction actionWithTitle:@"微信好友" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"微信好友");
+    }];
+    UIAlertAction *wechatMoment = [UIAlertAction actionWithTitle:@"微信朋友圈" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"微信朋友圈");
+    }];
+    UIAlertAction *sinaWeibo = [UIAlertAction actionWithTitle:@"新浪微博" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"新浪微博");
+    }];
+    UIAlertAction *qqZone = [UIAlertAction actionWithTitle:@"QQ空间" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"QQ空间");
+    }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"取消");
+    }];
+    
+    
+    [alertController addAction:wechatFriend];
+    [alertController addAction:wechatMoment];
+    [alertController addAction:sinaWeibo];
+    [alertController addAction:qqZone];
+    [alertController addAction:cancel];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+
+}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 1;

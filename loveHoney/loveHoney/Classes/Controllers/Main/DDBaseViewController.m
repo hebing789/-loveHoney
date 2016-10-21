@@ -17,7 +17,6 @@
 @interface DDBaseViewController ()<DDQRCodeViewControllerDelegate>
 
 
-
 @end
 
 @implementation DDBaseViewController

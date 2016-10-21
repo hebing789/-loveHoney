@@ -139,6 +139,11 @@
 		8EF7D3251DB86331001F6982 /* DDQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7D3231DB86331001F6982 /* DDQRCodeViewController.m */; };
 		8EF7D3271DB8AF54001F6982 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF7D3261DB8AF54001F6982 /* libsqlite3.tbd */; };
 		8EF7D3541DB8D953001F6982 /* DDScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7D3531DB8D953001F6982 /* DDScanViewController.m */; };
+		8EF7D3571DB8F9A5001F6982 /* DDDetailProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7D3561DB8F9A5001F6982 /* DDDetailProductCell.m */; };
+		8EF7D3591DB8F9C4001F6982 /* DDDetailProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF7D3581DB8F9C4001F6982 /* DDDetailProductCell.xib */; };
+		8EF7D35F1DB91CDC001F6982 /* DDDetailViewControll.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7D35E1DB91CDC001F6982 /* DDDetailViewControll.m */; };
+		8EF7D3621DB9350A001F6982 /* DDProductToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF7D3611DB9350A001F6982 /* DDProductToolBar.m */; };
+		8EF7D3641DB93527001F6982 /* DDProductToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF7D3631DB93527001F6982 /* DDProductToolBar.xib */; };
 		EFF7DD84238702ACD9DD77FA /* libPods-loveHoney.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */; };
 /* End PBXBuildFile section */
 
@@ -361,6 +366,14 @@
 		8EF7D3261DB8AF54001F6982 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		8EF7D3521DB8D953001F6982 /* DDScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDScanViewController.h; sourceTree = "<group>"; };
 		8EF7D3531DB8D953001F6982 /* DDScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDScanViewController.m; sourceTree = "<group>"; };
+		8EF7D3551DB8F9A5001F6982 /* DDDetailProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDetailProductCell.h; sourceTree = "<group>"; };
+		8EF7D3561DB8F9A5001F6982 /* DDDetailProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDetailProductCell.m; sourceTree = "<group>"; };
+		8EF7D3581DB8F9C4001F6982 /* DDDetailProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDDetailProductCell.xib; sourceTree = "<group>"; };
+		8EF7D35D1DB91CDC001F6982 /* DDDetailViewControll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDetailViewControll.h; sourceTree = "<group>"; };
+		8EF7D35E1DB91CDC001F6982 /* DDDetailViewControll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDetailViewControll.m; sourceTree = "<group>"; };
+		8EF7D3601DB9350A001F6982 /* DDProductToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProductToolBar.h; sourceTree = "<group>"; };
+		8EF7D3611DB9350A001F6982 /* DDProductToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProductToolBar.m; sourceTree = "<group>"; };
+		8EF7D3631DB93527001F6982 /* DDProductToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DDProductToolBar.xib; sourceTree = "<group>"; };
 		9615B76D8AD026B4EA02009B /* libPods-loveHoney.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-loveHoney.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F25252F3DCBF081A3DA69CA7 /* Pods-loveHoney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-loveHoney.release.xcconfig"; path = "Pods/Target Support Files/Pods-loveHoney/Pods-loveHoney.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -599,6 +612,8 @@
 				8E1965671DB7A4F900D2C851 /* DDProductSelectVC.m */,
 				8E1965681DB7A4F900D2C851 /* HMMarketViewController.h */,
 				8E1965691DB7A4F900D2C851 /* HMMarketViewController.m */,
+				8EF7D35D1DB91CDC001F6982 /* DDDetailViewControll.h */,
+				8EF7D35E1DB91CDC001F6982 /* DDDetailViewControll.m */,
 				8E19656A1DB7A4F900D2C851 /* Model */,
 				8E19656F1DB7A4F900D2C851 /* ProductView */,
 			);
@@ -630,6 +645,12 @@
 				8E1965781DB7A4F900D2C851 /* DDTitleView.h */,
 				8E1965791DB7A4F900D2C851 /* DDTitleView.m */,
 				8E19657A1DB7A4F900D2C851 /* DDTitleView.xib */,
+				8EF7D3551DB8F9A5001F6982 /* DDDetailProductCell.h */,
+				8EF7D3561DB8F9A5001F6982 /* DDDetailProductCell.m */,
+				8EF7D3581DB8F9C4001F6982 /* DDDetailProductCell.xib */,
+				8EF7D3601DB9350A001F6982 /* DDProductToolBar.h */,
+				8EF7D3611DB9350A001F6982 /* DDProductToolBar.m */,
+				8EF7D3631DB93527001F6982 /* DDProductToolBar.xib */,
 			);
 			path = ProductView;
 			sourceTree = "<group>";
@@ -1087,7 +1108,7 @@
 				TargetAttributes = {
 					5BEC4FBD1DB1192100CA99B0 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = B98X4L36B7;
+						DevelopmentTeam = TZEHFE7VA2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1147,9 +1168,11 @@
 				8E19662D1DB7A4F900D2C851 /* DDTitleView.xib in Resources */,
 				8E1966611DB7A4F900D2C851 /* .gitkeep in Resources */,
 				8E19660F1DB7A4F900D2C851 /* .gitkeep in Resources */,
+				8EF7D3641DB93527001F6982 /* DDProductToolBar.xib in Resources */,
 				8E1966931DB7B14F00D2C851 /* 首页新鲜热卖 in Resources */,
 				8E19668C1DB7B14F00D2C851 /* Search in Resources */,
 				6A8660CD1DB8584100FEC491 /* HMYouCell.xib in Resources */,
+				8EF7D3591DB8F9C4001F6982 /* DDDetailProductCell.xib in Resources */,
 				8E19663B1DB7A4F900D2C851 /* HMMenuTableViewCell2.xib in Resources */,
 				8E1966491DB7A4F900D2C851 /* HMPay1TableViewCell.xib in Resources */,
 				8E1966561DB7A4F900D2C851 /* HMShoping1TableViewCell.xib in Resources */,
@@ -1225,6 +1248,7 @@
 			files = (
 				8E19664A1DB7A4F900D2C851 /* HMPay2TableViewCell.m in Sources */,
 				8E1966211DB7A4F900D2C851 /* HMTabbarButton.m in Sources */,
+				8EF7D35F1DB91CDC001F6982 /* DDDetailViewControll.m in Sources */,
 				8E1966261DB7A4F900D2C851 /* DDProductsModel.m in Sources */,
 				8E1966331DB7A4F900D2C851 /* HMAdrressCell.m in Sources */,
 				8E19662A1DB7A4F900D2C851 /* DDProductViewCell.m in Sources */,
@@ -1234,6 +1258,7 @@
 				8E19665F1DB7A4F900D2C851 /* HMShoppingViewController.m in Sources */,
 				8E19665B1DB7A4F900D2C851 /* HMTableShoping3ViewCell.m in Sources */,
 				8E1966321DB7A4F900D2C851 /* HMAddresModel.m in Sources */,
+				8EF7D3621DB9350A001F6982 /* DDProductToolBar.m in Sources */,
 				5B0674611DB1371500299600 /* ViewController.m in Sources */,
 				8E1966441DB7A4F900D2C851 /* HMUserInformationController.m in Sources */,
 				8E1966171DB7A4F900D2C851 /* HMFreshShopModel.m in Sources */,
@@ -1300,6 +1325,7 @@
 				8E1966451DB7A4F900D2C851 /* HMMyMeNuController.m in Sources */,
 				8E1966401DB7A4F900D2C851 /* HMSystemCell2.m in Sources */,
 				8E1966131DB7A4F900D2C851 /* HMHomeController.m in Sources */,
+				8EF7D3571DB8F9A5001F6982 /* DDDetailProductCell.m in Sources */,
 				6A8660CC1DB8584100FEC491 /* HMYouCell.m in Sources */,
 				8E1966671DB7A4F900D2C851 /* NSArray+Log.m in Sources */,
 				8E1966641DB7A4F900D2C851 /* WecomeAnimation.m in Sources */,
@@ -1404,14 +1430,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = B98X4L36B7;
+				DEVELOPMENT_TEAM = TZEHFE7VA2;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = loveHoney/PrefixHeader.pch;
 				INFOPLIST_FILE = loveHoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hebing.loveHoney;
+				PRODUCT_BUNDLE_IDENTIFIER = dd.loveHoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1422,14 +1448,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = B98X4L36B7;
+				DEVELOPMENT_TEAM = TZEHFE7VA2;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = loveHoney/PrefixHeader.pch;
 				INFOPLIST_FILE = loveHoney/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hebing.loveHoney;
+				PRODUCT_BUNDLE_IDENTIFIER = dd.loveHoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

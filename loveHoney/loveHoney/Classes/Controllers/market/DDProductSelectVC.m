@@ -185,9 +185,9 @@ static NSString *productSelectCellId = @"productSelectCellId";
     DDCategoriesModel *cModel = self.categoriesList[indexPath.section];
     DDProductsModel *pModel = cModel.products[indexPath.row];
     
-    HMWebViewController *webVC = [[HMWebViewController alloc]init];
-    webVC.model = pModel;
-    [self.navigationController pushViewController:webVC animated:YES];
+    DDDetailViewControll *detailVC = [[DDDetailViewControll alloc]init];
+    detailVC.model = pModel;
+    [self.navigationController pushViewController:detailVC animated:YES];
 
 }
 
@@ -200,9 +200,7 @@ static NSString *productSelectCellId = @"productSelectCellId";
         return;
     }
     NSIndexPath *indexPath = array.firstObject;
-    
-    
-    
+
     [[NSNotificationCenter defaultCenter] postNotificationName:@"productBrowser" object:nil userInfo:@{@"indexPath" : indexPath}];
 
 }
